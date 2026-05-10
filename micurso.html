@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MiCurso – Plataforma de Videos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F7F5F0;
+    --surface: #FFFFFF;
+    --border: #E2DED6;
+    --text: #1A1814;
+    --muted: #7A7570;
+    --accent: #2A4A3E;
+    --accent-light: #EAF1EE;
+    --accent-text: #1D3830;
+    --warn-bg: #FEF3E2;
+    --warn-text: #7A4E0D;
+    --danger: #C0392B;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-serif: 'DM Serif Display', serif;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── SCREENS ── */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* ── LOGIN ── */
+  #login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .login-wrap {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .login-brand {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .login-brand .brand-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--accent);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .login-brand .brand-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: white;
+  }
+
+  .login-brand h1 {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .login-brand p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .login-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .field {
+    margin-bottom: 1.25rem;
+  }
+
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .field input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--text);
+    background: var(--bg);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .field input:focus {
+    border-color: var(--accent);
+    background: white;
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 11px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-login:hover { opacity: 0.88; }
+  .btn-login:active { transform: scale(0.98); }
+
+  .login-error {
+    font-size: 13px;
+    color: var(--danger);
+    margin-top: 10px;
+    min-height: 18px;
+    text-align: center;
+  }
+
+  /* ── MAIN ── */
+  #main-screen {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .topbar-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--accent);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar-icon svg {
+    width: 17px;
+    height: 17px;
+    fill: white;
+  }
+
+  .topbar-title {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text);
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .user-chip {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 12px 5px 6px;
+  }
+
+  .user-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent-text);
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .admin-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  .btn-logout {
+    font-size: 13px;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: var(--font-sans);
+    text-decoration: underline;
+  }
+
+  .btn-logout:hover { color: var(--text); }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  /* ── VIDEO GRID ── */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  .video-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.15s, transform 0.15s;
+    box-shadow: var(--shadow);
+  }
+
+  .video-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+  }
+
+  .video-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .thumb-icon {
+    width: 44px;
+    height: 44px;
+    opacity: 0.35;
+  }
+
+  .play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42,74,62,0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+
+  .video-card:hover .play-overlay {
+    background: rgba(42,74,62,0.15);
+  }
+
+  .play-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.15s, transform 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .play-circle svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--accent);
+    margin-left: 2px;
+  }
+
+  .video-card:hover .play-circle {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .video-info {
+    padding: 12px 14px;
+  }
+
+  .video-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .badge-new {
+    flex-shrink: 0;
+    font-size: 10px;
+    padding: 2px 7px;
+    background: var(--accent-light);
+    color: var(--accent-text);
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+  }
+
+  .video-meta {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .video-meta svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+
+  /* ── ADMIN PANEL ── */
+  .admin-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .admin-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .admin-header svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .admin-header span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 8px;
+  }
+
+  .student-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+  }
+
+  .s-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent-text);
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .s-name {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,8,0.65);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .modal-overlay.open {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--surface);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 640px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    animation: modal-in 0.2s ease;
+  }
+
+  @keyframes modal-in {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .modal-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.1s;
+  }
+
+  .modal-close:hover { background: var(--bg); }
+
+  .modal-close svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 2.5;
+  }
+
+  .modal-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+  }
+
+  .modal-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .modal-body {
+    padding: 1rem 1.25rem;
+  }
+
+  .modal-desc {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    #main-screen { padding: 1.25rem 1rem 3rem; }
+    .video-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .topbar-right .user-chip .user-name { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ PANTALLA DE LOGIN ═══ -->
+<div id="login-screen" class="screen active">
+  <div class="login-wrap">
+    <div class="login-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <h1>MiCurso</h1>
+      <p>Ingresá con tu usuario para ver el contenido</p>
+    </div>
+    <div class="login-card">
+      <div class="field">
+        <label>Usuario</label>
+        <input type="text" id="username" placeholder="tu@email.com" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label>Contraseña</label>
+        <input type="password" id="password" placeholder="••••••••" />
+      </div>
+      <button class="btn-login" onclick="login()">Ingresar</button>
+      <p class="login-error" id="login-error"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PANTALLA PRINCIPAL ═══ -->
+<div id="main-screen" class="screen">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <div class="topbar-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <span class="topbar-title">MiCurso</span>
+    </div>
+    <div class="topbar-right">
+      <div class="user-chip">
+        <div class="user-avatar" id="nav-avatar">--</div>
+        <span class="user-name" id="nav-username"></span>
+      </div>
+      <span class="admin-badge" id="admin-badge" style="display:none;">admin</span>
+      <button class="btn-logout" onclick="logout()">Salir</button>
+    </div>
+  </div>
+
+  <p class="section-label">Videos del curso</p>
+  <div class="video-grid" id="video-grid"></div>
+
+  <div id="admin-panel" style="display:none;">
+    <p class="section-label">Estudiantes inscriptos</p>
+    <div class="admin-section">
+      <div class="admin-header">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Lista de alumnos</span>
+      </div>
+      <div class="students-grid" id="students-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MODAL DE VIDEO ═══ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-top">
+      <span class="modal-title" id="modal-title"></span>
+      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-player" id="modal-player"></div>
+    <div class="modal-body">
+      <p class="modal-desc" id="modal-desc"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ══════════════════════════════════════════════════════
+     USUARIOS
+     Para agregar un estudiante, copiá una línea y cambiá:
+       "usuario":  { pass: "contraseña", name: "Nombre Completo", role: "student" }
+     Para el admin cambiá role a "admin"
+  ══════════════════════════════════════════════════════ */
+  const USERS = {
+    "estudiante1": { pass: "pass123",  name: "Ana García",    role: "student" },
+    "estudiante2": { pass: "pass456",  name: "Carlos López",  role: "student" },
+    "maria":       { pass: "maria123", name: "María Torres",  role: "student" },
+    "admin":       { pass: "admin123", name: "Profesor",      role: "admin"   }
+  };
+
+  /* ══════════════════════════════════════════════════════
+     VIDEOS
+     Para agregar un video, copiá un bloque y cambiá:
+       title:    nombre del video
+       desc:     descripción breve
+       duration: duración (ej: "15 min")
+       ytId:     ID de YouTube (la parte después de ?v= en la URL)
+                 Ejemplo: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                          → ytId: "dQw4w9WgXcQ"
+       isNew:    true si querés mostrar la etiqueta "nuevo"
+  ══════════════════════════════════════════════════════ */
+  const VIDEOS = [
+    {
+      id: 1,
+      title: "Introducción al curso",
+      desc: "Bienvenida y presentación del temario completo.",
+      duration: "8 min",
+      ytId: "dQw4w9WgXcQ",
+      isNew: true
+    },
+    {
+      id: 2,
+      title: "Módulo 1 – Fundamentos",
+      desc: "Conceptos base que vas a necesitar para el resto del curso.",
+      duration: "22 min",
+      ytId: "dQw4w9WgXcQ",
+      isNew: true
+    },
+    {
+      id: 3,
+      title: "Módulo 2 – Práctica",
+      desc: "Ejercicios y ejemplos guiados paso a paso.",
+      duration: "35 min",
+      ytId: "dQw4w9WgXcQ",
+      isNew: false
+    },
+    {
+      id: 4,
+      title: "Módulo 3 – Avanzado",
+      desc: "Técnicas avanzadas para profundizar el aprendizaje.",
+      duration: "41 min",
+      ytId: "dQw4w9WgXcQ",
+      isNew: false
+    }
+  ];
+
+  /* ══ LÓGICA (no hace falta modificar lo de abajo) ══ */
+  let currentUser = null;
+
+  function login() {
+    const u = document.getElementById("username").value.trim();
+    const p = document.getElementById("password").value;
+    const err = document.getElementById("login-error");
+    if (USERS[u] && USERS[u].pass === p) {
+      currentUser = { username: u, ...USERS[u] };
+      err.textContent = "";
+      showMain();
+    } else {
+      err.textContent = "Usuario o contraseña incorrectos.";
+    }
+  }
+
+  document.getElementById("password").addEventListener("keydown", e => {
+    if (e.key === "Enter") login();
+  });
+
+  function showMain() {
+    document.getElementById("login-screen").classList.remove("active");
+    document.getElementById("main-screen").classList.add("active");
+    const initials = currentUser.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
+    document.getElementById("nav-avatar").textContent = initials;
+    document.getElementById("nav-username").textContent = currentUser.name;
+    if (currentUser.role === "admin") {
+      document.getElementById("admin-badge").style.display = "inline";
+      document.getElementById("admin-panel").style.display = "block";
+      renderStudents();
+    }
+    renderVideos();
+  }
+
+  function renderVideos() {
+    const grid = document.getElementById("video-grid");
+    grid.innerHTML = VIDEOS.map(v => `
+      <div class="video-card" onclick="openVideo(${v.id})" role="button" tabindex="0" aria-label="Ver: ${v.title}">
+        <div class="video-thumb">
+          <svg class="thumb-icon" viewBox="0 0 24 24" fill="none" stroke="#2A4A3E" stroke-width="1.5">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <div class="play-overlay">
+            <div class="play-circle">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <div class="video-header">
+            <span class="video-title">${v.title}</span>
+            ${v.isNew ? '<span class="badge-new">nuevo</span>' : ''}
+          </div>
+          <div class="video-meta">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ${v.duration}
+          </div>
+        </div>
+      </div>
+    `).join("");
+
+    grid.querySelectorAll(".video-card").forEach(card => {
+      card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") card.click(); });
+    });
+  }
+
+  function renderStudents() {
+    const list = document.getElementById("students-list");
+    list.innerHTML = Object.entries(USERS)
+      .filter(([, v]) => v.role === "student")
+      .map(([, v]) => {
+        const ini = v.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
+        return `<div class="student-row"><div class="s-avatar">${ini}</div><span class="s-name">${v.name}</span></div>`;
+      }).join("");
+  }
+
+  function openVideo(id) {
+    const v = VIDEOS.find(x => x.id === id);
+    document.getElementById("modal-title").textContent = v.title;
+    document.getElementById("modal-desc").textContent = v.desc;
+    document.getElementById("modal-player").innerHTML =
+      `<iframe src="https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
+    document.getElementById("modal-overlay").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    document.getElementById("modal-overlay").classList.remove("open");
+    document.getElementById("modal-player").innerHTML = "";
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("modal-overlay").addEventListener("click", e => {
+    if (e.target === document.getElementById("modal-overlay")) closeModal();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeModal();
+  });
+
+  function logout() {
+    currentUser = null;
+    document.getElementById("main-screen").classList.remove("active");
+    document.getElementById("login-screen").classList.add("active");
+    document.getElementById("admin-panel").style.display = "none";
+    document.getElementById("admin-badge").style.display = "none";
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  }
+</script>
+</body>
+</html>
