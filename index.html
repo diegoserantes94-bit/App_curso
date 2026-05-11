@@ -29,26 +29,45 @@
     --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.04);
   }
 
-  body {
+  html, body {
+    height: 100%;
+    overflow: hidden;
     font-family: var(--font-sans);
     background: var(--bg);
     color: var(--text);
-    min-height: 100vh;
     font-size: 15px;
     line-height: 1.6;
   }
 
-  /* ── SCREENS ── */
-  .screen { display: none; }
-  .screen.active { display: block; }
+  /* ── SCREENS con transición ── */
+  .screen {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.38s ease, transform 0.38s ease;
+    background: var(--bg);
+  }
+
+  .screen.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 
   /* ── LOGIN ── */
   #login-screen {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
+    z-index: 10;
+    transform: none;
+  }
+
+  /* cuando el login sale, se desvanece hacia arriba levemente */
+  #login-screen.leaving {
+    opacity: 0;
+    transform: translateY(-12px);
   }
 
   .login-wrap {
@@ -157,20 +176,27 @@
     text-align: center;
   }
 
-  /* ── MAIN ── */
+  /* ── MAIN (layout sin scroll, videos siempre visibles) ── */
   #main-screen {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+    transform: translateY(22px);
+  }
+
+  #main-screen.active {
+    transform: translateY(0);
   }
 
   .topbar {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.25rem;
+    padding: 0.85rem 2rem;
     border-bottom: 1px solid var(--border);
+    background: var(--bg);
   }
 
   .topbar-brand {
@@ -259,21 +285,47 @@
 
   .btn-logout:hover { color: var(--text); }
 
+  /* área de contenido debajo del topbar, scrollable solo si hay panel admin */
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem 2rem 1.5rem;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* hace que el área de scroll sea el contenedor completo */
+    align-self: stretch;
+    box-sizing: border-box;
+  }
+
+  /* el topbar también centra su contenido a 960px */
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
   .section-label {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    flex-shrink: 0;
   }
 
   /* ── VIDEO GRID ── */
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-    margin-bottom: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+    flex-shrink: 0;
   }
 
   .video-card {
@@ -349,7 +401,7 @@
   }
 
   .video-info {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
 
   .video-header {
@@ -361,7 +413,7 @@
   }
 
   .video-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text);
     line-height: 1.4;
@@ -403,6 +455,7 @@
     border-radius: var(--radius);
     padding: 1.25rem 1.5rem;
     box-shadow: var(--shadow);
+    margin-top: 0.75rem;
   }
 
   .admin-header {
@@ -464,6 +517,11 @@
     font-weight: 500;
   }
 
+  #admin-panel {
+    margin-top: 1.5rem;
+    flex-shrink: 0;
+  }
+
   /* ── MODAL ── */
   .modal-overlay {
     display: none;
@@ -492,7 +550,7 @@
 
   @keyframes modal-in {
     from { opacity: 0; transform: scale(0.96) translateY(8px); }
-    to { opacity: 1; transform: scale(1) translateY(0); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
   }
 
   .modal-top {
@@ -555,8 +613,9 @@
   }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 480px) {
-    #main-screen { padding: 1.25rem 1rem 3rem; }
+  @media (max-width: 600px) {
+    .topbar { padding: 0.75rem 1rem; }
+    .main-content { padding: 1rem 1rem 1.25rem; }
     .video-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .topbar-right .user-chip .user-name { display: none; }
   }
@@ -591,36 +650,44 @@
 
 <!-- ═══ PANTALLA PRINCIPAL ═══ -->
 <div id="main-screen" class="screen">
+
+  <!-- topbar fijo, no scrollea -->
   <div class="topbar">
-    <div class="topbar-brand">
-      <div class="topbar-icon">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    <div class="topbar-inner">
+      <div class="topbar-brand">
+        <div class="topbar-icon">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <span class="topbar-title">MiCurso</span>
       </div>
-      <span class="topbar-title">MiCurso</span>
-    </div>
-    <div class="topbar-right">
-      <div class="user-chip">
-        <div class="user-avatar" id="nav-avatar">--</div>
-        <span class="user-name" id="nav-username"></span>
+      <div class="topbar-right">
+        <div class="user-chip">
+          <div class="user-avatar" id="nav-avatar">--</div>
+          <span class="user-name" id="nav-username"></span>
+        </div>
+        <span class="admin-badge" id="admin-badge" style="display:none;">admin</span>
+        <button class="btn-logout" onclick="logout()">Salir</button>
       </div>
-      <span class="admin-badge" id="admin-badge" style="display:none;">admin</span>
-      <button class="btn-logout" onclick="logout()">Salir</button>
     </div>
   </div>
 
-  <p class="section-label">Videos del curso</p>
-  <div class="video-grid" id="video-grid"></div>
+  <!-- contenido centrado, scrollable solo si hay panel admin -->
+  <div class="main-content">
+    <p class="section-label">Videos del curso</p>
+    <div class="video-grid" id="video-grid"></div>
 
-  <div id="admin-panel" style="display:none;">
-    <p class="section-label">Estudiantes inscriptos</p>
-    <div class="admin-section">
-      <div class="admin-header">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Lista de alumnos</span>
+    <div id="admin-panel" style="display:none;">
+      <p class="section-label">Estudiantes inscriptos</p>
+      <div class="admin-section">
+        <div class="admin-header">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Lista de alumnos</span>
+        </div>
+        <div class="students-grid" id="students-list"></div>
       </div>
-      <div class="students-grid" id="students-list"></div>
     </div>
   </div>
+
 </div>
 
 <!-- ═══ MODAL DE VIDEO ═══ -->
@@ -699,7 +766,7 @@
     }
   ];
 
-  /* ══ LÓGICA (no hace falta modificar lo de abajo) ══ */
+  /* ══ LÓGICA ══ */
   let currentUser = null;
 
   function login() {
@@ -720,8 +787,10 @@
   });
 
   function showMain() {
-    document.getElementById("login-screen").classList.remove("active");
-    document.getElementById("main-screen").classList.add("active");
+    const loginEl = document.getElementById("login-screen");
+    const mainEl  = document.getElementById("main-screen");
+
+    // prepara el contenido antes de animar
     const initials = currentUser.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
     document.getElementById("nav-avatar").textContent = initials;
     document.getElementById("nav-username").textContent = currentUser.name;
@@ -731,6 +800,13 @@
       renderStudents();
     }
     renderVideos();
+
+    // transición: login sale hacia arriba, main entra desde abajo
+    loginEl.classList.add("leaving");
+    setTimeout(() => {
+      loginEl.classList.remove("active", "leaving");
+      mainEl.classList.add("active");
+    }, 360);
   }
 
   function renderVideos() {
@@ -801,12 +877,17 @@
 
   function logout() {
     currentUser = null;
-    document.getElementById("main-screen").classList.remove("active");
-    document.getElementById("login-screen").classList.add("active");
-    document.getElementById("admin-panel").style.display = "none";
-    document.getElementById("admin-badge").style.display = "none";
-    document.getElementById("username").value = "";
-    document.getElementById("password").value = "";
+    const loginEl = document.getElementById("login-screen");
+    const mainEl  = document.getElementById("main-screen");
+
+    mainEl.classList.remove("active");
+    setTimeout(() => {
+      loginEl.classList.add("active");
+      document.getElementById("admin-panel").style.display = "none";
+      document.getElementById("admin-badge").style.display = "none";
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    }, 360);
   }
 </script>
 </body>
