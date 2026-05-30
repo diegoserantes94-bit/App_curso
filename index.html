@@ -3,892 +3,731 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MiCurso – Plataforma de Videos</title>
+<title>Neurociencia – Facultad de Medicina BCC3</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #F7F5F0;
-    --surface: #FFFFFF;
-    --border: #E2DED6;
-    --text: #1A1814;
-    --muted: #7A7570;
-    --accent: #2A4A3E;
-    --accent-light: #EAF1EE;
-    --accent-text: #1D3830;
-    --warn-bg: #FEF3E2;
-    --warn-text: #7A4E0D;
-    --danger: #C0392B;
-    --font-sans: 'DM Sans', sans-serif;
-    --font-serif: 'DM Serif Display', serif;
-    --radius: 12px;
-    --radius-sm: 8px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.04);
-  }
-
-  html, body {
-    height: 100%;
-    overflow: hidden;
-    font-family: var(--font-sans);
-    background: var(--bg);
-    color: var(--text);
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  /* ── SCREENS con transición ── */
-  .screen {
-    position: fixed;
-    inset: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.38s ease, transform 0.38s ease;
-    background: var(--bg);
-  }
-
-  .screen.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  /* ── LOGIN ── */
-  #login-screen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    z-index: 10;
-    transform: none;
-  }
-
-  /* cuando el login sale, se desvanece hacia arriba levemente */
-  #login-screen.leaving {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-
-  .login-wrap {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .login-brand {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .login-brand .brand-icon {
-    width: 52px;
-    height: 52px;
-    background: var(--accent);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-  }
-
-  .login-brand .brand-icon svg {
-    width: 26px;
-    height: 26px;
-    fill: white;
-  }
-
-  .login-brand h1 {
-    font-family: var(--font-serif);
-    font-size: 26px;
-    color: var(--text);
-    font-weight: 400;
-  }
-
-  .login-brand p {
-    font-size: 14px;
-    color: var(--muted);
-    margin-top: 4px;
-  }
-
-  .login-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-  }
-
-  .field {
-    margin-bottom: 1.25rem;
-  }
-
-  .field label {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
-    margin-bottom: 6px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
-
-  .field input {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    font-family: var(--font-sans);
-    font-size: 15px;
-    color: var(--text);
-    background: var(--bg);
-    outline: none;
-    transition: border-color 0.15s;
-  }
-
-  .field input:focus {
-    border-color: var(--accent);
-    background: white;
-  }
-
-  .btn-login {
-    width: 100%;
-    padding: 11px;
-    background: var(--accent);
-    color: white;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: var(--font-sans);
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.15s, transform 0.1s;
-    margin-top: 0.5rem;
-  }
-
-  .btn-login:hover { opacity: 0.88; }
-  .btn-login:active { transform: scale(0.98); }
-
-  .login-error {
-    font-size: 13px;
-    color: var(--danger);
-    margin-top: 10px;
-    min-height: 18px;
-    text-align: center;
-  }
-
-  /* ── MAIN (layout sin scroll, videos siempre visibles) ── */
-  #main-screen {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 5;
-    transform: translateY(22px);
-  }
-
-  #main-screen.active {
-    transform: translateY(0);
-  }
-
-  .topbar {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.85rem 2rem;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-  }
-
-  .topbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .topbar-icon {
-    width: 34px;
-    height: 34px;
-    background: var(--accent);
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .topbar-icon svg {
-    width: 17px;
-    height: 17px;
-    fill: white;
-  }
-
-  .topbar-title {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text);
-  }
-
-  .topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .user-chip {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 5px 12px 5px 6px;
-  }
-
-  .user-avatar {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    color: var(--accent-text);
-    font-size: 11px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .user-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .admin-badge {
-    font-size: 11px;
-    padding: 2px 8px;
-    background: var(--warn-bg);
-    color: var(--warn-text);
-    border-radius: 999px;
-    font-weight: 500;
-  }
-
-  .btn-logout {
-    font-size: 13px;
-    color: var(--muted);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px 0;
-    font-family: var(--font-sans);
-    text-decoration: underline;
-  }
-
-  .btn-logout:hover { color: var(--text); }
-
-  /* área de contenido debajo del topbar, scrollable solo si hay panel admin */
-  .main-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 1.25rem 2rem 1.5rem;
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    /* hace que el área de scroll sea el contenedor completo */
-    align-self: stretch;
-    box-sizing: border-box;
-  }
-
-  /* el topbar también centra su contenido a 960px */
-  .topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.75rem;
-    flex-shrink: 0;
-  }
-
-  /* ── VIDEO GRID ── */
-  .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 14px;
-    flex-shrink: 0;
-  }
-
-  .video-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    cursor: pointer;
-    transition: box-shadow 0.15s, transform 0.15s;
-    box-shadow: var(--shadow);
-  }
-
-  .video-card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-    transform: translateY(-2px);
-  }
-
-  .video-thumb {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .thumb-icon {
-    width: 44px;
-    height: 44px;
-    opacity: 0.35;
-  }
-
-  .play-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(42,74,62,0.0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.15s;
-  }
-
-  .video-card:hover .play-overlay {
-    background: rgba(42,74,62,0.15);
-  }
-
-  .play-circle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.15s, transform 0.15s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  .play-circle svg {
-    width: 18px;
-    height: 18px;
-    fill: var(--accent);
-    margin-left: 2px;
-  }
-
-  .video-card:hover .play-circle {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .video-info {
-    padding: 10px 12px;
-  }
-
-  .video-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 6px;
-    margin-bottom: 4px;
-  }
-
-  .video-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-  }
-
-  .badge-new {
-    flex-shrink: 0;
-    font-size: 10px;
-    padding: 2px 7px;
-    background: var(--accent-light);
-    color: var(--accent-text);
-    border-radius: 999px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    margin-top: 2px;
-  }
-
-  .video-meta {
-    font-size: 12px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .video-meta svg {
-    width: 12px;
-    height: 12px;
-    stroke: var(--muted);
-    fill: none;
-    stroke-width: 2;
-    flex-shrink: 0;
-  }
-
-  /* ── ADMIN PANEL ── */
-  .admin-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    box-shadow: var(--shadow);
-    margin-top: 0.75rem;
-  }
-
-  .admin-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 1rem;
-  }
-
-  .admin-header svg {
-    width: 16px;
-    height: 16px;
-    stroke: var(--muted);
-    fill: none;
-    stroke-width: 2;
-  }
-
-  .admin-header span {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  .students-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 8px;
-  }
-
-  .student-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 12px;
-    background: var(--bg);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-  }
-
-  .s-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    color: var(--accent-text);
-    font-size: 11px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .s-name {
-    font-size: 13px;
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  #admin-panel {
-    margin-top: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  /* ── MODAL ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,8,0.65);
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-  }
-
-  .modal-overlay.open {
-    display: flex;
-  }
-
-  .modal {
-    background: var(--surface);
-    border-radius: var(--radius);
-    width: 100%;
-    max-width: 640px;
-    overflow: hidden;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.25);
-    animation: modal-in 0.2s ease;
-  }
-
-  @keyframes modal-in {
-    from { opacity: 0; transform: scale(0.96) translateY(8px); }
-    to   { opacity: 1; transform: scale(1) translateY(0); }
-  }
-
-  .modal-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.25rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .modal-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .modal-close {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.1s;
-  }
-
-  .modal-close:hover { background: var(--bg); }
-
-  .modal-close svg {
-    width: 14px;
-    height: 14px;
-    stroke: var(--muted);
-    fill: none;
-    stroke-width: 2.5;
-  }
-
-  .modal-player {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: #000;
-  }
-
-  .modal-player iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-
-  .modal-body {
-    padding: 1rem 1.25rem;
-  }
-
-  .modal-desc {
-    font-size: 14px;
-    color: var(--muted);
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
-    .topbar { padding: 0.75rem 1rem; }
-    .main-content { padding: 1rem 1rem 1.25rem; }
-    .video-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .topbar-right .user-chip .user-name { display: none; }
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:        #1E3A5F;
+  --navy-dark:   #152D4A;
+  --navy-hover:  rgba(255,255,255,0.07);
+  --navy-active: rgba(255,255,255,0.13);
+  --blue:        #2E5C9E;
+  --blue-hover:  #275191;
+  --blue-light:  #EBF1FB;
+  --white:       #FFFFFF;
+  --bg:          #F4F6F9;
+  --border:      #DDE3ED;
+  --border-light:#EEF1F6;
+  --text:        #1A2536;
+  --text-mid:    #3D4F66;
+  --text-muted:  #7A8A9E;
+  --danger:      #C0392B;
+  --font:        'Inter', system-ui, sans-serif;
+  --radius:      10px;
+  --radius-sm:   6px;
+  --sidebar-w:   252px;
+  --shadow-sm:   0 1px 3px rgba(30,58,95,0.07), 0 2px 8px rgba(30,58,95,0.04);
+  --shadow-md:   0 4px 16px rgba(30,58,95,0.11), 0 1px 4px rgba(30,58,95,0.06);
+  --shadow-lg:   0 10px 32px rgba(30,58,95,0.15);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TRANSITIONS ── */
+.screen {
+  position: fixed; inset: 0;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.36s ease, transform 0.36s ease;
+}
+.screen.active { opacity: 1; pointer-events: all; }
+#login-screen.leaving { opacity: 0; transform: scale(1.01); }
+#main-screen { transform: translateY(16px); background: var(--bg); }
+#main-screen.active { transform: translateY(0); }
+
+/* ── LOGIN ── */
+#login-screen {
+  display: flex;
+  background: var(--white);
+  z-index: 10;
+}
+
+.login-panel {
+  width: 42%;
+  flex-shrink: 0;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.login-panel::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(46,92,158,0.35) 0%, transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(46,92,158,0.25) 0%, transparent 50%);
+  pointer-events: none;
+}
+.login-panel::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.lp-top, .lp-bot { position: relative; z-index: 1; }
+.lp-mid {
+  position: relative; z-index: 1;
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; gap: 1.75rem;
+}
+
+.lp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 5px 14px 5px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.80);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.lp-badge img {
+  height: 22px;
+  width: auto;
+}
+
+.lp-brain-wrap {
+  display: flex;
+  justify-content: center;
+}
+.lp-brain {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
+.lp-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.lp-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.50);
+  margin-top: 5px;
+}
+
+.lp-divider { height: 1px; background: rgba(255,255,255,0.10); }
+
+.lp-quote {
+  font-size: 12px;
+  color: rgba(255,255,255,0.38);
+  font-style: italic;
+  line-height: 1.6;
+}
+.lp-footer { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+/* Formulario */
+.login-form-side {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 2.5rem;
+  background: var(--white);
+}
+.login-form-wrap { width: 100%; max-width: 380px; }
+
+.lf-heading {
+  font-size: 24px; font-weight: 700;
+  color: var(--text); letter-spacing: -0.02em; margin-bottom: 6px;
+}
+.lf-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 2rem; }
+
+.field { margin-bottom: 1rem; }
+.field label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: var(--text-mid); margin-bottom: 5px; letter-spacing: 0.03em;
+}
+.field input {
+  width: 100%; padding: 10px 13px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font); font-size: 14px;
+  color: var(--text); background: var(--white);
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field input::placeholder { color: var(--text-muted); }
+.field input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(46,92,158,0.12);
+}
+
+.btn-login {
+  width: 100%; padding: 11px;
+  background: var(--blue); color: var(--white);
+  border: none; border-radius: var(--radius-sm);
+  font-family: var(--font); font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  margin-top: 0.5rem;
+}
+.btn-login:hover { background: var(--blue-hover); box-shadow: 0 4px 12px rgba(46,92,158,0.30); }
+.btn-login:active { transform: scale(0.99); }
+
+.login-error {
+  font-size: 12px; color: var(--danger);
+  margin-top: 10px; min-height: 18px;
+  display: flex; align-items: center; gap: 5px;
+}
+.login-error svg { width: 13px; height: 13px; stroke: var(--danger); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+/* ── MAIN ── */
+#main-screen {
+  display: flex; overflow: hidden; z-index: 5;
+  background:var(--bg);
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--navy);
+  display: flex; flex-direction: column;
+  overflow-y: auto; overflow-x: hidden;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+.sb-header {
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
+}
+.sb-brand { display: flex; align-items: center; gap: 10px; }
+.sb-logo {
+  width: 32px; height: 32px;
+  object-fit: contain;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+.sb-name { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.2; }
+.sb-faculty { font-size: 10px; color: rgba(255,255,255,0.40); margin-top: 1px; }
+
+.sb-section { padding: 1rem 0.75rem 0.5rem; flex-shrink: 0; }
+.sb-section-label {
+  font-size: 10px; font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 0 0.5rem; margin-bottom: 0.35rem;
+}
+.sb-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.sb-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: background 0.12s;
+  color: rgba(255,255,255,0.60);
+  font-size: 13px; font-weight: 400;
+  user-select: none; border: none; background: none;
+  width: 100%; text-align: left; font-family: var(--font);
+}
+.sb-item svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; flex-shrink: 0; }
+.sb-item:hover { background: var(--navy-hover); color: rgba(255,255,255,0.85); }
+.sb-item.active { background: var(--navy-active); color: var(--white); font-weight: 500; }
+
+.sb-count {
+  margin-left: auto; font-size: 10px;
+  background: rgba(255,255,255,0.10); color: rgba(255,255,255,0.50);
+  border-radius: 999px; padding: 1px 7px; font-weight: 500;
+}
+.sb-item.active .sb-count { background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.75); }
+
+.sb-divider { margin: 0.75rem 1.25rem; height: 1px; background: rgba(255,255,255,0.07); flex-shrink: 0; }
+
+.sb-footer {
+  margin-top: auto; padding: 1rem 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.07); flex-shrink: 0;
+}
+.sb-user { display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: var(--radius-sm); }
+.sb-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.sb-user-info { flex: 1; min-width: 0; }
+.sb-user-name { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-user-role { font-size: 10px; color: rgba(255,255,255,0.38); }
+
+.btn-logout-sb {
+  background: none; border: none; cursor: pointer;
+  padding: 4px; border-radius: 4px;
+  color: rgba(255,255,255,0.35);
+  display: flex; align-items: center; justify-content: center;
+  transition: color 0.12s, background 0.12s;
+}
+.btn-logout-sb:hover { color: rgba(255,255,255,0.75); background: var(--navy-hover); }
+.btn-logout-sb svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+/* Contenido */
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+.content-topbar {
+  flex-shrink: 0; background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  padding: 0 2rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(30,58,95,0.05);
+}
+.ct-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); }
+.ct-breadcrumb svg { width: 14px; height: 14px; stroke: var(--text-muted); fill: none; stroke-width: 2; }
+.ct-breadcrumb strong { color: var(--text); font-weight: 600; }
+.ct-right { display: flex; align-items: center; gap: 10px; }
+.admin-pill {
+  font-size: 11px; font-weight: 600; padding: 3px 10px;
+  background: var(--blue-light); color: var(--blue);
+  border-radius: 999px; letter-spacing: 0.03em;
+}
+
+.content-body { flex: 1; overflow-y: auto; padding: 1.75rem 2rem; }
+.content-body::-webkit-scrollbar { width: 6px; }
+.content-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem; }
+.section-title { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.section-sub { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.section-count { font-size: 12px; color: var(--text-muted); background: var(--border-light); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+
+/* Video Grid */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+
+.video-card {
+  background: var(--white); border: 1px solid var(--border-light);
+  border-radius: var(--radius); overflow: hidden; cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
+  box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+}
+.video-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--blue); }
+
+.video-thumb {
+  width: 100%; aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--blue) 130%);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.vt-brain {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.vt-brain img {
+  width: 72%; height: 72%; object-fit: contain;
+  opacity: 0.10; mix-blend-mode: screen;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.video-card:hover .vt-brain img { opacity: 0.18; transform: scale(1.05); }
+
+.vt-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.play-btn {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.40);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.18s, border-color 0.18s, transform 0.18s;
+}
+.play-btn svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.80); margin-left: 2px; }
+.video-card:hover .play-btn { background: rgba(255,255,255,0.28); border-color: rgba(255,255,255,0.75); transform: scale(1.08); }
+
+.vt-num { position: absolute; top: 9px; left: 10px; font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.55); letter-spacing: 0.08em; z-index: 2; text-transform: uppercase; }
+.vt-new { position: absolute; top: 9px; right: 10px; font-size: 10px; font-weight: 700; padding: 2px 8px; background: var(--blue); color: white; border-radius: 999px; letter-spacing: 0.04em; text-transform: uppercase; z-index: 2; }
+
+.video-info { padding: 13px 14px 14px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.vi-module { font-size: 10px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.07em; }
+.vi-title { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+.vi-meta { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.vi-duration { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text-muted); }
+.vi-duration svg { width: 12px; height: 12px; stroke: var(--text-muted); fill: none; stroke-width: 2; }
+
+.empty-state { grid-column: 1/-1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 2rem; color: var(--text-muted); gap: 0.75rem; }
+.empty-state svg { width: 40px; height: 40px; stroke: var(--border); fill: none; stroke-width: 1.5; }
+
+/* Admin */
+.admin-section { margin-top: 2rem; }
+.admin-card { background: var(--white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow-sm); }
+.admin-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-light); }
+.admin-card-header svg { width: 15px; height: 15px; stroke: var(--blue); fill: none; stroke-width: 2; }
+.admin-card-title { font-size: 13px; font-weight: 600; color: var(--text); }
+.admin-card-count { margin-left: auto; font-size: 11px; background: var(--blue-light); color: var(--blue); border-radius: 999px; padding: 2px 9px; font-weight: 600; }
+.students-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.student-row { display: flex; align-items: center; gap: 9px; padding: 8px 10px; background: var(--bg); border-radius: var(--radius-sm); border: 1px solid var(--border-light); }
+.s-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--blue-light); color: var(--blue); font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.s-name { font-size: 13px; color: var(--text); font-weight: 500; }
+
+/* Modal */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,16,26,0.72); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; backdrop-filter: blur(2px); }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); width: 100%; max-width: 660px; overflow: hidden; box-shadow: var(--shadow-lg); animation: modal-in 0.22s ease; }
+@keyframes modal-in { from { opacity: 0; transform: scale(0.97) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+.modal-top { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.25rem; border-bottom: 1px solid var(--border-light); background: var(--bg); }
+.modal-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.modal-module { font-size: 11px; color: var(--blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+.modal-close { width: 28px; height: 28px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.1s; }
+.modal-close:hover { background: var(--bg); }
+.modal-close svg { width: 13px; height: 13px; stroke: var(--text-muted); fill: none; stroke-width: 2.5; }
+.modal-player { width: 100%; aspect-ratio: 16/9; background: #000; }
+.modal-player iframe { width: 100%; height: 100%; border: none; display: block; }
+.modal-body { padding: 0.9rem 1.25rem; display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--border-light); }
+.modal-desc { font-size: 13px; color: var(--text-muted); }
+.modal-duration { margin-left: auto; display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text-muted); white-space: nowrap; flex-shrink: 0; }
+.modal-duration svg { width: 13px; height: 13px; stroke: var(--text-muted); fill: none; stroke-width: 2; }
+
+@media (max-width: 700px) {
+  .login-panel { display: none; }
+  .sidebar { width: 200px; }
+  .content-topbar { padding: 0 1.25rem; }
+  .content-body { padding: 1.25rem; }
+  .video-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<!-- ═══ PANTALLA DE LOGIN ═══ -->
+<!-- LOGIN -->
 <div id="login-screen" class="screen active">
-  <div class="login-wrap">
-    <div class="login-brand">
-      <div class="brand-icon">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+  <div class="login-panel">
+    <div class="lp-top">
+      <div class="lp-badge">
+        <img src="logo-fmed.png" alt="FMed UdelaR" />
+        Facultad de Medicina · UdelaR
       </div>
-      <h1>MiCurso</h1>
-      <p>Ingresá con tu usuario para ver el contenido</p>
     </div>
-    <div class="login-card">
+    <div class="lp-mid">
+      <div class="lp-brain-wrap">
+        <img src="cerebro-byn.png" alt="Cerebro" class="lp-brain" />
+      </div>
+      <div>
+        <div class="lp-title">Neurociencia</div>
+        <div class="lp-subtitle">Facultad de Medicina · Universidad de la República</div>
+      </div>
+      <div class="lp-divider"></div>
+      <div class="lp-quote">"La neurociencia es la ciencia que nos permite entender cómo el cerebro crea la mente y controla la conducta."</div>
+    </div>
+    <div class="lp-bot">
+      <div class="lp-footer">© 2025 Facultad de Medicina · UdelaR · BCC3</div>
+    </div>
+  </div>
+
+  <div class="login-form-side">
+    <div class="login-form-wrap">
+      <div class="lf-heading">Bienvenido/a</div>
+      <div class="lf-sub">Ingresá tus credenciales para acceder al curso</div>
       <div class="field">
         <label>Usuario</label>
-        <input type="text" id="username" placeholder="tu@email.com" autocomplete="off" />
+        <input type="text" id="username" placeholder="Ingresá tu usuario" autocomplete="off" />
       </div>
       <div class="field">
         <label>Contraseña</label>
         <input type="password" id="password" placeholder="••••••••" />
       </div>
-      <button class="btn-login" onclick="login()">Ingresar</button>
-      <p class="login-error" id="login-error"></p>
+      <button class="btn-login" onclick="login()">Iniciar sesión</button>
+      <div class="login-error" id="login-error" style="visibility:hidden;">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="login-error-text"></span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ PANTALLA PRINCIPAL ═══ -->
+<!-- MAIN -->
 <div id="main-screen" class="screen">
-
-  <!-- topbar fijo, no scrollea -->
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-brand">
-        <div class="topbar-icon">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+  <aside class="sidebar">
+    <div class="sb-header">
+      <div class="sb-brand">
+        <img src="cerebro-byn.png" alt="Logo" class="sb-logo" />
+        <div>
+          <div class="sb-name">Neurociencia</div>
+          <div class="sb-faculty">UdelaR · Medicina BCC3</div>
         </div>
-        <span class="topbar-title">MiCurso</span>
-      </div>
-      <div class="topbar-right">
-        <div class="user-chip">
-          <div class="user-avatar" id="nav-avatar">--</div>
-          <span class="user-name" id="nav-username"></span>
-        </div>
-        <span class="admin-badge" id="admin-badge" style="display:none;">admin</span>
-        <button class="btn-logout" onclick="logout()">Salir</button>
       </div>
     </div>
-  </div>
+    <div class="sb-section">
+      <div class="sb-section-label">Módulos</div>
+      <nav class="sb-nav" id="sb-nav"></nav>
+    </div>
+    <div class="sb-divider"></div>
+    <div id="sb-admin-section" style="display:none;">
+      <div class="sb-section">
+        <div class="sb-section-label">Administración</div>
+        <nav class="sb-nav">
+          <button class="sb-item" onclick="scrollToAdmin()">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Estudiantes
+          </button>
+        </nav>
+      </div>
+      <div class="sb-divider"></div>
+    </div>
+    <div class="sb-footer">
+      <div class="sb-user">
+        <div class="sb-avatar" id="sb-avatar">--</div>
+        <div class="sb-user-info">
+          <div class="sb-user-name" id="sb-username">—</div>
+          <div class="sb-user-role" id="sb-role">—</div>
+        </div>
+        <button class="btn-logout-sb" onclick="logout()" title="Cerrar sesión">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
 
-  <!-- contenido centrado, scrollable solo si hay panel admin -->
   <div class="main-content">
-    <p class="section-label">Videos del curso</p>
-    <div class="video-grid" id="video-grid"></div>
-
-    <div id="admin-panel" style="display:none;">
-      <p class="section-label">Estudiantes inscriptos</p>
-      <div class="admin-section">
-        <div class="admin-header">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <span>Lista de alumnos</span>
+    <div class="content-topbar">
+      <div class="ct-breadcrumb">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Curso</span>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <strong id="ct-module-label">Todos los módulos</strong>
+      </div>
+      <div class="ct-right">
+        <span class="admin-pill" id="admin-pill" style="display:none;">Administrador</span>
+      </div>
+    </div>
+    <div class="content-body" id="content-body">
+      <div class="section-header">
+        <div>
+          <div class="section-title" id="section-title">Videos del curso</div>
+          <div class="section-sub" id="section-sub">Seleccioná un módulo o reproducí cualquier video</div>
         </div>
-        <div class="students-grid" id="students-list"></div>
+        <div class="section-count" id="section-count">0 videos</div>
+      </div>
+      <div class="video-grid" id="video-grid"></div>
+      <div id="admin-panel" style="display:none;">
+        <div class="admin-section">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div class="admin-card-title">Estudiantes inscriptos</div>
+              <div class="admin-card-count" id="student-count">0</div>
+            </div>
+            <div class="students-grid" id="students-list"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- ═══ MODAL DE VIDEO ═══ -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <div class="modal-top">
-      <span class="modal-title" id="modal-title"></span>
-      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">
+      <div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-module" id="modal-module"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">
         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="modal-player" id="modal-player"></div>
     <div class="modal-body">
-      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-duration">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span id="modal-duration-text"></span>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
-  /* ══════════════════════════════════════════════════════
-     USUARIOS
-     Para agregar un estudiante, copiá una línea y cambiá:
-       "usuario":  { pass: "contraseña", name: "Nombre Completo", role: "student" }
-     Para el admin cambiá role a "admin"
-  ══════════════════════════════════════════════════════ */
-  const USERS = {
-    "estudiante1": { pass: "pass123",  name: "Ana García",    role: "student" },
-    "estudiante2": { pass: "pass456",  name: "Carlos López",  role: "student" },
-    "maria":       { pass: "maria123", name: "María Torres",  role: "student" },
-    "admin":       { pass: "admin123", name: "Profesor",      role: "admin"   }
-  };
+const USERS = {
+  "estudiante1": { pass: "pass123",  name: "Ana García",   role: "student" },
+  "estudiante2": { pass: "pass456",  name: "Carlos López", role: "student" },
+  "maria":       { pass: "maria123", name: "María Torres", role: "student" },
+  "admin":       { pass: "admin123", name: "Profesor",     role: "admin"   }
+};
 
-  /* ══════════════════════════════════════════════════════
-     VIDEOS
-     Para agregar un video, copiá un bloque y cambiá:
-       title:    nombre del video
-       desc:     descripción breve
-       duration: duración (ej: "15 min")
-       ytId:     ID de YouTube (la parte después de ?v= en la URL)
-                 Ejemplo: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-                          → ytId: "dQw4w9WgXcQ"
-       isNew:    true si querés mostrar la etiqueta "nuevo"
-  ══════════════════════════════════════════════════════ */
-  const VIDEOS = [
-    {
-      id: 1,
-      title: "Introducción al curso",
-      desc: "Bienvenida y presentación del temario completo.",
-      duration: "8 min",
-      ytId: "dQw4w9WgXcQ",
-      isNew: true
-    },
-    {
-      id: 2,
-      title: "Módulo 1 – Fundamentos",
-      desc: "Conceptos base que vas a necesitar para el resto del curso.",
-      duration: "22 min",
-      ytId: "dQw4w9WgXcQ",
-      isNew: true
-    },
-    {
-      id: 3,
-      title: "Módulo 2 – Práctica",
-      desc: "Ejercicios y ejemplos guiados paso a paso.",
-      duration: "35 min",
-      ytId: "dQw4w9WgXcQ",
-      isNew: false
-    },
-    {
-      id: 4,
-      title: "Módulo 3 – Avanzado",
-      desc: "Técnicas avanzadas para profundizar el aprendizaje.",
-      duration: "41 min",
-      ytId: "dQw4w9WgXcQ",
-      isNew: false
-    }
-  ];
+const MODULES = [
+  { id: "all", label: "Todos los módulos", icon: "grid" },
+  { id: "m0",  label: "Introducción",      icon: "book-open" },
+  { id: "m1",  label: "Módulo 1",          icon: "layers" },
+  { id: "m2",  label: "Módulo 2",          icon: "cpu" },
+  { id: "m3",  label: "Módulo 3",          icon: "trending-up" }
+];
 
-  /* ══ LÓGICA ══ */
-  let currentUser = null;
+const VIDEOS = [
+  { id:1, moduleId:"m0", moduleLabel:"Introducción", title:"Introducción al curso",      desc:"Bienvenida y presentación del temario completo.", duration:"8 min",  ytId:"dQw4w9WgXcQ", isNew:true  },
+  { id:2, moduleId:"m1", moduleLabel:"Módulo 1",     title:"Potencial de Membrana",        desc:"Primera clase del curso: bases eléctricas del potencial de membrana neuronal.", duration:"22 min", ytId:"qz3Eq45-Cv0", isNew:true  },
+  { id:3, moduleId:"m2", moduleLabel:"Módulo 2",     title:"Neurociencia Aplicada",        desc:"Ejercicios y ejemplos guiados paso a paso.",       duration:"35 min", ytId:"dQw4w9WgXcQ", isNew:false },
+  { id:4, moduleId:"m3", moduleLabel:"Módulo 3",     title:"Técnicas Avanzadas",            desc:"Profundizamos en técnicas avanzadas del área.",    duration:"41 min", ytId:"dQw4w9WgXcQ", isNew:false }
+];
 
-  function login() {
-    const u = document.getElementById("username").value.trim();
-    const p = document.getElementById("password").value;
-    const err = document.getElementById("login-error");
-    if (USERS[u] && USERS[u].pass === p) {
-      currentUser = { username: u, ...USERS[u] };
-      err.textContent = "";
-      showMain();
-    } else {
-      err.textContent = "Usuario o contraseña incorrectos.";
-    }
+const ICONS = {
+  grid:        `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
+  "book-open": `<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+  layers:      `<svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+  cpu:         `<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>`,
+  "trending-up":`<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
+};
+
+let currentUser = null, activeModule = "all";
+
+function login() {
+  const u = document.getElementById("username").value.trim();
+  const p = document.getElementById("password").value;
+  const err = document.getElementById("login-error");
+  if (USERS[u] && USERS[u].pass === p) {
+    currentUser = { username: u, ...USERS[u] };
+    err.style.visibility = "hidden";
+    showMain();
+  } else {
+    document.getElementById("login-error-text").textContent = "Usuario o contraseña incorrectos.";
+    err.style.visibility = "visible";
+    document.getElementById("password").value = "";
+    document.getElementById("password").focus();
   }
+}
+document.getElementById("password").addEventListener("keydown", e => { if (e.key === "Enter") login(); });
+document.getElementById("username").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("password").focus(); });
 
-  document.getElementById("password").addEventListener("keydown", e => {
-    if (e.key === "Enter") login();
-  });
-
-  function showMain() {
-    const loginEl = document.getElementById("login-screen");
-    const mainEl  = document.getElementById("main-screen");
-
-    // prepara el contenido antes de animar
-    const initials = currentUser.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
-    document.getElementById("nav-avatar").textContent = initials;
-    document.getElementById("nav-username").textContent = currentUser.name;
-    if (currentUser.role === "admin") {
-      document.getElementById("admin-badge").style.display = "inline";
-      document.getElementById("admin-panel").style.display = "block";
-      renderStudents();
-    }
-    renderVideos();
-
-    // transición: login sale hacia arriba, main entra desde abajo
-    loginEl.classList.add("leaving");
-    setTimeout(() => {
-      loginEl.classList.remove("active", "leaving");
-      mainEl.classList.add("active");
-    }, 360);
+function showMain() {
+  const initials = currentUser.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
+  document.getElementById("sb-avatar").textContent   = initials;
+  document.getElementById("sb-username").textContent = currentUser.name;
+  document.getElementById("sb-role").textContent     = currentUser.role === "admin" ? "Administrador" : "Estudiante";
+  if (currentUser.role === "admin") {
+    document.getElementById("admin-pill").style.display       = "inline";
+    document.getElementById("sb-admin-section").style.display = "block";
+    document.getElementById("admin-panel").style.display      = "block";
+    renderStudents();
   }
+  buildSidebar(); renderVideos("all");
+  const loginEl = document.getElementById("login-screen");
+  const mainEl  = document.getElementById("main-screen");
+  loginEl.classList.add("leaving");
+  setTimeout(() => { loginEl.classList.remove("active","leaving"); mainEl.classList.add("active"); }, 340);
+}
 
-  function renderVideos() {
-    const grid = document.getElementById("video-grid");
-    grid.innerHTML = VIDEOS.map(v => `
-      <div class="video-card" onclick="openVideo(${v.id})" role="button" tabindex="0" aria-label="Ver: ${v.title}">
-        <div class="video-thumb">
-          <svg class="thumb-icon" viewBox="0 0 24 24" fill="none" stroke="#2A4A3E" stroke-width="1.5">
-            <polygon points="5 3 19 12 5 21 5 3"/>
-          </svg>
-          <div class="play-overlay">
-            <div class="play-circle">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-          </div>
-        </div>
-        <div class="video-info">
-          <div class="video-header">
-            <span class="video-title">${v.title}</span>
-            ${v.isNew ? '<span class="badge-new">nuevo</span>' : ''}
-          </div>
-          <div class="video-meta">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            ${v.duration}
-          </div>
-        </div>
+function buildSidebar() {
+  document.getElementById("sb-nav").innerHTML = MODULES.map(m => {
+    const count = m.id === "all" ? VIDEOS.length : VIDEOS.filter(v => v.moduleId === m.id).length;
+    return `<button class="sb-item ${m.id==='all'?'active':''}" data-module="${m.id}" onclick="selectModule('${m.id}',this)">
+      ${ICONS[m.icon]||ICONS.grid} ${m.label}
+      <span class="sb-count">${count}</span>
+    </button>`;
+  }).join("");
+}
+
+function selectModule(id, el) {
+  activeModule = id;
+  document.querySelectorAll(".sb-item").forEach(i => i.classList.remove("active"));
+  el.classList.add("active");
+  renderVideos(id);
+  const mod = MODULES.find(m => m.id === id);
+  document.getElementById("ct-module-label").textContent = mod ? mod.label : "";
+}
+
+function renderVideos(moduleId) {
+  const filtered = moduleId === "all" ? VIDEOS : VIDEOS.filter(v => v.moduleId === moduleId);
+  const mod = MODULES.find(m => m.id === moduleId);
+  document.getElementById("section-title").textContent = moduleId === "all" ? "Videos del curso" : mod?.label || "";
+  document.getElementById("section-sub").textContent   = moduleId === "all" ? "Seleccioná un módulo o reproducí cualquier video" : "Videos de este módulo";
+  document.getElementById("section-count").textContent = `${filtered.length} video${filtered.length!==1?'s':''}`;
+  const grid = document.getElementById("video-grid");
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>No hay videos en este módulo.</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(v => `
+    <div class="video-card" onclick="openVideo(${v.id})" role="button" tabindex="0">
+      <div class="video-thumb">
+        <div class="vt-brain"><img src="cerebro-byn.png" alt="" /></div>
+        <div class="vt-play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        <span class="vt-num">${v.moduleLabel}</span>
+        ${v.isNew ? '<span class="vt-new">Nuevo</span>' : ''}
       </div>
-    `).join("");
+      <div class="video-info">
+        <div class="vi-module">${v.moduleLabel}</div>
+        <div class="vi-title">${v.title}</div>
+        <div class="vi-meta"><div class="vi-duration"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${v.duration}</div></div>
+      </div>
+    </div>`).join("");
+  grid.querySelectorAll(".video-card").forEach(c => c.addEventListener("keydown", e => { if(e.key==="Enter"||e.key===" ") c.click(); }));
+}
 
-    grid.querySelectorAll(".video-card").forEach(card => {
-      card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") card.click(); });
+function renderStudents() {
+  const students = Object.entries(USERS).filter(([,v]) => v.role === "student");
+  document.getElementById("student-count").textContent = students.length;
+  document.getElementById("students-list").innerHTML = students.map(([,v]) => {
+    const ini = v.name.split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase();
+    return `<div class="student-row"><div class="s-avatar">${ini}</div><span class="s-name">${v.name}</span></div>`;
+  }).join("");
+}
+
+function openVideo(id) {
+  const v = VIDEOS.find(x => x.id === id);
+  document.getElementById("modal-title").textContent       = v.title;
+  document.getElementById("modal-module").textContent      = v.moduleLabel;
+  document.getElementById("modal-desc").textContent        = v.desc;
+  document.getElementById("modal-duration-text").textContent = v.duration;
+  document.getElementById("modal-player").innerHTML =
+    `<iframe src="https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
+  document.getElementById("modal-overlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+  document.getElementById("modal-player").innerHTML = "";
+  document.body.style.overflow = "";
+}
+
+document.getElementById("modal-overlay").addEventListener("click", e => { if(e.target===document.getElementById("modal-overlay")) closeModal(); });
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeModal(); });
+
+function scrollToAdmin() { document.getElementById("admin-panel").scrollIntoView({behavior:"smooth"}); }
+
+function logout() {
+  currentUser = null; activeModule = "all";
+  const loginEl = document.getElementById("login-screen");
+  const mainEl  = document.getElementById("main-screen");
+  mainEl.classList.remove("active");
+  setTimeout(() => {
+    loginEl.classList.add("active");
+    ["admin-panel","sb-admin-section","admin-pill"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "none";
     });
-  }
-
-  function renderStudents() {
-    const list = document.getElementById("students-list");
-    list.innerHTML = Object.entries(USERS)
-      .filter(([, v]) => v.role === "student")
-      .map(([, v]) => {
-        const ini = v.name.split(" ").map(w => w[0]).join("").slice(0,2).toUpperCase();
-        return `<div class="student-row"><div class="s-avatar">${ini}</div><span class="s-name">${v.name}</span></div>`;
-      }).join("");
-  }
-
-  function openVideo(id) {
-    const v = VIDEOS.find(x => x.id === id);
-    document.getElementById("modal-title").textContent = v.title;
-    document.getElementById("modal-desc").textContent = v.desc;
-    document.getElementById("modal-player").innerHTML =
-      `<iframe src="https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
-    document.getElementById("modal-overlay").classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal() {
-    document.getElementById("modal-overlay").classList.remove("open");
-    document.getElementById("modal-player").innerHTML = "";
-    document.body.style.overflow = "";
-  }
-
-  document.getElementById("modal-overlay").addEventListener("click", e => {
-    if (e.target === document.getElementById("modal-overlay")) closeModal();
-  });
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeModal();
-  });
-
-  function logout() {
-    currentUser = null;
-    const loginEl = document.getElementById("login-screen");
-    const mainEl  = document.getElementById("main-screen");
-
-    mainEl.classList.remove("active");
-    setTimeout(() => {
-      loginEl.classList.add("active");
-      document.getElementById("admin-panel").style.display = "none";
-      document.getElementById("admin-badge").style.display = "none";
-      document.getElementById("username").value = "";
-      document.getElementById("password").value = "";
-    }, 360);
-  }
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("login-error").style.visibility = "hidden";
+  }, 340);
+}
 </script>
 </body>
 </html>
