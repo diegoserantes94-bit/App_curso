@@ -209,25 +209,15 @@ html, body { height: 100%; overflow: hidden; font-family: var(--font); backgroun
 .empty-state { grid-column: 1/-1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 2rem; color: var(--text-muted); gap: 0.75rem; }
 .empty-state svg { width: 40px; height: 40px; stroke: var(--border); fill: none; stroke-width: 1.5; }
 
-/* MODALS */
+/* MODALS — controlados 100% por JS con display inline */
 .modal-overlay {
-  display: flex;
+  display: none;
   position: fixed; inset: 0;
   background: rgba(10,16,26,0.72);
   z-index: 200;
   align-items: center; justify-content: center;
   padding: 1.5rem;
   backdrop-filter: blur(2px);
-  /* Oculto via opacity+pointer-events para evitar bug con backdrop-filter */
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-.modal-overlay.open {
-  opacity: 1;
-  pointer-events: all;
-  visibility: visible;
 }
 .modal { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); width: 100%; overflow: hidden; box-shadow: var(--shadow-lg); animation: modal-in 0.22s ease; }
 .modal-sm { max-width: 440px; }
@@ -927,53 +917,58 @@ function renderStudents() {
 /* ══════════════════════════════════════
    MODAL: REPRODUCIR VIDEO
 ══════════════════════════════════════ */
+function showOverlay(id)  { document.getElementById(id).style.display = "flex"; }
+function hideOverlay(id)  { document.getElementById(id).style.display = "none"; }
+
 function openVideo(id) {
   const v = VIDEOS.find(x => x.id === id);
-  document.getElementById("modal-title").textContent        = v.title;
-  document.getElementById("modal-module").textContent       = v.moduleLabel;
-  document.getElementById("modal-desc").textContent         = v.desc;
+  document.getElementById("modal-title").textContent         = v.title;
+  document.getElementById("modal-module").textContent        = v.moduleLabel;
+  document.getElementById("modal-desc").textContent          = v.desc;
   document.getElementById("modal-duration-text").textContent = v.duration;
   document.getElementById("modal-player").innerHTML =
     `<iframe src="https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
-  document.getElementById("modal-overlay").classList.add("open");
-  document.body.style.overflow = "hidden";
+  showOverlay("modal-overlay");
 }
 function closeModal() {
-  document.getElementById("modal-overlay").classList.remove("open");
+  hideOverlay("modal-overlay");
   document.getElementById("modal-player").innerHTML = "";
-  document.body.style.overflow = "";
 }
-// Cerrar modales al hacer clic fuera
+// Cerrar al clic fuera del modal o con Escape
 ["modal-overlay","add-video-overlay","add-material-overlay","publish-overlay"].forEach(id => {
   document.getElementById(id).addEventListener("click", function(e) {
-    if (e.target === this) {
-      closeModal(); closeAddVideoModal(); closeAddMaterialModal(); closePublishModal();
+    if (e.target === this) hideOverlay(id);
+    if (id === "modal-overlay" && e.target === this) {
+      document.getElementById("modal-player").innerHTML = "";
     }
   });
 });
-document.addEventListener("keydown", e => { if(e.key==="Escape") { closeModal(); closeAddVideoModal(); closeAddMaterialModal(); closePublishModal(); } });
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    hideOverlay("modal-overlay");
+    hideOverlay("add-video-overlay");
+    hideOverlay("add-material-overlay");
+    hideOverlay("publish-overlay");
+    document.getElementById("modal-player").innerHTML = "";
+  }
+});
 
 /* ══════════════════════════════════════
    MODAL: AGREGAR VIDEO
 ══════════════════════════════════════ */
 function openAddVideoModal() {
-  // Poblar el select de módulos (excluyendo "all")
   const sel = document.getElementById("av-module");
   sel.innerHTML = MODULES.filter(m => m.id !== "all").map(m =>
     `<option value="${m.id}" ${m.id === activeModule && activeModule !== "all" ? "selected" : ""}>${m.label}</option>`
   ).join("");
-  document.getElementById("add-video-overlay").classList.add("open");
+  showOverlay("add-video-overlay");
 }
 function closeAddVideoModal() {
-  const overlay = document.getElementById("add-video-overlay");
-  if (!overlay) return;
-  overlay.classList.remove("open");
+  hideOverlay("add-video-overlay");
   ["av-title","av-url","av-desc","av-duration"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = "";
+    const el = document.getElementById(id); if (el) el.value = "";
   });
-  const cb = document.getElementById("av-new");
-  if (cb) cb.checked = true;
+  const cb = document.getElementById("av-new"); if (cb) cb.checked = true;
 }
 function addVideo() {
   const title    = document.getElementById("av-title").value.trim();
@@ -1019,15 +1014,12 @@ function openAddMaterialModal() {
   sel.innerHTML = MODULES.filter(m => m.id !== "all").map(m =>
     `<option value="${m.id}" ${m.id === activeModule && activeModule !== "all" ? "selected" : ""}>${m.label}</option>`
   ).join("");
-  document.getElementById("add-material-overlay").classList.add("open");
+  showOverlay("add-material-overlay");
 }
 function closeAddMaterialModal() {
-  const overlay = document.getElementById("add-material-overlay");
-  if (!overlay) return;
-  overlay.classList.remove("open");
+  hideOverlay("add-material-overlay");
   ["am-title","am-url","am-desc"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.value = "";
+    const el = document.getElementById(id); if (el) el.value = "";
   });
 }
 function addMaterial() {
@@ -1065,13 +1057,11 @@ function openPublishModal() {
   const saved = localStorage.getItem('gh_token');
   if (saved) document.getElementById("pub-token").value = saved;
   document.getElementById("publish-status").innerHTML = "";
-  document.getElementById("add-video-overlay").classList.remove("open");
-  document.getElementById("publish-overlay").classList.add("open");
+  hideOverlay("add-video-overlay");
+  showOverlay("publish-overlay");
 }
 function closePublishModal() {
-  const overlay = document.getElementById("publish-overlay");
-  if (!overlay) return;
-  overlay.classList.remove("open");
+  hideOverlay("publish-overlay");
   const status = document.getElementById("publish-status");
   if (status) status.innerHTML = "";
 }
