@@ -528,8 +528,8 @@ html, body { height: 100%; overflow: hidden; font-family: var(--font); backgroun
       </label>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeAddVideoModal()">Cancelar</button>
-      <button class="btn btn-primary" onclick="addVideo()">
+      <button type="button" class="btn btn-secondary" onclick="closeAddVideoModal()">Cancelar</button>
+      <button type="button" class="btn btn-primary" onclick="addVideo()">
         <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Agregar video
       </button>
@@ -580,8 +580,8 @@ html, body { height: 100%; overflow: hidden; font-family: var(--font); backgroun
       </div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeAddMaterialModal()">Cancelar</button>
-      <button class="btn btn-primary" onclick="addMaterial()">
+      <button type="button" class="btn btn-secondary" onclick="closeAddMaterialModal()">Cancelar</button>
+      <button type="button" class="btn btn-primary" onclick="addMaterial()">
         <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Agregar material
       </button>
@@ -621,7 +621,7 @@ html, body { height: 100%; overflow: hidden; font-family: var(--font); backgroun
       <div class="publish-status" id="publish-status"></div>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closePublishModal()">Cancelar</button>
+      <button type="button" class="btn btn-secondary" onclick="closePublishModal()">Cancelar</button>
       <button class="btn btn-success" id="btn-publish" onclick="publishToGitHub()">
         <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
         Publicar
@@ -926,7 +926,14 @@ function closeModal() {
   document.getElementById("modal-player").innerHTML = "";
   document.body.style.overflow = "";
 }
-document.getElementById("modal-overlay").addEventListener("click", e => { if(e.target===document.getElementById("modal-overlay")) closeModal(); });
+// Cerrar modales al hacer clic fuera
+["modal-overlay","add-video-overlay","add-material-overlay","publish-overlay"].forEach(id => {
+  document.getElementById(id).addEventListener("click", function(e) {
+    if (e.target === this) {
+      closeModal(); closeAddVideoModal(); closeAddMaterialModal(); closePublishModal();
+    }
+  });
+});
 document.addEventListener("keydown", e => { if(e.key==="Escape") { closeModal(); closeAddVideoModal(); closeAddMaterialModal(); closePublishModal(); } });
 
 /* ══════════════════════════════════════
@@ -941,10 +948,15 @@ function openAddVideoModal() {
   document.getElementById("add-video-overlay").classList.add("open");
 }
 function closeAddVideoModal() {
-  document.getElementById("add-video-overlay").classList.remove("open");
-  // Limpiar campos
-  ["av-title","av-url","av-desc","av-duration"].forEach(id => document.getElementById(id).value = "");
-  document.getElementById("av-new").checked = true;
+  const overlay = document.getElementById("add-video-overlay");
+  if (!overlay) return;
+  overlay.classList.remove("open");
+  ["av-title","av-url","av-desc","av-duration"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+  const cb = document.getElementById("av-new");
+  if (cb) cb.checked = true;
 }
 function addVideo() {
   const title    = document.getElementById("av-title").value.trim();
@@ -993,8 +1005,13 @@ function openAddMaterialModal() {
   document.getElementById("add-material-overlay").classList.add("open");
 }
 function closeAddMaterialModal() {
-  document.getElementById("add-material-overlay").classList.remove("open");
-  ["am-title","am-url","am-desc"].forEach(id => document.getElementById(id).value = "");
+  const overlay = document.getElementById("add-material-overlay");
+  if (!overlay) return;
+  overlay.classList.remove("open");
+  ["am-title","am-url","am-desc"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
 }
 function addMaterial() {
   const title    = document.getElementById("am-title").value.trim();
@@ -1035,8 +1052,11 @@ function openPublishModal() {
   document.getElementById("publish-overlay").classList.add("open");
 }
 function closePublishModal() {
-  document.getElementById("publish-overlay").classList.remove("open");
-  document.getElementById("publish-status").innerHTML = "";
+  const overlay = document.getElementById("publish-overlay");
+  if (!overlay) return;
+  overlay.classList.remove("open");
+  const status = document.getElementById("publish-status");
+  if (status) status.innerHTML = "";
 }
 function toggleToken() {
   const inp = document.getElementById("pub-token");
