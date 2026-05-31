@@ -230,6 +230,32 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .pw-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:2px;color:var(--text-muted);display:flex}
 .pw-toggle svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 
+/* FILE UPLOAD */
+.upload-tabs{display:flex;background:var(--bg);border-radius:var(--radius-sm);padding:3px;margin-bottom:1rem}
+.upload-tab{flex:1;padding:6px 8px;border:none;background:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;color:var(--text-muted);transition:background .12s,color .12s}
+.upload-tab.active{background:var(--white);color:var(--text);box-shadow:var(--sh-sm)}
+.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
+.upload-zone:hover,.upload-zone.drag-over{border-color:var(--blue);background:var(--blue-light)}
+.upload-zone svg{width:28px;height:28px;stroke:var(--text-muted);fill:none;stroke-width:1.5;margin-bottom:.4rem}
+.upload-zone-text{font-size:13px;color:var(--text-muted)}
+.upload-zone-link{color:var(--blue);font-weight:600}
+.upload-zone-hint{font-size:11px;color:var(--text-muted);margin-top:3px}
+.upload-preview{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg);border:1px solid var(--border-light);border-radius:var(--radius-sm)}
+.upload-file-icon{width:32px;height:32px;background:var(--danger-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.upload-file-icon svg{width:16px;height:16px;stroke:var(--danger);fill:none;stroke-width:2}
+.upload-file-info{flex:1;min-width:0}
+.upload-file-name{font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.upload-file-size{font-size:11px;color:var(--text-muted)}
+.upload-clear{background:none;border:none;cursor:pointer;color:var(--text-muted);width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.upload-clear:hover{background:var(--border-light);color:var(--text)}
+.upload-clear svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5}
+.upload-progress{margin-top:.75rem}
+.upload-progress-bar{height:4px;background:var(--border-light);border-radius:2px;overflow:hidden;margin-bottom:4px}
+.upload-progress-fill{height:100%;background:var(--blue);border-radius:2px;transition:width .3s ease}
+.upload-progress-text{font-size:11px;color:var(--text-muted)}
+.upload-token{margin-top:.75rem;padding:.75rem;background:var(--warn-light);border-radius:var(--radius-sm)}
+.upload-token-label{font-size:11px;font-weight:600;color:var(--warn);margin-bottom:6px}
+
 @media(max-width:700px){.login-panel{display:none}.sidebar{width:200px}.content-topbar{padding:0 1.25rem}.content-body{padding:1.25rem}.video-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
 </style>
 </head>
@@ -417,12 +443,52 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
         <div class="form-group"><label class="form-label">Módulo <span class="req">*</span></label><select class="form-select" id="am-module"></select></div>
         <div class="form-group"><label class="form-label">Tipo</label>
           <select class="form-select" id="am-type">
-            <option value="link">Enlace web</option><option value="pdf">PDF</option><option value="slides">Presentación</option><option value="book">Libro / Capítulo</option>
+            <option value="pdf">PDF</option>
+            <option value="link">Enlace web</option>
+            <option value="slides">Presentación</option>
+            <option value="book">Libro / Capítulo</option>
           </select>
         </div>
       </div>
-      <div class="form-group"><label class="form-label">URL <span class="req">*</span></label><input type="text" class="form-input" id="am-url" placeholder="https://..." /><div class="form-hint">Enlace al recurso (PDF, sitio web, Google Drive, etc.)</div></div>
-      <div class="form-group"><label class="form-label">Descripción</label><textarea class="form-textarea" id="am-desc" placeholder="Ej: Capítulos 1 al 3 – Lectura obligatoria" style="min-height:60px"></textarea></div>
+      <!-- Tabs -->
+      <div class="upload-tabs">
+        <button type="button" class="upload-tab active" id="am-tab-upload">⬆ Subir archivo</button>
+        <button type="button" class="upload-tab" id="am-tab-url">🔗 Enlace externo</button>
+      </div>
+      <!-- Panel subir -->
+      <div id="am-panel-upload">
+        <input type="file" id="am-file-input" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" style="display:none" />
+        <div class="upload-zone" id="am-upload-zone">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <div class="upload-zone-text">Arrastrá el archivo aquí o <span class="upload-zone-link">elegí uno</span></div>
+          <div class="upload-zone-hint">PDF, Word, PowerPoint (máx. 50MB)</div>
+        </div>
+        <div class="upload-preview" id="am-preview" style="display:none">
+          <div class="upload-file-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="upload-file-info"><div class="upload-file-name" id="am-file-name"></div><div class="upload-file-size" id="am-file-size"></div></div>
+          <button type="button" class="upload-clear" id="am-file-clear"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <div id="am-token-wrap" style="display:none">
+          <div class="upload-token">
+            <div class="upload-token-label">🔑 Necesitás tu GitHub Token para subir el archivo</div>
+            <input type="password" class="form-input" id="am-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
+            <div class="form-hint" style="margin-top:4px">Se guardará para futuros uploads</div>
+          </div>
+        </div>
+        <div class="upload-progress" id="am-progress" style="display:none">
+          <div class="upload-progress-bar"><div class="upload-progress-fill" id="am-progress-fill" style="width:0%"></div></div>
+          <div class="upload-progress-text" id="am-progress-text">Subiendo...</div>
+        </div>
+      </div>
+      <!-- Panel enlace -->
+      <div id="am-panel-url" style="display:none">
+        <div class="form-group">
+          <label class="form-label">URL <span class="req">*</span></label>
+          <input type="text" class="form-input" id="am-url" placeholder="https://..." />
+          <div class="form-hint">Enlace al recurso (Google Drive, sitio web, etc.)</div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:.25rem"><label class="form-label">Descripción</label><textarea class="form-textarea" id="am-desc" placeholder="Ej: Capítulos 1 al 3 – Lectura obligatoria" style="min-height:60px"></textarea></div>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" id="am-cancel">Cancelar</button>
@@ -713,21 +779,122 @@ function saveVideo() {
 }
 
 /* ══════════ AGREGAR MATERIAL ══════════ */
-function openAddMaterial() { populateModSelect('am-module', activeModule); openModal('modal-add-material'); }
+let amMode = 'upload';
+let amFile = null;
+
+function openAddMaterial() {
+  populateModSelect('am-module', activeModule);
+  switchAmTab('upload');
+  const token = localStorage.getItem('gh_token');
+  document.getElementById('am-token-wrap').style.display = token ? 'none' : 'block';
+  openModal('modal-add-material');
+}
+
+function switchAmTab(mode) {
+  amMode = mode;
+  document.getElementById('am-tab-upload').classList.toggle('active', mode === 'upload');
+  document.getElementById('am-tab-url').classList.toggle('active', mode === 'url');
+  document.getElementById('am-panel-upload').style.display = mode === 'upload' ? 'block' : 'none';
+  document.getElementById('am-panel-url').style.display   = mode === 'url'    ? 'block' : 'none';
+  if (mode === 'url')    document.getElementById('am-type').value = 'link';
+  if (mode === 'upload') document.getElementById('am-type').value = 'pdf';
+}
+
+function formatFileSize(bytes) {
+  if (bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
+  return (bytes/(1024*1024)).toFixed(1) + ' MB';
+}
+
+function handleFileSelect(file) {
+  if (!file) return;
+  if (file.size > 50 * 1024 * 1024) { alert('El archivo supera el límite de 50MB.'); return; }
+  amFile = file;
+  const ext = file.name.split('.').pop().toLowerCase();
+  var typeMap = { pdf:'pdf', ppt:'slides', pptx:'slides', doc:'book', docx:'book', xls:'link', xlsx:'link' };
+  if (typeMap[ext]) document.getElementById('am-type').value = typeMap[ext];
+  document.getElementById('am-upload-zone').style.display = 'none';
+  document.getElementById('am-preview').style.display     = 'flex';
+  document.getElementById('am-file-name').textContent = file.name;
+  document.getElementById('am-file-size').textContent = formatFileSize(file.size);
+  if (!document.getElementById('am-title').value) {
+    document.getElementById('am-title').value = file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+  }
+}
+
+function readFileAsBase64(file) {
+  return new Promise(function(resolve, reject) {
+    var reader = new FileReader();
+    reader.onload  = function() { resolve(reader.result.split(',')[1]); };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+async function uploadFileToGitHub(file, token) {
+  var safeName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, '_');
+  var path = 'materiales/' + safeName;
+  var api  = 'https://api.github.com/repos/' + REPO.owner + '/' + REPO.name + '/contents/' + path;
+  var hdrs = { 'Authorization':'token ' + token, 'Content-Type':'application/json' };
+  var sha = null;
+  var gr = await fetch(api, { headers:hdrs });
+  if (gr.ok) { sha = (await gr.json()).sha; }
+  var content = await readFileAsBase64(file);
+  var body = { message:'Subir material: ' + safeName, content:content, branch:REPO.branch };
+  if (sha) body.sha = sha;
+  var pr = await fetch(api, { method:'PUT', headers:hdrs, body:JSON.stringify(body) });
+  if (!pr.ok) { var e = await pr.json(); throw new Error(e.message || 'Error al subir el archivo'); }
+  return 'materiales/' + safeName;
+}
+
 function closeAddMaterial() {
   closeModal('modal-add-material');
   ['am-title','am-url','am-desc'].forEach(function(id){ document.getElementById(id).value = ''; });
+  amFile = null;
+  document.getElementById('am-file-input').value = '';
+  document.getElementById('am-upload-zone').style.display = 'block';
+  document.getElementById('am-preview').style.display     = 'none';
+  document.getElementById('am-progress').style.display    = 'none';
+  document.getElementById('am-progress-fill').style.width = '0%';
 }
-function saveMaterial() {
-  const title    = document.getElementById('am-title').value.trim();
-  const url      = document.getElementById('am-url').value.trim();
-  const moduleId = document.getElementById('am-module').value;
-  const type     = document.getElementById('am-type').value;
-  const desc     = document.getElementById('am-desc').value.trim();
+
+async function saveMaterial() {
+  var title    = document.getElementById('am-title').value.trim();
+  var moduleId = document.getElementById('am-module').value;
+  var type     = document.getElementById('am-type').value;
+  var desc     = document.getElementById('am-desc').value.trim();
   if (!title) { alert('El título es obligatorio.'); return; }
-  if (!url)   { alert('La URL es obligatoria.'); return; }
+
+  var url = '';
+
+  if (amMode === 'upload') {
+    if (!amFile) { alert('Seleccioná un archivo para subir.'); return; }
+    var token = localStorage.getItem('gh_token') || document.getElementById('am-token').value.trim();
+    if (!token) { alert('Ingresá tu GitHub Token para subir el archivo.'); return; }
+    localStorage.setItem('gh_token', token);
+    var saveBtn = document.getElementById('am-save');
+    saveBtn.disabled = true; saveBtn.textContent = 'Subiendo...';
+    document.getElementById('am-progress').style.display = 'block';
+    document.getElementById('am-progress-fill').style.width = '40%';
+    document.getElementById('am-progress-text').textContent = 'Subiendo a GitHub...';
+    try {
+      url = await uploadFileToGitHub(amFile, token);
+      document.getElementById('am-progress-fill').style.width = '100%';
+      document.getElementById('am-progress-text').textContent = '¡Archivo subido!';
+    } catch(e) {
+      document.getElementById('am-progress').style.display = 'none';
+      saveBtn.disabled = false;
+      saveBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:white;fill:none;stroke-width:2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar material';
+      alert('Error al subir: ' + e.message); return;
+    }
+    saveBtn.disabled = false;
+    saveBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:white;fill:none;stroke-width:2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar material';
+  } else {
+    url = document.getElementById('am-url').value.trim();
+    if (!url) { alert('La URL es obligatoria.'); return; }
+  }
+
   if (!MATERIALS[moduleId]) MATERIALS[moduleId] = [];
-  const allMats = [].concat.apply([], Object.values(MATERIALS));
+  var allMats = [].concat.apply([], Object.values(MATERIALS));
   MATERIALS[moduleId].push({ id:nextId(allMats), moduleId, title, url, type, desc });
   saveLocal(); renderMaterials(activeModule); closeAddMaterial();
 }
@@ -824,6 +991,26 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('am-cancel').addEventListener('click', closeAddMaterial);
   document.getElementById('am-save').addEventListener('click', saveMaterial);
   document.getElementById('modal-add-material').addEventListener('click', function(e){ if(e.target===this) closeAddMaterial(); });
+  // Tabs
+  document.getElementById('am-tab-upload').addEventListener('click', function(){ switchAmTab('upload'); });
+  document.getElementById('am-tab-url').addEventListener('click', function(){ switchAmTab('url'); });
+  // Zona de upload
+  var amZone = document.getElementById('am-upload-zone');
+  var amInput = document.getElementById('am-file-input');
+  amZone.addEventListener('click', function(){ amInput.click(); });
+  amInput.addEventListener('change', function(){ if (this.files[0]) handleFileSelect(this.files[0]); this.value = ''; });
+  document.getElementById('am-file-clear').addEventListener('click', function() {
+    amFile = null; amInput.value = '';
+    document.getElementById('am-upload-zone').style.display = 'block';
+    document.getElementById('am-preview').style.display     = 'none';
+  });
+  // Drag & drop
+  amZone.addEventListener('dragover',  function(e){ e.preventDefault(); amZone.classList.add('drag-over'); });
+  amZone.addEventListener('dragleave', function(){ amZone.classList.remove('drag-over'); });
+  amZone.addEventListener('drop', function(e){
+    e.preventDefault(); amZone.classList.remove('drag-over');
+    if (e.dataTransfer.files[0]) handleFileSelect(e.dataTransfer.files[0]);
+  });
 
   // Modal publicar
   document.getElementById('pub-close').addEventListener('click', closePublish);
