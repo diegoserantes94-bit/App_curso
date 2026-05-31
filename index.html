@@ -210,8 +210,25 @@ html, body { height: 100%; overflow: hidden; font-family: var(--font); backgroun
 .empty-state svg { width: 40px; height: 40px; stroke: var(--border); fill: none; stroke-width: 1.5; }
 
 /* MODALS */
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,16,26,0.72); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; backdrop-filter: blur(2px); }
-.modal-overlay.open { display: flex; }
+.modal-overlay {
+  display: flex;
+  position: fixed; inset: 0;
+  background: rgba(10,16,26,0.72);
+  z-index: 200;
+  align-items: center; justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(2px);
+  /* Oculto via opacity+pointer-events para evitar bug con backdrop-filter */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
 .modal { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); width: 100%; overflow: hidden; box-shadow: var(--shadow-lg); animation: modal-in 0.22s ease; }
 .modal-sm { max-width: 440px; }
 .modal-md { max-width: 520px; }
