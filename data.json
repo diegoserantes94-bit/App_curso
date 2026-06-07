@@ -1,0 +1,49 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "moduleId": "m0",
+      "moduleLabel": "Introducción",
+      "title": "Introducción al curso",
+      "desc": "Bienvenida y presentación del temario completo.",
+      "duration": "8 min",
+      "ytId": "dQw4w9WgXcQ",
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "moduleId": "m1",
+      "moduleLabel": "Módulo 1",
+      "title": "Potencial de Membrana",
+      "desc": "Primera clase del curso: bases eléctricas del potencial de membrana neuronal.",
+      "duration": "22 min",
+      "ytId": "qz3Eq45-Cv0",
+      "isNew": true
+    },
+    {
+      "id": 5,
+      "moduleId": "m1",
+      "moduleLabel": "Módulo 1",
+      "title": "Propiedades electricas pasivas de las neuronas",
+      "desc": "",
+      "duration": "49 min",
+      "ytId": "w7pWHLoyXM8",
+      "isNew": true
+    }
+  ],
+  "materials": {
+    "m0": [],
+    "m1": [
+      {
+        "id": 1,
+        "moduleId": "m1",
+        "title": "Potencial de membrana resumen",
+        "url": "materiales/Potencial_de_membrana_resumen.pdf",
+        "type": "pdf",
+        "desc": ""
+      }
+    ],
+    "m2": [],
+    "m3": []
+  }
+}
