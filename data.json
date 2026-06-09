@@ -41,6 +41,22 @@
         "url": "materiales/Potencial_de_membrana_resumen.pdf",
         "type": "pdf",
         "desc": ""
+      },
+      {
+        "id": 2,
+        "moduleId": "m1",
+        "title": "Propiedades pasivas resumen",
+        "url": "materiales/Propiedades_pasivas_resumen__1_.pdf",
+        "type": "pdf",
+        "desc": ""
+      },
+      {
+        "id": 3,
+        "moduleId": "m1",
+        "title": "Potencial de accion resumen",
+        "url": "materiales/Potencial_de_accion_resumen__1_.pdf",
+        "type": "pdf",
+        "desc": ""
       }
     ],
     "m2": [],
