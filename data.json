@@ -1,5 +1,39 @@
 {
-  "videos": [],
+  "videos": [
+    {
+      "id": 1,
+      "moduleId": "m1",
+      "moduleLabel": "Módulo 1",
+      "title": "potencial de membrana",
+      "desc": "",
+      "duration": "31 min",
+      "platform": "vimeo",
+      "vimeoId": "1204950215",
+      "isNew": false
+    },
+    {
+      "id": 2,
+      "moduleId": "m1",
+      "moduleLabel": "Módulo 1",
+      "title": "Propiedades pasivas",
+      "desc": "",
+      "duration": "49 min",
+      "platform": "vimeo",
+      "vimeoId": "1204957713",
+      "isNew": false
+    },
+    {
+      "id": 3,
+      "moduleId": "m1",
+      "moduleLabel": "Módulo 1",
+      "title": "Potencial de accion",
+      "desc": "",
+      "duration": "35 min",
+      "platform": "vimeo",
+      "vimeoId": "1204956536",
+      "isNew": false
+    }
+  ],
   "materials": {
     "m0": [],
     "m1": [
