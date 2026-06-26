@@ -187,6 +187,13 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .btn-add-user{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:white;background:var(--blue);border:none;border-radius:var(--radius-sm);padding:6px 12px;cursor:pointer;font-family:var(--font);margin-top:.75rem}
 .btn-add-user:hover{background:var(--blue-hover)}
 .btn-add-user svg{width:13px;height:13px;stroke:white;fill:none;stroke-width:2.5}
+.btn-approve{background:none;border:1px solid var(--success);color:var(--success);border-radius:var(--radius-sm);font-size:11px;font-weight:600;padding:3px 10px;cursor:pointer;font-family:var(--font);white-space:nowrap;flex-shrink:0}
+.btn-approve:hover{background:var(--success-light)}
+.reg-success{text-align:center;padding:1rem 0}
+.reg-success-icon{width:52px;height:52px;border-radius:50%;background:var(--success-light);display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
+.reg-success-icon svg{width:26px;height:26px;stroke:var(--success);fill:none;stroke-width:2.5}
+.reg-success-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:.5rem}
+.reg-success-msg{font-size:13px;color:var(--text-muted);line-height:1.6}
 
 /* MODALS */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,26,.72);z-index:200;align-items:center;justify-content:center;padding:1.5rem}
@@ -390,6 +397,14 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
       </div>
       <div id="admin-panel" style="display:none">
         <div class="admin-section">
+          <div class="admin-card" id="pending-card" style="margin-bottom:1rem">
+            <div class="admin-card-header">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div class="admin-card-title">Solicitudes pendientes</div>
+              <div class="admin-card-count" id="pending-count">0</div>
+            </div>
+            <div class="students-grid" id="pending-list"><p style="font-size:13px;color:var(--text-muted)">Sin solicitudes pendientes.</p></div>
+          </div>
           <div class="admin-card">
             <div class="admin-card-header">
               <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -420,8 +435,13 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
       <div class="form-group"><label class="form-label">Contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass" placeholder="Mínimo 6 caracteres" /></div>
       <div class="form-group"><label class="form-label">Confirmar contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass2" placeholder="Repetí tu contraseña" /></div>
       <div class="login-error" id="reg-error" style="visibility:hidden"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span id="reg-error-msg"></span></div>
+      <div class="reg-success" id="reg-success" style="display:none">
+        <div class="reg-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="reg-success-title">¡Registro exitoso!</div>
+        <div class="reg-success-msg">Tu cuenta está <strong>pendiente de aprobación</strong>.<br>El profesor habilitará tu acceso una vez confirmado el pago.</div>
+      </div>
     </div>
-    <div class="modal-footer">
+    <div class="modal-footer" id="reg-footer">
       <button type="button" class="btn btn-secondary" id="reg-cancel">Cancelar</button>
       <button type="button" class="btn btn-primary" id="reg-save">Crear cuenta</button>
     </div>
@@ -693,6 +713,12 @@ async function doLogin() {
       btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
     }
     const data = docSnap.data();
+    if (data.role === 'pending') {
+      await auth.signOut();
+      document.getElementById('login-error-msg').textContent = 'Tu cuenta está pendiente de aprobación. El profesor habilitará tu acceso una vez confirmado el pago.';
+      errEl.style.visibility = 'visible';
+      btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
+    }
     currentUser = { uid: cred.user.uid, email: cred.user.email, name: data.name || email, role: data.role || 'student' };
     btn.disabled = false; btn.textContent = 'Iniciar sesión';
     showMain();
@@ -713,7 +739,14 @@ function openRegister() {
   document.getElementById('reg-error').style.visibility = 'hidden';
   openModal('modal-register');
 }
-function closeRegister() { closeModal('modal-register'); }
+function closeRegister() {
+  closeModal('modal-register');
+  // Resetear estado del modal
+  ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).parentElement.style.display=''; });
+  document.getElementById('reg-success').style.display = 'none';
+  document.getElementById('reg-footer').style.display  = '';
+  document.getElementById('reg-error').style.visibility = 'hidden';
+}
 
 async function doRegister() {
   const name  = document.getElementById('reg-name').value.trim();
@@ -730,11 +763,14 @@ async function doRegister() {
   errEl.style.visibility = 'hidden';
   try {
     const cred = await auth.createUserWithEmailAndPassword(email, pass);
-    await db.collection('users').doc(cred.user.uid).set({ name, email, role:'student', createdAt: firebase.firestore.FieldValue.serverTimestamp() });
-    currentUser = { uid: cred.user.uid, email, name, role: 'student' };
+    await db.collection('users').doc(cred.user.uid).set({ name, email, role:'pending', createdAt: firebase.firestore.FieldValue.serverTimestamp() });
+    await auth.signOut();
     btn.disabled = false; btn.textContent = 'Crear cuenta';
-    closeRegister();
-    showMain();
+    // Mostrar pantalla de éxito en lugar de entrar al curso
+    ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).parentElement.style.display='none'; });
+    document.getElementById('reg-error').style.visibility = 'hidden';
+    document.getElementById('reg-success').style.display  = 'block';
+    document.getElementById('reg-footer').style.display   = 'none';
   } catch(e) {
     var msg = 'Error (' + (e.code || 'desconocido') + '): ' + e.message;
     showRegErr(msg); btn.disabled = false; btn.textContent = 'Crear cuenta';
@@ -755,6 +791,7 @@ async function showMain() {
     document.getElementById('btn-add-mat-inline').style.display = 'flex';
     document.getElementById('main-screen').classList.add('admin-mode');
     loadFirestoreUsers();
+    loadPendingUsers();
   }
   buildSidebar(); renderVideos('all');
   const loginEl = document.getElementById('login-screen');
@@ -872,6 +909,41 @@ function renderMaterials(moduleId) {
 }
 
 /* ══════════ USUARIOS (ADMIN) ══════════ */
+async function loadPendingUsers() {
+  const list  = document.getElementById('pending-list');
+  const count = document.getElementById('pending-count');
+  try {
+    const snap = await db.collection('users').where('role','==','pending').get();
+    count.textContent = snap.size;
+    if (snap.empty) {
+      list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">Sin solicitudes pendientes.</p>';
+      return;
+    }
+    list.innerHTML = '';
+    snap.forEach(function(doc) {
+      const u = doc.data();
+      const ini = (u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase();
+      const row = document.createElement('div');
+      row.className = 'user-row';
+      row.innerHTML =
+        '<div class="s-avatar" style="background:var(--warn-light);color:var(--warn)">' + ini + '</div>' +
+        '<div class="user-row-info">' +
+          '<div class="s-name">' + (u.name || '—') + '</div>' +
+          '<div class="user-email">' + (u.email || '') + '</div>' +
+        '</div>' +
+        '<button type="button" class="btn-approve">Aprobar</button>';
+      row.querySelector('.btn-approve').addEventListener('click', function() {
+        db.collection('users').doc(doc.id).update({ role:'student' }).then(function(){
+          loadPendingUsers(); loadFirestoreUsers();
+        });
+      });
+      list.appendChild(row);
+    });
+  } catch(e) {
+    list.innerHTML = '<p style="font-size:13px;color:var(--danger)">Error: ' + e.message + '</p>';
+  }
+}
+
 async function loadFirestoreUsers() {
   const list  = document.getElementById('stu-list');
   const count = document.getElementById('stu-count');
