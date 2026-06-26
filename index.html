@@ -59,6 +59,9 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .btn-login:hover{background:var(--blue-hover);box-shadow:0 4px 12px rgba(46,92,158,.30)}
 .login-error{font-size:12px;color:var(--danger);margin-top:10px;min-height:18px;display:flex;align-items:center;gap:5px}
 .login-error svg{width:13px;height:13px;stroke:var(--danger);fill:none;stroke-width:2;flex-shrink:0}
+.lf-register{text-align:center;font-size:13px;color:var(--text-muted);margin-top:1rem}
+.lf-register button{background:none;border:none;color:var(--blue);font-weight:600;cursor:pointer;font-family:var(--font);font-size:13px;padding:0}
+.lf-register button:hover{text-decoration:underline}
 
 /* SIDEBAR */
 .sidebar{width:var(--sidebar-w);flex-shrink:0;background:var(--navy);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden}
@@ -175,6 +178,15 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .student-row{display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
 .s-avatar{width:28px;height:28px;border-radius:50%;background:var(--blue-light);color:var(--blue);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .s-name{font-size:13px;color:var(--text);font-weight:500}
+.user-row{display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
+.user-row-info{flex:1;min-width:0}
+.user-email{font-size:11px;color:var(--text-muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.user-del-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.user-del-btn:hover{background:var(--danger-light);color:var(--danger)}
+.user-del-btn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5}
+.btn-add-user{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:white;background:var(--blue);border:none;border-radius:var(--radius-sm);padding:6px 12px;cursor:pointer;font-family:var(--font);margin-top:.75rem}
+.btn-add-user:hover{background:var(--blue-hover)}
+.btn-add-user svg{width:13px;height:13px;stroke:white;fill:none;stroke-width:2.5}
 
 /* MODALS */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,26,.72);z-index:200;align-items:center;justify-content:center;padding:1.5rem}
@@ -282,9 +294,10 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
     <div class="login-form-wrap">
       <div class="lf-heading">Bienvenido/a</div>
       <div class="lf-sub">Ingresá tus credenciales para acceder al curso</div>
-      <div class="field"><label>Usuario</label><input type="text" id="inp-user" placeholder="Ingresá tu usuario" autocomplete="off" /></div>
+      <div class="field"><label>Correo electrónico</label><input type="email" id="inp-user" placeholder="tu@email.com" autocomplete="email" /></div>
       <div class="field"><label>Contraseña</label><input type="password" id="inp-pass" placeholder="••••••••" /></div>
       <button class="btn-login" id="btn-login-submit">Iniciar sesión</button>
+      <p class="lf-register">¿No tenés cuenta? <button type="button" id="btn-show-register">Crear cuenta</button></p>
       <div class="login-error" id="login-error" style="visibility:hidden">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <span id="login-error-msg"></span>
@@ -384,9 +397,54 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
               <div class="admin-card-count" id="stu-count">0</div>
             </div>
             <div class="students-grid" id="stu-list"></div>
+            <button type="button" class="btn-add-user" id="btn-add-user">
+              <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>Agregar usuario
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Registro de estudiante -->
+<div class="modal-overlay" id="modal-register" style="display:none">
+  <div class="modal modal-sm">
+    <div class="modal-top">
+      <div><div class="modal-title">Crear cuenta</div><div class="modal-subtitle">Completá tus datos para registrarte</div></div>
+      <button type="button" class="modal-close" id="reg-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group"><label class="form-label">Nombre completo <span class="req">*</span></label><input type="text" class="form-input" id="reg-name" placeholder="Ej: Ana García" autocomplete="name" /></div>
+      <div class="form-group"><label class="form-label">Correo electrónico <span class="req">*</span></label><input type="email" class="form-input" id="reg-email" placeholder="tu@email.com" autocomplete="email" /></div>
+      <div class="form-group"><label class="form-label">Contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass" placeholder="Mínimo 6 caracteres" /></div>
+      <div class="form-group"><label class="form-label">Confirmar contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass2" placeholder="Repetí tu contraseña" /></div>
+      <div class="login-error" id="reg-error" style="visibility:hidden"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span id="reg-error-msg"></span></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="reg-cancel">Cancelar</button>
+      <button type="button" class="btn btn-primary" id="reg-save">Crear cuenta</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Agregar usuario (admin) -->
+<div class="modal-overlay" id="modal-add-user" style="display:none">
+  <div class="modal modal-sm">
+    <div class="modal-top">
+      <div><div class="modal-title">Agregar usuario</div><div class="modal-subtitle">Se creará una cuenta con acceso al curso</div></div>
+      <button type="button" class="modal-close" id="au-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group"><label class="form-label">Nombre completo <span class="req">*</span></label><input type="text" class="form-input" id="au-name" placeholder="Ej: Carlos López" /></div>
+      <div class="form-group"><label class="form-label">Correo electrónico <span class="req">*</span></label><input type="email" class="form-input" id="au-email" placeholder="estudiante@email.com" /></div>
+      <div class="form-group"><label class="form-label">Contraseña inicial <span class="req">*</span></label><input type="password" class="form-input" id="au-pass" placeholder="Mínimo 6 caracteres" /></div>
+      <div class="form-group"><label class="form-label">Rol</label><select class="form-select" id="au-role"><option value="student">Estudiante</option><option value="admin">Administrador</option></select></div>
+      <div id="au-error" style="display:none;font-size:12px;color:var(--danger);padding:8px 12px;background:var(--danger-light);border-radius:var(--radius-sm);margin-top:8px"></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="au-cancel">Cancelar</button>
+      <button type="button" class="btn btn-primary" id="au-save"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>Crear usuario</button>
     </div>
   </div>
 </div>
@@ -523,16 +581,28 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   </div>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
+/* ══════════ FIREBASE — reemplazá estos valores con los de tu proyecto ══════════ */
+const firebaseConfig = {
+  apiKey:            "REEMPLAZAR_CON_TU_API_KEY",
+  authDomain:        "REEMPLAZAR_CON_TU_AUTH_DOMAIN",
+  projectId:         "REEMPLAZAR_CON_TU_PROJECT_ID",
+  storageBucket:     "REEMPLAZAR_CON_TU_STORAGE_BUCKET",
+  messagingSenderId: "REEMPLAZAR_CON_TU_MESSAGING_SENDER_ID",
+  appId:             "REEMPLAZAR_CON_TU_APP_ID"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db   = firebase.firestore();
+// App secundaria para crear usuarios sin desloguear al admin
+const secondaryApp  = firebase.initializeApp(firebaseConfig, 'secondary');
+const secondaryAuth = secondaryApp.auth();
+
 /* ══════════ CONFIGURACIÓN ══════════ */
 const REPO = { owner:'diegoserantes94-bit', name:'App_curso', branch:'main', file:'data.json' };
-
-const USERS = {
-  "estudiante1":{ pass:"pass123",  name:"Ana García",   role:"student" },
-  "estudiante2":{ pass:"pass456",  name:"Carlos López", role:"student" },
-  "maria":      { pass:"maria123", name:"María Torres", role:"student" },
-  "admin":      { pass:"admin123", name:"Profesor",     role:"admin"   }
-};
 
 const MODULES = [
   { id:"all", label:"Todos los módulos", icon:"grid"        },
@@ -602,18 +672,75 @@ function populateModSelect(selId, currentMod) {
 }
 
 /* ══════════ LOGIN ══════════ */
-function doLogin() {
-  const u = document.getElementById('inp-user').value.trim();
-  const p = document.getElementById('inp-pass').value;
+async function doLogin() {
+  const email = document.getElementById('inp-user').value.trim();
+  const pass  = document.getElementById('inp-pass').value;
   const errEl = document.getElementById('login-error');
-  if (USERS[u] && USERS[u].pass === p) {
-    currentUser = Object.assign({ username:u }, USERS[u]);
-    errEl.style.visibility = 'hidden';
+  const btn   = document.getElementById('btn-login-submit');
+  if (!email || !pass) {
+    document.getElementById('login-error-msg').textContent = 'Completá todos los campos.';
+    errEl.style.visibility = 'visible'; return;
+  }
+  btn.disabled = true; btn.textContent = 'Ingresando...';
+  errEl.style.visibility = 'hidden';
+  try {
+    const cred    = await auth.signInWithEmailAndPassword(email, pass);
+    const docSnap = await db.collection('users').doc(cred.user.uid).get();
+    if (!docSnap.exists) {
+      await auth.signOut();
+      document.getElementById('login-error-msg').textContent = 'Cuenta no encontrada. Contactá al profesor.';
+      errEl.style.visibility = 'visible';
+      btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
+    }
+    const data = docSnap.data();
+    currentUser = { uid: cred.user.uid, email: cred.user.email, name: data.name || email, role: data.role || 'student' };
+    btn.disabled = false; btn.textContent = 'Iniciar sesión';
     showMain();
-  } else {
-    document.getElementById('login-error-msg').textContent = 'Usuario o contraseña incorrectos.';
+  } catch(e) {
+    var msg = 'Correo o contraseña incorrectos.';
+    if (e.code === 'auth/invalid-email')        msg = 'El correo no es válido.';
+    else if (e.code === 'auth/too-many-requests') msg = 'Demasiados intentos. Intentá más tarde.';
+    document.getElementById('login-error-msg').textContent = msg;
     errEl.style.visibility = 'visible';
     document.getElementById('inp-pass').value = '';
+    btn.disabled = false; btn.textContent = 'Iniciar sesión';
+  }
+}
+
+/* ══════════ REGISTRO ══════════ */
+function openRegister() {
+  ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).value = ''; });
+  document.getElementById('reg-error').style.visibility = 'hidden';
+  openModal('modal-register');
+}
+function closeRegister() { closeModal('modal-register'); }
+
+async function doRegister() {
+  const name  = document.getElementById('reg-name').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const pass  = document.getElementById('reg-pass').value;
+  const pass2 = document.getElementById('reg-pass2').value;
+  const errEl = document.getElementById('reg-error');
+  const btn   = document.getElementById('reg-save');
+  function showRegErr(msg) { document.getElementById('reg-error-msg').textContent = msg; errEl.style.visibility = 'visible'; }
+  if (!name || !email || !pass) { showRegErr('Completá todos los campos.'); return; }
+  if (pass.length < 6)          { showRegErr('La contraseña debe tener al menos 6 caracteres.'); return; }
+  if (pass !== pass2)           { showRegErr('Las contraseñas no coinciden.'); return; }
+  btn.disabled = true; btn.textContent = 'Creando cuenta...';
+  errEl.style.visibility = 'hidden';
+  try {
+    const cred = await auth.createUserWithEmailAndPassword(email, pass);
+    await db.collection('users').doc(cred.user.uid).set({ name, email, role:'student', createdAt: firebase.firestore.FieldValue.serverTimestamp() });
+    currentUser = { uid: cred.user.uid, email, name, role: 'student' };
+    btn.disabled = false; btn.textContent = 'Crear cuenta';
+    closeRegister();
+    showMain();
+  } catch(e) {
+    var msg = 'Error al crear la cuenta.';
+    if (e.code === 'auth/email-already-in-use') msg = 'Ese correo ya está registrado.';
+    else if (e.code === 'auth/invalid-email')   msg = 'El correo no es válido.';
+    else if (e.code === 'auth/weak-password')   msg = 'Contraseña muy débil (mínimo 6 caracteres).';
+    showRegErr(msg); btn.disabled = false; btn.textContent = 'Crear cuenta';
   }
 }
 
@@ -630,7 +757,7 @@ async function showMain() {
     document.getElementById('admin-panel').style.display   = 'block';
     document.getElementById('btn-add-mat-inline').style.display = 'flex';
     document.getElementById('main-screen').classList.add('admin-mode');
-    renderStudents();
+    loadFirestoreUsers();
   }
   buildSidebar(); renderVideos('all');
   const loginEl = document.getElementById('login-screen');
@@ -747,14 +874,77 @@ function renderMaterials(moduleId) {
   });
 }
 
-/* ══════════ STUDENTS ══════════ */
-function renderStudents() {
-  const students = Object.entries(USERS).filter(function(e){ return e[1].role === 'student'; });
-  document.getElementById('stu-count').textContent = students.length;
-  document.getElementById('stu-list').innerHTML = students.map(function(e){
-    const ini = e[1].name.split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase();
-    return '<div class="student-row"><div class="s-avatar">' + ini + '</div><span class="s-name">' + e[1].name + '</span></div>';
-  }).join('');
+/* ══════════ USUARIOS (ADMIN) ══════════ */
+async function loadFirestoreUsers() {
+  const list  = document.getElementById('stu-list');
+  const count = document.getElementById('stu-count');
+  list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">Cargando...</p>';
+  try {
+    const snap = await db.collection('users').where('role','==','student').get();
+    count.textContent = snap.size;
+    if (snap.empty) {
+      list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">No hay estudiantes registrados todavía.</p>';
+      return;
+    }
+    list.innerHTML = '';
+    snap.forEach(function(doc) {
+      const u = doc.data();
+      const ini = (u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase();
+      const row = document.createElement('div');
+      row.className = 'user-row';
+      row.innerHTML =
+        '<div class="s-avatar">' + ini + '</div>' +
+        '<div class="user-row-info">' +
+          '<div class="s-name">' + (u.name || '—') + '</div>' +
+          '<div class="user-email">' + (u.email || '') + '</div>' +
+        '</div>' +
+        '<button type="button" class="user-del-btn" title="Eliminar estudiante"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>';
+      row.querySelector('.user-del-btn').addEventListener('click', function() {
+        if (confirm('¿Eliminar a "' + (u.name || u.email) + '"?\nYa no podrá acceder al curso.')) {
+          db.collection('users').doc(doc.id).delete().then(function(){ loadFirestoreUsers(); });
+        }
+      });
+      list.appendChild(row);
+    });
+  } catch(e) {
+    list.innerHTML = '<p style="font-size:13px;color:var(--danger)">Error al cargar usuarios: ' + e.message + '</p>';
+  }
+}
+
+function openAddUser() {
+  ['au-name','au-email','au-pass'].forEach(function(id){ document.getElementById(id).value = ''; });
+  document.getElementById('au-role').value = 'student';
+  document.getElementById('au-error').style.display = 'none';
+  openModal('modal-add-user');
+}
+function closeAddUser() { closeModal('modal-add-user'); }
+
+async function saveNewUser() {
+  const name  = document.getElementById('au-name').value.trim();
+  const email = document.getElementById('au-email').value.trim();
+  const pass  = document.getElementById('au-pass').value;
+  const role  = document.getElementById('au-role').value;
+  const errEl = document.getElementById('au-error');
+  const btn   = document.getElementById('au-save');
+  function showErr(msg) { errEl.textContent = msg; errEl.style.display = 'block'; }
+  if (!name || !email || !pass) { showErr('Completá todos los campos.'); return; }
+  if (pass.length < 6) { showErr('La contraseña debe tener al menos 6 caracteres.'); return; }
+  btn.disabled = true; btn.textContent = 'Creando...';
+  errEl.style.display = 'none';
+  try {
+    const cred = await secondaryAuth.createUserWithEmailAndPassword(email, pass);
+    await db.collection('users').doc(cred.user.uid).set({ name, email, role, createdAt: firebase.firestore.FieldValue.serverTimestamp() });
+    await secondaryAuth.signOut();
+    btn.disabled = false; btn.textContent = 'Crear usuario';
+    closeAddUser();
+    loadFirestoreUsers();
+  } catch(e) {
+    var msg = 'Error al crear el usuario.';
+    if (e.code === 'auth/email-already-in-use') msg = 'Ese correo ya está registrado.';
+    else if (e.code === 'auth/invalid-email')   msg = 'El correo no es válido.';
+    else if (e.code === 'auth/weak-password')   msg = 'Contraseña débil (mínimo 6 caracteres).';
+    showErr(msg); btn.disabled = false; btn.textContent = 'Crear usuario';
+  }
 }
 
 /* ══════════ AGREGAR VIDEO ══════════ */
@@ -944,7 +1134,8 @@ async function doPublish() {
 }
 
 /* ══════════ LOGOUT ══════════ */
-function doLogout() {
+async function doLogout() {
+  await auth.signOut();
   currentUser = null; activeModule = 'all'; isAdmin = false;
   const mainEl  = document.getElementById('main-screen');
   const loginEl = document.getElementById('login-screen');
@@ -965,6 +1156,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('btn-login-submit').addEventListener('click', doLogin);
   document.getElementById('inp-pass').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
   document.getElementById('inp-user').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('inp-pass').focus(); });
+  document.getElementById('btn-show-register').addEventListener('click', openRegister);
 
   // Logout
   document.getElementById('btn-logout').addEventListener('click', doLogout);
@@ -975,6 +1167,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('btn-open-publish').addEventListener('click', openPublish);
   document.getElementById('btn-add-mat-inline').addEventListener('click', openAddMaterial);
   document.getElementById('btn-goto-students').addEventListener('click', function(){ document.getElementById('admin-panel').scrollIntoView({behavior:'smooth'}); });
+  document.getElementById('btn-add-user').addEventListener('click', openAddUser);
 
   // Modal video
   document.getElementById('mv-close').addEventListener('click', function(){ closeModal('modal-video'); document.getElementById('mv-player').innerHTML = ''; });
@@ -1019,11 +1212,24 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('pub-toggle').addEventListener('click', function(){ const i = document.getElementById('pub-token'); i.type = i.type === 'password' ? 'text' : 'password'; });
   document.getElementById('modal-publish').addEventListener('click', function(e){ if(e.target===this) closePublish(); });
 
+  // Modal registro
+  document.getElementById('reg-close').addEventListener('click', closeRegister);
+  document.getElementById('reg-cancel').addEventListener('click', closeRegister);
+  document.getElementById('reg-save').addEventListener('click', doRegister);
+  document.getElementById('modal-register').addEventListener('click', function(e){ if(e.target===this) closeRegister(); });
+  document.getElementById('reg-pass2').addEventListener('keydown', function(e){ if(e.key==='Enter') doRegister(); });
+
+  // Modal agregar usuario (admin)
+  document.getElementById('au-close').addEventListener('click', closeAddUser);
+  document.getElementById('au-cancel').addEventListener('click', closeAddUser);
+  document.getElementById('au-save').addEventListener('click', saveNewUser);
+  document.getElementById('modal-add-user').addEventListener('click', function(e){ if(e.target===this) closeAddUser(); });
+
   // Escape cierra todo
   document.addEventListener('keydown', function(e) {
     if (e.key !== 'Escape') return;
     closeModal('modal-video'); document.getElementById('mv-player').innerHTML = '';
-    closeAddVideo(); closeAddMaterial(); closePublish();
+    closeAddVideo(); closeAddMaterial(); closePublish(); closeRegister(); closeAddUser();
   });
 });
 </script>
