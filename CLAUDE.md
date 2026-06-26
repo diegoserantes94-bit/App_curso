@@ -16,6 +16,9 @@ Sitio estático (HTML/CSS/JS puro), sin backend. Alojado en **GitHub Pages**.
 
 - HTML + CSS + JS vanilla (sin frameworks)
 - Fuente: Inter (Google Fonts)
+- **Firebase Authentication** — login con email/contraseña
+- **Firebase Firestore** — base de datos de usuarios (nombre, email, rol)
+- Firebase proyecto: `app-curso-8392a`
 - Contenido dinámico: `data.json` en el repo (videos + materiales por módulo)
 - Persistencia local: `localStorage` con clave `neurociencia_data_v2`
 - Archivos subidos por el admin: carpeta `materiales/` en el repo
@@ -37,16 +40,31 @@ Sitio estático (HTML/CSS/JS puro), sin backend. Alojado en **GitHub Pages**.
 
 ---
 
-## Usuarios del sistema
+## Sistema de usuarios (Firebase)
 
-```
-estudiante1 / pass123
-estudiante2 / pass456
-maria       / maria123
-admin       / admin123   ← usuario administrador
-```
+**Autenticación:** Firebase Auth con email/contraseña.  
+**Perfiles:** Firestore, colección `users`, documento por UID.
 
-El objeto `USERS` está hardcodeado en el JS dentro de `index.html`.
+### Roles en Firestore
+
+| Rol | Descripción |
+|---|---|
+| `pending` | Recién registrado, esperando aprobación del admin |
+| `student` | Aprobado, puede acceder al curso |
+| `admin` | Acceso completo + panel de administración |
+
+### Flujo de acceso (curso pago)
+1. Estudiante paga (MercadoPago externo, fuera de la plataforma)
+2. Estudiante se registra → queda con rol `pending`
+3. Admin verifica el pago y aprueba desde el panel → rol cambia a `student`
+4. Estudiante puede iniciar sesión y ver el curso
+
+### Cuenta admin
+Diego Serantes — `diegoserantes94@gmail.com`  
+Para crear un nuevo admin: registrarlo en la app → ir a Firestore → cambiar `role` a `"admin"` manualmente.
+
+### App secundaria de Firebase
+Se usa `firebase.initializeApp(firebaseConfig, 'secondary')` para que el admin pueda crear cuentas sin perder su propia sesión.
 
 ---
 
@@ -56,27 +74,28 @@ El objeto `USERS` está hardcodeado en el JS dentro de `index.html`.
 ```js
 const REPO = { owner:'diegoserantes94-bit', name:'App_curso', branch:'main', file:'data.json' };
 const LOCAL_KEY = 'neurociencia_data_v2';
+const auth = firebase.auth();
+const db   = firebase.firestore();
 ```
 
 ### Funciones principales
-- `loadData()` — carga data.json desde GitHub, fallback a localStorage, fallback a defaults
+- `doLogin()` — async, verifica Firebase Auth + rol en Firestore (bloquea pending)
+- `doRegister()` — async, crea cuenta con rol `pending`, muestra pantalla de éxito
+- `doLogout()` — async, cierra sesión en Firebase
+- `showMain()` — transición login → curso, carga datos y panel admin
+- `loadData()` — carga data.json desde GitHub, fallback a localStorage
 - `saveLocal()` — guarda en localStorage
 - `buildSidebar()` — construye el menú lateral de módulos
-- `selectModule(id, btn)` — filtra videos y materiales por módulo
 - `renderVideos(moduleId)` — renderiza tarjetas de video
 - `playVideo(id)` — abre modal con iframe de YouTube
 - `renderMaterials(moduleId)` — renderiza tarjetas de material bibliográfico
-- `openModal(id)` / `closeModal(id)` — maneja modales con `style.display`
+- `loadPendingUsers()` — admin: carga solicitudes pendientes con botón Aprobar
+- `loadFirestoreUsers()` — admin: carga estudiantes aprobados con botón Eliminar
+- `approveUser` — integrado en loadPendingUsers, cambia role a `student`
+- `openAddUser()` / `saveNewUser()` — admin crea usuario directamente
 - `saveMaterial()` — async, guarda material (upload o URL)
-- `uploadFileToGitHub(file, token)` — sube archivo a `materiales/` vía API
-- `readFileAsBase64(file)` — FileReader como Promise
+- `uploadFileToGitHub(file, token)` — sube archivo a `materiales/` vía GitHub API
 - `doPublish()` — publica data.json a GitHub vía API
-
-### Estado global relevante
-```js
-let amMode = 'upload'; // 'upload' | 'url'  (modo del modal agregar material)
-let amFile = null;     // archivo seleccionado para subir
-```
 
 ---
 
@@ -85,19 +104,27 @@ let amFile = null;     // archivo seleccionado para subir
 | ID | Descripción |
 |---|---|
 | `modal-video` | Reproductor de video (YouTube iframe) |
+| `modal-register` | Registro de nuevos estudiantes |
 | `modal-add-video` | Admin: agregar nuevo video |
 | `modal-add-material` | Admin: agregar material bibliográfico (upload o URL) |
 | `modal-publish` | Admin: publicar cambios a GitHub |
+| `modal-add-user` | Admin: crear usuario directamente |
 
 ---
 
 ## Panel de administrador
 
-Solo visible para el usuario `admin`. Botones en el sidebar:
-- `btn-open-add-video` — abre modal agregar video
-- `btn-open-add-material` — abre modal agregar material
-- `btn-open-publish` — abre modal publicar cambios
-- `sb-admin-wrap` — contenedor del bloque admin en sidebar
+Solo visible para usuarios con `role === 'admin'`. Secciones:
+
+**Sidebar — Gestión de contenido:**
+- `btn-open-add-video` — agregar video
+- `btn-open-add-material` — agregar material
+- `btn-open-publish` — publicar cambios a GitHub
+
+**Panel principal — Administración:**
+- **Solicitudes pendientes** (`#pending-list`) — estudiantes con rol `pending`, botón Aprobar
+- **Estudiantes inscriptos** (`#stu-list`) — estudiantes con rol `student`, botón Eliminar
+- **Agregar usuario** (`#btn-add-user`) — el admin crea cuentas directamente
 
 ---
 
@@ -128,29 +155,36 @@ Estilo sobrio académico-médico, similar a Amboss/Osmosis.
 
 ## Decisiones técnicas importantes
 
-1. **Sin onclick en HTML** — todo el JS usa `addEventListener` dentro de `DOMContentLoaded`. Esto fue necesario porque Netlify (y GitHub Pages) aplican CSP headers que bloquean handlers inline. Si en algún momento un botón no funciona, verificar que no tenga `onclick="..."` en el HTML.
+1. **Sin onclick en HTML** — todo el JS usa `addEventListener` dentro de `DOMContentLoaded`. Necesario por CSP headers de GitHub Pages que bloquean handlers inline.
 
-2. **Modales con style.display** — se usa `style.display = 'flex'/'none'` directamente, sin clases CSS ni transiciones en los overlays. Esto evitó un bug donde el modal quedaba bloqueando interacciones durante la transición.
+2. **Modales con style.display** — `style.display = 'flex'/'none'` directamente, sin transiciones en overlays. Evita bug de freeze durante transición.
 
-3. **data.json como CMS** — el contenido del curso (videos y materiales) se almacena en `data.json` en el repo. El admin lo edita desde la web y lo publica vía GitHub API. Los estudiantes siempre ven la versión más reciente al cargar la página.
+3. **data.json como CMS** — el contenido del curso se almacena en `data.json` en el repo. El admin lo edita desde la web y lo publica vía GitHub API.
 
-4. **Hosting migrado de Netlify a GitHub Pages** — migrado para evitar el límite de 300 minutos de build/mes de Netlify. GitHub Pages no tiene ese límite para sitios estáticos puros.
+4. **Firebase compat SDK** — se usa la versión compat (no modular) para compatibilidad con el script tag sin bundler: `firebase-app-compat.js`, `firebase-auth-compat.js`, `firebase-firestore-compat.js`.
+
+5. **App secundaria Firebase** — `firebase.initializeApp(firebaseConfig, 'secondary')` permite al admin crear usuarios sin desloguearse.
+
+6. **Hosting migrado de Netlify a GitHub Pages** — para evitar el límite de 300 minutos de build/mes de Netlify.
 
 ---
 
-## Historial de cambios principales
+## Reglas de Firestore
 
-- Rediseño completo: estética académica médica (Amboss/Osmosis style)
-- Panel de admin: agregar/eliminar videos y materiales, publicar a GitHub
-- Fix modales: reescritura completa del JS para usar addEventListener (eliminó bug de freeze)
-- Upload de PDFs: subida directa desde la web sin pasar por GitHub UI
-- Migración Netlify → GitHub Pages
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
 
 ---
 
 ## Desarrollo local
-
-Para servir el sitio localmente (necesario para ver las imágenes):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File C:\Users\diego\App_curso\server.ps1
