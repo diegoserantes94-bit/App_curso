@@ -497,7 +497,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
         <div class="form-group"><label class="form-label">Módulo <span class="req">*</span></label><select class="form-select" id="av-module"></select></div>
         <div class="form-group"><label class="form-label">Duración</label><input type="text" class="form-input" id="av-duration" placeholder="Ej: 25 min" /></div>
       </div>
-      <div class="form-group"><label class="form-label">Enlace de YouTube <span class="req">*</span></label><input type="text" class="form-input" id="av-url" placeholder="https://youtu.be/... o https://www.youtube.com/watch?v=..." /><div class="form-hint">Pegá la URL completa del video de YouTube</div></div>
+      <div class="form-group"><label class="form-label">Enlace del video <span class="req">*</span></label><input type="text" class="form-input" id="av-url" placeholder="YouTube: https://youtu.be/... · Vimeo: ID o URL" /><div class="form-hint">Pegá la URL de YouTube o el ID/URL del video de Vimeo</div></div>
       <div class="form-group"><label class="form-label">Descripción</label><textarea class="form-textarea" id="av-desc" placeholder="Breve descripción del contenido..."></textarea></div>
       <label class="form-check"><input type="checkbox" id="av-isnew" checked />Marcar como "Nuevo"</label>
     </div>
@@ -634,7 +634,7 @@ const MODULES = [
 
 let VIDEOS = [
   { id:1, moduleId:"m0", moduleLabel:"Introducción", title:"Introducción al curso",        desc:"Bienvenida y presentación del temario completo.",                                duration:"8 min",  ytId:"dQw4w9WgXcQ", isNew:true  },
-  { id:2, moduleId:"m1", moduleLabel:"Módulo 1",     title:"Potencial de Membrana",         desc:"Primera clase del curso: bases eléctricas del potencial de membrana neuronal.",  duration:"22 min", ytId:"qz3Eq45-Cv0", isNew:true  },
+  { id:2, moduleId:"m1", moduleLabel:"Módulo 1",     title:"Potencial de Membrana",         desc:"Primera clase del curso: bases eléctricas del potencial de membrana neuronal.",  duration:"22 min", platform:"vimeo", vimeoId:"1204950215", isNew:true  },
   { id:3, moduleId:"m2", moduleLabel:"Módulo 2",     title:"Neurociencia Aplicada",          desc:"Ejercicios y ejemplos guiados paso a paso.",                                    duration:"35 min", ytId:"dQw4w9WgXcQ", isNew:false },
   { id:4, moduleId:"m3", moduleLabel:"Módulo 3",     title:"Técnicas Avanzadas",              desc:"Profundizamos en técnicas avanzadas del área.",                                 duration:"41 min", ytId:"dQw4w9WgXcQ", isNew:false }
 ];
@@ -682,6 +682,13 @@ function extractYtId(v) {
   let m = v.match(/[?&]v=([a-zA-Z0-9_-]{11})/); if (m) return m[1];
   m = v.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/); if (m) return m[1];
   if (/^[a-zA-Z0-9_-]{11}$/.test(v)) return v;
+  return null;
+}
+function extractVimeoId(v) {
+  v = v.trim();
+  const m = v.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (m) return m[1];
+  if (/^\d{6,12}$/.test(v)) return v;
   return null;
 }
 function nextId(arr) { return arr.length ? Math.max(...arr.map(x => x.id)) + 1 : 1; }
@@ -875,7 +882,13 @@ function playVideo(id) {
   document.getElementById('mv-module').textContent = v.moduleLabel;
   document.getElementById('mv-desc').textContent   = v.desc;
   document.getElementById('mv-dur').textContent    = v.duration;
-  document.getElementById('mv-player').innerHTML   = '<iframe src="https://www.youtube.com/embed/' + v.ytId + '?autoplay=1&rel=0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+  var iframeSrc = v.platform === 'vimeo'
+    ? 'https://player.vimeo.com/video/' + v.vimeoId + '?autoplay=1&title=0&byline=0&portrait=0'
+    : 'https://www.youtube.com/embed/' + v.ytId + '?autoplay=1&rel=0';
+  var iframeAllow = v.platform === 'vimeo'
+    ? 'autoplay; fullscreen; picture-in-picture'
+    : 'autoplay; encrypted-media; fullscreen';
+  document.getElementById('mv-player').innerHTML = '<iframe src="' + iframeSrc + '" allow="' + iframeAllow + '" allowfullscreen></iframe>';
   openModal('modal-video');
 }
 
@@ -1035,9 +1048,13 @@ function saveVideo() {
   const desc     = document.getElementById('av-desc').value.trim();
   const isNew    = document.getElementById('av-isnew').checked;
   if (!title) { alert('El título es obligatorio.'); return; }
-  const ytId = extractYtId(url);
-  if (!ytId) { alert('URL de YouTube inválida. Pegá el enlace completo.'); return; }
-  VIDEOS.push({ id:nextId(VIDEOS), moduleId, moduleLabel:getModLabel(moduleId), title, desc, duration, ytId, isNew });
+  const vimeoId = extractVimeoId(url);
+  const ytId    = extractYtId(url);
+  if (!vimeoId && !ytId) { alert('URL inválida. Pegá un enlace de YouTube o el ID/URL de Vimeo.'); return; }
+  const videoData = vimeoId
+    ? { id:nextId(VIDEOS), moduleId, moduleLabel:getModLabel(moduleId), title, desc, duration, platform:'vimeo', vimeoId, isNew }
+    : { id:nextId(VIDEOS), moduleId, moduleLabel:getModLabel(moduleId), title, desc, duration, platform:'youtube', ytId, isNew };
+  VIDEOS.push(videoData);
   saveLocal(); buildSidebar(); renderVideos(activeModule); closeAddVideo();
 }
 
