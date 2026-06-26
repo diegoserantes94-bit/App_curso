@@ -103,6 +103,14 @@
         "url": "materiales/Generalidades_sinapsis.pdf",
         "type": "pdf",
         "desc": ""
+      },
+      {
+        "id": 5,
+        "moduleId": "m2",
+        "title": "Liberacion_NT",
+        "url": "materiales/Liberacion_NT_resumen.pdf",
+        "type": "pdf",
+        "desc": ""
       }
     ],
     "m3": []
