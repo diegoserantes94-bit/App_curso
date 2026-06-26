@@ -641,6 +641,8 @@ let VIDEOS = [
 let MATERIALS = { m0:[], m1:[], m2:[], m3:[] };
 
 let currentUser = null, activeModule = "all", isAdmin = false;
+let sessionInterval = null;
+const SESSION_KEY = 'neurociencia_session_token';
 
 const ICONS = {
   grid:        '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
@@ -720,6 +722,8 @@ async function doLogin() {
       btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
     }
     currentUser = { uid: cred.user.uid, email: cred.user.email, name: data.name || email, role: data.role || 'student' };
+    await setSession(cred.user.uid);
+    startSessionCheck(cred.user.uid);
     btn.disabled = false; btn.textContent = 'Iniciar sesión';
     showMain();
   } catch(e) {
@@ -1202,8 +1206,40 @@ async function doPublish() {
   }
 }
 
+/* ══════════ SESIÓN ÚNICA ══════════ */
+function generateSessionToken() {
+  return Date.now().toString(36) + Math.random().toString(36).substring(2);
+}
+
+async function setSession(uid) {
+  const token = generateSessionToken();
+  localStorage.setItem(SESSION_KEY, token);
+  await db.collection('users').doc(uid).update({ sessionToken: token });
+}
+
+function startSessionCheck(uid) {
+  sessionInterval = setInterval(async function() {
+    try {
+      const doc  = await db.collection('users').doc(uid).get();
+      const remote = doc.exists ? doc.data().sessionToken : null;
+      const local  = localStorage.getItem(SESSION_KEY);
+      if (remote && local && remote !== local) {
+        clearInterval(sessionInterval);
+        alert('Tu sesión fue iniciada en otro dispositivo. Serás desconectado.');
+        doLogout();
+      }
+    } catch(_) { /* error de red — no desconectar */ }
+  }, 45000);
+}
+
+function stopSessionCheck() {
+  if (sessionInterval) { clearInterval(sessionInterval); sessionInterval = null; }
+}
+
 /* ══════════ LOGOUT ══════════ */
 async function doLogout() {
+  stopSessionCheck();
+  localStorage.removeItem(SESSION_KEY);
   await auth.signOut();
   currentUser = null; activeModule = 'all'; isAdmin = false;
   const mainEl  = document.getElementById('main-screen');
