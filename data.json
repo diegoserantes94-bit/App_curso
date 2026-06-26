@@ -32,6 +32,39 @@
       "platform": "vimeo",
       "vimeoId": "1204956536",
       "isNew": false
+    },
+    {
+      "id": 4,
+      "moduleId": "m2",
+      "moduleLabel": "Módulo 2",
+      "title": "Generalidades de las sinapsis",
+      "desc": "",
+      "duration": "37 min",
+      "platform": "vimeo",
+      "vimeoId": "1204963892",
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "moduleId": "m2",
+      "moduleLabel": "Módulo 2",
+      "title": "Liberacion de los Neurotransmisores",
+      "desc": "",
+      "duration": "45 min",
+      "platform": "vimeo",
+      "vimeoId": "1204964174",
+      "isNew": false
+    },
+    {
+      "id": 6,
+      "moduleId": "m2",
+      "moduleLabel": "Módulo 2",
+      "title": "Sinapsis neuromuscular",
+      "desc": "",
+      "duration": "45 min",
+      "platform": "vimeo",
+      "vimeoId": "1204964175",
+      "isNew": false
     }
   ],
   "materials": {
