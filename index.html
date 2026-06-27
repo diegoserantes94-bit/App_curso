@@ -1236,6 +1236,8 @@ function stopSessionCheck() {
 async function doLogout() {
   stopSessionCheck();
   localStorage.removeItem(SESSION_KEY);
+  closeModal('modal-video');
+  document.getElementById('mv-player').innerHTML = '';
   await auth.signOut();
   currentUser = null; activeModule = 'all'; isAdmin = false;
   const mainEl  = document.getElementById('main-screen');
