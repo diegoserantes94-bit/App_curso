@@ -130,9 +130,8 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .video-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;box-shadow:var(--sh-sm);display:flex;flex-direction:column;position:relative}
 .video-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--blue)}
 .video-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--blue) 130%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.vt-brain{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.vt-brain img{width:72%;height:72%;object-fit:contain;opacity:.10;mix-blend-mode:screen;transition:opacity .2s,transform .2s}
-.video-card:hover .vt-brain img{opacity:.18;transform:scale(1.05)}
+.video-thumb.has-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35);transition:background .2s}
+.video-card:hover .video-thumb.has-thumb::after{background:rgba(0,0,0,.2)}
 .vt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
 .play-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.40);display:flex;align-items:center;justify-content:center;transition:background .18s,border-color .18s,transform .18s}
 .play-btn svg{width:16px;height:16px;fill:rgba(255,255,255,.80);margin-left:2px}
@@ -901,7 +900,6 @@ function renderVideos(moduleId) {
     card.setAttribute('role','button'); card.setAttribute('tabindex','0');
     card.innerHTML =
       '<div class="video-thumb">' +
-        '<div class="vt-brain"><img src="cerebro-byn.png" alt="" /></div>' +
         '<div class="vt-play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>' +
         '<span class="vt-num">' + v.moduleLabel + '</span>' +
         (v.isNew ? '<span class="vt-new">Nuevo</span>' : '') +
@@ -919,7 +917,23 @@ function renderVideos(moduleId) {
       if (confirm('¿Eliminar "' + v.title + '" del curso?')) { VIDEOS = VIDEOS.filter(function(x){ return x.id !== v.id; }); saveLocal(); buildSidebar(); renderVideos(activeModule); }
     });
     grid.appendChild(card);
+    if (v.vimeoId) setVimeoThumb(card, v.vimeoId);
   });
+}
+
+function setVimeoThumb(card, vimeoId) {
+  fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + vimeoId)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (!d.thumbnail_url) return;
+      var url = d.thumbnail_url.replace(/_\d+x\d+/, '_640');
+      var thumb = card.querySelector('.video-thumb');
+      thumb.style.backgroundImage = 'url(' + url + ')';
+      thumb.style.backgroundSize = 'cover';
+      thumb.style.backgroundPosition = 'center';
+      thumb.classList.add('has-thumb');
+    })
+    .catch(function(){});
 }
 
 /* ══════════ PLAY VIDEO ══════════ */
