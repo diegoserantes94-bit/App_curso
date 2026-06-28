@@ -275,7 +275,52 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .upload-token{margin-top:.75rem;padding:.75rem;background:var(--warn-light);border-radius:var(--radius-sm)}
 .upload-token-label{font-size:11px;font-weight:600;color:var(--warn);margin-bottom:6px}
 
-@media(max-width:700px){.login-panel{display:none}.sidebar{width:200px}.content-topbar{padding:0 1.25rem}.content-body{padding:1.25rem}.video-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+/* HAMBURGER BUTTON — solo visible en móvil */
+.btn-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;border-radius:var(--radius-sm);color:var(--text-mid);flex-shrink:0}
+.btn-menu:hover{background:var(--border-light)}
+.btn-menu svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
+/* OVERLAY sidebar móvil */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,26,.55);z-index:99}
+.sidebar-overlay.visible{display:block}
+
+@media(max-width:768px){
+  /* Login: ocultar panel izquierdo */
+  .login-panel{display:none}
+  .login-form-side{padding:2rem 1.25rem}
+
+  /* Main: sidebar se convierte en drawer deslizable */
+  .btn-menu{display:flex}
+  .sidebar{
+    position:fixed;left:0;top:0;bottom:0;z-index:100;
+    transform:translateX(-100%);transition:transform .26s ease;
+    width:272px;box-shadow:var(--sh-lg)
+  }
+  .sidebar.open{transform:translateX(0)}
+  .main-content{width:100%}
+
+  /* Topbar */
+  .content-topbar{padding:0 1rem;gap:10px}
+  .ct-breadcrumb{font-size:12px}
+
+  /* Contenido */
+  .content-body{padding:1rem}
+  .video-grid{grid-template-columns:1fr}
+  .materials-grid{grid-template-columns:1fr}
+  .students-grid{grid-template-columns:1fr}
+
+  /* Formularios */
+  .form-row{grid-template-columns:1fr}
+
+  /* Modales: casi pantalla completa */
+  .modal-overlay{padding:.75rem}
+  .modal-sm,.modal-md,.modal-lg{max-width:100%;max-height:90vh;overflow-y:auto}
+  .modal-body{padding:1rem}
+  .modal-footer{padding:.75rem 1rem;flex-wrap:wrap;gap:8px}
+  .modal-footer .btn{flex:1;justify-content:center}
+
+  /* Upload tabs */
+  .upload-tabs{flex-direction:row}
+}
 </style>
 </head>
 <body>
@@ -315,6 +360,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 
 <!-- MAIN -->
 <div id="main-screen" class="screen">
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
   <aside class="sidebar">
     <div class="sb-header">
       <div class="sb-brand">
@@ -372,6 +418,9 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 
   <div class="main-content">
     <div class="content-topbar">
+      <button type="button" class="btn-menu" id="btn-menu" aria-label="Menú">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <div class="ct-breadcrumb">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         <span>Curso</span>
@@ -821,6 +870,7 @@ function selectModule(id, btn) {
   document.getElementById('ct-label').textContent = getModLabel(id);
   renderVideos(id);
   renderMaterials(id);
+  if (window.innerWidth <= 768) closeSidebar();
 }
 
 /* ══════════ VIDEOS ══════════ */
@@ -1232,6 +1282,18 @@ function stopSessionCheck() {
   if (sessionInterval) { clearInterval(sessionInterval); sessionInterval = null; }
 }
 
+/* ══════════ SIDEBAR MÓVIL ══════════ */
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  const open = sidebar.classList.toggle('open');
+  overlay.classList.toggle('visible', open);
+}
+function closeSidebar() {
+  document.querySelector('.sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('visible');
+}
+
 /* ══════════ LOGOUT ══════════ */
 async function doLogout() {
   stopSessionCheck();
@@ -1260,6 +1322,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('inp-pass').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
   document.getElementById('inp-user').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('inp-pass').focus(); });
   document.getElementById('btn-show-register').addEventListener('click', openRegister);
+
+  // Menú móvil
+  document.getElementById('btn-menu').addEventListener('click', toggleSidebar);
+  document.getElementById('sidebar-overlay').addEventListener('click', closeSidebar);
 
   // Logout
   document.getElementById('btn-logout').addEventListener('click', doLogout);
