@@ -41,6 +41,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .lp-badge img{height:22px;width:auto}
 .lp-brain-wrap{display:flex;justify-content:center}
 .lp-brain{width:170px;height:170px;object-fit:contain;opacity:.18;mix-blend-mode:screen}
+.lp-logo-memento{width:200px;height:auto;background:white;border-radius:16px;padding:18px 22px}
 .lp-title{font-size:30px;font-weight:700;color:var(--white);letter-spacing:-.02em;line-height:1.15}
 .lp-subtitle{font-size:13px;color:rgba(255,255,255,.50);margin-top:5px}
 .lp-divider{height:1px;background:rgba(255,255,255,.10)}
@@ -53,6 +54,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .login-mobile-header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(46,92,158,.4) 0%,transparent 55%),radial-gradient(circle at 20% 80%,rgba(46,92,158,.3) 0%,transparent 50%);pointer-events:none}
 .lmh-brain{width:72px;height:72px;object-fit:contain;opacity:.85;position:relative;z-index:1;margin-bottom:.75rem}
 .lmh-title{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.02em;position:relative;z-index:1}
+.lmh-logo-memento{width:190px;height:auto;background:white;border-radius:14px;padding:16px 20px;position:relative;z-index:1}
 .lmh-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;position:relative;z-index:1}
 .lf-heading{font-size:24px;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:6px}
 .lf-sub{font-size:14px;color:var(--text-muted);margin-bottom:2rem}
@@ -74,10 +76,11 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .sidebar::-webkit-scrollbar{width:4px}
 .sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}
 .sb-header{padding:1.25rem 1.25rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0}
-.sb-brand{display:flex;align-items:center;gap:10px}
+.sb-brand{display:flex;align-items:center;justify-content:center}
 .sb-logo{width:32px;height:32px;object-fit:contain;opacity:.85;flex-shrink:0}
 .sb-name{font-size:13px;font-weight:700;color:var(--white);line-height:1.2}
 .sb-faculty{font-size:10px;color:rgba(255,255,255,.40);margin-top:1px}
+.sb-logo-memento{width:148px;height:auto;background:white;border-radius:10px;padding:10px 14px}
 .sb-section{padding:1rem .75rem .5rem;flex-shrink:0}
 .sb-section-label{font-size:10px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.09em;text-transform:uppercase;padding:0 .5rem;margin-bottom:.35rem}
 .sb-nav{display:flex;flex-direction:column;gap:2px}
@@ -341,11 +344,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
       <div class="lp-badge"><img src="logo-fmed.png" alt="FMed" />Facultad de Medicina · UdelaR</div>
     </div>
     <div class="lp-mid">
-      <div class="lp-brain-wrap"><img src="cerebro-byn.png" alt="" class="lp-brain" /></div>
-      <div>
-        <div class="lp-title">Neurociencia</div>
-        <div class="lp-subtitle">Facultad de Medicina · Universidad de la República</div>
-      </div>
+      <div class="lp-brain-wrap"><img src="logo-memento.jpg" alt="Academia Memento" class="lp-logo-memento" /></div>
       <div class="lp-divider"></div>
       <div class="lp-quote">"La neurociencia es la ciencia que nos permite entender cómo el cerebro crea la mente y controla la conducta."</div>
     </div>
@@ -353,9 +352,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   </div>
   <div class="login-form-side">
     <div class="login-mobile-header">
-      <img src="cerebro-byn.png" alt="" class="lmh-brain" />
-      <div class="lmh-title">Neurociencia</div>
-      <div class="lmh-sub">Facultad de Medicina · UdelaR · BCC3</div>
+      <img src="logo-memento.jpg" alt="Academia Memento" class="lmh-logo-memento" />
     </div>
     <div class="login-form-wrap">
       <div class="lf-heading">Bienvenido/a</div>
@@ -378,8 +375,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   <aside class="sidebar">
     <div class="sb-header">
       <div class="sb-brand">
-        <img src="cerebro-byn.png" alt="" class="sb-logo" />
-        <div><div class="sb-name">Neurociencia</div><div class="sb-faculty">UdelaR · Medicina BCC3</div></div>
+        <img src="logo-memento.jpg" alt="Academia Memento" class="sb-logo-memento" />
       </div>
     </div>
     <div class="sb-section">
