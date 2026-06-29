@@ -316,6 +316,48 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .upload-token{margin-top:.75rem;padding:.75rem;background:var(--warn-light);border-radius:var(--radius-sm)}
 .upload-token-label{font-size:11px;font-weight:600;color:var(--warn);margin-bottom:6px}
 
+/* QUIZ */
+#quiz-view{flex:1;overflow-y:scroll;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;background:var(--bg)}
+.quiz-card{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;padding:1.5rem;gap:.9rem;position:relative;overflow-y:auto}
+.quiz-progress{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em}
+.quiz-module-tag{display:inline-block;font-size:10px;font-weight:600;color:var(--blue);background:var(--blue-light);border-radius:999px;padding:2px 10px;text-transform:uppercase;letter-spacing:.06em}
+.quiz-q-text{font-size:18px;font-weight:700;color:var(--text);line-height:1.4;flex-shrink:0}
+.quiz-opts{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+.quiz-opt{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--white);border:2px solid var(--border);border-radius:var(--radius);cursor:pointer;font-family:var(--font);font-size:14px;color:var(--text);text-align:left;transition:border-color .15s,background .15s;box-shadow:var(--sh-sm);width:100%}
+.quiz-opt:hover:not(:disabled){border-color:var(--blue);background:var(--blue-light)}
+.quiz-opt-letter{width:28px;height:28px;border-radius:50%;background:var(--bg);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--text-mid);flex-shrink:0;transition:background .15s,border-color .15s,color .15s}
+.quiz-opt.correct{border-color:var(--success);background:var(--success-light)}
+.quiz-opt.correct .quiz-opt-letter{background:var(--success);border-color:var(--success);color:white}
+.quiz-opt.wrong{border-color:var(--danger);background:var(--danger-light)}
+.quiz-opt.wrong .quiz-opt-letter{background:var(--danger);border-color:var(--danger);color:white}
+.quiz-opt:disabled{cursor:default}
+.quiz-feedback{border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.quiz-feedback.correct{background:var(--success-light);border:1px solid #A7D7B6}
+.quiz-feedback.wrong{background:var(--danger-light);border:1px solid #F5B7B1}
+.quiz-feedback-header{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700}
+.quiz-feedback.correct .quiz-feedback-header{color:var(--success)}
+.quiz-feedback.wrong .quiz-feedback-header{color:var(--danger)}
+.quiz-feedback-header svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5}
+.quiz-feedback-text{font-size:13px;color:var(--text-mid);line-height:1.6}
+.quiz-next-wrap{margin-top:auto;padding-top:.5rem;flex-shrink:0}
+.quiz-next-btn{width:100%;padding:13px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s}
+.quiz-next-btn:hover{background:var(--blue-hover)}
+.quiz-finish-card{height:100%;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;gap:1rem}
+.quiz-finish-icon{width:72px;height:72px;border-radius:50%;background:var(--success-light);display:flex;align-items:center;justify-content:center}
+.quiz-finish-icon svg{width:36px;height:36px;stroke:var(--success);fill:none;stroke-width:2}
+.quiz-finish-title{font-size:22px;font-weight:700;color:var(--text)}
+.quiz-score{font-size:40px;font-weight:700;color:var(--blue)}
+.quiz-score-label{font-size:13px;color:var(--text-muted);margin-top:-6px}
+.quiz-finish-sub{font-size:13px;color:var(--text-muted);line-height:1.6}
+.quiz-restart-btn{padding:12px 28px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s}
+.quiz-restart-btn:hover{background:var(--blue-hover)}
+.quiz-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--text-muted);text-align:center;padding:2rem}
+.quiz-empty svg{width:48px;height:48px;stroke:var(--border);fill:none;stroke-width:1.5}
+.quiz-card-del{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.12);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;color:var(--danger)}
+.quiz-card-del svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5}
+.admin-mode .quiz-card-del{display:flex}
+.quiz-header-row{display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+
 /* HAMBURGER BUTTON — solo visible en móvil */
 .btn-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;border-radius:var(--radius-sm);color:var(--text-mid);flex-shrink:0}
 .btn-menu:hover{background:var(--border-light)}
@@ -427,6 +469,10 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
             Agregar material
           </button>
+          <button type="button" class="sb-action-btn add-material" id="btn-open-add-question">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Agregar pregunta
+          </button>
           <button type="button" class="sb-action-btn publish" id="btn-open-publish">
             <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
             Publicar cambios
@@ -515,6 +561,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
         </div>
       </div>
     </div>
+    <div id="quiz-view" style="display:none"></div>
   </div>
 </div>
 
@@ -742,6 +789,34 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   </div>
 </div>
 
+<!-- MODAL: Agregar pregunta (admin) -->
+<div class="modal-overlay" id="modal-add-question" style="display:none">
+  <div class="modal modal-md">
+    <div class="modal-top">
+      <div><div class="modal-title">Agregar pregunta</div><div class="modal-subtitle">Se agregará al banco de preguntas del Quiz</div></div>
+      <button type="button" class="modal-close" id="aq-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group"><label class="form-label">Pregunta <span class="req">*</span></label><textarea class="form-textarea" id="aq-question" rows="3" placeholder="Ej: ¿Cuál es el potencial de membrana en reposo de una neurona?"></textarea></div>
+      <div class="form-group"><label class="form-label">Módulo</label><select class="form-select" id="aq-module"></select></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Opción A <span class="req">*</span></label><input type="text" class="form-input" id="aq-a" placeholder="..." /></div>
+        <div class="form-group"><label class="form-label">Opción B <span class="req">*</span></label><input type="text" class="form-input" id="aq-b" placeholder="..." /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Opción C <span class="req">*</span></label><input type="text" class="form-input" id="aq-c" placeholder="..." /></div>
+        <div class="form-group"><label class="form-label">Opción D <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label><input type="text" class="form-input" id="aq-d" placeholder="..." /></div>
+      </div>
+      <div class="form-group"><label class="form-label">Respuesta correcta <span class="req">*</span></label><select class="form-select" id="aq-correct"><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></div>
+      <div class="form-group"><label class="form-label">Explicación <span class="req">*</span></label><textarea class="form-textarea" id="aq-explanation" rows="4" placeholder="Explicá por qué la respuesta es correcta y qué tienen de erróneo las demás opciones..."></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="aq-cancel">Cancelar</button>
+      <button type="button" class="btn btn-primary" id="aq-save"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar pregunta</button>
+    </div>
+  </div>
+</div>
+
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -770,13 +845,15 @@ const MODULES = [
   { id:"m0",  label:"Introducción",      icon:"book-open"   },
   { id:"m1",  label:"Módulo 1",          icon:"layers"      },
   { id:"m2",  label:"Módulo 2",          icon:"cpu"         },
-  { id:"m3",  label:"Módulo 3",          icon:"trending-up" }
+  { id:"m3",  label:"Módulo 3",          icon:"trending-up" },
+  { id:"quiz",label:"Quiz",              icon:"help-circle" }
 ];
 
 let VIDEOS = [];
 let MATERIALS = { m0:[], m1:[], m2:[], m3:[] };
 let HOME_CONTENT = { welcome:'', criteria:[], reminders:[] };
 let COURSE_START_DATE = '';
+let QUESTIONS = [];
 
 let currentUser = null, activeModule = "home", isAdmin = false;
 let sessionInterval = null;
@@ -788,7 +865,8 @@ const ICONS = {
   "book-open": '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
   layers:      '<svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
   cpu:         '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
-  "trending-up":'<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
+  "trending-up":'<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+  "help-circle":'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'
 };
 const MAT_ICONS = {
   pdf:   '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
@@ -803,7 +881,7 @@ function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 
 /* ══════════ DATA ══════════ */
 const LOCAL_KEY = 'neurociencia_data_v2';
-function saveLocal() { localStorage.setItem(LOCAL_KEY, JSON.stringify({ courseStartDate:COURSE_START_DATE, videos:VIDEOS, materials:MATERIALS, homeContent:HOME_CONTENT })); }
+function saveLocal() { localStorage.setItem(LOCAL_KEY, JSON.stringify({ courseStartDate:COURSE_START_DATE, videos:VIDEOS, materials:MATERIALS, homeContent:HOME_CONTENT, questions:QUESTIONS })); }
 async function loadData() {
   try {
     const r = await fetch('data.json?t=' + Date.now());
@@ -813,6 +891,7 @@ async function loadData() {
       if (d.videos && d.videos.length) VIDEOS = d.videos;
       if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
       if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
+      if (d.questions) QUESTIONS = d.questions;
       return;
     }
   } catch(_) {}
@@ -824,6 +903,7 @@ async function loadData() {
       if (d.videos && d.videos.length) VIDEOS = d.videos;
       if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
       if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
+      if (d.questions) QUESTIONS = d.questions;
     }
   } catch(_) {}
 }
@@ -962,6 +1042,9 @@ async function showMain() {
     loadFirestoreUsers();
     loadPendingUsers();
   }
+  activeModule = 'home';
+  document.getElementById('quiz-view').style.display = 'none';
+  document.querySelector('.content-body').style.display = '';
   buildSidebar(); renderHome();
   const loginEl = document.getElementById('login-screen');
   const mainEl  = document.getElementById('main-screen');
@@ -988,6 +1071,14 @@ function renderHome() {
   }).join('');
 
   var moduleCards = MODULES.filter(function(m){ return m.id !== 'home'; }).map(function(m) {
+    if (m.id === 'quiz') {
+      var qc = QUESTIONS.length;
+      return '<div class="home-mod-card" data-mod="quiz">' +
+        '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
+        '<div class="hmc-name">' + m.label + '</div>' +
+        '<div class="hmc-count">' + qc + ' pregunta' + (qc !== 1 ? 's' : '') + '</div>' +
+      '</div>';
+    }
     var count = VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
     return '<div class="home-mod-card" data-mod="' + m.id + '">' +
       '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
@@ -1033,7 +1124,7 @@ function buildSidebar() {
   const nav = document.getElementById('sb-nav');
   nav.innerHTML = '';
   MODULES.forEach(function(m) {
-    const count = m.id === 'home' ? VIDEOS.length : VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
+    const count = m.id === 'home' ? VIDEOS.length : m.id === 'quiz' ? QUESTIONS.length : VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'sb-item' + (m.id === activeModule ? ' active' : '');
@@ -1048,9 +1139,19 @@ function selectModule(id, btn) {
   document.querySelectorAll('#sb-nav .sb-item').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
   document.getElementById('ct-label').textContent = getModLabel(id);
+  var quizView    = document.getElementById('quiz-view');
+  var contentBody = document.querySelector('.content-body');
   if (id === 'home') {
+    quizView.style.display = 'none';
+    contentBody.style.display = '';
     renderHome();
+  } else if (id === 'quiz') {
+    contentBody.style.display = 'none';
+    quizView.style.display = 'block';
+    renderQuiz();
   } else {
+    quizView.style.display = 'none';
+    contentBody.style.display = '';
     document.getElementById('home-panel').style.display = 'none';
     document.querySelector('.section-header').style.display = '';
     document.getElementById('video-grid').style.display = '';
@@ -1469,7 +1570,7 @@ async function doPublish() {
     const gr = await fetch(api, { headers:hdrs });
     if (gr.ok) { sha = (await gr.json()).sha; }
     setStatus('info', 'Subiendo contenido...');
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify({ courseStartDate:COURSE_START_DATE, homeContent:HOME_CONTENT, videos:VIDEOS, materials:MATERIALS }, null, 2))));
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify({ courseStartDate:COURSE_START_DATE, homeContent:HOME_CONTENT, videos:VIDEOS, materials:MATERIALS, questions:QUESTIONS }, null, 2))));
     const body = { message:'Actualizar contenido del curso', content, branch:REPO.branch };
     if (sha) body.sha = sha;
     const pr = await fetch(api, { method:'PUT', headers:hdrs, body:JSON.stringify(body) });
@@ -1549,6 +1650,136 @@ async function doLogout() {
     document.getElementById('inp-pass').value = '';
     document.getElementById('login-error').style.visibility = 'hidden';
   }, 340);
+}
+
+/* ══════════ QUIZ ══════════ */
+function renderQuiz() {
+  var qv = document.getElementById('quiz-view');
+  var qs = QUESTIONS.slice().sort(function(){ return Math.random() - 0.5; });
+  var score = 0;
+  qv.innerHTML = '';
+
+  if (!qs.length) {
+    qv.innerHTML = '<div class="quiz-empty">' +
+      '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' +
+      '<p style="font-size:14px;font-weight:600;color:var(--text)">' + (isAdmin ? 'No hay preguntas cargadas aún.' : 'No hay preguntas disponibles aún.') + '</p>' +
+      (isAdmin ? '<p style="font-size:13px">Usá el botón <strong>Agregar pregunta</strong> del menú lateral para cargar la primera.</p>' : '') +
+      '</div>';
+    return;
+  }
+
+  qs.forEach(function(q, idx) {
+    var card = document.createElement('div');
+    card.className = 'quiz-card';
+
+    var optsHtml = q.options.map(function(opt) {
+      return '<button type="button" class="quiz-opt" data-letter="' + opt.label + '">' +
+        '<span class="quiz-opt-letter">' + opt.label + '</span>' +
+        '<span>' + opt.text + '</span>' +
+      '</button>';
+    }).join('');
+
+    var isLast = idx === qs.length - 1;
+    card.innerHTML =
+      '<div class="quiz-header-row">' +
+        '<div class="quiz-progress">Pregunta ' + (idx + 1) + ' de ' + qs.length + '</div>' +
+        '<span class="quiz-module-tag">' + getModLabel(q.moduleId) + '</span>' +
+      '</div>' +
+      '<div class="quiz-q-text">' + q.question + '</div>' +
+      '<div class="quiz-opts">' + optsHtml + '</div>' +
+      '<div class="quiz-feedback" style="display:none"></div>' +
+      '<div class="quiz-next-wrap" style="display:none">' +
+        '<button type="button" class="quiz-next-btn">' + (isLast ? 'Ver resultados →' : 'Siguiente pregunta →') + '</button>' +
+      '</div>' +
+      '<button type="button" class="quiz-card-del" data-qid="' + q.id + '" title="Eliminar pregunta">' +
+        '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+      '</button>';
+
+    card.querySelectorAll('.quiz-opt').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var chosen = btn.getAttribute('data-letter');
+        var isCorrect = chosen === q.correct;
+        if (isCorrect) score++;
+
+        card.querySelectorAll('.quiz-opt').forEach(function(b) {
+          b.disabled = true;
+          if (b.getAttribute('data-letter') === q.correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+
+        var fbEl = card.querySelector('.quiz-feedback');
+        fbEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'wrong');
+        fbEl.innerHTML =
+          '<div class="quiz-feedback-header">' +
+            (isCorrect
+              ? '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>¡Correcto!'
+              : '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Incorrecto') +
+          '</div>' +
+          '<div class="quiz-feedback-text">' + (q.explanation || '') + '</div>';
+        fbEl.style.display = 'flex';
+        card.querySelector('.quiz-next-wrap').style.display = 'block';
+
+        var fc = document.getElementById('quiz-finish');
+        if (fc) fc.querySelector('.quiz-score').textContent = score + '/' + qs.length;
+      });
+    });
+
+    card.querySelector('.quiz-next-wrap button').addEventListener('click', function() {
+      var allCards = qv.querySelectorAll('.quiz-card, .quiz-finish-card');
+      var next = allCards[idx + 1];
+      if (next) next.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+
+    card.querySelector('.quiz-card-del').addEventListener('click', function() {
+      var qid = parseInt(this.getAttribute('data-qid'));
+      if (confirm('¿Eliminar esta pregunta?')) {
+        QUESTIONS = QUESTIONS.filter(function(x){ return x.id !== qid; });
+        saveLocal(); buildSidebar(); renderQuiz();
+      }
+    });
+
+    qv.appendChild(card);
+  });
+
+  var finishCard = document.createElement('div');
+  finishCard.className = 'quiz-finish-card';
+  finishCard.id = 'quiz-finish';
+  finishCard.innerHTML =
+    '<div class="quiz-finish-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>' +
+    '<div class="quiz-finish-title">¡Terminaste el quiz!</div>' +
+    '<div class="quiz-score">0/' + qs.length + '</div>' +
+    '<div class="quiz-score-label">respuestas correctas</div>' +
+    '<div class="quiz-finish-sub">Podés volver a repasar las preguntas<br>deslizando hacia arriba, o reiniciar.</div>' +
+    '<button type="button" class="quiz-restart-btn">Reiniciar quiz</button>';
+  finishCard.querySelector('.quiz-restart-btn').addEventListener('click', function() {
+    renderQuiz();
+  });
+  qv.appendChild(finishCard);
+}
+
+function openAddQuestion() {
+  populateModSelect('aq-module', activeModule !== 'quiz' ? activeModule : 'm1');
+  ['aq-question','aq-a','aq-b','aq-c','aq-d','aq-explanation'].forEach(function(id){ document.getElementById(id).value = ''; });
+  document.getElementById('aq-correct').value = 'A';
+  openModal('modal-add-question');
+}
+function closeAddQuestion() { closeModal('modal-add-question'); }
+function saveQuestion() {
+  var question    = document.getElementById('aq-question').value.trim();
+  var moduleId    = document.getElementById('aq-module').value;
+  var a           = document.getElementById('aq-a').value.trim();
+  var b           = document.getElementById('aq-b').value.trim();
+  var c           = document.getElementById('aq-c').value.trim();
+  var d           = document.getElementById('aq-d').value.trim();
+  var correct     = document.getElementById('aq-correct').value;
+  var explanation = document.getElementById('aq-explanation').value.trim();
+  if (!question || !a || !b || !c) { alert('La pregunta y las opciones A, B y C son obligatorias.'); return; }
+  if (!explanation) { alert('La explicación es obligatoria.'); return; }
+  var options = [{ label:'A', text:a }, { label:'B', text:b }, { label:'C', text:c }];
+  if (d) options.push({ label:'D', text:d });
+  QUESTIONS.push({ id:nextId(QUESTIONS), moduleId:moduleId, question:question, options:options, correct:correct, explanation:explanation });
+  saveLocal(); buildSidebar(); closeAddQuestion();
+  if (activeModule === 'quiz') renderQuiz();
 }
 
 /* ══════════ WIRE UP — todos los listeners aquí, sin onclick en HTML ══════════ */
@@ -1634,6 +1865,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('locked-ok').addEventListener('click', function(){ closeModal('modal-locked'); });
   document.getElementById('modal-locked').addEventListener('click', function(e){ if(e.target===this) closeModal('modal-locked'); });
 
+  // Modal agregar pregunta (admin)
+  document.getElementById('btn-open-add-question').addEventListener('click', openAddQuestion);
+  document.getElementById('aq-close').addEventListener('click', closeAddQuestion);
+  document.getElementById('aq-cancel').addEventListener('click', closeAddQuestion);
+  document.getElementById('aq-save').addEventListener('click', saveQuestion);
+  document.getElementById('modal-add-question').addEventListener('click', function(e){ if(e.target===this) closeAddQuestion(); });
+
   // Modal editar página principal
   document.getElementById('eh-close').addEventListener('click', closeEditHome);
   document.getElementById('eh-cancel').addEventListener('click', closeEditHome);
@@ -1644,7 +1882,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     if (e.key !== 'Escape') return;
     closeModal('modal-video'); document.getElementById('mv-player').innerHTML = '';
-    closeAddVideo(); closeAddMaterial(); closePublish(); closeRegister(); closeAddUser();
+    closeAddVideo(); closeAddMaterial(); closePublish(); closeRegister(); closeAddUser(); closeAddQuestion();
   });
 });
 </script>

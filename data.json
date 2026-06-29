@@ -136,5 +136,46 @@
       }
     ],
     "m3": []
-  }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "moduleId": "m1",
+      "question": "¿Cuál es el valor aproximado del potencial de membrana en reposo de una neurona típica?",
+      "options": [
+        { "label": "A", "text": "-70 mV" },
+        { "label": "B", "text": "+70 mV" },
+        { "label": "C", "text": "-35 mV" },
+        { "label": "D", "text": "0 mV" }
+      ],
+      "correct": "A",
+      "explanation": "El potencial de membrana en reposo de una neurona es aproximadamente -70 mV. Este valor es negativo porque el interior de la célula tiene mayor concentración de cargas negativas respecto al exterior, mantenido principalmente por la bomba Na⁺/K⁺-ATPasa y los canales de fuga de K⁺."
+    },
+    {
+      "id": 2,
+      "moduleId": "m1",
+      "question": "¿Qué ion es el principal responsable de la fase de despolarización en el potencial de acción?",
+      "options": [
+        { "label": "A", "text": "Potasio (K⁺)" },
+        { "label": "B", "text": "Cloro (Cl⁻)" },
+        { "label": "C", "text": "Sodio (Na⁺)" },
+        { "label": "D", "text": "Calcio (Ca²⁺)" }
+      ],
+      "correct": "C",
+      "explanation": "Durante la despolarización, los canales de Na⁺ dependientes de voltaje se abren rápidamente, permitiendo una entrada masiva de sodio al interior de la célula. Esto hace que el potencial de membrana cambie de -70 mV hacia valores positivos (hasta +30 mV aproximadamente). El K⁺ es el protagonista de la repolarización, no de la despolarización."
+    },
+    {
+      "id": 3,
+      "moduleId": "m2",
+      "question": "En la sinapsis química, ¿qué desencadena la liberación de neurotransmisores a la hendidura sináptica?",
+      "options": [
+        { "label": "A", "text": "Entrada de K⁺ al terminal presináptico" },
+        { "label": "B", "text": "Entrada de Ca²⁺ al terminal presináptico" },
+        { "label": "C", "text": "Salida de Na⁺ del terminal presináptico" },
+        { "label": "D", "text": "Hiperpolarización del terminal presináptico" }
+      ],
+      "correct": "B",
+      "explanation": "Cuando el potencial de acción llega al terminal presináptico, activa canales de Ca²⁺ dependientes de voltaje. La entrada de calcio al interior del terminal desencadena la fusión de las vesículas sinápticas con la membrana y la exocitosis de los neurotransmisores hacia la hendidura sináptica."
+    }
+  ]
 }
