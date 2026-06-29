@@ -132,6 +132,16 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .home-course{font-size:13px;color:rgba(255,255,255,.55);position:relative;margin-bottom:1rem}
 .home-hint{font-size:13px;color:rgba(255,255,255,.4);position:relative;display:flex;align-items:center;gap:6px}
 .home-hint svg{flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2}
+.home-info-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--sh-sm)}
+.home-info-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem;font-size:14px;font-weight:700;color:var(--text)}
+.home-info-header svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;flex-shrink:0}
+.btn-edit-home-inline{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-light);border:none;border-radius:6px;padding:4px 10px;cursor:pointer}
+.btn-edit-home-inline:hover{background:#d0e0f7}
+.btn-edit-home-inline svg{width:12px;height:12px;stroke:var(--blue);fill:none;stroke-width:2}
+.home-info-welcome{font-size:14px;color:var(--text-mid);line-height:1.65;margin:0 0 1rem}
+.home-info-sub{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin:.75rem 0 .4rem}
+.home-info-list{margin:0 0 .5rem;padding-left:1.25rem}
+.home-info-list li{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:3px}
 .home-section-title{font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.07em}
 .home-modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
 .home-mod-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;box-shadow:var(--sh-sm)}
@@ -544,6 +554,34 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   </div>
 </div>
 
+<!-- MODAL: Editar página principal (admin) -->
+<div class="modal-overlay" id="modal-edit-home" style="display:none">
+  <div class="modal modal-md">
+    <div class="modal-top">
+      <div><div class="modal-title">Editar página principal</div><div class="modal-subtitle">El contenido se guarda al publicar cambios</div></div>
+      <button type="button" class="modal-close" id="eh-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Texto de bienvenida</label>
+        <textarea class="form-input" id="eh-welcome" rows="4" placeholder="Escribí el mensaje de bienvenida al curso..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Criterios de evaluación <span style="font-weight:400;color:var(--text-muted)">(uno por línea)</span></label>
+        <textarea class="form-input" id="eh-criteria" rows="5" placeholder="Ej: Parcial 1 — 30% de la nota&#10;Parcial 2 — 30% de la nota&#10;Examen final — 40% de la nota"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Recordatorios <span style="font-weight:400;color:var(--text-muted)">(uno por línea)</span></label>
+        <textarea class="form-input" id="eh-reminders" rows="4" placeholder="Ej: Recordá anotarte al examen con anticipación.&#10;Existen puntos por actividades prácticas."></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="eh-cancel">Cancelar</button>
+      <button type="button" class="btn btn-primary" id="eh-save"><svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>Guardar</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL: Video -->
 <div class="modal-overlay" id="modal-video" style="display:none">
   <div class="modal modal-lg">
@@ -709,6 +747,7 @@ const MODULES = [
 
 let VIDEOS = [];
 let MATERIALS = { m0:[], m1:[], m2:[], m3:[] };
+let HOME_CONTENT = { welcome:'', criteria:[], reminders:[] };
 
 let currentUser = null, activeModule = "home", isAdmin = false;
 let sessionInterval = null;
@@ -735,15 +774,26 @@ function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 
 /* ══════════ DATA ══════════ */
 const LOCAL_KEY = 'neurociencia_data_v2';
-function saveLocal() { localStorage.setItem(LOCAL_KEY, JSON.stringify({ videos:VIDEOS, materials:MATERIALS })); }
+function saveLocal() { localStorage.setItem(LOCAL_KEY, JSON.stringify({ videos:VIDEOS, materials:MATERIALS, homeContent:HOME_CONTENT })); }
 async function loadData() {
   try {
     const r = await fetch('data.json?t=' + Date.now());
-    if (r.ok) { const d = await r.json(); if (d.videos && d.videos.length) VIDEOS = d.videos; if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials); return; }
+    if (r.ok) {
+      const d = await r.json();
+      if (d.videos && d.videos.length) VIDEOS = d.videos;
+      if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
+      if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
+      return;
+    }
   } catch(_) {}
   try {
     const s = localStorage.getItem(LOCAL_KEY);
-    if (s) { const d = JSON.parse(s); if (d.videos && d.videos.length) VIDEOS = d.videos; if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials); }
+    if (s) {
+      const d = JSON.parse(s);
+      if (d.videos && d.videos.length) VIDEOS = d.videos;
+      if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
+      if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
+    }
   } catch(_) {}
 }
 
@@ -885,6 +935,14 @@ function renderHome() {
   homeEl.style.display = 'block';
 
   var name = (currentUser && currentUser.name) ? currentUser.name.split(' ')[0] : 'estudiante';
+
+  var criteriaItems = (HOME_CONTENT.criteria || []).map(function(c){
+    return '<li>' + c + '</li>';
+  }).join('');
+  var reminderItems = (HOME_CONTENT.reminders || []).map(function(r){
+    return '<li>' + r + '</li>';
+  }).join('');
+
   var moduleCards = MODULES.filter(function(m){ return m.id !== 'home'; }).map(function(m) {
     var count = VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
     return '<div class="home-mod-card" data-mod="' + m.id + '">' +
@@ -900,6 +958,16 @@ function renderHome() {
       '<div class="home-course">Neurociencia · Facultad de Medicina BCC3 · UdelaR</div>' +
       '<div class="home-hint"><svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Seleccioná un módulo del menú lateral para comenzar</div>' +
     '</div>' +
+    '<div class="home-info-card">' +
+      '<div class="home-info-header">' +
+        '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' +
+        '<span>Información general</span>' +
+        (isAdmin ? '<button type="button" class="btn-edit-home-inline" id="btn-edit-home-inline"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Editar</button>' : '') +
+      '</div>' +
+      '<p class="home-info-welcome">' + (HOME_CONTENT.welcome || '') + '</p>' +
+      (criteriaItems ? '<div class="home-info-sub">Criterios de evaluación</div><ul class="home-info-list">' + criteriaItems + '</ul>' : '') +
+      (reminderItems ? '<div class="home-info-sub">Recordatorios</div><ul class="home-info-list">' + reminderItems + '</ul>' : '') +
+    '</div>' +
     '<div class="home-section-title">Módulos del curso</div>' +
     '<div class="home-modules-grid">' + moduleCards + '</div>';
 
@@ -912,6 +980,8 @@ function renderHome() {
       if (btn) selectModule(modId, btn);
     });
   });
+  var editBtn = document.getElementById('btn-edit-home-inline');
+  if (editBtn) editBtn.addEventListener('click', openEditHome);
 }
 
 /* ══════════ SIDEBAR ══════════ */
@@ -1126,6 +1196,23 @@ function openAddUser() {
 }
 function closeAddUser() { closeModal('modal-add-user'); }
 
+/* ══════════ EDITAR PÁGINA PRINCIPAL ══════════ */
+function openEditHome() {
+  document.getElementById('eh-welcome').value = HOME_CONTENT.welcome || '';
+  document.getElementById('eh-criteria').value = (HOME_CONTENT.criteria || []).join('\n');
+  document.getElementById('eh-reminders').value = (HOME_CONTENT.reminders || []).join('\n');
+  openModal('modal-edit-home');
+}
+function closeEditHome() { closeModal('modal-edit-home'); }
+function saveHomeContent() {
+  HOME_CONTENT.welcome   = document.getElementById('eh-welcome').value.trim();
+  HOME_CONTENT.criteria  = document.getElementById('eh-criteria').value.split('\n').map(function(l){ return l.trim(); }).filter(Boolean);
+  HOME_CONTENT.reminders = document.getElementById('eh-reminders').value.split('\n').map(function(l){ return l.trim(); }).filter(Boolean);
+  saveLocal();
+  closeEditHome();
+  renderHome();
+}
+
 async function saveNewUser() {
   const name  = document.getElementById('au-name').value.trim();
   const email = document.getElementById('au-email').value.trim();
@@ -1321,7 +1408,7 @@ async function doPublish() {
     const gr = await fetch(api, { headers:hdrs });
     if (gr.ok) { sha = (await gr.json()).sha; }
     setStatus('info', 'Subiendo contenido...');
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify({ videos:VIDEOS, materials:MATERIALS }, null, 2))));
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify({ homeContent:HOME_CONTENT, videos:VIDEOS, materials:MATERIALS }, null, 2))));
     const body = { message:'Actualizar contenido del curso', content, branch:REPO.branch };
     if (sha) body.sha = sha;
     const pr = await fetch(api, { method:'PUT', headers:hdrs, body:JSON.stringify(body) });
@@ -1481,6 +1568,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('au-cancel').addEventListener('click', closeAddUser);
   document.getElementById('au-save').addEventListener('click', saveNewUser);
   document.getElementById('modal-add-user').addEventListener('click', function(e){ if(e.target===this) closeAddUser(); });
+
+  // Modal editar página principal
+  document.getElementById('eh-close').addEventListener('click', closeEditHome);
+  document.getElementById('eh-cancel').addEventListener('click', closeEditHome);
+  document.getElementById('eh-save').addEventListener('click', saveHomeContent);
+  document.getElementById('modal-edit-home').addEventListener('click', function(e){ if(e.target===this) closeEditHome(); });
 
   // Escape cierra todo
   document.addEventListener('keydown', function(e) {

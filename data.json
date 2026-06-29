@@ -1,4 +1,17 @@
 {
+  "homeContent": {
+    "welcome": "Bienvenido/a al Curso Paralelo de Neurociencias de la Facultad de Medicina (UdelaR). Este espacio está diseñado para acompañar tu aprendizaje con videos, resúmenes y material de estudio organizado por módulos.",
+    "criteria": [
+      "Criterio de evaluación 1 (editar desde el panel de administración)",
+      "Criterio de evaluación 2",
+      "Criterio de evaluación 3"
+    ],
+    "reminders": [
+      "Recordá que existen puntos por actividades prácticas.",
+      "No olvidés anotarte a los exámenes con anticipación.",
+      "Ante cualquier duda podés contactar a los docentes."
+    ]
+  },
   "videos": [
     {
       "id": 1,
