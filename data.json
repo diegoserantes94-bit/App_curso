@@ -111,6 +111,14 @@
         "url": "materiales/Liberacion_NT_resumen.pdf",
         "type": "pdf",
         "desc": ""
+      },
+      {
+        "id": 6,
+        "moduleId": "m2",
+        "title": "sinapsis neuromuscular",
+        "url": "materiales/Sinapsis_neuromuscular.pdf",
+        "type": "pdf",
+        "desc": ""
       }
     ],
     "m3": []
