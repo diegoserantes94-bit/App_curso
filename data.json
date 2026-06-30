@@ -165,1485 +165,485 @@
                                           }
                                       ],
                           "correct":  "A",
-                          "explanation":  "El exceso de cargas positivas fuera y negativas dentro genera una diferencia de potencial de entre -60 y -70 mV, determinada principalmente por los gradientes ionicos de K+ y Na+."
+                          "explanation":  "El exceso de cargas positivas fuera y negativas dentro genera un potencial de entre -60 y -70 mV, determinado principalmente por los gradientes ionicos de K+ y Na+."
                       },
                       {
                           "id":  2,
                           "moduleId":  "m1",
-                          "question":  "La celula glial tiene un potencial de reposo de aproximadamente -75 mV principalmente porque:",
+                          "question":  "Los canales ionicos de reposo se caracterizan por:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Sus canales de reposo son exclusivamente permeables al Na+"
+                                              "text":  "Estar cerrados en reposo y abrirse ante cambios de voltaje"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Sus canales de reposo son permeables casi de forma exclusiva al K+"
+                                              "text":  "Estar normalmente abiertos sin verse influidos por factores extrinsecos"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "La bomba Na+-K+ hiperpolariza activamente la membrana hasta -75 mV"
+                                              "text":  "Abrirse unicamente cuando se une un ligando especifico a su sitio receptor"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "El Cl- es el ion que determina el potencial de reposo de la celula glial"
+                                              "text":  "Responder a cambios de tension mecanica en la membrana celular"
                                           }
                                       ],
                           "correct":  "B",
-                          "explanation":  "La celula glial tiene canales de reposo casi exclusivamente para K+, por lo que su potencial de membrana se aproxima a EK (-75 mV), donde las fuerzas quimica y electrica sobre el K+ se equilibran."
+                          "explanation":  "Los canales de reposo estan normalmente abiertos y no se ven influidos por el potencial de membrana ni otros factores extrinsecos. Mantienen el potencial de reposo."
                       },
                       {
                           "id":  3,
                           "moduleId":  "m1",
-                          "question":  "La ecuacion de Nernst permite calcular:",
+                          "question":  "La celula glial tiene un potencial de reposo de -75 mV principalmente porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "La velocidad de conduccion del potencial de accion a lo largo del axon"
+                                              "text":  "Posee alta densidad de canales de Na+ que mantienen el interior celular negativo"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "La conductancia total de la membrana en reposo"
+                                              "text":  "La bomba Na+-K+ hiperpolariza activamente la membrana hasta ese valor"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "El potencial de equilibrio de un ion: el voltaje al que no existe flujo neto de ese ion a traves de la membrana"
+                                              "text":  "Sus canales de reposo son permeables casi exclusivamente al K+, acercando Vm al potencial de equilibrio del K+"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "La velocidad de apertura de los canales ionicos sensibles al voltaje"
+                                              "text":  "El Cl- es el ion predominante que determina el potencial de reposo en celulas gliales"
                                           }
                                       ],
                           "correct":  "C",
-                          "explanation":  "La ecuacion de Nernst calcula el potencial de equilibrio ionico: el voltaje al que la fuerza quimica (gradiente de concentracion) y la fuerza electrica se compensan exactamente, con flujo neto igual a cero."
+                          "explanation":  "La inmensa mayoria de los canales de reposo gliales solo son permeables al K+. Esto hace que Vm se aproxime al potencial de equilibrio del K+ (EK = -75 mV)."
                       },
                       {
                           "id":  4,
                           "moduleId":  "m1",
-                          "question":  "En el potencial de membrana en reposo de una neurona, el flujo pasivo de Na+ hacia dentro esta compensado por:",
+                          "question":  "El potencial de equilibrio del K+ en el axon del calamar (400 mM dentro, 20 mM fuera), calculado con la ecuacion de Nernst, es:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Un flujo de Ca2+ hacia fuera a traves de canales de reposo"
+                                              "text":  "+55 mV, valor que refleja la mayor concentracion extracelular de Na+"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "El cierre activo de todos los canales de Na+ de la membrana"
+                                              "text":  "-60 mV, determinado por la distribucion pasiva del Cl- a ambos lados"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Una corriente de Cl- hacia fuera que contrarresta la entrada de Na+"
+                                              "text":  "0 mV, punto donde las fuerzas quimica y electrica se anulan entre si"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "El flujo de K+ hacia fuera a traves de los canales de reposo"
+                                              "text":  "-75 mV, calculado a partir del cociente entre concentraciones interna y externa de K+"
                                           }
                                       ],
                           "correct":  "D",
-                          "explanation":  "El flujo continuo de Na+ hacia dentro se equilibra por el flujo de K+ hacia fuera a traves de canales de reposo. La bomba Na+-K+ extrae activamente Na+ e introduce K+ (con gasto de ATP) para mantener constante el potencial."
+                          "explanation":  "Aplicando la ecuacion de Nernst: EK = 58 mV x log(20/400) = -75 mV. Refleja el equilibrio entre el gradiente quimico y la fuerza electrica sobre el K+."
                       },
                       {
                           "id":  5,
                           "moduleId":  "m1",
-                          "question":  "En la ecuacion de Goldman, que factor determina cuanto influye cada ion en el potencial de membrana?",
+                          "question":  "En una neurona en reposo, el flujo pasivo continuo de Na+ hacia el interior se contrarresta principalmente por:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "La permeabilidad de la membrana para ese ion"
+                                              "text":  "El flujo pasivo de K+ hacia fuera a traves de canales de reposo, compensado a su vez por la bomba Na+-K+"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Solo la concentracion intracelular de cada ion"
+                                              "text":  "El flujo activo de Cl- hacia dentro impulsado por el transportador de cloruro especifico"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "La carga electrica del ion (su valencia)"
+                                              "text":  "La inactivacion de los canales de Na+ sensibles al voltaje que bloquea la entrada en reposo"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Unicamente el gradiente electroquimico del ion mas abundante"
+                                              "text":  "La capacitancia de membrana que almacena y neutraliza las cargas de Na+ entrantes"
                                           }
                                       ],
                           "correct":  "A",
-                          "explanation":  "La ecuacion de Goldman pondera la contribucion de cada ion por su permeabilidad de membrana: cuanto mayor la permeabilidad, mayor la influencia de ese ion en el potencial resultante."
+                          "explanation":  "El flujo pasivo de K+ hacia fuera equilibra el flujo de Na+ hacia dentro. La bomba Na+-K+ repone activamente los gradientes, extrayendo Na+ e introduciendo K+."
                       },
                       {
                           "id":  6,
                           "moduleId":  "m1",
-                          "question":  "En el modelo de circuito equivalente de la neurona, cada canal ionico se representa como:",
+                          "question":  "La ecuacion de Goldman, a diferencia de la de Nernst, permite calcular:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Un condensador que almacena cargas ionicas"
+                                              "text":  "El potencial de equilibrio de un unico ion a partir de su gradiente de concentracion"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Un conductor (resistencia) en serie con una bateria que representa el potencial de Nernst del ion"
+                                              "text":  "El potencial de membrana cuando multiples iones contribuyen segun su permeabilidad y concentracion"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Un generador de corriente que produce potenciales de accion"
+                                              "text":  "La conductancia total de la membrana a partir del numero de canales ionicos abiertos"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Un transistor que amplifica la senal sinaptica"
+                                              "text":  "La velocidad de cambio del potencial en respuesta a una corriente inyectada externamente"
                                           }
                                       ],
                           "correct":  "B",
-                          "explanation":  "Cada canal se modela como una conductancia (flujo ionico) en serie con una bateria cuya fuerza electromotriz es el potencial de equilibrio del ion correspondiente."
+                          "explanation":  "La ecuacion de Goldman incluye las permeabilidades relativas y concentraciones de Na+, K+ y Cl-, calculando el potencial de membrana cuando mas de un ion contribuye a la vez."
                       },
                       {
                           "id":  7,
                           "moduleId":  "m1",
-                          "question":  "La bomba Na+-K+ se dice que es \"electrogenica\". Que significa esto?",
+                          "question":  "La bomba Na+-K+ se considera electrogena porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Que genera potenciales de accion espontaneamente"
+                                              "text":  "Mueve iones unicamente en la direccion de su gradiente electroquimico usando energia del ATP"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Que utiliza energia electrica de la red para funcionar"
+                                              "text":  "Mantiene las concentraciones ionicas perfectamente constantes durante la actividad neuronal"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Que produce un flujo neto de carga positiva hacia fuera al transportar 3 Na+ hacia fuera y solo 2 K+ hacia dentro"
+                                              "text":  "Transporta 3 Na+ hacia fuera por cada 2 K+ hacia dentro, generando una corriente neta de carga positiva hacia fuera"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Que produce corriente solo durante el potencial de accion"
+                                              "text":  "Hiperpolariza la membrana hasta alcanzar exactamente el potencial de equilibrio del K+"
                                           }
                                       ],
                           "correct":  "C",
-                          "explanation":  "Al extraer tres iones de Na+ por cada dos de K+ que introduce, genera un flujo neto de carga positiva hacia fuera, hiperpolarizando la membrana levemente mas de lo que conseguiria la difusion pasiva sola."
+                          "explanation":  "Por cada ciclo la bomba expulsa 3 Na+ e introduce 2 K+. Este flujo ionico desigual genera una corriente neta de carga positiva hacia fuera, hiperpolarizando ligeramente la membrana."
                       },
                       {
                           "id":  8,
                           "moduleId":  "m1",
-                          "question":  "Por que el Cl- puede considerarse \"distribuido de forma pasiva\" en algunas neuronas?",
+                          "question":  "La diferencia entre permeabilidad y conductancia de membrana es que:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Porque el Cl- no puede atravesar la membrana neuronal"
+                                              "text":  "La permeabilidad se mide en siemens y la conductancia en cm/s, siendo unidades distintas pero equivalentes"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Porque la bomba Na+-K+ tambien transporta activamente el Cl-"
+                                              "text":  "La conductancia depende solo del tipo de canal, mientras que la permeabilidad incluye la concentracion ionica"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Porque el Cl- nunca contribuye al potencial de membrana en ninguna neurona"
+                                              "text":  "Ambas son practicamente identicas y pueden usarse indistintamente en cualquier ecuacion"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Porque en esas celulas el potencial de equilibrio del Cl- coincide con el potencial de reposo"
+                                              "text":  "La permeabilidad es intrinseca del canal (cm/s), mientras que la conductancia tambien depende de la concentracion ionica disponible en solucion"
                                           }
                                       ],
                           "correct":  "D",
-                          "explanation":  "En neuronas sin transporte activo de Cl-, este ion se distribuye pasivamente hasta que ECl iguala el potencial de reposo. En esa condicion las fuerzas electrica y quimica sobre el Cl- se cancelan y su flujo neto es cero."
+                          "explanation":  "Una membrana puede tener alta permeabilidad para K+ pero conductancia cero si no hay K+ en solucion. La permeabilidad se usa en Goldman; la conductancia en circuitos equivalentes."
                       },
                       {
                           "id":  9,
                           "moduleId":  "m1",
-                          "question":  "Que sucede cuando la despolarizacion neuronal supera el umbral?",
+                          "question":  "La despolarizacion de la membrana neuronal se define como:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Los canales de Na+ sensibles al voltaje se abren en un ciclo regenerativo que lleva el potencial hacia ENa"
+                                              "text":  "Una reduccion de la separacion de carga que hace el potencial de membrana menos negativo"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "El potencial se estabiliza en un valor intermedio entre EK y ENa"
+                                              "text":  "Un aumento de la separacion de carga que incrementa la negatividad del potencial de membrana"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "La bomba Na+-K+ se activa e hiperpolariza rapidamente la membrana"
+                                              "text":  "El retorno del potencial al valor de reposo tras el pico del potencial de accion"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Los canales de K+ se cierran completamente para permitir la maxima despolarizacion"
+                                              "text":  "La apertura de canales de K+ voltaje-dependientes durante la fase descendente del potencial de accion"
                                           }
                                       ],
                           "correct":  "A",
-                          "explanation":  "Al superar el umbral, mas despolarizacion abre mas canales de Na+, que generan mas corriente de Na+ hacia dentro, que produce mas despolarizacion. Este ciclo regenerativo produce el potencial de accion."
+                          "explanation":  "La despolarizacion es una reduccion de la separacion de carga a traves de la membrana, resultando en un potencial de membrana menos negativo. Si alcanza el umbral, genera un potencial de accion."
                       },
                       {
                           "id":  10,
                           "moduleId":  "m1",
-                          "question":  "Si la permeabilidad al K+ de una neurona es mucho mayor que la de cualquier otro ion, hacia que valor tendera el potencial de membrana?",
+                          "question":  "En el axon gigante del calamar, los gradientes ionicos muestran que:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Hacia el potencial de equilibrio del Na+ (ENa ≈ +55 mV)"
+                                              "text":  "El Na+ es el ion mas concentrado dentro de la celula, con 400 mM intracelular"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Hacia el potencial de equilibrio del K+ (EK ≈ -75 mV)"
+                                              "text":  "El K+ predomina intracelularmente (400 mM) mientras que el Na+ es el mas abundante en el exterior (440 mM)"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Hacia el potencial de equilibrio del Cl- (ECl ≈ -60 mV)"
+                                              "text":  "El Cl- tiene igual concentracion a ambos lados de la membrana en condiciones de reposo"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Hacia 0 mV, porque las cargas se distribuirian uniformemente"
+                                              "text":  "Los aniones organicos se distribuyen por igual dentro y fuera de la celula"
                                           }
                                       ],
                           "correct":  "B",
-                          "explanation":  "Segun la ecuacion de Goldman, cuando la permeabilidad de un ion es mucho mayor que la de los demas, el potencial de membrana se aproxima al potencial de Nernst de ese ion. Si PK domina, Vm tiende a EK ≈ -75 mV, como ocurre en las celulas gliales."
+                          "explanation":  "Segun los datos del texto: K+ intracelular 400 mM (extracelular 20 mM); Na+ intracelular 50 mM (extracelular 440 mM). El K+ y aniones organicos predominan dentro; Na+ y Cl- fuera."
                       },
                       {
                           "id":  11,
                           "moduleId":  "m1",
-                          "question":  "El potencial de membrana se vuelve mas negativo (hiperpolarizacion). Que condicion lo explica?",
+                          "question":  "El potencial de accion cesa y la membrana se repolariza porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Apertura de canales de Na+ sensibles al voltaje"
+                                              "text":  "Los canales de Na+ se abren indefinidamente hasta agotar el gradiente ionico disponible"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Inactivacion de la bomba Na+-K+"
+                                              "text":  "La bomba Na+-K+ se activa rapidamente durante el pico para expulsar el Na+ que ingreso"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Entrada neta de cationes o salida neta de aniones que aumenta la separacion de carga a traves de la membrana"
+                                              "text":  "Los canales de Na+ se inactivan gradualmente y los canales de K+ voltaje-dependientes se abren de forma retardada"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Apertura masiva de canales de Ca2+ sensibles al voltaje"
+                                              "text":  "El Cl- ingresa masivamente y contrarresta por completo la despolarizacion producida por el Na+"
                                           }
                                       ],
                           "correct":  "C",
-                          "explanation":  "La hiperpolarizacion resulta de mayor separacion de carga: salida de cationes del interior (o entrada de aniones) hace el interior aun mas negativo respecto al exterior."
+                          "explanation":  "La repolarizacion ocurre por dos mecanismos combinados: inactivacion gradual de los canales de Na+ voltaje-dependientes y apertura retardada de canales de K+ voltaje-dependientes."
                       },
                       {
                           "id":  12,
                           "moduleId":  "m1",
-                          "question":  "En el circuito equivalente de la neurona, la capacitancia de la membrana representa:",
+                          "question":  "La ecuacion de Nernst calcula:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "La resistencia total al flujo de iones a traves de los canales"
+                                              "text":  "La corriente neta de un ion como producto de su conductancia por la fuerza de arrastre electroquimica"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "La potencia de la bomba Na+-K+ para mantener los gradientes ionicos"
+                                              "text":  "El potencial de membrana resultante de la contribucion combinada de Na+, K+ y Cl-"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "La velocidad de difusion de los iones a traves de la hendidura sinaptica"
+                                              "text":  "La capacitancia de la membrana en funcion del area y el grosor de la bicapa lipidica"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "La capacidad de la bicapa lipidica para almacenar carga electrica cuando existe una diferencia de potencial a traves de ella"
+                                              "text":  "El voltaje al que no existe flujo neto de un ion especifico a traves de una membrana permeable para el"
                                           }
                                       ],
                           "correct":  "D",
-                          "explanation":  "La bicapa lipidica actua como un condensador: separa dos medios conductores mediante un aislante lipidico y puede almacenar carga cuando se mantiene una diferencia de potencial entre sus caras."
+                          "explanation":  "La ecuacion de Nernst calcula el potencial de equilibrio de un ion: el voltaje al que la fuerza quimica (gradiente de concentracion) y la fuerza electrica se igualan, resultando en flujo neto cero."
                       },
                       {
                           "id":  13,
                           "moduleId":  "m1",
-                          "question":  "Segun el circuito equivalente, el potencial de membrana se aproximara al potencial de Nernst del ion que tenga:",
+                          "question":  "En el circuito electrico equivalente de la neurona, cada canal ionico se representa como:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "La mayor conductancia de membrana en ese momento"
+                                              "text":  "Un conductor en serie con una bateria cuyo valor equivale al potencial de Nernst del ion correspondiente"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "La mayor concentracion intracelular"
+                                              "text":  "Un condensador en paralelo con un generador de corriente dependiente del voltaje de membrana"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "La mayor concentracion extracelular"
+                                              "text":  "Una resistencia variable controlada directamente por el gradiente de concentracion del ion"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "El mayor potencial de equilibrio en valor absoluto"
+                                              "text":  "Una bateria independiente cuya fuerza electromotriz es igual al potencial de membrana en reposo"
                                           }
                                       ],
                           "correct":  "A",
-                          "explanation":  "El circuito equivalente muestra que Vm se aproxima al valor de la bateria ionica asociada con la mayor conductancia. En reposo gK domina y Vm se acerca a EK; durante el potencial de accion gNa aumenta enormemente y Vm se acerca a ENa."
+                          "explanation":  "Cada canal se modela como un conductor (que representa su conductancia) en serie con una bateria (cuya fuerza electromotriz es el potencial de Nernst del ion que conduce)."
                       },
                       {
                           "id":  14,
                           "moduleId":  "m1",
-                          "question":  "Si la concentracion extracelular de K+ aumenta abruptamente, que ocurre con el potencial de membrana en reposo?",
+                          "question":  "La capacitancia electrica de la membrana neuronal existe porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Se hiperpolariza porque entra mas K+ a la celula"
+                                              "text":  "Los canales ionicos actuan como condensadores que almacenan carga entre sus aperturas sucesivas"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Se despolariza porque disminuye el gradiente de concentracion del K+ y EK se hace menos negativo"
+                                              "text":  "La bicapa lipidica, como aislante electrico, separa dos medios conductores: el citoplasma y el liquido extracelular"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "No cambia porque la bomba Na+-K+ compensa inmediatamente el cambio"
+                                              "text":  "El alto contenido en colesterol de la membrana incrementa su capacidad de acumular iones"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Se despolariza porque entra mas Na+ a la celula"
+                                              "text":  "Las proteinas integrales de membrana acumulan cargas en su superficie intracelular durante el reposo"
                                           }
                                       ],
                           "correct":  "B",
-                          "explanation":  "EK = 58 mV × log([K+]e/[K+]i). Si [K+]e aumenta, el cociente sube y EK se hace menos negativo. Como Vm sigue a EK, la neurona se despolariza. Esto explica por que la hiperpotasemia puede causar arritmias y problemas neurologicos."
+                          "explanation":  "La membrana actua como condensador porque la bicapa lipidica (aislante) separa el citoplasma y el liquido extracelular (conductores). Un valor tipico de capacitancia es 1 uF/cm2."
                       },
                       {
                           "id":  15,
                           "moduleId":  "m1",
-                          "question":  "Los \"potenciales electrotónicos\" son cambios de potencial que:",
+                          "question":  "Cuando la despolarizacion alcanza el umbral, el potencial de accion se genera por:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Generan un potencial de accion propagado de todo o nada"
+                                              "text":  "La apertura de canales de K+ sensibles al voltaje que despolarizan rapidamente la membrana"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Solo se producen por hiperpolarizacion, nunca por despolarizacion"
+                                              "text":  "El cierre de los canales de Cl- que elimina la hiperpolarizacion y permite la despolarizacion"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Son respuestas pasivas de la membrana proporcionales al estimulo"
+                                              "text":  "La apertura de canales de Na+ sensibles al voltaje en un ciclo regenerativo de retroalimentacion positiva"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Se propagan sin atenuacion a lo largo del axon como el potencial de accion"
+                                              "text":  "La inversion temporal de la bomba Na+-K+ que introduce Na+ en lugar de expulsarlo"
                                           }
                                       ],
                           "correct":  "C",
-                          "explanation":  "Los potenciales electrotónicos resultan de estimulos que no abren canales sensibles al voltaje. Son pasivos, proporcionales al tamano del estimulo, y se atenuan con la distancia."
+                          "explanation":  "La apertura de canales de Na+ voltaje-dependientes permite la entrada de Na+, lo que despolariza mas la membrana y abre mas canales: un ciclo de retroalimentacion positiva explosivo."
                       },
                       {
                           "id":  16,
                           "moduleId":  "m1",
-                          "question":  "La fuerza de arrastre electroquimica que actua sobre un ion es:",
+                          "question":  "Los indices de permeabilidad PK:PNa:PCl en la membrana en reposo del axon del calamar, medidos por Hodgkin y Katz, son:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Unicamente la diferencia de concentracion entre interior y exterior de la celula"
+                                              "text":  "1.0:20:0.45, mostrando que el Na+ es el ion mas permeable en condiciones de reposo"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Solo el gradiente electrico generado por la bomba Na+-K+"
+                                              "text":  "1.0:1.0:1.0, lo que explicaria que el potencial se ubica en el promedio de los tres potenciales de Nernst"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "El producto de la valencia del ion por su concentracion intracelular"
+                                              "text":  "0.04:1.0:0.45, indicando que el Na+ domina la permeabilidad de membrana en reposo"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "La suma de la fuerza de arrastre quimica debida al gradiente de concentracion y la fuerza de arrastre electrica debida al potencial de membrana"
+                                              "text":  "1.0:0.04:0.45, indicando que el K+ tiene la mayor permeabilidad y domina el potencial de reposo"
                                           }
                                       ],
                           "correct":  "D",
-                          "explanation":  "La fuerza electroquimica neta es la suma vectorial de ambas fuerzas. Esta suma determina la direccion y magnitud del flujo neto del ion, y es proporcional a (Vm - Eion)."
+                          "explanation":  "En reposo, PK:PNa:PCl = 1.0:0.04:0.45. El K+ tiene la mayor permeabilidad, por eso Vm se aproxima a EK. En el pico del potencial de accion la relacion se invierte: PK:PNa = 1.0:20."
                       },
                       {
                           "id":  17,
                           "moduleId":  "m1",
-                          "question":  "Por que los aniones organicos (A-) no pueden salir de la neurona?",
+                          "question":  "La celula nerviosa en reposo se encuentra en estado estable y NO en equilibrio porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Porque son demasiado grandes para atravesar los canales ionicos de la membrana y la bicapa lipidica es impermeable a ellos"
+                                              "text":  "Hay flujos pasivos continuos de Na+ hacia dentro y K+ hacia fuera, compensados exactamente por la bomba Na+-K+"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Porque la bomba Na+-K+ los retiene activamente en el interior"
+                                              "text":  "El potencial de membrana oscila continuamente entre EK y ENa sin alcanzar ningun valor fijo estable"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Porque tienen alta afinidad por los canales de K+, que los retienen unidos"
+                                              "text":  "Los gradientes ionicos se disipan lentamente y la bomba no puede compensar la perdida a largo plazo"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Porque el campo electrico de la membrana los empuja activamente hacia el interior"
+                                              "text":  "Los canales de reposo abren y cierran ciclicamente manteniendo el potencial constante en promedio"
                                           }
                                       ],
                           "correct":  "A",
-                          "explanation":  "Los aniones organicos son macromoleculas cuyo tamano supera el diametro de los canales ionicos, y la bicapa lipidica no los conduce. Por eso quedan atrapados en el interior, contribuyendo al exceso de cargas negativas del potencial de reposo."
+                          "explanation":  "En reposo existe un flujo pasivo constante (Na+ entra, K+ sale). No hay equilibrio porque los iones individuales no estan en equilibrio; es un estado estable donde los flujos pasivos son compensados por la bomba activa."
                       },
                       {
                           "id":  18,
                           "moduleId":  "m1",
-                          "question":  "Cual es la principal diferencia entre un canal de reposo y un canal regulado?",
+                          "question":  "El Cl- se distribuye pasivamente en muchas celulas nerviosas porque:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Los canales de reposo solo conducen Na+ y los regulados solo conducen K+"
+                                              "text":  "La bomba Na+-K+ cotransporta activamente Cl- hacia el exterior en cada ciclo de funcionamiento"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Los canales de reposo estan normalmente abiertos y no son influidos por factores extrinsecos"
+                                              "text":  "Sin transporte activo de Cl-, su concentracion intracelular se ajusta hasta que ECl iguala el potencial de reposo"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Los canales de reposo se encuentran solo en las dendritas y los regulados solo en el axon"
+                                              "text":  "El Cl- no puede atravesar los canales ionicos de reposo a causa de su carga negativa"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Los canales regulados son mas abundantes que los de reposo en todas las membranas"
+                                              "text":  "La alta concentracion de aniones organicos intracelulares repele al Cl- e impide su ingreso"
                                           }
                                       ],
                           "correct":  "B",
-                          "explanation":  "Esta es la distincion fundamental: los canales de reposo estan abiertos de forma constitutiva y establecen el potencial de reposo; los regulados requieren un estimulo especifico para abrirse y generar senales electricas transitorias."
+                          "explanation":  "En celulas sin transporte activo de Cl-, este ion se redistribuye pasivamente hasta que su potencial de equilibrio (ECl) iguala el potencial de reposo (Vr), resultando en flujo neto cero de Cl- en reposo."
                       },
                       {
                           "id":  19,
                           "moduleId":  "m1",
-                          "question":  "Durante el pico del potencial de accion, Vm se aproxima a ENa pero nunca lo alcanza completamente. Por que?",
+                          "question":  "La fuerza de arrastre electroquimica sobre un ion se define como:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Porque la bomba Na+-K+ contrarresta activamente la entrada de Na+"
+                                              "text":  "La suma de las concentraciones intracelular y extracelular del ion dividida entre su valencia"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Porque los canales de Na+ estan bloqueados fisicamente por el Cl-"
+                                              "text":  "El producto de la conductancia de membrana para ese ion por su potencial de equilibrio de Nernst"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Porque la permeabilidad finita de la membrana para K+ y Cl- genera flujos opuestos al flujo de Na+"
+                                              "text":  "La diferencia entre el potencial de membrana actual y el potencial de equilibrio del ion (Vm - Ex)"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Porque la concentracion intracelular de Na+ iguala a la extracelular antes de que Vm llegue a ENa"
+                                              "text":  "La razon entre el gradiente quimico y la fuerza electrica que actuan en sentidos opuestos sobre el ion"
                                           }
                                       ],
                           "correct":  "C",
-                          "explanation":  "Aunque durante el pico la permeabilidad al Na+ es dominante, la permeabilidad residual al K+ y al Cl- genera corrientes opuestas que impiden que Vm llegue exactamente a ENa. Ademas, los canales de Na+ comienzan a inactivarse."
+                          "explanation":  "La fuerza de arrastre electroquimica es Vm - Ex. Determina la direccion y la magnitud del flujo neto del ion: si es positiva, el cation sale; si es negativa, entra."
                       },
                       {
                           "id":  20,
                           "moduleId":  "m1",
-                          "question":  "Por que la neurona esta en un estado estable y no en equilibrio termodinamico en reposo?",
+                          "question":  "Segun el modelo de circuito equivalente, el potencial de membrana en reposo se aproxima al potencial de equilibrio del ion que:",
                           "options":  [
                                           {
                                               "label":  "A",
-                                              "text":  "Porque todos los flujos ionicos son cero en reposo"
+                                              "text":  "Tiene la mayor concentracion extracelular en relacion a su concentracion intracelular"
                                           },
                                           {
                                               "label":  "B",
-                                              "text":  "Porque la membrana celular bloquea completamente el movimiento de todos los iones"
+                                              "text":  "Presenta la menor diferencia entre su potencial de Nernst y el potencial de reposo actual"
                                           },
                                           {
                                               "label":  "C",
-                                              "text":  "Porque el potencial de reposo es igual al potencial de equilibrio del Na+"
+                                              "text":  "Es transportado activamente por la bomba Na+-K+ en mayor cantidad por ciclo"
                                           },
                                           {
                                               "label":  "D",
-                                              "text":  "Porque hay flujo pasivo continuo de Na+ hacia dentro y K+ hacia fuera"
+                                              "text":  "Tiene la mayor conductancia de membrana en el estado de reposo de la celula"
                                           }
                                       ],
                           "correct":  "D",
-                          "explanation":  "El estado estable implica potencial constante no porque no haya flujos, sino porque los flujos pasivos son compensados por la bomba. Este proceso requiere hidrolisis continua de ATP, por lo que no es equilibrio termodinamico sino un estado dinamico que consume energia."
+                          "explanation":  "El potencial de membrana se pondera por las conductancias ionicas: el ion con mayor conductancia arrastra Vm hacia su potencial de equilibrio. En reposo, gK es mayor, por eso Vm se aproxima a EK."
                       },
                       {
                           "id":  21,
-                          "moduleId":  "m1",
-                          "question":  "La resistencia a la entrada de corriente (Rin) de una neurona determina:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La magnitud del cambio de potencial en respuesta a una corriente sinaptica: a mayor Rin"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La velocidad de propagacion del potencial de accion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El numero de canales de Na+ sensibles al voltaje en el cono axonico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El umbral de voltaje para la apertura de los canales de K+ de rectificacion tardia"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Por la ley de Ohm (ΔV = I × Rin), la despolarizacion producida por una corriente sinaptica es proporcional a la resistencia de entrada. Una neurona pequena tiene mayor Rin y por tanto mayor respuesta de voltaje ante la misma corriente que una neurona grande."
-                      },
-                      {
-                          "id":  22,
-                          "moduleId":  "m1",
-                          "question":  "La constante temporal de la membrana (τ) se define como:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El tiempo que tarda el potencial de accion en alcanzar su pico desde el umbral"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El producto de la resistencia de entrada por la capacitancia total"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El tiempo que dura el periodo refractario absoluto tras un potencial de accion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La duracion de la corriente sinaptica que produce un potencial de placa terminal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "τ = Rin × Cm mide la velocidad de respuesta pasiva. Es el tiempo para que el potencial alcance el 63% (1 - 1/e) de su valor en estado estable. Valores tipicos: 20-50 ms."
-                      },
-                      {
-                          "id":  23,
-                          "moduleId":  "m1",
-                          "question":  "La constante de longitud (λ) de una dendrita mide:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La distancia total que puede recorrer un potencial de accion sin atenuarse"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La longitud maxima que puede alcanzar un axon antes de requerir mielinizacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La distancia a la que un cambio pasivo de potencial se reduce al 37% de su valor inicial"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El numero de sinapsis por unidad de longitud de dendrita"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "λ es la distancia a la que ΔVm decae al 37% (= 1/e) de su valor en el punto de inyeccion. Depende de √(rm/ra): mayor resistencia de membrana y menor resistencia axial aumentan λ, permitiendo que las senales pasivas viajen mas lejos."
-                      },
-                      {
-                          "id":  24,
-                          "moduleId":  "m1",
-                          "question":  "Por que una dendrita mas gruesa tiene una constante de longitud mayor?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque su mayor diametro aumenta la resistencia axial, mejorando la conduccion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque las dendritas mas gruesas tienen mas canales de Na+ activos que regeneran la senal"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el mayor diametro reduce la capacitancia por unidad de longitud, acelerando la conduccion pasiva"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque al aumentar el diametro disminuye la resistencia axial (ra) proporcionalmente al cuadrado del radio"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "λ = √(rm/ra). Al aumentar el radio, ra disminuye con el cuadrado del radio y rm disminuye menos (inverso al radio), por lo que rm/ra aumenta con el radio. En consecuencia λ aumenta: axones y dendritas mas gruesos conducen senales pasivas a mayor distancia."
-                      },
-                      {
-                          "id":  25,
-                          "moduleId":  "m1",
-                          "question":  "La capacitancia de membrana tiene como efecto principal sobre la transmision de señales que:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Retarda el cambio del potencial de membrana porque parte de la corriente debe primero cargar el condensador antes de cambiar el voltaje"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Aumenta la amplitud de los potenciales sinapticos al almacenar carga extra"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Aumenta la resistencia axial, dificultando el flujo de corriente longitudinal"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Permite que los potenciales locales se propaguen sin atenuacion"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Cuando se aplica corriente, parte de ella carga la capacitancia (corriente capacitiva) en lugar de fluir a traves de la resistencia. Esto retarda el cambio de voltaje: el potencial sube lentamente al principio y se nivela despues de varias constantes temporales."
-                      },
-                      {
-                          "id":  26,
-                          "moduleId":  "m1",
-                          "question":  "Por que los axones de gran diametro son mas faciles de excitar con estimulos de corriente extracelulares?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque tienen mas canales de Na+ sensibles al voltaje por unidad de area"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque su menor resistencia axial permite que una mayor fraccion de la corriente extracelular penetre en el axon y lo despolarice mas eficientemente"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque su mayor capacitancia facilita la carga rapida de la membrana"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque su umbral de voltaje para el potencial de accion es mas bajo"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los axones de mayor diametro tienen menor resistencia axial y mayor conductancia longitudinal. Esto permite que una mayor fraccion de la corriente extracelular penetre en el axon y despolarice su membrana, haciendolo mas facilmente excitable."
-                      },
-                      {
-                          "id":  27,
-                          "moduleId":  "m1",
-                          "question":  "La mielinizacion de un axon aumenta la velocidad de conduccion principalmente porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Aumenta la resistencia axial del interior del axon"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Proporciona canales de Na+ adicionales a lo largo de todo el axon mielinizado"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Reduce la capacitancia de la membrana internodal al actuar como aislante muy grueso"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Elimina completamente la necesidad de potenciales de accion en el axon"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La mielina actua como un aislante que aumenta el grosor efectivo de la membrana. Dado que la capacitancia es inversamente proporcional al grosor del aislante, la mielina reduce drasticamente cm, disminuyendo ra·cm y acelerando la propagacion pasiva entre nodulos de Ranvier."
-                      },
-                      {
-                          "id":  28,
-                          "moduleId":  "m1",
-                          "question":  "En la conduccion saltatoria de los axones mielinizados, el potencial de accion parece saltar de nodulo en nodulo porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El potencial de accion se propaga por canales de Ca2+ en la vaina de mielina"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Los nodulos de Ranvier actuan como resistencias de baja impedancia que acortan el trayecto de la corriente"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La mielina actua como semiconductor que transmite la senal electrica directamente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La corriente generada en un nodulo se extiende pasivamente y con rapidez a lo largo del axon mielinizado de baja capacitancia hasta el siguiente nodulo"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "En los internodos mielinizados, la baja capacitancia permite que la corriente se propague pasivamente a gran velocidad hasta el siguiente nodulo. Alli, la alta densidad de canales de Na+ regenera el potencial de accion. Esta conduccion saltatoria es mucho mas rapida y metabolicamente eficiente."
-                      },
-                      {
-                          "id":  29,
-                          "moduleId":  "m1",
-                          "question":  "La desmielinizacion afecta la conduccion nerviosa porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Al perderse la mielina aumenta la capacitancia de membrana y disminuye la constante de longitud en el segmento desmielinizado"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Destruye los canales de Na+ sensibles al voltaje de los nodulos de Ranvier"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Aumenta el diametro del axon, lo que paradojicamente reduce la velocidad de conduccion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Elimina los nodulos de Ranvier, impidiendo la regeneracion activa del potencial de accion"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Sin mielina, la membrana queda expuesta con su capacitancia normal y resistencia de membrana reducida. Esto aumenta la carga capacitiva y acorta la constante de longitud. El potencial de accion puede no alcanzar el umbral en el nodulo siguiente, enlenteciendo o bloqueando la conduccion."
-                      },
-                      {
-                          "id":  30,
-                          "moduleId":  "m1",
-                          "question":  "Por que neuronas mas grandes tienen una menor resistencia de entrada (Rin)?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque tienen una membrana con menor densidad de canales ionicos de reposo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque al ser mas grandes tienen mayor area de membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque sus canales de reposo tienen mayor conductancia individual"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque tienen mas mitocondrias que producen corrientes electricas adicionales"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Rin = Rm / area. A mayor area de membrana, mas canales de reposo conducen corriente en paralelo, reduciendo la resistencia total. Una neurona grande produce menor cambio de voltaje para la misma corriente sinaptica que una pequena."
-                      },
-                      {
-                          "id":  31,
-                          "moduleId":  "m1",
-                          "question":  "La suma espacial de potenciales sinapticos se ve favorecida por una constante de longitud larga porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una λ larga permite que los potenciales de accion de regiones distantes sean mas rapidos"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Una λ larga aumenta el umbral del potencial de accion en el cono axonico"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una mayor λ permite que los potenciales sinapticos generados en dendritas distantes se atenuen menos antes de llegar al cono axonico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una λ larga hace mas negativo el potencial de reposo, facilitando la suma"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "Con λ larga, los potenciales sinapticos se propagan con menor atenuacion desde las dendritas distales hasta la zona desencadenante (cono axonico). Esto hace mas efectivas las contribuciones sinapticas de regiones alejadas del soma para la suma espacial."
-                      },
-                      {
-                          "id":  32,
-                          "moduleId":  "m1",
-                          "question":  "La resistencia especifica de membrana (Rm) es una propiedad intrinseca que no depende del tamano de la celula. Que si determina?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El voltaje maximo que puede alcanzar el potencial de accion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La capacidad de la membrana para almacenar carga electrica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La concentracion de iones en el liquido extracelular"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La densidad de canales ionicos de reposo por unidad de area de membrana y su conductancia"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Rm (en Ω·cm²) mide cuanto se opone la membrana al flujo de corriente por unidad de area. Depende exclusivamente de la densidad de canales de reposo y de su conductancia individual."
-                      },
-                      {
-                          "id":  33,
-                          "moduleId":  "m1",
-                          "question":  "La conduccion electronica de senales a lo largo de las dendritas es \"decremental\". Esto significa que:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La amplitud del potencial disminuye exponencialmente con la distancia desde el punto de generacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La senal aumenta de amplitud conforme viaja hacia el soma"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La senal dura menos tiempo conforme se aleja del punto de origen"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La velocidad de la senal disminuye con la distancia hasta detenerse"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "La disminucion es exponencial: a una distancia λ el potencial queda reducido al 37% de su valor inicial. Esta atenuacion impone limitaciones a la comunicacion entre sinapsis distales y el cono axonico."
-                      },
-                      {
-                          "id":  34,
-                          "moduleId":  "m1",
-                          "question":  "La constante temporal τ afecta la suma temporal de potenciales sinapticos porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una τ larga hace que los canales de Na+ se inactiven mas rapidamente"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Una τ larga implica que el potencial sinaptico dura mas tiempo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una τ larga reduce la resistencia de entrada, permitiendo que mas corriente entre a la celula"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una τ corta es siempre preferible para la integracion neuronal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Con τ larga, el potencial sinaptico decae lentamente. Si llega un segundo estimulo antes de que el primero se haya disipado, sus efectos se suman (suma temporal). Una τ corta hace que los potenciales decaigan rapido y sean menos susceptibles de sumarse."
-                      },
-                      {
-                          "id":  35,
-                          "moduleId":  "m1",
-                          "question":  "Cual de las siguientes describe correctamente el efecto del diametro del axon sobre su resistencia axial (ra)?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "ra aumenta con el cuadrado del radio porque hay mas citoplasma que ofrece resistencia"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "ra es independiente del diametro del axon"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "ra disminuye en proporcion al cuadrado del radio"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "ra disminuye en proporcion lineal al radio, no al cuadrado"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "ra = ρ/(πa²): ra es inversamente proporcional al area de la seccion transversal, que crece con el cuadrado del radio. Un axon de mayor diametro tiene mayor seccion transversal, mas iones disponibles y por tanto menor resistencia axial."
-                      },
-                      {
-                          "id":  36,
-                          "moduleId":  "m1",
-                          "question":  "Por que la corriente total de membrana (Im) es la suma de una corriente ionica y una corriente capacitiva?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque la membrana tiene dos membranas lipidicas que conducen por separado"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque los canales ionicos actuan como capacitores cuando no hay transmisor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque la membrana solo permite flujo de corriente en una sola direccion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la resistencia y la capacitancia de la membrana estan en paralelo: la corriente puede fluir tanto a traves de los canales ionicos como cargando el condensador que forma la bicapa lipidica"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "En el modelo equivalente, Rm y Cm estan en paralelo. Cuando se aplica corriente, una parte fluye por los canales (corriente ionica, proporcional al voltaje) y otra carga el condensador (corriente capacitiva, proporcional a dV/dt). Im = Ii + Ic."
-                      },
-                      {
-                          "id":  37,
-                          "moduleId":  "m1",
-                          "question":  "Cuales son los dos objetivos de diseno que compiten en la arquitectura de las neuronas?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Ser pequeñas para maximizar el numero de neuronas en el encefalo, y ser rapidas para responder al entorno; se resuelve con mielinizacion y aumento del diametro axonal"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Ser grandes para tener mas sinapsis, y ser rapidas; se resuelve con mielinizacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Ser largas para cubrir distancias y ser energeticamente eficientes; se resuelve con canales de Na+ de alta densidad en todo el axon"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Ser rigidas para mantener la morfologia y ser plasticas para adaptarse; se resuelve con el citoesqueleto y transporte axonal"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Las neuronas deben ser pequeñas para que quepan muchas en el encefalo (poder computacional), pero tambien deben conducir señales rapidamente. La mielinizacion y el aumento del diametro axonal permiten alta velocidad de conduccion sin requerir axones demasiado gruesos, reconciliando ambos objetivos."
-                      },
-                      {
-                          "id":  38,
-                          "moduleId":  "m1",
-                          "question":  "Al inicio de una pulsacion de corriente hacia fuera, toda la corriente fluye a traves del condensador (Ic = Im). Por que?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque los canales ionicos se cierran al inicio de la pulsacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque al comienzo el voltaje a traves de la membrana es 0"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el condensador tiene menor resistencia que los canales ionicos en reposo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la corriente capacitiva siempre es mayor que la ionica en cualquier momento"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Al inicio de la pulsacion el voltaje no ha cambiado (V = 0), por lo que Ii = V/R = 0. Toda la corriente va al condensador (Ic = Im). Conforme Vm aumenta, Ii crece y Ic disminuye hasta que se alcanza el estado estable (Ic = 0)."
-                      },
-                      {
-                          "id":  39,
-                          "moduleId":  "m1",
-                          "question":  "La resistencia axial (ra) limita la velocidad de propagacion del potencial de accion porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una ra alta impide que los canales de Na+ sensibles al voltaje se activen"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Una ra alta hace que la membrana del axon sea mas permeable al K+"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una ra alta reduce el flujo de corriente de circuito local entre la region activa y la adyacente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una ra alta aumenta la capacitancia de la membrana, requiriendo mas carga para despolarizarla"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La corriente de circuito local que despolariza el segmento adyacente debe fluir a traves de ra. Una ra alta reduce esa corriente (I = V/R), enlenteciendo la carga de la capacitancia del segmento siguiente y el tiempo para alcanzar el umbral."
-                      },
-                      {
-                          "id":  40,
-                          "moduleId":  "m1",
-                          "question":  "En un experimento, a 1 mm del electrodo el potencial es 37% del original. Que indica esto?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que la dendrita tiene un potencial de reposo inestable"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que la dendrita esta a punto de generar un potencial de accion por corriente de circuito local"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que la resistencia axial de la dendrita es mucho mayor que la resistencia de membrana"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que la constante de longitud de esa dendrita es de 1 mm: a esa distancia la senal pasiva se reduce a 1/e (37%) de su valor inicial"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Por definicion, λ es la distancia a la que ΔVm decae al 37% de su valor inicial. Si a 1 mm el potencial es 37% del original, entonces λ = 1 mm. Las sinapsis a mas de 1 mm contribuiran con menos del 37% de su amplitud original al soma."
-                      },
-                      {
-                          "id":  41,
-                          "moduleId":  "m1",
-                          "question":  "El experimento de Cole y Curtis demostro que durante el potencial de accion la conductancia ionica de la membrana:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Aumenta de forma notable, indicando que el impulso resulta de cambios en el flujo de iones a traves de los canales de membrana"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Disminuye de forma transitoria, produciendo la despolarizacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Permanece constante, y el potencial de accion se debe solo a cambios de la conductancia capacitiva"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Aumenta solo al final, durante la repolarizacion"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Cole y Curtis observaron un gran aumento de la conductancia ionica coincidiendo con el potencial de accion, demostrando que este no es un proceso puramente electrico sino que implica un aumento masivo del flujo de iones."
-                      },
-                      {
-                          "id":  42,
-                          "moduleId":  "m1",
-                          "question":  "La tecnica de pinza de voltaje (voltage clamp) permite estudiar los canales ionicos sensibles al voltaje porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Elimina completamente la corriente ionica para medir solo la capacitiva"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Interrumpe la retroalimentacion positiva entre despolarizacion y apertura de canales de Na+"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Congela la membrana para impedir el movimiento de los canales ionicos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Amplifica la corriente de un solo canal para hacerla medible"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La pinza de voltaje mantiene Vm constante inyectando la corriente necesaria para contrarrestar exactamente la corriente ionica de los canales. Esto permite medir esa corriente y estudiar como depende del voltaje y del tiempo."
-                      },
-                      {
-                          "id":  43,
-                          "moduleId":  "m1",
-                          "question":  "Como separaron Hodgkin y Huxley las corrientes de Na+ y K+ en los experimentos de pinza de voltaje?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Midiendo las corrientes a diferentes temperaturas para separar sus cineticas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Usando dos electrodos intracelulares separados, uno para Na+ y otro para K+"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Sustituyendo el Na+ extracelular por colina (ion impermeante) para eliminar INa"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Aplicando campos magneticos para desviar cationes de diferente masa atomica"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "Hodgkin y Huxley usaron: sustitucion de Na+ por colina para eliminar la corriente de Na+, y farmacos selectivos: TTX para canales de Na+ y TEA para canales de K+. Esto permitio medir INa e IK puras por separado."
-                      },
-                      {
-                          "id":  44,
-                          "moduleId":  "m1",
-                          "question":  "Cual es la diferencia entre el canal de Na+ en estado \"de reposo\" (cerrado) y en estado \"inactivado\" (cerrado)?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "No hay diferencia funcional; ambos estados son identicos electricamente"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El canal inactivado conduce mas iones que el canal de reposo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El canal inactivado tiene la compuerta de activacion abierta y la de inactivacion cerrada, mientras que el de reposo tiene ambas cerradas"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El canal en reposo puede responder a nueva despolarizacion"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "En reposo la compuerta de activacion esta cerrada y la de inactivacion abierta, listo para activarse. En el estado inactivado, la compuerta de inactivacion esta cerrada bloqueando el poro. Solo la repolarizacion revierte la inactivacion lentamente."
-                      },
-                      {
-                          "id":  45,
-                          "moduleId":  "m1",
-                          "question":  "El periodo refractario absoluto impide la generacion de un segundo potencial de accion inmediatamente. Cual es su mecanismo?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La mayoria de los canales de Na+ estan inactivados y no pueden abrirse ante nueva despolarizacion hasta repolarizarse"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La bomba Na+-K+ hiperpolariza la membrana hasta que no puede despolarizarse de nuevo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La apertura masiva de canales de K+ despolariza la membrana hasta un nivel donde los canales de Na+ ya no pueden abrirse"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El Ca2+ intracelular acumulado bloquea fisicamente los canales de Na+"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Durante y justo despues del potencial de accion, la mayoria de los canales de Na+ estan inactivados. Aunque la membrana se despolarice, no pueden responder. El periodo termina cuando la repolarizacion permite que los canales regresen al estado de reposo."
-                      },
-                      {
-                          "id":  46,
-                          "moduleId":  "m1",
-                          "question":  "El potencial de accion sigue la regla de todo o nada. Como se explica si la conductancia de Na+ aumenta gradualmente con la despolarizacion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque la conductancia de Na+ solo puede tener dos valores: cero o maximo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque existe un umbral critico por encima del cual el aumento de INa hacia dentro supera las corrientes de K+ y de escape hacia fuera"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales de K+ solo se abren completamente por encima del umbral, bloqueando cualquier potencial intermedio"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el umbral es el voltaje exacto al que gNa = gK"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Subumbralmente, el aumento de INa es compensado por IK e Ip. En el umbral, INa supera por primera vez las corrientes de salida, iniciando retroalimentacion positiva: mas despolarizacion → mas canales Na+ → mas INa → mas despolarizacion. Este ciclo explosivo genera el potencial de accion."
-                      },
-                      {
-                          "id":  47,
-                          "moduleId":  "m1",
-                          "question":  "Que produce la repolarizacion de la membrana tras el pico del potencial de accion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La entrada masiva de Cl- que neutraliza la despolarizacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La activacion de la bomba Na+-K+ que extrae el Na+ acumulado rapidamente"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La inactivacion gradual de los canales de Na+ (que reduce la corriente hacia dentro) combinada con la apertura retardada de los canales de K+ sensibles al voltaje (que aumenta la corriente hacia fuera)"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El cierre de todos los canales de K+ de reposo al mismo tiempo"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La repolarizacion resulta de dos procesos: (1) los canales de Na+ se inactivan progresivamente reduciendo la corriente de entrada; (2) los canales de K+ sensibles al voltaje, cuya apertura es mas lenta, se abren aumentando la corriente hacia fuera. Ambos producen un flujo neto de carga positiva hacia fuera que repolariza la membrana."
-                      },
-                      {
-                          "id":  48,
-                          "moduleId":  "m1",
-                          "question":  "Que es el \"potencial posterior\" hiperpolarizante que sigue a muchos potenciales de accion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una despolarizacion rapida que sigue inmediatamente al pico del potencial de accion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Un aumento transitorio del voltaje producido por la activacion de la bomba Na+-K+"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El resultado de la entrada rapida de Ca2+ que hiperpolariza la membrana"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una hiperpolarizacion transitoria porque los canales de K+ sensibles al voltaje permanecen abiertos brevemente despues de que Vm haya regresado al potencial de reposo"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Despues de la repolarizacion, los canales de K+ sensibles al voltaje no se cierran instantaneamente. Mientras permanecen abiertos, gK es mayor que en reposo y Vm se desplaza temporalmente hacia EK (mas negativo que el potencial de reposo)."
-                      },
-                      {
-                          "id":  49,
-                          "moduleId":  "m1",
-                          "question":  "Los canales de Na+ sensibles al voltaje seleccionan al Na+ sobre el K+ mediante:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Un filtro de selectividad cuya geometria permite que el Na+ deshidratado interactue opticamente con oxigenos del poro que sustituyen su agua de hidratacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Cargas positivas en el poro que solo permiten la entrada de aniones"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Un poro con carga negativa que atrae selectivamente al Na+ por su mayor densidad de carga"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Canales de Na+ que utilizan energia del ATP para transportar activamente Na+ hacia dentro"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "El filtro de selectividad del canal de Na+ tiene dimensiones que permiten la deshidratacion del Na+ y su interaccion optima con los oxigenos de la proteina. El K+ es mas pequeno en forma deshidratada y no puede interactuar con esos oxigenos con la misma afinidad energetica, siendo excluido."
-                      },
-                      {
-                          "id":  50,
-                          "moduleId":  "m1",
-                          "question":  "Que es la inactivacion de los canales de Na+ y cual es su consecuencia funcional?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El cierre de la compuerta de activacion durante la despolarizacion; permite generar potenciales de accion repetitivos de alta frecuencia"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El cierre de la compuerta de inactivacion durante la despolarizacion prolongada"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La reduccion de la conductancia de K+ durante el potencial de accion para evitar hiperpolarizacion excesiva"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La activacion de la bomba Na+-K+ que remueve el Na+ acumulado y recarga el canal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La inactivacion ocurre cuando la compuerta de inactivacion (cara citoplasmica) se cierra bloqueando el poro. Limita la corriente de Na+, contribuye a la repolarizacion y es el mecanismo del periodo refractario absoluto."
-                      },
-                      {
-                          "id":  51,
-                          "moduleId":  "m1",
-                          "question":  "La tetrodotoxina (TTX) bloquea selectivamente los canales de Na+. Cual es su mecanismo?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Se introduce en el citoplasma y se une a la compuerta de inactivacion, manteniendola siempre abierta"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Activa permanentemente los canales de Na+, llevando el potencial a ENa"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Se une con alta afinidad al poro del canal de Na+ desde el lado extracelular, bloqueando fisicamente el paso de iones de Na+"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Se une a receptores muscarinicos que a traves de proteinas G cierran los canales de Na+"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La TTX es una molecula positivamente cargada que se une con extraordinaria afinidad (nanomolar) a un sitio especifico en la entrada extracelular del poro del canal de Na+, ocluye el poro y bloquea el flujo de Na+ sin afectar las compuertas ni a otros tipos de canales."
-                      },
-                      {
-                          "id":  52,
-                          "moduleId":  "m1",
-                          "question":  "El modelo de Hodgkin y Huxley pudo reconstruir matematicamente el potencial de accion. Que validaron al comparar el potencial calculado con el registrado?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que la bomba Na+-K+ es el generador principal del potencial de accion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que el Ca2+ es el principal ion responsable de la fase ascendente del potencial de accion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que la duracion del potencial de accion depende principalmente de la constante de longitud del axon"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que las propiedades de dependencia temporal y voltaje de los canales de Na+ y K+"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Cuando calcularon el potencial de accion teorico a partir de sus ecuaciones, la curva calculada coincidio casi perfectamente con el registro real, validando que los canales de Na+ y K+ sensibles al voltaje son los responsables del potencial de accion."
-                      },
-                      {
-                          "id":  53,
-                          "moduleId":  "m1",
-                          "question":  "En que se diferencia la cinetica de los canales de K+ sensibles al voltaje respecto a los de Na+?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Los canales de K+ se abren mas lentamente que los de Na+ y no se inactivan mientras dure la despolarizacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Los canales de K+ se abren mas rapido y se inactivan igual que los de Na+"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Los canales de K+ tienen tres estados (reposo, activo, inactivado) igual que los de Na+"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Los canales de K+ se abren antes del umbral y los de Na+ despues del umbral"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Los canales de Na+ se abren rapidamente pero luego se inactivan. Los canales de K+ del axon de calamar (rectificador de activacion retardada) se abren mas lentamente y no se inactivan, permaneciendo abiertos durante toda la despolarizacion, lo que explica la repolarizacion sostenida."
-                      },
-                      {
-                          "id":  54,
-                          "moduleId":  "m1",
-                          "question":  "Por que el potencial de accion se propaga en una sola direccion a lo largo del axon?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque la vaina de mielina actua como valvula que impide la propagacion retrograda"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque la region del axon que acaba de generar un potencial de accion esta en periodo refractario (canales de Na+ inactivados)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales de Na+ solo estan presentes en el extremo distal del axon"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la bomba Na+-K+ genera una corriente rectificada que solo permite flujo ionico anterogrado"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La corriente de circuito local avanza desde la region activa pero la region que acaba de disparar esta en periodo refractario absoluto (canales de Na+ inactivados) y no puede generar un nuevo potencial de accion. Por eso la propagacion es unidireccional."
-                      },
-                      {
-                          "id":  55,
-                          "moduleId":  "m1",
-                          "question":  "Cual es la diferencia entre los periodos refractarios absoluto y relativo?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Durante el absoluto se pueden generar potenciales mas pequenos, y durante el relativo no se puede generar ningun potencial"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El absoluto solo ocurre en axones mielinizados y el relativo en axones sin mielina"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Durante el periodo refractario absoluto es imposible generar un potencial de accion independientemente del estimulo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El relativo dura siempre mas que el absoluto en todos los tipos de neuronas"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "El periodo refractario absoluto coincide con la maxima inactivacion de canales de Na+ y mayor aumento de gK; ninguna corriente puede generar un potencial de accion. En el relativo, muchos canales de Na+ han retornado al reposo y gK esta volviendo a normal; un estimulo mas intenso puede generar un potencial de accion."
-                      },
-                      {
-                          "id":  56,
-                          "moduleId":  "m1",
-                          "question":  "Por que la apertura de canales de Ca2+ sensibles al voltaje genera una corriente hacia dentro?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el Ca2+ esta mas concentrado dentro de la celula y la membrana es positiva por dentro"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque el Ca2+ tiene carga negativa y es atraido por el interior positivo de la membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el Ca2+ es activamente transportado hacia dentro por canales acoplados a ATP"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el Ca2+ esta mas concentrado fuera de la celula y la membrana es negativa por dentro"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "La concentracion extracelular de Ca2+ es unas 10 000 veces mayor que la intracelular, y la cara interna de la membrana es negativa. Ambos factores crean una fuerte fuerza electroquimica que impulsa al Ca2+ hacia dentro cuando el canal se abre."
-                      },
-                      {
-                          "id":  57,
-                          "moduleId":  "m1",
-                          "question":  "Que es la corriente de \"perdida\" (Ip) en los experimentos con pinza de voltaje?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La corriente sostenida y constante que fluye a traves de los canales de reposo (siempre abiertos) de K+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La corriente de los canales de Na+ sensibles al voltaje cuando se despolariza la membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La corriente que se pierde hacia el electrodo de tierra durante el experimento"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La corriente generada por la bomba Na+-K+ durante el experimento"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "La corriente de perdida fluye por los canales de reposo que permanecen abiertos independientemente del voltaje. Permite calcular gp (constante), que debe ser sustraida de la corriente total para obtener las corrientes de los canales sensibles al voltaje."
-                      },
-                      {
-                          "id":  58,
-                          "moduleId":  "m1",
-                          "question":  "Un incremento en la concentracion extracelular de Ca2+ (hipercalcemia) reduce la excitabilidad neuronal. Por que?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el Ca2+ bloquea fisicamente los canales de Na+ sensibles al voltaje desde el exterior"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque el Ca2+ extracelular apantalla las cargas negativas de la superficie externa de la membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el Ca2+ activa la bomba Na+-K+, hiperpolarizando la membrana por debajo del umbral"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el Ca2+ aumenta la permeabilidad al K+, hiperpolarizando la membrana de forma sostenida"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los cationes divalentes como el Ca2+ interactuan con las cargas negativas fijas en la superficie externa de la membrana. Al neutralizarlas, modifican el campo electrico local sobre los sensores de voltaje de los canales, desplazando efectivamente el umbral de activacion hacia potenciales mas positivos y reduciendo la excitabilidad."
-                      },
-                      {
-                          "id":  59,
-                          "moduleId":  "m1",
-                          "question":  "Los canales \"tipo h\" (canales HCN) se activan por hiperpolarizacion. Cual es su efecto funcional?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Generan una corriente de K+ hacia dentro que hiperpolariza aun mas la membrana"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Generan una corriente de Cl- hacia fuera que despolariza la membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Se activan por hiperpolarizacion generando una corriente mixta (Na+ y K+) despolarizante que limita la hiperpolarizacion y contribuye a ritmos oscilatorios en ciertas neuronas"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Se activan solo en axones mielinizados para regenerar el potencial de accion en los nodulos de Ranvier"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "Los canales h se activan cuando la membrana se hiperpolariza por debajo de -60 mV. La corriente Ih (mixta Na+/K+ hacia dentro) tiende a despolarizar la membrana de nuevo, limitando la hiperpolarizacion excesiva. En neuronas de marcapasos contribuye a los ritmos oscilatorios."
-                      },
-                      {
-                          "id":  60,
-                          "moduleId":  "m1",
-                          "question":  "Las \"canalopatias\" son enfermedades causadas por mutaciones en genes de canales ionicos. Cual de los siguientes es un ejemplo correcto?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una mutacion en la conexina 32 que causa la enfermedad de Charcot-Marie-Tooth"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La deficiencia de vitamina B12 que desmieliniza los axones y reduce la velocidad de conduccion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La intoxicacion por plomo que bloquea los receptores NMDA en el hipocampo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Mutaciones en canales de Na+ o K+ sensibles al voltaje que producen epilepsia"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Las canalopatias de canales sensibles al voltaje incluyen: mutaciones en canales de Na+ que causan epilepsia (GEFS+), miotonia congenita (canales de Na+ musculares); mutaciones en canales de K+ que causan paralisis periodica hipokalemica; y mutaciones en canales de Ca2+ que causan ataxia episodica."
-                      },
-                      {
-                          "id":  61,
                           "moduleId":  "m2",
                           "question":  "Cual es la diferencia fundamental entre una sinapsis electrica y una sinapsis quimica en cuanto a su estructura?",
                           "options":  [
@@ -1668,7 +668,7 @@
                           "explanation":  "La sinapsis electrica tiene una hendidura de 3,5 nm atravesada por canales intercelulares comunicantes que unen directamente los citoplasmas. La sinapsis quimica tiene una hendidura de 20-40 nm sin continuidad citoplasmática; el transmisor debe difundir por esa brecha."
                       },
                       {
-                          "id":  62,
+                          "id":  22,
                           "moduleId":  "m2",
                           "question":  "Por que la demora sinaptica es practicamente nula en las sinapsis electricas?",
                           "options":  [
@@ -1693,7 +693,7 @@
                           "explanation":  "La corriente que despolariza la celula postsinaptica es generada directamente por los canales ionicos de la presinaptica y viaja de forma directa sin ningun paso bioquimico que introduzca retraso."
                       },
                       {
-                          "id":  63,
+                          "id":  23,
                           "moduleId":  "m2",
                           "question":  "Que estructura proteica forma cada hemicanal en las uniones intercelulares comunicantes?",
                           "options":  [
@@ -1718,7 +718,7 @@
                           "explanation":  "Cada hemicanal (o conexon) esta formado por seis subunidades proteicas identicas llamadas conexinas. El par de conexones enfrentados de ambas celulas forma el canal intercelular completo."
                       },
                       {
-                          "id":  64,
+                          "id":  24,
                           "moduleId":  "m2",
                           "question":  "La transmision en las sinapsis electricas es \"graduada\". Que significa esto?",
                           "options":  [
@@ -1743,7 +743,7 @@
                           "explanation":  "Cualquier corriente, aunque no genere un potencial de accion en la presinaptica, se transmite igualmente a la postsinaptica. La transmision es continua y proporcional al estimulo."
                       },
                       {
-                          "id":  65,
+                          "id":  25,
                           "moduleId":  "m2",
                           "question":  "Bajo que condiciones se cierran la mayoria de los canales intercelulares comunicantes?",
                           "options":  [
@@ -1768,7 +768,7 @@
                           "explanation":  "Un pH bajo y un Ca2+ elevado, tipicos de celulas danadas, cierran los canales intercelulares comunicantes, desacoplando las celulas lesionadas del tejido sano circundante."
                       },
                       {
-                          "id":  66,
+                          "id":  26,
                           "moduleId":  "m2",
                           "question":  "Una mutacion en la conexina 32 se asocia con que condicion clinica?",
                           "options":  [
@@ -1793,7 +793,7 @@
                           "explanation":  "Mutaciones en la conexina 32 causan una forma de la enfermedad de Charcot-Marie-Tooth que produce desmielinizacion, ilustrando la importancia funcional de los canales comunicantes en las celulas de Schwann."
                       },
                       {
-                          "id":  67,
+                          "id":  27,
                           "moduleId":  "m2",
                           "question":  "En la sinapsis quimica, cual es el rol del Ca2+ en el terminal presinaptico?",
                           "options":  [
@@ -1818,7 +818,7 @@
                           "explanation":  "El potencial de accion abre canales de Ca2+ sensibles al voltaje en la zona activa, y la entrada de Ca2+ desencadena la fusion de las vesiculas con la membrana presinaptica y la liberacion del neurotransmisor en la hendidura: la exocitosis."
                       },
                       {
-                          "id":  68,
+                          "id":  28,
                           "moduleId":  "m2",
                           "question":  "Que determina si una sinapsis quimica sera excitatoria o inhibitoria?",
                           "options":  [
@@ -1843,7 +843,7 @@
                           "explanation":  "Es el receptor, y no el transmisor, el que determina si una sinapsis sera excitatoria o inhibitoria. La acetilcolina puede excitar unas celulas e inhibir otras segun el tipo de receptor presente."
                       },
                       {
-                          "id":  69,
+                          "id":  29,
                           "moduleId":  "m2",
                           "question":  "Por que las sinapsis quimicas pueden amplificar la senal sinaptica?",
                           "options":  [
@@ -1868,7 +868,7 @@
                           "explanation":  "La amplificacion emerge de que una vesicula libera miles de moleculas, y como bastan ~2 moleculas para abrir un canal, la exocitosis de una vesicula puede abrir miles de canales. Asi, un diminuto terminal puede despolarizar una celula postsinaptica mucho mayor."
                       },
                       {
-                          "id":  70,
+                          "id":  30,
                           "moduleId":  "m2",
                           "question":  "Que son los receptores ionotropicos?",
                           "options":  [
@@ -1893,7 +893,7 @@
                           "explanation":  "En los receptores ionotropicos, receptor y canal son la misma macromolecula: al unirse el transmisor el canal se abre de inmediato, produciendo una respuesta rapida (milisegundos). El receptor nicotinico de ACh es el ejemplo paradigmatico."
                       },
                       {
-                          "id":  71,
+                          "id":  31,
                           "moduleId":  "m2",
                           "question":  "Cual es la principal ventaja funcional de los receptores metabotropicos respecto a los ionotropicos?",
                           "options":  [
@@ -1918,7 +918,7 @@
                           "explanation":  "Los receptores metabotropicos producen acciones de segundos a minutos que modulan la excitabilidad neuronal y la fuerza de las conexiones. Estas vias son fundamentales para el aprendizaje, a diferencia de los ionotropicos que median respuestas rapidas como los reflejos."
                       },
                       {
-                          "id":  72,
+                          "id":  32,
                           "moduleId":  "m2",
                           "question":  "Que mecanismo usa un receptor metabotropico para regular un canal ionico?",
                           "options":  [
@@ -1943,7 +943,7 @@
                           "explanation":  "El transmisor se une al receptor metabotropico, que activa una proteina G, que activa una cascada (como el AMPc), que activa proteina-cinasas, que fosforilan el canal y modifican su actividad: un circuito de amplificacion y modulacion indirecta."
                       },
                       {
-                          "id":  73,
+                          "id":  33,
                           "moduleId":  "m2",
                           "question":  "Que moleculas ademas de iones pueden pasar por los canales intercelulares comunicantes?",
                           "options":  [
@@ -1968,7 +968,7 @@
                           "explanation":  "Los canales intercelulares comunicantes son grandes y poco selectivos, permitiendo el paso de iones, segundos mensajeros (IP3, AMPc) y pequenos peptidos, lo que les confiere funcion de integracion metabolica ademas de la electrica."
                       },
                       {
-                          "id":  74,
+                          "id":  34,
                           "moduleId":  "m2",
                           "question":  "Que son las \"zonas activas\" en el terminal presinaptico de una sinapsis quimica?",
                           "options":  [
@@ -1993,7 +993,7 @@
                           "explanation":  "Las zonas activas son las regiones especializadas de la membrana presinaptica donde se acumulan vesiculas y se concentran canales de Ca2+ sensibles al voltaje, de modo que la entrada de Ca2+ desencadena la exocitosis exactamente alli."
                       },
                       {
-                          "id":  75,
+                          "id":  35,
                           "moduleId":  "m2",
                           "question":  "Por que la sinapsis quimica es unidireccional mientras la electrica es tipicamente bidireccional?",
                           "options":  [
@@ -2018,7 +1018,7 @@
                           "explanation":  "La unidireccionalidad quimica resulta de la asimetria anatomica: las vesiculas y el transmisor estan en la presinaptica y los receptores en la postsinaptica. Los canales intercelulares simetricos permiten flujo en ambas direcciones, haciendo la sinapsis electrica bidireccional."
                       },
                       {
-                          "id":  76,
+                          "id":  36,
                           "moduleId":  "m2",
                           "question":  "En que se diferencia la transmision sinaptica quimica de la secrecion hormonal endocrina?",
                           "options":  [
@@ -2043,7 +1043,7 @@
                           "explanation":  "La sinapsis quimica puede verse como una forma modificada de secrecion hormonal, pero mientras la hormona actua en forma difusa a distancia, la neurona dirige el transmisor con precision sobre una celula determinada, haciendo la transmision rapida y espacialmente especifica."
                       },
                       {
-                          "id":  77,
+                          "id":  37,
                           "moduleId":  "m2",
                           "question":  "El acoplamiento electrico entre celulas eleva el umbral efectivo para disparar. Por que?",
                           "options":  [
@@ -2068,7 +1068,7 @@
                           "explanation":  "El acoplamiento reduce la resistencia efectiva de la red al distribuir la corriente entre varias celulas. Por tanto se necesita mas corriente para alcanzar el umbral. Una vez superado, todas tienden a disparar sincronizadamente."
                       },
                       {
-                          "id":  78,
+                          "id":  38,
                           "moduleId":  "m2",
                           "question":  "La celula de Mauthner en la carpa dorada ilustra que propiedad de las sinapsis electricas?",
                           "options":  [
@@ -2093,7 +1093,7 @@
                           "explanation":  "La celula de Mauthner recibe sinapsis electricas que le permiten iniciar una respuesta de escape en la carpa dorada con minima demora sinaptica. La velocidad de la sinapsis electrica es la clave para este comportamiento rapido de supervivencia."
                       },
                       {
-                          "id":  79,
+                          "id":  39,
                           "moduleId":  "m2",
                           "question":  "Cual es la diferencia funcional fundamental entre sinapsis electricas y quimicas?",
                           "options":  [
@@ -2118,7 +1118,7 @@
                           "explanation":  "Las sinapsis electricas destacan por velocidad y sincronizacion. Las quimicas, aunque mas lentas, amplifican la senal y pueden ser excitatorias o inhibitorias, mediar respuestas rapidas (ionotropicas) o moduladoras lentas (metabotropicas): una versatilidad enorme."
                       },
                       {
-                          "id":  80,
+                          "id":  40,
                           "moduleId":  "m2",
                           "question":  "El ejemplo de la nube de tinta defensiva de Aplysia ilustra que propiedad de las sinapsis electricas?",
                           "options":  [
@@ -2143,7 +1143,7 @@
                           "explanation":  "Las tres neuronas acopladas electricamente tienen un alto umbral individual, pero una vez alcanzado, la corriente generada en una se transmite a las otras y las tres disparan sincronizadamente, produciendo la liberacion explosiva de tinta. Esto ilustra la funcion de sincronizacion de las sinapsis electricas."
                       },
                       {
-                          "id":  81,
+                          "id":  41,
                           "moduleId":  "m2",
                           "question":  "Katz y Miledi demostraron que la entrada de Na+ no es necesaria para liberar transmisor. Como lo demostraron?",
                           "options":  [
@@ -2168,7 +1168,7 @@
                           "explanation":  "Con los canales de Na+ completamente bloqueados por TTX, Katz y Miledi inyectaron corriente directamente en la terminal presinaptica. Por encima de ~40 mV de despolarizacion se liberaron cantidades crecientes de transmisor, demostrando que la entrada de Na+ no es necesaria: solo importa la despolarizacion de la membrana."
                       },
                       {
-                          "id":  82,
+                          "id":  42,
                           "moduleId":  "m2",
                           "question":  "Por que la entrada de Ca2+ es necesaria y suficiente para desencadenar la liberacion del transmisor?",
                           "options":  [
@@ -2193,7 +1193,7 @@
                           "explanation":  "Los experimentos de Llinas demostraron que la corriente de Ca2+ en la terminal se correlaciona directamente con la liberacion del transmisor. El Ca2+ entra por canales sensibles al voltaje concentrados en las zonas activas y activa el sensor de calcio de la maquinaria de exocitosis, fusionando las vesiculas con la membrana."
                       },
                       {
-                          "id":  83,
+                          "id":  43,
                           "moduleId":  "m2",
                           "question":  "La liberacion de transmisor muestra dependencia no lineal del Ca2+: un aumento de 2 veces en la entrada de Ca2+ puede aumentar la liberacion hasta 16 veces. Que indica esto?",
                           "options":  [
@@ -2218,7 +1218,7 @@
                           "explanation":  "La relacion no lineal (cuarta potencia aproximadamente) indica que el sensor de calcio requiere la union de varios iones de Ca2+ para activarse. Esto crea sensibilidad exquisita: pequenos cambios en el Ca2+ local producen grandes cambios en la liberacion, y la concentracion de ~50-100 µM requerida solo se alcanza en el microdominio junto al canal de Ca2+."
                       },
                       {
-                          "id":  84,
+                          "id":  44,
                           "moduleId":  "m2",
                           "question":  "Los canales de Ca2+ de tipo P/Q y N son los principales mediadores de la liberacion rapida de transmisor porque:",
                           "options":  [
@@ -2243,7 +1243,7 @@
                           "explanation":  "Los canales P/Q y N se concentran en las zonas activas. Esta localizacion estrategica permite que su apertura genere un microdominio de Ca2+ de alta concentracion (~100 µM) exactamente donde estan ancladas las vesiculas, desencadenando exocitosis rapida (en 0,2 ms)."
                       },
                       {
-                          "id":  85,
+                          "id":  45,
                           "moduleId":  "m2",
                           "question":  "Que son los potenciales de placa motora en miniatura?",
                           "options":  [
@@ -2268,7 +1268,7 @@
                           "explanation":  "Fatt y Katz descubrieron que en ausencia de estimulacion la union neuromuscular produce potenciales espontaneos de ~0,5 mV con intervalos aleatorios. Representan la liberacion espontanea de un cuanto (contenido de una sola vesicula sinaptica) que abre ~2000 canales receptor-ACh."
                       },
                       {
-                          "id":  86,
+                          "id":  46,
                           "moduleId":  "m2",
                           "question":  "Que demostraron los experimentos con bajo Ca2+ externo sobre la naturaleza de la liberacion del transmisor?",
                           "options":  [
@@ -2293,7 +1293,7 @@
                           "explanation":  "En bajo Ca2+, los potenciales de placa motora son variables y pequenos. Del Castillo y Katz observaron que cada respuesta es siempre un multiplo entero del potencial unitario (que coincide con el potencial en miniatura). Los fallos, unitarios y multiples siguen una distribucion de Poisson, estableciendo la naturaleza cuantal de la liberacion."
                       },
                       {
-                          "id":  87,
+                          "id":  47,
                           "moduleId":  "m2",
                           "question":  "Que evidencias morfologicas apoyaron que las vesiculas sinapticas son el sustrato del cuanto de transmisor?",
                           "options":  [
@@ -2318,7 +1318,7 @@
                           "explanation":  "La microscopia electronica revelo vesiculas sinapticas ~50 nm en las terminales. Reese y Heuser usaron congelacion-rapida en momentos precisos tras la estimulacion y observaron estructuras en forma de omega (Q) en las zonas activas que representan vesiculas en fusion. La correlacion entre el numero de estructuras Q y el tamano del potencial postsináptico confirmo la exocitosis vesicular."
                       },
                       {
-                          "id":  88,
+                          "id":  48,
                           "moduleId":  "m2",
                           "question":  "Como se detecta la exocitosis vesicular mediante mediciones de capacitancia de membrana?",
                           "options":  [
@@ -2343,7 +1343,7 @@
                           "explanation":  "Cuando una vesicula se fusiona con la membrana plasmatica, incorpora su membrana aumentando el area total. Este aumento se detecta como incremento de capacitancia (Cm proporcional al area). En celulas con vesiculas grandes (celulas cromafines, celulas cebadas), estos incrementos discretos permiten detectar la fusion de una sola vesicula."
                       },
                       {
-                          "id":  89,
+                          "id":  49,
                           "moduleId":  "m2",
                           "question":  "Cual es la diferencia entre las vesiculas sinapticas clasicas y las vesiculas grandes de centro denso?",
                           "options":  [
@@ -2368,7 +1368,7 @@
                           "explanation":  "Las vesiculas clasicas son pequenas (~50 nm), transparentes al electron, se acumulan en zonas activas y liberan transmisores rapidos (ACh, glutamato). Las vesiculas grandes de centro denso son mayores, electrondensas, se encuentran en todo el terminal y liberan neuropeptidos que modulan la excitabilidad durante segundos o minutos."
                       },
                       {
-                          "id":  90,
+                          "id":  50,
                           "moduleId":  "m2",
                           "question":  "La transmision cuantica se ha demostrado en casi todas las sinapsis quimicas estudiadas, con que notable excepcion?",
                           "options":  [
@@ -2393,7 +1393,7 @@
                           "explanation":  "En la retina, las celulas fotorreceptoras y las celulas bipolares no siguen la transmision cuantica clasica; liberan transmisor de forma graduada y continua proporcional a la luz, sin liberacion discreta de cuantos en el sentido clasico."
                       },
                       {
-                          "id":  91,
+                          "id":  51,
                           "moduleId":  "m2",
                           "question":  "Que representa el \"contenido cuantico\" (m) en la liberacion cuantica?",
                           "options":  [
@@ -2418,7 +1418,7 @@
                           "explanation":  "El contenido cuantico m = n × p, donde n es el numero de cuantos facilmente liberables y p es la probabilidad de que cada uno sea liberado por un potencial de accion. En la union neuromuscular normal m ≈ 150 cuantos por potencial de accion."
                       },
                       {
-                          "id":  92,
+                          "id":  52,
                           "moduleId":  "m2",
                           "question":  "Las sinapsis axo-axonicas pueden regular la liberacion de transmisor en la terminal presinaptica. Como?",
                           "options":  [
@@ -2443,7 +1443,7 @@
                           "explanation":  "Las sinapsis axo-axonicas (inhibicion presinaptica) pueden despolarizar o hiperpolarizar la terminal presinaptica, modificando la amplitud del potencial de accion que la invade y por tanto la entrada de Ca2+. Un menor Ca2+ libre reduce el numero de cuantos liberados, ajustando la eficacia sinaptica."
                       },
                       {
-                          "id":  93,
+                          "id":  53,
                           "moduleId":  "m2",
                           "question":  "Por que la liberacion del transmisor ocurre con un retraso tipico tras el inicio del potencial de accion presinaptico?",
                           "options":  [
@@ -2468,7 +1468,7 @@
                           "explanation":  "Los canales de Ca2+ se activan mas lentamente que los de Na+. La entrada de Ca2+ comienza cuando el potencial de accion ya alcanza su pico y empieza a repolarizarse. Este retraso en la apertura de los canales de Ca2+ constituye la mayor parte de la demora sinaptica quimica de ~0,2 ms."
                       },
                       {
-                          "id":  94,
+                          "id":  54,
                           "moduleId":  "m2",
                           "question":  "Que concentracion de Ca2+ libre se requiere localmente para desencadenar la exocitosis, y por que es importante que sea tan alta?",
                           "options":  [
@@ -2493,7 +1493,7 @@
                           "explanation":  "El sensor de calcio para la liberacion rapida requiere ~50-100 µM de Ca2+. Esta concentracion solo se alcanza en el microdominio inmediato (\u003c100 nm) al canal de Ca2+ abierto. Fuera de ese microdominio el Ca2+ se diluye rapidamente, asegurando que la liberacion sea extremadamente localizada y se detenga al milisegundo de cerrar los canales."
                       },
                       {
-                          "id":  95,
+                          "id":  55,
                           "moduleId":  "m2",
                           "question":  "En la union neuromuscular normal, cuantos cuantos libera un potencial de accion presinaptico?",
                           "options":  [
@@ -2518,7 +1518,7 @@
                           "explanation":  "La union neuromuscular del vertebrado tiene ~300 zonas activas y alto contenido cuantico. Un potencial de accion libera aproximadamente 150 cuantos de ACh en 1-2 ms, suficiente para generar un potencial de placa motora de ~70 mV que siempre supera el umbral muscular."
                       },
                       {
-                          "id":  96,
+                          "id":  56,
                           "moduleId":  "m2",
                           "question":  "Como se reciclan las membranas vesiculares tras la exocitosis?",
                           "options":  [
@@ -2543,7 +1543,7 @@
                           "explanation":  "Tras la exocitosis, la membrana vesicular se incorpora a la membrana plasmatica aumentando transitoriamente su area. Esta membrana es rapidamente recuperada por endocitosis mediada por clatrina, formando vesiculas que son recargadas con transmisor y vuelven al ciclo vesicular."
                       },
                       {
-                          "id":  97,
+                          "id":  57,
                           "moduleId":  "m2",
                           "question":  "La duracion del potencial de accion en la terminal presinaptica influye en la cantidad de transmisor liberado. Como?",
                           "options":  [
@@ -2568,7 +1568,7 @@
                           "explanation":  "Los canales de Ca2+ permanecen abiertos mientras dure la despolarizacion. Un potencial prolongado (como cuando se bloquean los canales de K+ con TEA) permite mayor acumulacion de Ca2+ intracelular y mayor liberacion de transmisor."
                       },
                       {
-                          "id":  98,
+                          "id":  58,
                           "moduleId":  "m2",
                           "question":  "Los gases CO y NO se liberan de forma diferente a los transmisores clasicos. Como lo hacen?",
                           "options":  [
@@ -2593,7 +1593,7 @@
                           "explanation":  "El CO y el NO son moleculas gaseosas y lipofilas que no pueden ser empaquetadas en vesiculas. Se sintetizan en el citoplasma y difunden directamente a traves de la bicapa lipidica hacia celulas vecinas, donde actuan como mensajeros quimicos o senales retrogradas hacia la terminal presinaptica."
                       },
                       {
-                          "id":  99,
+                          "id":  59,
                           "moduleId":  "m2",
                           "question":  "Por que es importante que los canales de Ca2+ esten concentrados en las zonas activas en vez de estar distribuidos uniformemente en el terminal?",
                           "options":  [
@@ -2618,7 +1618,7 @@
                           "explanation":  "La concentracion de canales de Ca2+ en las zonas activas junto a las vesiculas ancladas crea un microdominio de Ca2+ muy elevado (~100 µM) en el punto de liberacion. Si los canales estuvieran distribuidos uniformemente, el Ca2+ no alcanzaria la concentracion necesaria junto a las vesiculas para activar el sensor de baja afinidad de la exocitosis."
                       },
                       {
-                          "id":  100,
+                          "id":  60,
                           "moduleId":  "m2",
                           "question":  "Que es la \"movilizacion de vesiculas\" en el contexto de la liberacion cuantica?",
                           "options":  [
@@ -2643,7 +1643,7 @@
                           "explanation":  "La probabilidad de liberacion p incluye la probabilidad de que una vesicula alcance el punto de liberacion (movilizacion) y la probabilidad de que sea liberada por el potencial de accion. La movilizacion es regulada por el Ca2+ y determina cuantas vesiculas estan listas en las zonas activas."
                       },
                       {
-                          "id":  101,
+                          "id":  61,
                           "moduleId":  "m2",
                           "question":  "Por que la sinapsis nervio-musculo es un sitio ideal para estudiar la transmision sinaptica quimica?",
                           "options":  [
@@ -2668,7 +1668,7 @@
                           "explanation":  "La sinapsis neuromuscular tiene varias ventajas: el musculo es grande y accesible, normalmente recibe solo un axon motor (sin convergencia), libera un solo transmisor (ACh) que activa un solo tipo de receptor (nicotinico ionotropico), haciendo el analisis mucho mas sencillo que en las complejas sinapsis centrales."
                       },
                       {
-                          "id":  102,
+                          "id":  62,
                           "moduleId":  "m2",
                           "question":  "Que es la placa terminal en la sinapsis neuromuscular?",
                           "options":  [
@@ -2693,7 +1693,7 @@
                           "explanation":  "La placa terminal es la region especializada de la membrana de la fibra muscular donde el axon motor establece el contacto sinaptico. Contiene los pliegues de union con alta densidad de receptores de ACh en sus crestas (~10 000 receptores/µm²), separados del terminal presináptico por una hendidura de 100 nm."
                       },
                       {
-                          "id":  103,
+                          "id":  63,
                           "moduleId":  "m2",
                           "question":  "El potencial de placa terminal tiene una amplitud de ~70 mV en condiciones normales. Por que esto asegura la contraccion muscular?",
                           "options":  [
@@ -2718,7 +1718,7 @@
                           "explanation":  "Con un potencial de reposo de -90 mV y un potencial de placa de 70 mV, el potencial muscular alcanza ~-20 mV, muy por encima del umbral de -50 mV. Esta gran amplitud asegura que la transmision tenga un alto factor de seguridad: incluso si el potencial de placa es menor de lo normal, aun asi suele superar el umbral."
                       },
                       {
-                          "id":  104,
+                          "id":  64,
                           "moduleId":  "m2",
                           "question":  "El potencial de inversion de la corriente de la placa terminal es 0 mV. Que indica esto sobre los iones que la producen?",
                           "options":  [
@@ -2743,7 +1743,7 @@
                           "explanation":  "El potencial de inversion de 0 mV indica que los canales activados por ACh son casi igualmente permeables al Na+ (ENa ≈ +55 mV) y al K+ (EK ≈ -75 mV). Con permeabilidades iguales, la media ponderada resulta en ~0 mV. En ese potencial, el flujo de Na+ hacia dentro esta equilibrado por el flujo de K+ hacia fuera."
                       },
                       {
-                          "id":  105,
+                          "id":  65,
                           "moduleId":  "m2",
                           "question":  "Por que los canales de ACh de la placa terminal no son selectivos para un solo ion?",
                           "options":  [
@@ -2768,7 +1768,7 @@
                           "explanation":  "El poro del canal nicotinico de ACh es grande (~0,8 nm) comparado con los poros de los canales selectivos de Na+ (~0,3 nm) o K+ (~0,3 nm). Esta amplitud permite que Na+ y K+ pasen casi igual de bien, haciendo el canal poco selectivo entre cationes monovalentes. Los aniones quedan excluidos por las cargas negativas del poro."
                       },
                       {
-                          "id":  106,
+                          "id":  66,
                           "moduleId":  "m2",
                           "question":  "Que es la acetilcolinesterasa y donde se localiza en la sinapsis neuromuscular?",
                           "options":  [
@@ -2793,7 +1793,7 @@
                           "explanation":  "La acetilcolinesterasa se ancla a las fibrillas de colageno de la membrana basal dentro de la hendidura sinaptica. Hidroliza la ACh muy rapidamente, limitando la duracion de la accion del transmisor y permitiendo que el canal receptor se cierre y la placa terminal se repolarice para recibir el siguiente impulso."
                       },
                       {
-                          "id":  107,
+                          "id":  67,
                           "moduleId":  "m2",
                           "question":  "El curare bloquea la transmision en la union neuromuscular. Cual es su mecanismo?",
                           "options":  [
@@ -2818,7 +1818,7 @@
                           "explanation":  "La tubocurarina (curare purificado) se une al sitio de union de la ACh en las subunidades alpha del receptor nicotinico, bloqueando competitivamente la activacion del canal. Reduce la amplitud del potencial de placa terminal; con suficiente curare, el potencial de placa no alcanza el umbral y no se genera potencial de accion muscular, produciendo paralisis flacida."
                       },
                       {
-                          "id":  108,
+                          "id":  68,
                           "moduleId":  "m2",
                           "question":  "El receptor nicotinico de ACh esta formado por cinco subunidades. Cual es su composicion?",
                           "options":  [
@@ -2843,7 +1843,7 @@
                           "explanation":  "El receptor nicotinico tiene la composicion α2βεδ (o α2βγδ en fetal). Las cinco subunidades se organizan simetricamente alrededor de un eje central formando el poro acuoso. Los dos sitios de union a ACh estan en las subunidades alpha. El canal lo forman los segmentos transmembrana M2 de las cinco subunidades."
                       },
                       {
-                          "id":  109,
+                          "id":  69,
                           "moduleId":  "m2",
                           "question":  "Para que el canal receptor de ACh se abra, cuantas moleculas de ACh deben unirse?",
                           "options":  [
@@ -2868,7 +1868,7 @@
                           "explanation":  "El canal se abre cuando dos moleculas de ACh se unen de forma cooperativa: una a cada subunidad alpha. Los sitios de union estan en la interfaz entre cada subunidad alpha y su vecina. La union de solo una molecula tiene baja probabilidad de abrir el canal."
                       },
                       {
-                          "id":  110,
+                          "id":  70,
                           "moduleId":  "m2",
                           "question":  "La corriente sinaptica de la placa terminal aumenta y disminuye mas rapidamente que el potencial de placa terminal resultante. Por que?",
                           "options":  [
@@ -2893,7 +1893,7 @@
                           "explanation":  "La corriente sinaptica rapida (dictada por la rapida apertura y cierre de los canales de ACh) debe cargar la capacitancia de membrana para cambiar el voltaje. Como Vm = Q/Cm, el cambio de potencial es proporcional a la carga acumulada. Esto produce una respuesta de voltaje suavizada y retrasada respecto a la corriente sinaptica."
                       },
                       {
-                          "id":  111,
+                          "id":  71,
                           "moduleId":  "m2",
                           "question":  "Que es la miastenia gravis y cual es su mecanismo patologico?",
                           "options":  [
@@ -2918,7 +1918,7 @@
                           "explanation":  "En la miastenia gravis, el sistema inmune produce anticuerpos contra el receptor nicotinico de ACh. Estos anticuerpos bloquean el receptor, aceleran su degradacion y activan el complemento, reduciendo drasticamente el numero de receptores funcionales. El resultado es un potencial de placa terminal reducido que puede no alcanzar el umbral, causando debilidad muscular fluctuante."
                       },
                       {
-                          "id":  112,
+                          "id":  72,
                           "moduleId":  "m2",
                           "question":  "Como despolariza el potencial de placa terminal al resto de la fibra muscular para generar un potencial de accion?",
                           "options":  [
@@ -2943,7 +1943,7 @@
                           "explanation":  "La corriente sinaptica genera una despolarizacion local que se propaga electronicamente (pasivamente, con atenuacion) desde la placa terminal hacia regiones adyacentes. Los canales de Na+ sensibles al voltaje concentrados en los pliegues de union y en la membrana muscular cercana son activados por esta despolarizacion local, generando un potencial de accion muscular que luego se propaga activamente."
                       },
                       {
-                          "id":  113,
+                          "id":  73,
                           "moduleId":  "m2",
                           "question":  "El registro de zona en la placa terminal mostro que la corriente de un canal de ACh es ~0,3 pA. Que implica esto para el potencial de placa motora en miniatura?",
                           "options":  [
@@ -2968,7 +1968,7 @@
                           "explanation":  "Si la corriente unitaria de un canal es ~0,3 pA y el potencial en miniatura requiere una corriente total de ~600 pA, se necesitan ~2000 canales. Como se necesitan 2 moleculas de ACh para abrir un canal y parte de la ACh no llega a los receptores (hidrolisis, difusion), se requieren ~5000 moleculas de ACh por cuanto, correspondiente al contenido de una vesicula sinaptica."
                       },
                       {
-                          "id":  114,
+                          "id":  74,
                           "moduleId":  "m2",
                           "question":  "Cual es la funcion de los pliegues de union en la placa terminal?",
                           "options":  [
@@ -2993,7 +1993,7 @@
                           "explanation":  "Los pliegues de union tienen organizacion funcional: crestas con alta densidad de receptores nicotinicos de ACh, optimamente ubicados frente a las zonas activas donde se libera el transmisor. Los fondos de los pliegues concentran canales de Na+ sensibles al voltaje que son activados por la despolarizacion del potencial de placa terminal para generar el potencial de accion muscular."
                       },
                       {
-                          "id":  115,
+                          "id":  75,
                           "moduleId":  "m2",
                           "question":  "Que espera observar si aplica prostigmina (inhibidor de acetilcolinesterasa) a la union neuromuscular?",
                           "options":  [
@@ -3018,7 +2018,7 @@
                           "explanation":  "Al inhibir la acetilcolinesterasa, la prostigmina permite que la ACh permanezca mas tiempo en la hendidura y active los receptores nicotinicos por un periodo mas prolongado. Esto aumenta tanto la amplitud como la duracion del potencial de placa terminal. Este es el fundamento del uso de inhibidores de colinesterasa en el tratamiento de la miastenia gravis."
                       },
                       {
-                          "id":  116,
+                          "id":  76,
                           "moduleId":  "m2",
                           "question":  "Cual es el factor de seguridad de la transmision en la union neuromuscular normal y por que es importante?",
                           "options":  [
@@ -3043,7 +2043,7 @@
                           "explanation":  "El umbral muscular esta a unos -50 mV, y el potencial de reposo a -90 mV, por lo que se necesita despolarizar ~40 mV para generar un potencial de accion. El potencial de placa terminal normal de ~70 mV supera ampliamente este requisito, dando un margen (factor de seguridad) que protege la transmision frente a patologias como la miastenia gravis."
                       },
                       {
-                          "id":  117,
+                          "id":  77,
                           "moduleId":  "m2",
                           "question":  "Por que la corriente sinaptica de la placa terminal (IPPSE) fluye hacia dentro cuando el potencial de membrana es mas negativo que el potencial de inversion (0 mV)?",
                           "options":  [
@@ -3068,7 +2068,7 @@
                           "explanation":  "A potenciales negativos respecto al potencial de inversion, la fuerza electrica atrae cationes hacia dentro y el gradiente de concentracion empuja al Na+ hacia dentro. Aunque el K+ tiene fuerza hacia fuera por su gradiente, la gran fuerza sobre el Na+ hace que la corriente neta de cationes sea hacia dentro. En el potencial de inversion (0 mV) estos flujos se igualan exactamente."
                       },
                       {
-                          "id":  118,
+                          "id":  78,
                           "moduleId":  "m2",
                           "question":  "Que diferencia estructural fundamental existe entre los canales activados por ligandos y los canales sensibles al voltaje?",
                           "options":  [
@@ -3093,7 +2093,7 @@
                           "explanation":  "La diferencia clave es el mecanismo de activacion: los canales ionotropicos de ligando tienen un sitio de union para el transmisor en la region extracelular y se abren cuando este se une; los canales sensibles al voltaje tienen un sensor de voltaje (segmento S4 con cargas positivas) que detecta cambios del potencial de membrana y desencadena la apertura del canal."
                       },
                       {
-                          "id":  119,
+                          "id":  79,
                           "moduleId":  "m2",
                           "question":  "En el circuito equivalente de la placa terminal, que determina la amplitud maxima del potencial de placa terminal?",
                           "options":  [
@@ -3118,7 +2118,7 @@
                           "explanation":  "En el estado estable maximo, la corriente sinaptica iguala la corriente de reposo. El voltaje resultante es la media ponderada de las baterias. Con valores tipicos (gPPSE = 5 × 10^-6 S, gr = 1 × 10^-6 S, EPPSE = 0 mV, Er = -90 mV), se obtiene Vm = -15 mV, y el potencial de placa = -15 - (-90) = 75 mV."
                       },
                       {
-                          "id":  120,
+                          "id":  80,
                           "moduleId":  "m2",
                           "question":  "Por que la sinapsis neuromuscular es un modelo para comprender las enfermedades autoinmunes que afectan los receptores sinapticos?",
                           "options":  [
