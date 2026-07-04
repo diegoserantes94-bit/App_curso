@@ -1692,11 +1692,11 @@ function renderConsultasShell() {
         '<div class="consultas-sub">Dejá tus dudas para la clase de consulta semanal. Si ya está la que ibas a hacer, votala para que la tratemos.</div>' +
       '</div>' +
       '<div class="consulta-form">' +
-        '<textarea id="consulta-text" class="consulta-textarea" maxlength="280" rows="3" placeholder="Escribí tu duda de forma clara y concreta..."></textarea>' +
+        '<textarea id="consulta-text" class="consulta-textarea" maxlength="1000" rows="3" placeholder="Escribí tu duda de forma clara y concreta..."></textarea>' +
         '<div class="consulta-form-row">' +
           '<select id="consulta-module" class="consulta-select">' + modOptions + '</select>' +
           '<label class="consulta-anon"><input type="checkbox" id="consulta-anon" /> Preguntar en anónimo</label>' +
-          '<span class="consulta-counter" id="consulta-counter">280</span>' +
+          '<span class="consulta-counter" id="consulta-counter">1000</span>' +
           '<button type="button" class="consulta-submit" id="consulta-submit">Publicar consulta</button>' +
         '</div>' +
       '</div>' +
@@ -1706,7 +1706,7 @@ function renderConsultasShell() {
 
   var textEl = document.getElementById('consulta-text');
   var counterEl = document.getElementById('consulta-counter');
-  textEl.addEventListener('input', function() { counterEl.textContent = 280 - textEl.value.length; });
+  textEl.addEventListener('input', function() { counterEl.textContent = 1000 - textEl.value.length; });
   document.getElementById('consulta-submit').addEventListener('click', submitConsulta);
   document.getElementById('consulta-filters').querySelectorAll('.consulta-chip').forEach(function(chip) {
     chip.addEventListener('click', function() {
@@ -1798,7 +1798,7 @@ function submitConsulta() {
   }).then(function() {
     textEl.value = '';
     document.getElementById('consulta-anon').checked = false;
-    document.getElementById('consulta-counter').textContent = '280';
+    document.getElementById('consulta-counter').textContent = '1000';
   }).catch(function(e) {
     alert('No se pudo publicar la consulta: ' + (e.message || e.code));
   }).then(function() {
