@@ -79,6 +79,17 @@
       "platform": "vimeo",
       "vimeoId": "1204964175",
       "isNew": false
+    },
+    {
+      "id": 7,
+      "moduleId": "m2",
+      "moduleLabel": "Módulo 2",
+      "title": "integracion sinaptica",
+      "desc": "",
+      "duration": "60 min",
+      "platform": "vimeo",
+      "vimeoId": "1207006001",
+      "isNew": false
     }
   ],
   "materials": {
