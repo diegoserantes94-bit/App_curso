@@ -2141,6 +2141,965 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "La sinapsis neuromuscular fue el primer sistema en que se identifico bioquimicamente un receptor sinaptico (el receptor nicotinico). Este conocimiento permitio comprender que en la miastenia gravis los anticuerpos se dirigen contra este receptor. El modelo es valioso porque la transmision normal esta tan bien caracterizada que es posible predecir cuantitativamente el efecto de la perdida de receptores."
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Con respecto al procesamiento sensorial en el asta dorsal de la medula, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "En forma caracteristica, las aferentes tipo C utilizan la encefalina como neurotransmisor"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La neurona A proyecta directamente hacia los nucleos de las columnas dorsales"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Las neuronas de la lamina V del asta dorsal responden a la estimulacion de mas de una modalidad sensorial"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La neurona B proyecta directamente a la corteza de la insula y la corteza cingulada anterior"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Las aferentes tipo A-beta son las que traen la informacion nociceptiva desde la periferia"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "Las neuronas de la lamina V son de amplio rango dinamico: reciben convergencia de aferentes tactiles y nociceptivas, por lo que responden a mas de una modalidad sensorial.",
+                          "id":  81
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a la corriente ionica de membrana IH, es correcto senalar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Caracteristicamente no participa en el establecimiento del potencial de membrana en reposo"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Es activada por la hiperpolarizacion del potencial de membrana"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Su activacion promueve la hiperpolarizacion del potencial de membrana respecto del reposo"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Es activada por el ingreso de calcio citosolico a la neurona"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Su activacion no modifica de forma significativa la excitabilidad neuronal"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "IH (corriente cationica activada por hiperpolarizacion) se abre cuando la membrana se hiperpolariza, generando una corriente de entrada que despolariza de vuelta hacia el reposo.",
+                          "id":  82
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "De las estructuras de tronco encefalico, cual se vincula al control de la musculatura axial del tronco y proximal de los miembros mediante sus proyecciones descendentes:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Nucleo vestibular descendente"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Sustancia gris periacueductal"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Oliva inferior"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Nucleos del complejo olivar superior"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Nucleo del tracto solitario"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "El tracto vestibuloespinal, originado en los nucleos vestibulares, controla la musculatura axial y proximal para mantener la postura y el equilibrio.",
+                          "id":  83
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "A partir del estudio comparado de las propiedades electrofisiologicas de axones amielinicos, es posible afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La magnitud de la corriente de sodio responsable del potencial de accion es independiente del diametro del axon"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Los axones de menor diametro presentan en forma caracteristica resistencias de entrada relativamente altas"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Los axones de mayor diametro presentan menores velocidades de conduccion"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La constante de espacio es mayor en los axones de menor diametro respecto de los de mayor diametro"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "A menor diametro, mayor resistencia axial interna (Ri), lo que se traduce en una mayor resistencia de entrada de la fibra.",
+                          "id":  84
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Las transecciones experimentales realizadas inmediatamente por delante del hipotalamo fueron clave para comprender la fisiologia del sistema limbico. Los animales con estas lesiones se caracterizan por presentar:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Furia ficticia: ataques de furia que se desencadenan sin una causa aparente"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Insomnio persistente con incapacidad de conciliar el sueño"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Sindrome de Kluver-Bucy: disminucion de la agresividad e hipersexualidad"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Aquinesia y temblor de reposo similares a la enfermedad de Parkinson"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Hiperfagia marcada con aumento sostenido de peso corporal"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "La seccion por delante del hipotalamo desconecta la corteza e hipocampo de los nucleos hipotalamicos, liberando respuestas de furia ficticia (sham rage) no dirigidas a un estimulo real.",
+                          "id":  85
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Un audiograma en un ser humano normal muestra que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La sensibilidad a sonidos entre 20 y 50 Hz es mayor que para el resto de las frecuencias"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "El umbral perceptivo no cambia con la frecuencia del sonido estimulante"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Un sonido de una frecuencia superior a los 25 KHz no es audible"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El umbral perceptivo es de aproximadamente 30 dB en todas las frecuencias por igual"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Un estimulo de 15 Hz a 40 dB de intensidad resulta perfectamente audible"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "El rango audible humano llega hasta aproximadamente 20 KHz; por encima de 25 KHz los sonidos quedan fuera del rango de audicion (ultrasonido).",
+                          "id":  86
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion al Sistema Nervioso Autonomo, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Las neuronas preganglionares activan a las postganglionares principalmente mediante sinapsis de tipo electrico"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Las neuronas preganglionares parasimpaticas hacen sinapsis directa con los efectores viscerales"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "En el ganglio autonomo se generan distintos tipos de potenciales postsinapticos por la presencia de diversos receptores"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "De manera caracteristica, las terminales postganglionares simpaticas liberan acetilcolina"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "En el ganglio autonomo coexisten receptores nicotinicos y muscarinicos, ademas de peptidos, generando potenciales postsinapticos tanto excitadores como inhibidores segun el receptor activado.",
+                          "id":  87
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En un Taller Experimental se estimulo el nervio ciatico de la rana con estimulos supra-maximos, registrando primero a 3,0 cm del catodo de estimulacion y luego a 4,0 cm. La latencia fue de 1 ms y 1,5 ms respectivamente. La velocidad de conduccion (en metros por segundo) puede estimarse como:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "30,0 metros por segundo"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "20,0 metros por segundo"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "80,0 metros por segundo"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "26,67 metros por segundo"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "6,67 metros por segundo"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "La distancia recorrida de mas equivale a 1 cm en un tiempo adicional de 0,5 ms, lo que da una velocidad de 20 metros por segundo.",
+                          "id":  88
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Acerca de la orbita osea, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La pared inferior se relaciona con el conducto infraorbitario"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La pared inferior se relaciona con el seno esfenoidal"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El techo de la orbita esta formado principalmente por el hueso etmoides"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La pared lateral de la orbita es la mas delgada de las cuatro paredes"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "El conducto infraorbitario recorre el piso de la orbita, formado principalmente por el maxilar, y transmite el paquete vasculonervioso infraorbitario.",
+                          "id":  89
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a las celulas de Purkinje del cerebelo, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Establecen contactos sinapticos directos con motoneuronas del asta anterior de la medula espinal"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Se encuentran localizadas unicamente en la corteza del vestibulo-cerebelo"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "La espiga simple resulta de la activacion de un grupo de fibras paralelas"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Su activacion produce una espiga compleja a nivel de las neuronas de los nucleos cerebelosos profundos"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Las fibras paralelas establecen contactos sinapticos de tipo axo-axonico con estas celulas"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "Las fibras paralelas (axones de celulas granulares) generan espigas simples en la celula de Purkinje; la espiga compleja, en cambio, es producida por la fibra trepadora.",
+                          "id":  90
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Las neuronas auditivas del nucleo coclear se caracterizan por:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Responder unicamente a estimulos sonoros ipsilaterales"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Proyectar directamente de vuelta hacia la coclea"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Carecer por completo de respuesta inhibidora frente a la estimulacion sonora"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Responder principalmente a la diferencia de intensidad interauricular"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Presentar mayor latencia de respuesta que las neuronas de la corteza auditiva primaria"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "El nucleo coclear recibe la aferencia directa del nervio auditivo de un solo oido, por lo que responde solo a estimulos sonoros ipsilaterales; la comparacion binaural ocurre en nucleos posteriores (complejo olivar superior).",
+                          "id":  91
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Con respecto a la cadena osicular del oido medio, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La platina del estribo articula con la ventana redonda"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Ligamentos fijan los huesecillos a las paredes de la caja timpanica, otorgandoles estabilidad"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El mango del martillo se topografia en el epitimpano"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La rama larga del yunque se ubica dentro de la capa fibrosa de la membrana timpanica"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "Ligamentos propios de cada huesecillo (martillo, yunque, estribo) los suspenden y fijan a las paredes de la caja del timpano, estabilizando la cadena durante la transmision del sonido.",
+                          "id":  92
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Se registra una neurona cuya frecuencia de descarga varia con el estado comportamental: 0.5 espigas por segundo en vigilia, 20 espigas por segundo en sueño NREM, y 2 espigas por segundo en sueño REM. Es esperable que haya sido registrada en:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "El area preoptica del hipotalamo"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La formacion reticulada meso-pontina"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "La corteza motora, area 4 de Brodmann"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El vermis cerebeloso"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "El nucleo supraquiasmatico"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "Las neuronas del area preoptica hipotalamica promotoras del sueño aumentan marcadamente su descarga durante el sueño NREM y se inhiben durante la vigilia, patron compatible con estos valores.",
+                          "id":  93
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Sobre las propiedades fisicas de las lentes, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "El punto focal de una lente divergente no puede determinarse"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Dos lentes convexas cualesquiera actuaran siempre en conjunto como sistema convergente"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "La potencia de una lente depende de su geometria y no de su composicion"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La potencia de una lente, en dioptrias, es la inversa de la distancia focal expresada en metros"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "La potencia de una lente se calcula como el inverso de su radio de curvatura"
+                                          }
+                                      ],
+                          "correct":  "D",
+                          "explanation":  "Por definicion, la potencia optica en dioptrias es igual a 1 dividido la distancia focal expresada en metros.",
+                          "id":  94
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Cual de estas afirmaciones NO se ajusta a las caracteristicas de la corteza fusiforme (area de asociacion visual)?",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "En seres humanos se activa al pensar en imagenes que representan caras"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "En monos, neuronas de esta region aumentan su descarga durante la observacion de caras"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Sus neuronas presentan un campo receptivo grande en relacion a la corteza visual primaria"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "En seres humanos se activa durante la observacion de imagenes que representan caras"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Sus neuronas presentan un campo receptivo circular, con centro y periferia antagonicos"
+                                          }
+                                      ],
+                          "correct":  "E",
+                          "explanation":  "El campo receptivo circular centro-periferia antagonico es propio de neuronas tempranas de la via visual (retina, geniculado, V1), no de la corteza fusiforme, cuyas neuronas tienen campos grandes y responden a rasgos complejos como rostros.",
+                          "id":  95
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion al fenomeno de adaptacion en frecuencia que presentan las neuronas piramidales del hipocampo, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La activacion de receptores colinergicos muscarinicos tiende a reducir la magnitud de este fenomeno"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Consiste en un aumento progresivo de la frecuencia de descarga ante un estimulo de magnitud constante"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El bloqueo de los canales de calcio dependientes de voltaje no tiene ningun efecto sobre este fenomeno"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Este fenomeno aumenta tras la eliminacion del ion calcio del medio extracelular"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "El mecanismo responsable es la activacion de una corriente de sodio de bajo umbral"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "La adaptacion en frecuencia depende de una corriente de potasio activada por calcio; los receptores muscarinicos la inhiben, por eso su activacion reduce la adaptacion (efecto de la acetilcolina durante la atencion o vigilia).",
+                          "id":  96
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Respecto a la fisiologia de la leptina en el control de la homeostasis energetica, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Es sintetizada principalmente en la region preoptica del hipotalamo"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Aumenta el almacenamiento lipidico actuando a nivel del tejido adiposo"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Ratones knock-out para la leptina, que no la sintetizan, muestran un marcado aumento de peso"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Se libera principalmente desde la hipofisis posterior"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "La leptina es sintetizada por el tejido adiposo y señaliza saciedad al hipotalamo; sin ella, se pierde esa señal y el animal desarrolla obesidad marcada.",
+                          "id":  97
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En la union neuromuscular, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "El potencial de placa terminal se propaga activamente sin disminuir su amplitud a lo largo de la fibra"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "El potencial de reversion de la corriente sinaptica coincide con el potencial de equilibrio del sodio"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "En condiciones normales, un potencial de placa terminal es suficiente para desencadenar un potencial de accion postsinaptico"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El curare no modifica la amplitud del potencial de placa terminal"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "El potencial de placa terminal consiste en una hiperpolarizacion de la membrana postsinaptica"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "La union neuromuscular tiene un gran factor de seguridad: la amplitud del potencial de placa terminal normalmente supera ampliamente el umbral, garantizando la generacion del potencial de accion muscular.",
+                          "id":  98
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a la funcion y estructura de los husos neuromusculares, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Estan conformados por fibras musculares especializadas que perdieron totalmente su capacidad contractil"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Durante estiramientos pasivos, las fibras intrafusales cambian de longitud de forma similar a las extrafusales"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Su inervacion eferente esta mediada por el neurotransmisor GABA"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Estan dispuestos en serie respecto de las fibras musculares extrafusales"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "Los husos neuromusculares estan dispuestos en paralelo con las fibras extrafusales, por lo que durante el estiramiento pasivo del musculo ambas se estiran en magnitud similar.",
+                          "id":  99
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Con respecto a las neuronas ganglionares de la retina, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Las de centro off son inhibidas por neuronas bipolares GABAergicas durante la estimulacion luminica"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Los campos receptivos de estas neuronas son de forma rectangular"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Es caracteristico que estimular el centro del campo receptivo genere una respuesta distinta que estimular la periferia"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Las que llevan informacion desde la fovea tienen campos receptivos de mayor tamaño que las perifericas"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "Los campos receptivos de las celulas ganglionares tienen organizacion centro-periferia antagonica: la luz en el centro y en la periferia producen efectos opuestos sobre la respuesta de la celula.",
+                          "id":  100
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a los receptores adrenergicos autonomicos, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Son bloqueados especificamente por la atropina"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Son activados fisiologicamente por la acetilcolina"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Se caracterizan por ser de tipo metabotropico"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Se localizan principalmente en neuronas postganglionares parasimpaticas"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "Los receptores adrenergicos (alfa y beta) son todos metabotropicos, acoplados a proteinas G, a diferencia de los receptores nicotinicos que son ionotropicos.",
+                          "id":  101
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En un registro simultaneo del potencial de membrana de un par de neuronas, cual observacion experimental es compatible con la presencia de un contacto sinaptico de tipo electrico entre ellas:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La inyeccion de un pulso de corriente despolarizante en una neurona no tiene efecto sobre la otra"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La eliminacion del ion calcio del medio extracelular bloquea la transmision entre estas neuronas"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "La inyeccion de un pulso de corriente hiperpolarizante en una neurona produce hiperpolarizacion en la otra"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La activacion de una celula a alta frecuencia durante minutos reduce progresivamente la respuesta en la otra"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "La aplicacion de curare en el medio extracelular bloquea la transmision entre ambas celulas"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "Las sinapsis electricas (uniones gap) transmiten corriente de forma bidireccional y pasiva, incluyendo cambios hiperpolarizantes, sin requerir neurotransmisor ni calcio.",
+                          "id":  102
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Respecto del corpusculo de Pacini, un mecanorreceptor de la piel, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Se trata de un receptor ubicado en las capas mas superficiales de la piel"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Las propiedades de adaptacion de este receptor dependen de las estructuras prerreceptoriales que posee"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Si se eliminan las laminas de tejido conectivo, el receptor se vuelve insensible a cualquier estimulo"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Es un receptor particularmente sensible a la aplicacion de una presion sostenida y prolongada"
+                                          }
+                                      ],
+                          "correct":  "B",
+                          "explanation":  "Las capas concentricas de tejido conectivo que rodean la terminal nerviosa filtran los estimulos sostenidos, haciendo que el corpusculo de Pacini adapte rapidamente y responda solo a la vibracion o cambios rapidos de presion.",
+                          "id":  103
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion al potencial de accion y los mecanismos responsables de su generacion, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "El incremento de la permeabilidad al potasio ocurre antes que el incremento de la permeabilidad al sodio"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La inactivacion del canal de sodio precede temporalmente a la activacion del mismo canal"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El potencial de membrana en el pico del potencial de accion es proximo al potencial de equilibrio del sodio"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La fase de repolarizacion obedece principalmente a la inactivacion de los canales de potasio"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "En el pico del potencial de accion la permeabilidad al sodio predomina ampliamente, por lo que el potencial de membrana se aproxima al potencial de equilibrio del sodio (cercano a +55 mV).",
+                          "id":  104
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En un experimento se observo que la ligadura del nervio ciatico de la rana produjo la contraccion de varios grupos musculares del miembro posterior ipsilateral. En relacion a estas contracciones, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Podrian volver a observarse ante una nueva ligadura realizada distalmente al sitio de la primera"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "No se producen si las raices ventrales por donde transitan axones del ciatico fueron seccionadas antes de la ligadura"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Tipicamente se distribuyen de forma bilateral en ambos miembros posteriores"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Son producto de la activacion mecanica de axones sensoriales de origen muscular que transcurren por el nervio ciatico"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "La ligadura activa mecanicamente axones sensoriales del nervio, generando un reflejo que persiste aunque se repita la maniobra distalmente, ya que el estimulo mecanico sigue actuando sobre fibras aferentes intactas proximales al segundo sitio.",
+                          "id":  105
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Al calentar en forma localizada el hipotalamo anterior (area preoptica) de un animal de experimentacion, es posible observar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Neuronas sensibles al frio del hipotalamo posterior aumentan su frecuencia de descarga"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Se produce temblor muscular generalizado como respuesta termorreguladora"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Aumenta la generacion de calor por metabolizacion de la grasa parda"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Se produce una constriccion de las arteriolas de la piel"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Neuronas sensibles al calor del hipotalamo anterior aumentan su frecuencia de descarga"
+                                          }
+                                      ],
+                          "correct":  "E",
+                          "explanation":  "El area preoptica contiene neuronas termosensibles que detectan directamente la temperatura local; al calentarla, las neuronas sensibles al calor incrementan su descarga y desencadenan respuestas de perdida de calor (vasodilatacion, inhibicion de termogenesis).",
+                          "id":  106
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Un registro polisomnografico nocturno de 8 horas en un joven adulto normal muestra que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Aproximadamente el 50 por ciento del sueño ocurre en la etapa N1 del sueño No-REM"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Cerca del 75 por ciento del sueño REM se concentra en la primera hora de sueño"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Se registra la presencia de unicamente dos ciclos completos de sueño"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "La latencia al primer episodio de sueño REM es de aproximadamente 5 minutos"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "El tiempo total en sueño REM es de aproximadamente 2 horas durante la noche"
+                                          }
+                                      ],
+                          "correct":  "E",
+                          "explanation":  "En un adulto joven normal, el sueño REM ocupa cerca del 20 a 25 por ciento del tiempo total de sueño, lo que en una noche de 8 horas equivale a aproximadamente 2 horas.",
+                          "id":  107
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Con respecto al sistema de conos y bastones de la retina, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La mayor densidad de bastones se encuentra en la fovea"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "El sistema de conos es el mas apropiado para la vision en condiciones escotopicas de baja iluminacion"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "En la retina, el numero de conos es aproximadamente el triple que el de bastones"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El sistema de bastones es incapaz de discriminar colores"
+                                          }
+                                      ],
+                          "correct":  "D",
+                          "explanation":  "Los bastones poseen un unico fotopigmento (rodopsina), por lo que no aportan informacion cromatica; la discriminacion de color depende de los tres tipos de conos.",
+                          "id":  108
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a caracteristicas particulares de los receptores ionotropicos, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La permeabilidad selectiva a un ion o grupo de iones constituye una caracteristica distintiva de estos receptores"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "En ausencia del neurotransmisor, estos receptores permanecen en un estado semi-abierto"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El curso temporal de las acciones sinapticas que median es tipicamente del orden de segundos"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El sitio de union al ligando y el canal ionico forman parte de moleculas independientes"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Al activarse en presencia del neurotransmisor, permiten el pasaje de moleculas como ATP o AMPc"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "Cada receptor ionotropico posee un poro con selectividad definida, integrado en la misma proteina que el sitio de union al ligando, a diferencia de los metabotropicos que actuan via segundos mensajeros.",
+                          "id":  109
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion al proceso de aprendizaje por habituacion en el caracol marino Aplysia, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Implica una facilitacion presinaptica de la transmision sinaptica involucrada"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Es un ejemplo caracteristico de memoria explicita o declarativa"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Se desencadena ante la repeticion de un mismo estimulo que resulta inocuo para el individuo"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "El fenomeno plastico responsable es de tipo heterosinaptico"
+                                          }
+                                      ],
+                          "correct":  "C",
+                          "explanation":  "La habituacion es una forma de aprendizaje no asociativo: la respuesta disminuye progresivamente ante la repeticion de un estimulo que no representa amenaza ni relevancia para el animal.",
+                          "id":  110
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Con relacion a la locomocion en animales de experimentacion y los mecanismos que la generan, es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "En condiciones fisiologicas, la activacion de centros motores de la region mesopontina puede desencadenar la locomocion"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "La seccion de las raices dorsales, privando la informacion propioceptiva, no afecta el patron locomotor"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Durante la marcha se produce de forma caracteristica la contraccion simultanea de musculos antagonicos"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "En ausencia de comandos corticales (animal descerebrado) no es posible generar la alternancia caracteristica de la marcha"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "La region locomotora mesencefalica o mesopontina puede activar generadores centrales de patrones espinales y desencadenar la locomocion incluso sin participacion cortical directa.",
+                          "id":  111
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a las sinapsis que utilizan glicina como neurotransmisor en un mamifero adulto, es correcto afirmar que la accion sinaptica:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Involucra un aumento en la conductancia para el ion cloro de la neurona postsinaptica"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Determina un aumento de la probabilidad de descarga de la neurona postsinaptica"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Se caracteriza por generar un aumento de la resistencia de entrada de la neurona postsinaptica"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Es despolarizadora cuando la neurona postsinaptica presenta un potencial de reposo de -50 mV"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Es bloqueada especificamente por la atropina"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "El receptor de glicina es un canal ionotropico permeable a cloro; su activacion aumenta la conductancia a este ion, generalmente inhibiendo la neurona, y es bloqueado por estricnina, no por atropina.",
+                          "id":  112
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En un experimento del Taller Experimental, se aplico un estimulo supramaximo al nervio ciatico y luego se invirtio la polaridad del estimulo sin modificar su duracion ni intensidad. Es esperable que este cambio produzca:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Un incremento al doble de la amplitud de la señal registrada en el instante t1"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Una inversion exclusiva de la polaridad del componente biologico de la señal registrada"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Un retraso en el instante de ocurrencia de la primera deflexion monofasica del trazado"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Una reduccion del intervalo de tiempo entre el estimulo y la respuesta registrada"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "La inversion exclusiva de la polaridad de la primera deflexion monofasica del trazado"
+                                          }
+                                      ],
+                          "correct":  "E",
+                          "explanation":  "Al invertir la polaridad del estimulo (intercambiar anodo y catodo), se invierte la direccion de la corriente inicial bajo los electrodos de registro, invirtiendo especificamente la primera deflexion sin alterar el resto del trazado.",
+                          "id":  113
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "Pacientes con lesiones localizadas en el area 22 de Brodmann de la corteza temporal (area de Wernicke) del hemisferio dominante, en forma caracteristica presentan:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "Trastornos en la comprension del lenguaje hablado"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "Incapacidad de reconocer rostros familiares, conocida como prosopagnosia"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "Incapacidad de planificar un acto motor y de tomar decisiones"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Trastornos especificos en la expresion del lenguaje hablado"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "Incapacidad de reconocer colores, conocida como cromatoagnosia"
+                                          }
+                                      ],
+                          "correct":  "A",
+                          "explanation":  "El area de Wernicke procesa la comprension del lenguaje; su lesion produce afasia de Wernicke, con habla fluente pero comprension gravemente alterada, a diferencia de la afasia de Broca que afecta la produccion.",
+                          "id":  114
+                      },
+                      {
+                          "moduleId":  "examen",
+                          "question":  "En relacion a la corteza motora primaria (M1 o area 4), es correcto afirmar que:",
+                          "options":  [
+                                          {
+                                              "label":  "A",
+                                              "text":  "La estimulacion electrica unilateral provoca movimientos bilaterales de distintos segmentos corporales"
+                                          },
+                                          {
+                                              "label":  "B",
+                                              "text":  "En forma caracteristica, esta area no recibe informacion somatosensorial de retorno"
+                                          },
+                                          {
+                                              "label":  "C",
+                                              "text":  "El area de corteza dedicada al control de la mano es de dimension similar a la del pie"
+                                          },
+                                          {
+                                              "label":  "D",
+                                              "text":  "Contiene neuronas cuya frecuencia de descarga se relaciona con la fuerza generada por los musculos durante el acto motor"
+                                          },
+                                          {
+                                              "label":  "E",
+                                              "text":  "La estimulacion electrica unilateral provoca movimientos del lado ipsilateral del cuerpo"
+                                          }
+                                      ],
+                          "correct":  "D",
+                          "explanation":  "Numerosos estudios muestran que la frecuencia de descarga de neuronas de M1 se correlaciona con la fuerza muscular generada durante el movimiento, ademas de con su direccion.",
+                          "id":  115
                       }
                   ]
 }
