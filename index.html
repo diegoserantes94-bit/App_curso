@@ -316,6 +316,47 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .upload-token{margin-top:.75rem;padding:.75rem;background:var(--warn-light);border-radius:var(--radius-sm)}
 .upload-token-label{font-size:11px;font-weight:600;color:var(--warn);margin-bottom:6px}
 
+/* CONSULTAS (FORO) */
+#consultas-view{flex:1;overflow-y:auto;background:var(--bg)}
+.consultas-wrap{max-width:760px;margin:0 auto;padding:1.75rem 2rem 3rem}
+.consultas-head{margin-bottom:1.25rem}
+.consultas-title{font-size:20px;font-weight:700;color:var(--text);letter-spacing:-.01em}
+.consultas-sub{font-size:13px;color:var(--text-muted);line-height:1.55;margin-top:4px}
+.consulta-form{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1rem;box-shadow:var(--sh-sm);margin-bottom:1.25rem}
+.consulta-textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 13px;font-family:var(--font);font-size:14px;color:var(--text);resize:vertical;box-sizing:border-box;line-height:1.5}
+.consulta-textarea:focus{outline:none;border-color:var(--blue)}
+.consulta-form-row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.consulta-select{border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px;font-family:var(--font);font-size:13px;color:var(--text);background:var(--white);cursor:pointer}
+.consulta-select:focus{outline:none;border-color:var(--blue)}
+.consulta-anon{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-mid);cursor:pointer;user-select:none}
+.consulta-anon input{cursor:pointer;width:15px;height:15px;accent-color:var(--blue)}
+.consulta-counter{font-size:12px;color:var(--text-muted);margin-left:auto}
+.consulta-submit{padding:9px 18px;background:var(--blue);color:white;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;transition:background .15s}
+.consulta-submit:hover:not(:disabled){background:var(--blue-hover)}
+.consulta-submit:disabled{opacity:.6;cursor:default}
+.consulta-filters{display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
+.consulta-chip{padding:5px 14px;border-radius:999px;border:1px solid var(--border);background:var(--white);font-family:var(--font);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .15s}
+.consulta-chip:hover{border-color:var(--blue)}
+.consulta-chip.active{background:var(--blue);border-color:var(--blue);color:white}
+.consulta-item{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--sh-sm)}
+.consulta-vote{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:44px;padding:8px 0;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);cursor:pointer;transition:all .15s;flex-shrink:0}
+.consulta-vote svg{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2.5;transition:stroke .15s}
+.consulta-vote span{font-size:14px;font-weight:700;color:var(--text-mid)}
+.consulta-vote:hover{border-color:var(--blue)}
+.consulta-vote.voted{background:var(--blue-light);border-color:var(--blue)}
+.consulta-vote.voted svg{stroke:var(--blue)}
+.consulta-vote.voted span{color:var(--blue)}
+.consulta-body{flex:1;min-width:0}
+.consulta-text-line{font-size:14px;color:var(--text);line-height:1.5;word-wrap:break-word}
+.consulta-meta{display:flex;align-items:center;gap:7px;margin-top:7px;font-size:11px;color:var(--text-muted);flex-wrap:wrap}
+.consulta-mod-tag{font-size:10px;font-weight:600;color:var(--blue);background:var(--blue-light);border-radius:999px;padding:2px 9px;text-transform:uppercase;letter-spacing:.05em}
+.consulta-anon-tag{font-size:9px;font-weight:600;color:var(--text-muted);background:var(--border-light);border-radius:999px;padding:1px 7px;text-transform:uppercase;letter-spacing:.05em}
+.consulta-del{width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.10);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--danger);flex-shrink:0}
+.consulta-del svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5}
+.consultas-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--text-muted);text-align:center;padding:2.5rem 1rem}
+.consultas-empty svg{width:44px;height:44px;stroke:var(--border);fill:none;stroke-width:1.5}
+.consultas-empty p{font-size:13px;line-height:1.5;max-width:320px}
+
 /* HAMBURGER BUTTON — solo visible en móvil */
 .btn-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;border-radius:var(--radius-sm);color:var(--text-mid);flex-shrink:0}
 .btn-menu:hover{background:var(--border-light)}
@@ -351,6 +392,11 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
   .video-grid{grid-template-columns:1fr}
   .materials-grid{grid-template-columns:1fr}
   .students-grid{grid-template-columns:1fr}
+
+  /* Consultas */
+  .consultas-wrap{padding:1.25rem 1rem 2.5rem}
+  .consulta-counter{order:3}
+  .consulta-submit{order:4;margin-left:auto}
 
   /* Formularios */
   .form-row{grid-template-columns:1fr}
@@ -515,6 +561,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
         </div>
       </div>
     </div>
+    <div id="consultas-view" style="display:none"></div>
   </div>
 </div>
 
@@ -770,13 +817,17 @@ const MODULES = [
   { id:"m0",  label:"Introducción",      icon:"book-open"   },
   { id:"m1",  label:"Módulo 1",          icon:"layers"      },
   { id:"m2",  label:"Módulo 2",          icon:"cpu"         },
-  { id:"m3",  label:"Módulo 3",          icon:"trending-up" }
+  { id:"m3",  label:"Módulo 3",          icon:"trending-up" },
+  { id:"consultas", label:"Consultas",   icon:"message-circle" }
 ];
 
 let VIDEOS = [];
 let MATERIALS = { m0:[], m1:[], m2:[], m3:[] };
 let HOME_CONTENT = { welcome:'', criteria:[], reminders:[] };
 let COURSE_START_DATE = '';
+let CONSULTAS = [];
+let consultasUnsub = null;
+let consultasFilter = 'all';
 
 let currentUser = null, activeModule = "home", isAdmin = false;
 let sessionInterval = null;
@@ -788,7 +839,8 @@ const ICONS = {
   "book-open": '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
   layers:      '<svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
   cpu:         '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
-  "trending-up":'<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
+  "trending-up":'<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+  "message-circle":'<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>'
 };
 const MAT_ICONS = {
   pdf:   '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
@@ -962,6 +1014,9 @@ async function showMain() {
     loadFirestoreUsers();
     loadPendingUsers();
   }
+  activeModule = 'home';
+  document.getElementById('consultas-view').style.display = 'none';
+  document.querySelector('.content-body').style.display = '';
   buildSidebar(); renderHome();
   const loginEl = document.getElementById('login-screen');
   const mainEl  = document.getElementById('main-screen');
@@ -988,6 +1043,13 @@ function renderHome() {
   }).join('');
 
   var moduleCards = MODULES.filter(function(m){ return m.id !== 'home'; }).map(function(m) {
+    if (m.id === 'consultas') {
+      return '<div class="home-mod-card" data-mod="consultas">' +
+        '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
+        '<div class="hmc-name">' + m.label + '</div>' +
+        '<div class="hmc-count">Dejá y votá dudas</div>' +
+      '</div>';
+    }
     var count = VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
     return '<div class="home-mod-card" data-mod="' + m.id + '">' +
       '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
@@ -1034,10 +1096,11 @@ function buildSidebar() {
   nav.innerHTML = '';
   MODULES.forEach(function(m) {
     const count = m.id === 'home' ? VIDEOS.length : VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
+    const noCount = (m.id === 'home' || m.id === 'consultas');
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'sb-item' + (m.id === activeModule ? ' active' : '');
-    btn.innerHTML = (ICONS[m.icon] || ICONS.grid) + ' ' + m.label + (m.id !== 'home' ? ' <span class="sb-count">' + count + '</span>' : '');
+    btn.innerHTML = (ICONS[m.icon] || ICONS.grid) + ' ' + m.label + (!noCount ? ' <span class="sb-count">' + count + '</span>' : '');
     btn.addEventListener('click', function() { selectModule(m.id, btn); });
     nav.appendChild(btn);
   });
@@ -1048,9 +1111,20 @@ function selectModule(id, btn) {
   document.querySelectorAll('#sb-nav .sb-item').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
   document.getElementById('ct-label').textContent = getModLabel(id);
+  var consultasView = document.getElementById('consultas-view');
+  var contentBody   = document.querySelector('.content-body');
+  if (id !== 'consultas') stopConsultas();
   if (id === 'home') {
+    consultasView.style.display = 'none';
+    contentBody.style.display = '';
     renderHome();
+  } else if (id === 'consultas') {
+    contentBody.style.display = 'none';
+    consultasView.style.display = 'block';
+    startConsultas();
   } else {
+    consultasView.style.display = 'none';
+    contentBody.style.display = '';
     document.getElementById('home-panel').style.display = 'none';
     document.querySelector('.section-header').style.display = '';
     document.getElementById('video-grid').style.display = '';
@@ -1533,11 +1607,12 @@ function closeSidebar() {
 /* ══════════ LOGOUT ══════════ */
 async function doLogout() {
   stopSessionCheck();
+  stopConsultas();
   localStorage.removeItem(SESSION_KEY);
   closeModal('modal-video');
   document.getElementById('mv-player').innerHTML = '';
   await auth.signOut();
-  currentUser = null; activeModule = 'all'; isAdmin = false;
+  currentUser = null; activeModule = 'home'; isAdmin = false;
   const mainEl  = document.getElementById('main-screen');
   const loginEl = document.getElementById('login-screen');
   mainEl.classList.remove('active','admin-mode');
@@ -1549,6 +1624,204 @@ async function doLogout() {
     document.getElementById('inp-pass').value = '';
     document.getElementById('login-error').style.visibility = 'hidden';
   }, 340);
+}
+
+/* ══════════ CONSULTAS (FORO) ══════════ */
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, function(c) {
+    return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+  });
+}
+function timeAgo(date) {
+  if (!date) return 'ahora';
+  var s = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (s < 60)    return 'hace instantes';
+  var m = Math.floor(s / 60);
+  if (m < 60)    return 'hace ' + m + ' min';
+  var h = Math.floor(m / 60);
+  if (h < 24)    return 'hace ' + h + ' h';
+  var d = Math.floor(h / 24);
+  if (d < 7)     return 'hace ' + d + (d === 1 ? ' día' : ' días');
+  return date.toLocaleDateString('es-UY', { day:'numeric', month:'short' });
+}
+function contentModules() {
+  return MODULES.filter(function(m){ return /^m\d/.test(m.id); });
+}
+
+function startConsultas() {
+  renderConsultasShell();
+  stopConsultas();
+  consultasUnsub = db.collection('consultas').onSnapshot(function(snap) {
+    CONSULTAS = snap.docs.map(function(doc) {
+      var d = doc.data();
+      return {
+        id: doc.id,
+        text: d.text || '',
+        moduleId: d.moduleId || '',
+        authorUid: d.authorUid || '',
+        authorName: d.authorName || 'Estudiante',
+        anonymous: !!d.anonymous,
+        voters: d.voters || [],
+        createdAt: d.createdAt && d.createdAt.toDate ? d.createdAt.toDate() : null
+      };
+    });
+    renderConsultasList();
+  }, function(err) {
+    var listEl = document.getElementById('consultas-list');
+    if (listEl) listEl.innerHTML = '<div class="consultas-empty"><p>No se pudieron cargar las consultas. Revisá tu conexión.</p></div>';
+  });
+}
+function stopConsultas() {
+  if (consultasUnsub) { consultasUnsub(); consultasUnsub = null; }
+}
+
+function renderConsultasShell() {
+  var view = document.getElementById('consultas-view');
+  var modOptions = contentModules().map(function(m) {
+    return '<option value="' + m.id + '">' + m.label + '</option>';
+  }).join('');
+  var filterChips = '<button type="button" class="consulta-chip' + (consultasFilter === 'all' ? ' active' : '') + '" data-filter="all">Todas</button>' +
+    contentModules().map(function(m) {
+      return '<button type="button" class="consulta-chip' + (consultasFilter === m.id ? ' active' : '') + '" data-filter="' + m.id + '">' + m.label + '</button>';
+    }).join('');
+
+  view.innerHTML =
+    '<div class="consultas-wrap">' +
+      '<div class="consultas-head">' +
+        '<div class="consultas-title">Consultas para las clases</div>' +
+        '<div class="consultas-sub">Dejá tus dudas para la clase de consulta semanal. Si ya está la que ibas a hacer, votala para que la tratemos.</div>' +
+      '</div>' +
+      '<div class="consulta-form">' +
+        '<textarea id="consulta-text" class="consulta-textarea" maxlength="280" rows="3" placeholder="Escribí tu duda de forma clara y concreta..."></textarea>' +
+        '<div class="consulta-form-row">' +
+          '<select id="consulta-module" class="consulta-select">' + modOptions + '</select>' +
+          '<label class="consulta-anon"><input type="checkbox" id="consulta-anon" /> Preguntar en anónimo</label>' +
+          '<span class="consulta-counter" id="consulta-counter">280</span>' +
+          '<button type="button" class="consulta-submit" id="consulta-submit">Publicar consulta</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="consulta-filters" id="consulta-filters">' + filterChips + '</div>' +
+      '<div id="consultas-list"></div>' +
+    '</div>';
+
+  var textEl = document.getElementById('consulta-text');
+  var counterEl = document.getElementById('consulta-counter');
+  textEl.addEventListener('input', function() { counterEl.textContent = 280 - textEl.value.length; });
+  document.getElementById('consulta-submit').addEventListener('click', submitConsulta);
+  document.getElementById('consulta-filters').querySelectorAll('.consulta-chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      consultasFilter = chip.getAttribute('data-filter');
+      document.querySelectorAll('#consulta-filters .consulta-chip').forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      renderConsultasList();
+    });
+  });
+}
+
+function renderConsultasList() {
+  var listEl = document.getElementById('consultas-list');
+  if (!listEl) return;
+  var items = CONSULTAS.filter(function(c) {
+    return consultasFilter === 'all' || c.moduleId === consultasFilter;
+  });
+  items.sort(function(a, b) {
+    if (b.voters.length !== a.voters.length) return b.voters.length - a.voters.length;
+    return (b.createdAt ? b.createdAt.getTime() : 0) - (a.createdAt ? a.createdAt.getTime() : 0);
+  });
+
+  if (!items.length) {
+    listEl.innerHTML = '<div class="consultas-empty">' +
+      '<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>' +
+      '<p>Todavía no hay consultas' + (consultasFilter !== 'all' ? ' en este módulo' : '') + '. ¡Sé el primero en dejar tu duda!</p>' +
+    '</div>';
+    return;
+  }
+
+  var uid = currentUser ? currentUser.uid : '';
+  listEl.innerHTML = items.map(function(c) {
+    var voted = c.voters.indexOf(uid) !== -1;
+    var canDelete = isAdmin || c.authorUid === uid;
+    var authorLabel;
+    if (c.anonymous) {
+      authorLabel = isAdmin
+        ? escapeHtml(c.authorName.split(' ')[0]) + ' <span class="consulta-anon-tag">anónimo</span>'
+        : 'Anónimo';
+    } else {
+      authorLabel = escapeHtml(c.authorName.split(' ')[0]);
+    }
+    return '<div class="consulta-item">' +
+      '<button type="button" class="consulta-vote' + (voted ? ' voted' : '') + '" data-id="' + c.id + '" data-voted="' + voted + '">' +
+        '<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
+        '<span>' + c.voters.length + '</span>' +
+      '</button>' +
+      '<div class="consulta-body">' +
+        '<div class="consulta-text-line">' + escapeHtml(c.text) + '</div>' +
+        '<div class="consulta-meta">' +
+          '<span class="consulta-mod-tag">' + getModLabel(c.moduleId) + '</span>' +
+          '<span>' + authorLabel + '</span>' +
+          '<span>·</span>' +
+          '<span>' + timeAgo(c.createdAt) + '</span>' +
+        '</div>' +
+      '</div>' +
+      (canDelete ? '<button type="button" class="consulta-del" data-id="' + c.id + '" title="Eliminar"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>' : '') +
+    '</div>';
+  }).join('');
+
+  listEl.querySelectorAll('.consulta-vote').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      toggleVoteConsulta(btn.getAttribute('data-id'), btn.getAttribute('data-voted') === 'true');
+    });
+  });
+  listEl.querySelectorAll('.consulta-del').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      deleteConsulta(btn.getAttribute('data-id'));
+    });
+  });
+}
+
+function submitConsulta() {
+  var textEl = document.getElementById('consulta-text');
+  var text = textEl.value.trim();
+  if (!text) { textEl.focus(); return; }
+  var moduleId = document.getElementById('consulta-module').value;
+  var anon = document.getElementById('consulta-anon').checked;
+  var btn = document.getElementById('consulta-submit');
+  btn.disabled = true; btn.textContent = 'Publicando...';
+  db.collection('consultas').add({
+    text: text,
+    moduleId: moduleId,
+    authorUid: currentUser.uid,
+    authorName: currentUser.name,
+    anonymous: anon,
+    voters: [currentUser.uid],
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }).then(function() {
+    textEl.value = '';
+    document.getElementById('consulta-anon').checked = false;
+    document.getElementById('consulta-counter').textContent = '280';
+  }).catch(function(e) {
+    alert('No se pudo publicar la consulta: ' + (e.message || e.code));
+  }).then(function() {
+    btn.disabled = false; btn.textContent = 'Publicar consulta';
+  });
+}
+
+function toggleVoteConsulta(id, hasVoted) {
+  var uid = currentUser.uid;
+  var ref = db.collection('consultas').doc(id);
+  var change = hasVoted
+    ? firebase.firestore.FieldValue.arrayRemove(uid)
+    : firebase.firestore.FieldValue.arrayUnion(uid);
+  ref.update({ voters: change }).catch(function(e) {
+    alert('No se pudo registrar tu voto: ' + (e.message || e.code));
+  });
+}
+
+function deleteConsulta(id) {
+  if (!confirm('¿Eliminar esta consulta?')) return;
+  db.collection('consultas').doc(id).delete().catch(function(e) {
+    alert('No se pudo eliminar: ' + (e.message || e.code));
+  });
 }
 
 /* ══════════ WIRE UP — todos los listeners aquí, sin onclick en HTML ══════════ */
