@@ -339,13 +339,15 @@ html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--b
 .consulta-chip:hover{border-color:var(--blue)}
 .consulta-chip.active{background:var(--blue);border-color:var(--blue);color:white}
 .consulta-item{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--sh-sm)}
-.consulta-vote{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:44px;padding:8px 0;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);cursor:pointer;transition:all .15s;flex-shrink:0}
+.consulta-vote{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:52px;padding:7px 4px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);cursor:pointer;transition:all .15s;flex-shrink:0}
 .consulta-vote svg{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2.5;transition:stroke .15s}
 .consulta-vote span{font-size:14px;font-weight:700;color:var(--text-mid)}
+.consulta-vote-label{font-size:10px!important;font-weight:600!important;color:var(--text-muted)!important;text-transform:uppercase;letter-spacing:.03em}
 .consulta-vote:hover{border-color:var(--blue)}
 .consulta-vote.voted{background:var(--blue-light);border-color:var(--blue)}
 .consulta-vote.voted svg{stroke:var(--blue)}
 .consulta-vote.voted span{color:var(--blue)}
+.consulta-vote.voted .consulta-vote-label{color:var(--blue)!important}
 .consulta-body{flex:1;min-width:0}
 .consulta-text-line{font-size:14px;color:var(--text);line-height:1.5;word-wrap:break-word}
 .consulta-meta{display:flex;align-items:center;gap:7px;margin-top:7px;font-size:11px;color:var(--text-muted);flex-wrap:wrap}
@@ -1753,6 +1755,7 @@ function renderConsultasList() {
       '<button type="button" class="consulta-vote' + (voted ? ' voted' : '') + '" data-id="' + c.id + '" data-voted="' + voted + '">' +
         '<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
         '<span>' + c.voters.length + '</span>' +
+        '<span class="consulta-vote-label">' + (voted ? 'Votado' : 'Votar') + '</span>' +
       '</button>' +
       '<div class="consulta-body">' +
         '<div class="consulta-text-line">' + escapeHtml(c.text) + '</div>' +
