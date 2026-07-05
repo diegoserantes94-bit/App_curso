@@ -143,2006 +143,6 @@
                   },
     "questions":  [
                       {
-                          "id":  1,
-                          "moduleId":  "m1",
-                          "question":  "El potencial de membrana en reposo de una neurona tipica oscila normalmente entre:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "-60 mV y -70 mV"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "+30 mV y +60 mV"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "0 mV y -10 mV"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "-20 mV y -30 mV"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "El exceso de cargas positivas fuera y negativas dentro genera un potencial de entre -60 y -70 mV, determinado principalmente por los gradientes ionicos de K+ y Na+."
-                      },
-                      {
-                          "id":  2,
-                          "moduleId":  "m1",
-                          "question":  "Los canales ionicos de reposo se caracterizan por:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Estar cerrados en reposo y abrirse ante cambios de voltaje"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Estar normalmente abiertos sin verse influidos por factores extrinsecos"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Abrirse unicamente cuando se une un ligando especifico a su sitio receptor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Responder a cambios de tension mecanica en la membrana celular"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los canales de reposo estan normalmente abiertos y no se ven influidos por el potencial de membrana ni otros factores extrinsecos. Mantienen el potencial de reposo."
-                      },
-                      {
-                          "id":  3,
-                          "moduleId":  "m1",
-                          "question":  "La celula glial tiene un potencial de reposo de -75 mV principalmente porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Posee alta densidad de canales de Na+ que mantienen el interior celular negativo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La bomba Na+-K+ hiperpolariza activamente la membrana hasta ese valor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Sus canales de reposo son permeables casi exclusivamente al K+, acercando Vm al potencial de equilibrio del K+"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El Cl- es el ion predominante que determina el potencial de reposo en celulas gliales"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La inmensa mayoria de los canales de reposo gliales solo son permeables al K+. Esto hace que Vm se aproxime al potencial de equilibrio del K+ (EK = -75 mV)."
-                      },
-                      {
-                          "id":  4,
-                          "moduleId":  "m1",
-                          "question":  "El potencial de equilibrio del K+ en el axon del calamar (400 mM dentro, 20 mM fuera), calculado con la ecuacion de Nernst, es:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "+55 mV, valor que refleja la mayor concentracion extracelular de Na+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "-60 mV, determinado por la distribucion pasiva del Cl- a ambos lados"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "0 mV, punto donde las fuerzas quimica y electrica se anulan entre si"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "-75 mV, calculado a partir del cociente entre concentraciones interna y externa de K+"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Aplicando la ecuacion de Nernst: EK = 58 mV x log(20/400) = -75 mV. Refleja el equilibrio entre el gradiente quimico y la fuerza electrica sobre el K+."
-                      },
-                      {
-                          "id":  5,
-                          "moduleId":  "m1",
-                          "question":  "En una neurona en reposo, el flujo pasivo continuo de Na+ hacia el interior se contrarresta principalmente por:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El flujo pasivo de K+ hacia fuera a traves de canales de reposo, compensado a su vez por la bomba Na+-K+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El flujo activo de Cl- hacia dentro impulsado por el transportador de cloruro especifico"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La inactivacion de los canales de Na+ sensibles al voltaje que bloquea la entrada en reposo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La capacitancia de membrana que almacena y neutraliza las cargas de Na+ entrantes"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "El flujo pasivo de K+ hacia fuera equilibra el flujo de Na+ hacia dentro. La bomba Na+-K+ repone activamente los gradientes, extrayendo Na+ e introduciendo K+."
-                      },
-                      {
-                          "id":  6,
-                          "moduleId":  "m1",
-                          "question":  "La ecuacion de Goldman, a diferencia de la de Nernst, permite calcular:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El potencial de equilibrio de un unico ion a partir de su gradiente de concentracion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El potencial de membrana cuando multiples iones contribuyen segun su permeabilidad y concentracion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La conductancia total de la membrana a partir del numero de canales ionicos abiertos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La velocidad de cambio del potencial en respuesta a una corriente inyectada externamente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La ecuacion de Goldman incluye las permeabilidades relativas y concentraciones de Na+, K+ y Cl-, calculando el potencial de membrana cuando mas de un ion contribuye a la vez."
-                      },
-                      {
-                          "id":  7,
-                          "moduleId":  "m1",
-                          "question":  "La bomba Na+-K+ se considera electrogena porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Mueve iones unicamente en la direccion de su gradiente electroquimico usando energia del ATP"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Mantiene las concentraciones ionicas perfectamente constantes durante la actividad neuronal"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Transporta 3 Na+ hacia fuera por cada 2 K+ hacia dentro, generando una corriente neta de carga positiva hacia fuera"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Hiperpolariza la membrana hasta alcanzar exactamente el potencial de equilibrio del K+"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "Por cada ciclo la bomba expulsa 3 Na+ e introduce 2 K+. Este flujo ionico desigual genera una corriente neta de carga positiva hacia fuera, hiperpolarizando ligeramente la membrana."
-                      },
-                      {
-                          "id":  8,
-                          "moduleId":  "m1",
-                          "question":  "La diferencia entre permeabilidad y conductancia de membrana es que:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La permeabilidad se mide en siemens y la conductancia en cm/s, siendo unidades distintas pero equivalentes"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La conductancia depende solo del tipo de canal, mientras que la permeabilidad incluye la concentracion ionica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Ambas son practicamente identicas y pueden usarse indistintamente en cualquier ecuacion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La permeabilidad es intrinseca del canal (cm/s), mientras que la conductancia tambien depende de la concentracion ionica disponible en solucion"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "Una membrana puede tener alta permeabilidad para K+ pero conductancia cero si no hay K+ en solucion. La permeabilidad se usa en Goldman; la conductancia en circuitos equivalentes."
-                      },
-                      {
-                          "id":  9,
-                          "moduleId":  "m1",
-                          "question":  "La despolarizacion de la membrana neuronal se define como:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una reduccion de la separacion de carga que hace el potencial de membrana menos negativo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Un aumento de la separacion de carga que incrementa la negatividad del potencial de membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El retorno del potencial al valor de reposo tras el pico del potencial de accion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La apertura de canales de K+ voltaje-dependientes durante la fase descendente del potencial de accion"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "La despolarizacion es una reduccion de la separacion de carga a traves de la membrana, resultando en un potencial de membrana menos negativo. Si alcanza el umbral, genera un potencial de accion."
-                      },
-                      {
-                          "id":  10,
-                          "moduleId":  "m1",
-                          "question":  "En el axon gigante del calamar, los gradientes ionicos muestran que:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El Na+ es el ion mas concentrado dentro de la celula, con 400 mM intracelular"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El K+ predomina intracelularmente (400 mM) mientras que el Na+ es el mas abundante en el exterior (440 mM)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El Cl- tiene igual concentracion a ambos lados de la membrana en condiciones de reposo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Los aniones organicos se distribuyen por igual dentro y fuera de la celula"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Segun los datos del texto: K+ intracelular 400 mM (extracelular 20 mM); Na+ intracelular 50 mM (extracelular 440 mM). El K+ y aniones organicos predominan dentro; Na+ y Cl- fuera."
-                      },
-                      {
-                          "id":  11,
-                          "moduleId":  "m1",
-                          "question":  "El potencial de accion cesa y la membrana se repolariza porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Los canales de Na+ se abren indefinidamente hasta agotar el gradiente ionico disponible"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La bomba Na+-K+ se activa rapidamente durante el pico para expulsar el Na+ que ingreso"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Los canales de Na+ se inactivan gradualmente y los canales de K+ voltaje-dependientes se abren de forma retardada"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El Cl- ingresa masivamente y contrarresta por completo la despolarizacion producida por el Na+"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La repolarizacion ocurre por dos mecanismos combinados: inactivacion gradual de los canales de Na+ voltaje-dependientes y apertura retardada de canales de K+ voltaje-dependientes."
-                      },
-                      {
-                          "id":  12,
-                          "moduleId":  "m1",
-                          "question":  "La ecuacion de Nernst calcula:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La corriente neta de un ion como producto de su conductancia por la fuerza de arrastre electroquimica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El potencial de membrana resultante de la contribucion combinada de Na+, K+ y Cl-"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La capacitancia de la membrana en funcion del area y el grosor de la bicapa lipidica"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El voltaje al que no existe flujo neto de un ion especifico a traves de una membrana permeable para el"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "La ecuacion de Nernst calcula el potencial de equilibrio de un ion: el voltaje al que la fuerza quimica (gradiente de concentracion) y la fuerza electrica se igualan, resultando en flujo neto cero."
-                      },
-                      {
-                          "id":  13,
-                          "moduleId":  "m1",
-                          "question":  "En el circuito electrico equivalente de la neurona, cada canal ionico se representa como:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Un conductor en serie con una bateria cuyo valor equivale al potencial de Nernst del ion correspondiente"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Un condensador en paralelo con un generador de corriente dependiente del voltaje de membrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una resistencia variable controlada directamente por el gradiente de concentracion del ion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una bateria independiente cuya fuerza electromotriz es igual al potencial de membrana en reposo"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "Cada canal se modela como un conductor (que representa su conductancia) en serie con una bateria (cuya fuerza electromotriz es el potencial de Nernst del ion que conduce)."
-                      },
-                      {
-                          "id":  14,
-                          "moduleId":  "m1",
-                          "question":  "La capacitancia electrica de la membrana neuronal existe porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Los canales ionicos actuan como condensadores que almacenan carga entre sus aperturas sucesivas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La bicapa lipidica, como aislante electrico, separa dos medios conductores: el citoplasma y el liquido extracelular"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El alto contenido en colesterol de la membrana incrementa su capacidad de acumular iones"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Las proteinas integrales de membrana acumulan cargas en su superficie intracelular durante el reposo"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La membrana actua como condensador porque la bicapa lipidica (aislante) separa el citoplasma y el liquido extracelular (conductores). Un valor tipico de capacitancia es 1 uF/cm2."
-                      },
-                      {
-                          "id":  15,
-                          "moduleId":  "m1",
-                          "question":  "Cuando la despolarizacion alcanza el umbral, el potencial de accion se genera por:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La apertura de canales de K+ sensibles al voltaje que despolarizan rapidamente la membrana"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El cierre de los canales de Cl- que elimina la hiperpolarizacion y permite la despolarizacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La apertura de canales de Na+ sensibles al voltaje en un ciclo regenerativo de retroalimentacion positiva"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La inversion temporal de la bomba Na+-K+ que introduce Na+ en lugar de expulsarlo"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La apertura de canales de Na+ voltaje-dependientes permite la entrada de Na+, lo que despolariza mas la membrana y abre mas canales: un ciclo de retroalimentacion positiva explosivo."
-                      },
-                      {
-                          "id":  16,
-                          "moduleId":  "m1",
-                          "question":  "Los indices de permeabilidad PK:PNa:PCl en la membrana en reposo del axon del calamar, medidos por Hodgkin y Katz, son:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "1.0:20:0.45, mostrando que el Na+ es el ion mas permeable en condiciones de reposo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "1.0:1.0:1.0, lo que explicaria que el potencial se ubica en el promedio de los tres potenciales de Nernst"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "0.04:1.0:0.45, indicando que el Na+ domina la permeabilidad de membrana en reposo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "1.0:0.04:0.45, indicando que el K+ tiene la mayor permeabilidad y domina el potencial de reposo"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "En reposo, PK:PNa:PCl = 1.0:0.04:0.45. El K+ tiene la mayor permeabilidad, por eso Vm se aproxima a EK. En el pico del potencial de accion la relacion se invierte: PK:PNa = 1.0:20."
-                      },
-                      {
-                          "id":  17,
-                          "moduleId":  "m1",
-                          "question":  "La celula nerviosa en reposo se encuentra en estado estable y NO en equilibrio porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Hay flujos pasivos continuos de Na+ hacia dentro y K+ hacia fuera, compensados exactamente por la bomba Na+-K+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El potencial de membrana oscila continuamente entre EK y ENa sin alcanzar ningun valor fijo estable"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Los gradientes ionicos se disipan lentamente y la bomba no puede compensar la perdida a largo plazo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Los canales de reposo abren y cierran ciclicamente manteniendo el potencial constante en promedio"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "En reposo existe un flujo pasivo constante (Na+ entra, K+ sale). No hay equilibrio porque los iones individuales no estan en equilibrio; es un estado estable donde los flujos pasivos son compensados por la bomba activa."
-                      },
-                      {
-                          "id":  18,
-                          "moduleId":  "m1",
-                          "question":  "El Cl- se distribuye pasivamente en muchas celulas nerviosas porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La bomba Na+-K+ cotransporta activamente Cl- hacia el exterior en cada ciclo de funcionamiento"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Sin transporte activo de Cl-, su concentracion intracelular se ajusta hasta que ECl iguala el potencial de reposo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El Cl- no puede atravesar los canales ionicos de reposo a causa de su carga negativa"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La alta concentracion de aniones organicos intracelulares repele al Cl- e impide su ingreso"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En celulas sin transporte activo de Cl-, este ion se redistribuye pasivamente hasta que su potencial de equilibrio (ECl) iguala el potencial de reposo (Vr), resultando en flujo neto cero de Cl- en reposo."
-                      },
-                      {
-                          "id":  19,
-                          "moduleId":  "m1",
-                          "question":  "La fuerza de arrastre electroquimica sobre un ion se define como:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La suma de las concentraciones intracelular y extracelular del ion dividida entre su valencia"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El producto de la conductancia de membrana para ese ion por su potencial de equilibrio de Nernst"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La diferencia entre el potencial de membrana actual y el potencial de equilibrio del ion (Vm - Ex)"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La razon entre el gradiente quimico y la fuerza electrica que actuan en sentidos opuestos sobre el ion"
-                                          }
-                                      ],
-                          "correct":  "C",
-                          "explanation":  "La fuerza de arrastre electroquimica es Vm - Ex. Determina la direccion y la magnitud del flujo neto del ion: si es positiva, el cation sale; si es negativa, entra."
-                      },
-                      {
-                          "id":  20,
-                          "moduleId":  "m1",
-                          "question":  "Segun el modelo de circuito equivalente, el potencial de membrana en reposo se aproxima al potencial de equilibrio del ion que:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Tiene la mayor concentracion extracelular en relacion a su concentracion intracelular"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Presenta la menor diferencia entre su potencial de Nernst y el potencial de reposo actual"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Es transportado activamente por la bomba Na+-K+ en mayor cantidad por ciclo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Tiene la mayor conductancia de membrana en el estado de reposo de la celula"
-                                          }
-                                      ],
-                          "correct":  "D",
-                          "explanation":  "El potencial de membrana se pondera por las conductancias ionicas: el ion con mayor conductancia arrastra Vm hacia su potencial de equilibrio. En reposo, gK es mayor, por eso Vm se aproxima a EK."
-                      },
-                      {
-                          "id":  21,
-                          "moduleId":  "m2",
-                          "question":  "Cual es la diferencia fundamental entre una sinapsis electrica y una sinapsis quimica en cuanto a su estructura?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "En la sinapsis electrica no existe membrana celular entre las dos celulas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "En la sinapsis electrica las membranas pre y postsinaptica estan separadas por solo 3,5 nm y unidas por canales intercelulares comunicantes, mientras que en la quimica la hendidura es de 20-40 nm sin continuidad citoplasmática"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "En la sinapsis quimica las membranas estan fusionadas permanentemente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La sinapsis electrica utiliza neurotransmisor de difusion rapida mientras que la quimica usa corriente directa"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La sinapsis electrica tiene una hendidura de 3,5 nm atravesada por canales intercelulares comunicantes que unen directamente los citoplasmas. La sinapsis quimica tiene una hendidura de 20-40 nm sin continuidad citoplasmática; el transmisor debe difundir por esa brecha."
-                      },
-                      {
-                          "id":  22,
-                          "moduleId":  "m2",
-                          "question":  "Por que la demora sinaptica es practicamente nula en las sinapsis electricas?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el neurotransmisor difunde muy rapidamente a traves de la hendidura"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque la corriente ionica pasa directamente de una celula a otra a traves de canales intercelulares comunicantes, sin pasos bioquimicos intermedios"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales de Ca2+ se abren muy rapidamente en la terminal presinaptica"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la hendidura sinaptica electrica tiene muy baja resistencia al flujo ionico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La corriente que despolariza la celula postsinaptica es generada directamente por los canales ionicos de la presinaptica y viaja de forma directa sin ningun paso bioquimico que introduzca retraso."
-                      },
-                      {
-                          "id":  23,
-                          "moduleId":  "m2",
-                          "question":  "Que estructura proteica forma cada hemicanal en las uniones intercelulares comunicantes?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Cuatro subunidades llamadas conexinas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Seis subunidades llamadas conexinas"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Ocho subunidades llamadas conexones"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Cinco subunidades llamadas integrinas"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Cada hemicanal (o conexon) esta formado por seis subunidades proteicas identicas llamadas conexinas. El par de conexones enfrentados de ambas celulas forma el canal intercelular completo."
-                      },
-                      {
-                          "id":  24,
-                          "moduleId":  "m2",
-                          "question":  "La transmision en las sinapsis electricas es \"graduada\". Que significa esto?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que solo se produce cuando el potencial presinaptico supera el umbral"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que el potencial postsináptico es directamente proporcional al de la celula presinaptica, incluso ante estimulos subumbrales"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que el potencial postsináptico aumenta en escalones discretos fijos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que la senal se amplifica en cada sinapsis electrica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Cualquier corriente, aunque no genere un potencial de accion en la presinaptica, se transmite igualmente a la postsinaptica. La transmision es continua y proporcional al estimulo."
-                      },
-                      {
-                          "id":  25,
-                          "moduleId":  "m2",
-                          "question":  "Bajo que condiciones se cierran la mayoria de los canales intercelulares comunicantes?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Cuando aumenta el Na+ intracelular o baja el K+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Cuando baja el pH citoplasmico o sube el Ca2+ intracelular"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Cuando aumenta el AMPc intracelular"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Cuando se hiperpolariza la membrana presinaptica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Un pH bajo y un Ca2+ elevado, tipicos de celulas danadas, cierran los canales intercelulares comunicantes, desacoplando las celulas lesionadas del tejido sano circundante."
-                      },
-                      {
-                          "id":  26,
-                          "moduleId":  "m2",
-                          "question":  "Una mutacion en la conexina 32 se asocia con que condicion clinica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Esclerosis multiple"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Enfermedad de Charcot-Marie-Tooth"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Enfermedad de Parkinson"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Sindrome de Guillain-Barre"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Mutaciones en la conexina 32 causan una forma de la enfermedad de Charcot-Marie-Tooth que produce desmielinizacion, ilustrando la importancia funcional de los canales comunicantes en las celulas de Schwann."
-                      },
-                      {
-                          "id":  27,
-                          "moduleId":  "m2",
-                          "question":  "En la sinapsis quimica, cual es el rol del Ca2+ en el terminal presinaptico?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Abre directamente los canales de Na+ de la membrana postsinaptica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Entra por canales sensibles al voltaje y desencadena la fusion de vesiculas con la membrana (exocitosis)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Hiperpolariza el terminal presinaptico para frenar la liberacion de transmisor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Cierra los canales de K+ del terminal para prolongar la despolarizacion"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El potencial de accion abre canales de Ca2+ sensibles al voltaje en la zona activa, y la entrada de Ca2+ desencadena la fusion de las vesiculas con la membrana presinaptica y la liberacion del neurotransmisor en la hendidura: la exocitosis."
-                      },
-                      {
-                          "id":  28,
-                          "moduleId":  "m2",
-                          "question":  "Que determina si una sinapsis quimica sera excitatoria o inhibitoria?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La concentracion de neurotransmisor liberado"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El receptor postsináptico que reconoce al transmisor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las propiedades quimicas del neurotransmisor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El numero de vesiculas en el terminal presinaptico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Es el receptor, y no el transmisor, el que determina si una sinapsis sera excitatoria o inhibitoria. La acetilcolina puede excitar unas celulas e inhibir otras segun el tipo de receptor presente."
-                      },
-                      {
-                          "id":  29,
-                          "moduleId":  "m2",
-                          "question":  "Por que las sinapsis quimicas pueden amplificar la senal sinaptica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el potencial de accion postsináptico es mas rapido que el presinaptico"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque una sola vesicula libera miles de moleculas de transmisor y bastan unas dos moleculas para abrir un canal, de modo que un pequeno terminal puede generar una gran respuesta postsinaptica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales intercelulares comunicantes tienen mayor conductancia que los canales sinapticos quimicos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la hendidura sinaptica actua como amplificador electronico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La amplificacion emerge de que una vesicula libera miles de moleculas, y como bastan ~2 moleculas para abrir un canal, la exocitosis de una vesicula puede abrir miles de canales. Asi, un diminuto terminal puede despolarizar una celula postsinaptica mucho mayor."
-                      },
-                      {
-                          "id":  30,
-                          "moduleId":  "m2",
-                          "question":  "Que son los receptores ionotropicos?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Receptores acoplados a proteina G que modulan canales ionicos mediante segundos mensajeros"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Receptores en los que el sitio de union al transmisor y el canal ionico son la misma macromolecula, produciendo respuestas rapidas de milisegundos"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Receptores que solo se encuentran en la union neuromuscular"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Receptores intracelulares que regulan la expresion genica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En los receptores ionotropicos, receptor y canal son la misma macromolecula: al unirse el transmisor el canal se abre de inmediato, produciendo una respuesta rapida (milisegundos). El receptor nicotinico de ACh es el ejemplo paradigmatico."
-                      },
-                      {
-                          "id":  31,
-                          "moduleId":  "m2",
-                          "question":  "Cual es la principal ventaja funcional de los receptores metabotropicos respecto a los ionotropicos?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Son mas rapidos en producir el potencial postsináptico"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Producen acciones mas duraderas y moduladoras que pueden modificar la excitabilidad neuronal y la fuerza sinaptica, siendo fundamentales para el aprendizaje"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Solo existen en el sistema nervioso periferico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Permiten la transmision bidireccional de la senal sinaptica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los receptores metabotropicos producen acciones de segundos a minutos que modulan la excitabilidad neuronal y la fuerza de las conexiones. Estas vias son fundamentales para el aprendizaje, a diferencia de los ionotropicos que median respuestas rapidas como los reflejos."
-                      },
-                      {
-                          "id":  32,
-                          "moduleId":  "m2",
-                          "question":  "Que mecanismo usa un receptor metabotropico para regular un canal ionico?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Se une directamente al canal y cambia su conformacion al recibir el transmisor"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Activa una proteina G que desencadena una cascada de segundos mensajeros que activan proteina-cinasas que fosforilan el canal"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Libera Ca2+ del reticulo endoplasmatico para abrir directamente el canal"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Forma poros propios en la membrana sin necesidad de canales preexistentes"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El transmisor se une al receptor metabotropico, que activa una proteina G, que activa una cascada (como el AMPc), que activa proteina-cinasas, que fosforilan el canal y modifican su actividad: un circuito de amplificacion y modulacion indirecta."
-                      },
-                      {
-                          "id":  33,
-                          "moduleId":  "m2",
-                          "question":  "Que moleculas ademas de iones pueden pasar por los canales intercelulares comunicantes?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Unicamente iones de Na+ y K+"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Iones inorganicos, segundos mensajeros como IP3 y AMPc, e incluso pequeños peptidos"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Solo proteinas de alto peso molecular"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Unicamente neurotransmisores"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los canales intercelulares comunicantes son grandes y poco selectivos, permitiendo el paso de iones, segundos mensajeros (IP3, AMPc) y pequenos peptidos, lo que les confiere funcion de integracion metabolica ademas de la electrica."
-                      },
-                      {
-                          "id":  34,
-                          "moduleId":  "m2",
-                          "question":  "Que son las \"zonas activas\" en el terminal presinaptico de una sinapsis quimica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Regiones de la membrana postsinaptica donde se concentran los receptores"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Regiones especializadas de la membrana presinaptica donde se acumulan las vesiculas sinapticas y donde ocurre la exocitosis"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Sitios de sintesis de neurotransmisores en el soma neuronal"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Los canales de Na+ del axon que generan el potencial de accion presinaptico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Las zonas activas son las regiones especializadas de la membrana presinaptica donde se acumulan vesiculas y se concentran canales de Ca2+ sensibles al voltaje, de modo que la entrada de Ca2+ desencadena la exocitosis exactamente alli."
-                      },
-                      {
-                          "id":  35,
-                          "moduleId":  "m2",
-                          "question":  "Por que la sinapsis quimica es unidireccional mientras la electrica es tipicamente bidireccional?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque en la sinapsis electrica hay neurotransmisor que difunde en ambas direcciones"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque la sinapsis quimica tiene asimetria anatomica (vesiculas y transmisor en la presinaptica, receptores en la postsinaptica), mientras que los canales comunicantes de la electrica son simetricos y la corriente puede fluir en cualquier sentido"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales intercelulares comunicantes tienen una valvula que permite el flujo en una sola direccion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la sinapsis quimica usa corriente capacitiva y la electrica usa corriente resistiva"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La unidireccionalidad quimica resulta de la asimetria anatomica: las vesiculas y el transmisor estan en la presinaptica y los receptores en la postsinaptica. Los canales intercelulares simetricos permiten flujo en ambas direcciones, haciendo la sinapsis electrica bidireccional."
-                      },
-                      {
-                          "id":  36,
-                          "moduleId":  "m2",
-                          "question":  "En que se diferencia la transmision sinaptica quimica de la secrecion hormonal endocrina?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La sinapsis quimica no usa moleculas quimicas como mensajeros"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La neurona libera el transmisor de forma enfocada sobre una celula especifica a muy corta distancia, mientras que la hormona viaja por la sangre y actua sobre todas las celulas con el receptor apropiado"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las hormonas actuan mas rapidamente que los neurotransmisores"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La sinapsis quimica no requiere receptores de membrana en la celula blanco"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La sinapsis quimica puede verse como una forma modificada de secrecion hormonal, pero mientras la hormona actua en forma difusa a distancia, la neurona dirige el transmisor con precision sobre una celula determinada, haciendo la transmision rapida y espacialmente especifica."
-                      },
-                      {
-                          "id":  37,
-                          "moduleId":  "m2",
-                          "question":  "El acoplamiento electrico entre celulas eleva el umbral efectivo para disparar. Por que?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque la corriente se distribuye entre varias celulas acopladas, reduciendo la resistencia efectiva de la red y requiriendo mas corriente total para llevar a las celulas al umbral"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque la resistencia de cada celula individual aumenta con el acoplamiento"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque las conexinas bloquean los canales de Na+ sensibles al voltaje"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el Ca2+ que entra por los canales intercelulares inhibe los canales de Na+"
-                                          }
-                                      ],
-                          "correct":  "A",
-                          "explanation":  "El acoplamiento reduce la resistencia efectiva de la red al distribuir la corriente entre varias celulas. Por tanto se necesita mas corriente para alcanzar el umbral. Una vez superado, todas tienden a disparar sincronizadamente."
-                      },
-                      {
-                          "id":  38,
-                          "moduleId":  "m2",
-                          "question":  "La celula de Mauthner en la carpa dorada ilustra que propiedad de las sinapsis electricas?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La modulacion quimica de la excitabilidad postsinaptica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La ventaja de velocidad de las sinapsis electricas para respuestas de escape rapido que requieren transmision sin demora sinaptica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La sincronizacion de varias neuronas de alto umbral para producir una respuesta coordinada"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La capacidad de los canales intercelulares de transportar segundos mensajeros"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La celula de Mauthner recibe sinapsis electricas que le permiten iniciar una respuesta de escape en la carpa dorada con minima demora sinaptica. La velocidad de la sinapsis electrica es la clave para este comportamiento rapido de supervivencia."
-                      },
-                      {
-                          "id":  39,
-                          "moduleId":  "m2",
-                          "question":  "Cual es la diferencia funcional fundamental entre sinapsis electricas y quimicas?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Las electricas son mas versatiles porque pueden ser excitatorias o inhibitorias"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Las electricas transmiten con rapidez y sincronia mediante corriente directa, mientras que las quimicas son mas lentas pero amplifican la senal y son enormemente versatiles gracias a la diversidad de transmisores y receptores"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las quimicas son mas rapidas porque no requieren difusion del transmisor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Las electricas requieren neurotransmisor y las quimicas requieren canales intercelulares comunicantes"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Las sinapsis electricas destacan por velocidad y sincronizacion. Las quimicas, aunque mas lentas, amplifican la senal y pueden ser excitatorias o inhibitorias, mediar respuestas rapidas (ionotropicas) o moduladoras lentas (metabotropicas): una versatilidad enorme."
-                      },
-                      {
-                          "id":  40,
-                          "moduleId":  "m2",
-                          "question":  "El ejemplo de la nube de tinta defensiva de Aplysia ilustra que propiedad de las sinapsis electricas?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La velocidad de transmision sin demora sinaptica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La sincronizacion: tres neuronas motoras de alto umbral acopladas electricamente, que al superar el umbral disparan de forma coordinada y explosiva al unisono"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La modulacion lenta de la excitabilidad neuronal por receptores metabotropicos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La transmision de segundos mensajeros entre celulas acopladas electricamente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Las tres neuronas acopladas electricamente tienen un alto umbral individual, pero una vez alcanzado, la corriente generada en una se transmite a las otras y las tres disparan sincronizadamente, produciendo la liberacion explosiva de tinta. Esto ilustra la funcion de sincronizacion de las sinapsis electricas."
-                      },
-                      {
-                          "id":  41,
-                          "moduleId":  "m2",
-                          "question":  "Katz y Miledi demostraron que la entrada de Na+ no es necesaria para liberar transmisor. Como lo demostraron?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Bloqueando los canales de K+ y observando que la liberacion continuaba"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Bloqueando los canales de Na+ con tetrodotoxina y produciendo despolarizacion directa con corriente, demostrando que se liberaba transmisor igualmente al superar ~40 mV de despolarizacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Sustituyendo el K+ extracelular por Cs+ y observando que la liberacion aumentaba"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Midiendo la liberacion de transmisor en ausencia total de iones en el bano extracelular"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Con los canales de Na+ completamente bloqueados por TTX, Katz y Miledi inyectaron corriente directamente en la terminal presinaptica. Por encima de ~40 mV de despolarizacion se liberaron cantidades crecientes de transmisor, demostrando que la entrada de Na+ no es necesaria: solo importa la despolarizacion de la membrana."
-                      },
-                      {
-                          "id":  42,
-                          "moduleId":  "m2",
-                          "question":  "Por que la entrada de Ca2+ es necesaria y suficiente para desencadenar la liberacion del transmisor?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el Ca2+ despolariza directamente la membrana postsinaptica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque el Ca2+ que entra por canales sensibles al voltaje en la zona activa activa directamente la maquinaria de exocitosis que fusiona las vesiculas sinapticas con la membrana presinaptica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el Ca2+ bloquea los canales de K+, prolongando la despolarizacion y aumentando la liberacion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el Ca2+ activa la bomba Na+-K+ que genera el potencial electrico para la exocitosis"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los experimentos de Llinas demostraron que la corriente de Ca2+ en la terminal se correlaciona directamente con la liberacion del transmisor. El Ca2+ entra por canales sensibles al voltaje concentrados en las zonas activas y activa el sensor de calcio de la maquinaria de exocitosis, fusionando las vesiculas con la membrana."
-                      },
-                      {
-                          "id":  43,
-                          "moduleId":  "m2",
-                          "question":  "La liberacion de transmisor muestra dependencia no lineal del Ca2+: un aumento de 2 veces en la entrada de Ca2+ puede aumentar la liberacion hasta 16 veces. Que indica esto?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que el Ca2+ actua en la membrana postsinaptica multiplicando la respuesta"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que el sensor de calcio para la liberacion requiere la union de varios iones de Ca2+ (al menos cuatro) antes de que se produzca la exocitosis, lo que genera una relacion exponencial"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que el Ca2+ activa la bomba Na+-K+ que genera 16 veces mas energia para la exocitosis"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que la liberacion de transmisor es un proceso lineal y proporcional a la entrada de Ca2+"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La relacion no lineal (cuarta potencia aproximadamente) indica que el sensor de calcio requiere la union de varios iones de Ca2+ para activarse. Esto crea sensibilidad exquisita: pequenos cambios en el Ca2+ local producen grandes cambios en la liberacion, y la concentracion de ~50-100 µM requerida solo se alcanza en el microdominio junto al canal de Ca2+."
-                      },
-                      {
-                          "id":  44,
-                          "moduleId":  "m2",
-                          "question":  "Los canales de Ca2+ de tipo P/Q y N son los principales mediadores de la liberacion rapida de transmisor porque:",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Estan distribuidos uniformemente en toda la membrana del axon"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Estan concentrados en las zonas activas de la terminal presinaptica, lo que permite una alta concentracion local de Ca2+ junto a los sitios de liberacion vesicular"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Son los canales de Ca2+ mas grandes y conducen mas corriente que los de tipo L y T"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Son los unicos canales de Ca2+ que no requieren despolarizacion para abrirse"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los canales P/Q y N se concentran en las zonas activas. Esta localizacion estrategica permite que su apertura genere un microdominio de Ca2+ de alta concentracion (~100 µM) exactamente donde estan ancladas las vesiculas, desencadenando exocitosis rapida (en 0,2 ms)."
-                      },
-                      {
-                          "id":  45,
-                          "moduleId":  "m2",
-                          "question":  "Que son los potenciales de placa motora en miniatura?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Potenciales de accion de pequena amplitud que se generan espontaneamente en la fibra muscular"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Pequenos potenciales postsinápticos espontaneos de ~0,5 mV que ocurren en ausencia de estimulacion nerviosa, representando la liberacion espontanea de un unico cuanto de transmisor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Potenciales postsinápticos producidos por la estimulacion de un unico axon presinaptico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Respuestas de alta frecuencia que indican que la membrana esta proxima al umbral del potencial de accion"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Fatt y Katz descubrieron que en ausencia de estimulacion la union neuromuscular produce potenciales espontaneos de ~0,5 mV con intervalos aleatorios. Representan la liberacion espontanea de un cuanto (contenido de una sola vesicula sinaptica) que abre ~2000 canales receptor-ACh."
-                      },
-                      {
-                          "id":  46,
-                          "moduleId":  "m2",
-                          "question":  "Que demostraron los experimentos con bajo Ca2+ externo sobre la naturaleza de la liberacion del transmisor?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que el neurotransmisor se libera en un continuo graduado proporcional al numero de moleculas por vesicula"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que el transmisor se libera en unidades discretas o cuantos, y que el potencial de placa motora es la suma de un numero entero de potenciales unitarios identicos al potencial en miniatura espontaneo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que en bajo Ca2+ los canales de Na+ de la celula muscular se inactivan mas rapidamente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que el Ca2+ determina el tamano de cada cuanto individual de transmisor"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En bajo Ca2+, los potenciales de placa motora son variables y pequenos. Del Castillo y Katz observaron que cada respuesta es siempre un multiplo entero del potencial unitario (que coincide con el potencial en miniatura). Los fallos, unitarios y multiples siguen una distribucion de Poisson, estableciendo la naturaleza cuantal de la liberacion."
-                      },
-                      {
-                          "id":  47,
-                          "moduleId":  "m2",
-                          "question":  "Que evidencias morfologicas apoyaron que las vesiculas sinapticas son el sustrato del cuanto de transmisor?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La observacion de grandes globulos lipidicos en la terminal presinaptica bajo microscopio optico"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La identificacion por microscopia electronica de vesiculas ~50 nm en la terminal presinaptica y la demostracion de su exocitosis mediante tecnicas de congelacion-rapida sincronizada con la estimulacion nerviosa"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La medicion de la fluorescencia de moleculas de Ca2+ dentro de cada vesicula sinaptica"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La observacion de cambios en la densidad optica de la terminal con microscopio de luz polarizada"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La microscopia electronica revelo vesiculas sinapticas ~50 nm en las terminales. Reese y Heuser usaron congelacion-rapida en momentos precisos tras la estimulacion y observaron estructuras en forma de omega (Q) en las zonas activas que representan vesiculas en fusion. La correlacion entre el numero de estructuras Q y el tamano del potencial postsináptico confirmo la exocitosis vesicular."
-                      },
-                      {
-                          "id":  48,
-                          "moduleId":  "m2",
-                          "question":  "Como se detecta la exocitosis vesicular mediante mediciones de capacitancia de membrana?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Un canal proteico permanente en la membrana presinaptica que conduce ACh"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Cuando una vesicula se fusiona con la membrana plasmatica, aumenta el area total de la membrana, lo que se detecta electricamente como un incremento discreto de la capacitancia proporcional al area de la membrana vesicular fusionada"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una invaginacion de la membrana postsinaptica que captura el transmisor liberado"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Un poro formado por el receptor nicotinico de ACh cuando se une al transmisor"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Cuando una vesicula se fusiona con la membrana plasmatica, incorpora su membrana aumentando el area total. Este aumento se detecta como incremento de capacitancia (Cm proporcional al area). En celulas con vesiculas grandes (celulas cromafines, celulas cebadas), estos incrementos discretos permiten detectar la fusion de una sola vesicula."
-                      },
-                      {
-                          "id":  49,
-                          "moduleId":  "m2",
-                          "question":  "Cual es la diferencia entre las vesiculas sinapticas clasicas y las vesiculas grandes de centro denso?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Las vesiculas clasicas liberan Ca2+ y las grandes liberan neurotransmisores convencionales"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Las vesiculas sinapticas clasicas (~50 nm, claras) se localizan en zonas activas y liberan transmisores convencionales para transmision rapida; las grandes de centro denso (electrondensas) no estan en zonas activas y liberan neuropeptidos para acciones moduladoras lentas"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las vesiculas clasicas son exclusivas de sinapsis inhibitorias y las grandes de sinapsis excitatorias"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Las vesiculas grandes se fusionan mas rapidamente que las clasicas porque tienen mayor area de membrana"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Las vesiculas clasicas son pequenas (~50 nm), transparentes al electron, se acumulan en zonas activas y liberan transmisores rapidos (ACh, glutamato). Las vesiculas grandes de centro denso son mayores, electrondensas, se encuentran en todo el terminal y liberan neuropeptidos que modulan la excitabilidad durante segundos o minutos."
-                      },
-                      {
-                          "id":  50,
-                          "moduleId":  "m2",
-                          "question":  "La transmision cuantica se ha demostrado en casi todas las sinapsis quimicas estudiadas, con que notable excepcion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "La sinapsis neuromuscular del calamar"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Las sinapsis de la retina, donde la liberacion es graduada y continua en respuesta a cambios de luz"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las sinapsis inhibitorias del cerebelo"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Las sinapsis del ganglio simpatico superior"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En la retina, las celulas fotorreceptoras y las celulas bipolares no siguen la transmision cuantica clasica; liberan transmisor de forma graduada y continua proporcional a la luz, sin liberacion discreta de cuantos en el sentido clasico."
-                      },
-                      {
-                          "id":  51,
-                          "moduleId":  "m2",
-                          "question":  "Que representa el \"contenido cuantico\" (m) en la liberacion cuantica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El numero de moleculas de neurotransmisor en una sola vesicula sinaptica"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El numero promedio de cuantos de transmisor liberados por un potencial de accion presinaptico, igual al producto del numero de cuantos disponibles (n) por la probabilidad de liberacion (p)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El potencial de membrana promedio producido por un cuanto de transmisor en la celula postsinaptica"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La cantidad de Ca2+ que entra durante un potencial de accion presinaptico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El contenido cuantico m = n × p, donde n es el numero de cuantos facilmente liberables y p es la probabilidad de que cada uno sea liberado por un potencial de accion. En la union neuromuscular normal m ≈ 150 cuantos por potencial de accion."
-                      },
-                      {
-                          "id":  52,
-                          "moduleId":  "m2",
-                          "question":  "Las sinapsis axo-axonicas pueden regular la liberacion de transmisor en la terminal presinaptica. Como?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Aumentando directamente el numero de vesiculas sinapticas en la terminal blanco"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Modulando el potencial de accion o la concentracion de Ca2+ libre en la terminal presinaptica, lo que altera la cantidad de transmisor liberado"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Bloqueando fisicamente la hendidura sinaptica con material del citoplasma"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Aumentando la actividad de la acetilcolinesterasa en la hendidura sinaptica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Las sinapsis axo-axonicas (inhibicion presinaptica) pueden despolarizar o hiperpolarizar la terminal presinaptica, modificando la amplitud del potencial de accion que la invade y por tanto la entrada de Ca2+. Un menor Ca2+ libre reduce el numero de cuantos liberados, ajustando la eficacia sinaptica."
-                      },
-                      {
-                          "id":  53,
-                          "moduleId":  "m2",
-                          "question":  "Por que la liberacion del transmisor ocurre con un retraso tipico tras el inicio del potencial de accion presinaptico?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque el transmisor debe ser sintetizado de novo en la terminal antes de poder ser liberado"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque los canales de Ca2+ sensibles al voltaje se abren mas lentamente que los de Na+, de modo que el Ca2+ no entra hasta que el potencial de accion ya se esta repolarizando"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque el Ca2+ debe difundir desde el soma neuronal hasta la terminal antes de desencadenar la exocitosis"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque las vesiculas sinapticas deben migrar desde el soma hasta la zona activa antes de cada estimulo"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los canales de Ca2+ se activan mas lentamente que los de Na+. La entrada de Ca2+ comienza cuando el potencial de accion ya alcanza su pico y empieza a repolarizarse. Este retraso en la apertura de los canales de Ca2+ constituye la mayor parte de la demora sinaptica quimica de ~0,2 ms."
-                      },
-                      {
-                          "id":  54,
-                          "moduleId":  "m2",
-                          "question":  "Que concentracion de Ca2+ libre se requiere localmente para desencadenar la exocitosis, y por que es importante que sea tan alta?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "1 µM, que es la concentracion maxima alcanzable en las zonas activas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "50-100 µM, concentracion que solo se alcanza en el microdominio junto al canal de Ca2+ abierto, lo que garantiza que la exocitosis ocurra solo en las zonas activas y se detenga rapidamente cuando los canales cierran"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "10 mM, que es la concentracion intracelular normal de Ca2+ libre"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "5 µM, porque a esa concentracion el Ca2+ activa la calmodulina que desencadena la exocitosis"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El sensor de calcio para la liberacion rapida requiere ~50-100 µM de Ca2+. Esta concentracion solo se alcanza en el microdominio inmediato (\u003c100 nm) al canal de Ca2+ abierto. Fuera de ese microdominio el Ca2+ se diluye rapidamente, asegurando que la liberacion sea extremadamente localizada y se detenga al milisegundo de cerrar los canales."
-                      },
-                      {
-                          "id":  55,
-                          "moduleId":  "m2",
-                          "question":  "En la union neuromuscular normal, cuantos cuantos libera un potencial de accion presinaptico?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Entre 1 y 10 cuantos"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Aproximadamente 150 cuantos"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Exactamente 1 cuanto por zona activa, siempre"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Mas de 10 000 cuantos simultaneamente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La union neuromuscular del vertebrado tiene ~300 zonas activas y alto contenido cuantico. Un potencial de accion libera aproximadamente 150 cuantos de ACh en 1-2 ms, suficiente para generar un potencial de placa motora de ~70 mV que siempre supera el umbral muscular."
-                      },
-                      {
-                          "id":  56,
-                          "moduleId":  "m2",
-                          "question":  "Como se reciclan las membranas vesiculares tras la exocitosis?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Son degradadas completamente por enzimas lisosomales y se sintetiza nueva membrana vesicular desde cero"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La membrana vesicular incorporada a la membrana plasmatica es recuperada por endocitosis mediada por clatrina (fositas revestidas), generando nuevas vesiculas que son recargadas con transmisor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Las vesiculas se rellenan de neurotransmisor directamente desde el espacio extracelular a traves de la hendidura sinaptica"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Se incorporan permanentemente a la membrana plasmatica y la terminal sintetiza nuevas vesiculas continuamente por el Golgi local"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Tras la exocitosis, la membrana vesicular se incorpora a la membrana plasmatica aumentando transitoriamente su area. Esta membrana es rapidamente recuperada por endocitosis mediada por clatrina, formando vesiculas que son recargadas con transmisor y vuelven al ciclo vesicular."
-                      },
-                      {
-                          "id":  57,
-                          "moduleId":  "m2",
-                          "question":  "La duracion del potencial de accion en la terminal presinaptica influye en la cantidad de transmisor liberado. Como?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Un potencial de accion mas largo cierra los canales de Ca2+ antes, reduciendo la liberacion"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Un potencial de accion mas largo permite mayor entrada de Ca2+ durante la despolarizacion prolongada, lo que aumenta el numero de cuantos liberados"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La duracion no afecta la liberacion porque los canales de Ca2+ se saturan inmediatamente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Un potencial mas corto aumenta la liberacion porque el Ca2+ puede salir mas rapidamente de la terminal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los canales de Ca2+ permanecen abiertos mientras dure la despolarizacion. Un potencial prolongado (como cuando se bloquean los canales de K+ con TEA) permite mayor acumulacion de Ca2+ intracelular y mayor liberacion de transmisor."
-                      },
-                      {
-                          "id":  58,
-                          "moduleId":  "m2",
-                          "question":  "Los gases CO y NO se liberan de forma diferente a los transmisores clasicos. Como lo hacen?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Se almacenan en vesiculas especializadas y se liberan por exocitosis"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Por su naturaleza lipofila difunden directamente a traves de la bicapa lipidica desde el sitio de sintesis, actuando como mensajeros quimicos o senales retrogradas"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Se liberan mediante transportadores de membrana en respuesta al despolarizacion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Se secretan por exocitosis de vesiculas grandes de centro denso"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El CO y el NO son moleculas gaseosas y lipofilas que no pueden ser empaquetadas en vesiculas. Se sintetizan en el citoplasma y difunden directamente a traves de la bicapa lipidica hacia celulas vecinas, donde actuan como mensajeros quimicos o senales retrogradas hacia la terminal presinaptica."
-                      },
-                      {
-                          "id":  59,
-                          "moduleId":  "m2",
-                          "question":  "Por que es importante que los canales de Ca2+ esten concentrados en las zonas activas en vez de estar distribuidos uniformemente en el terminal?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Para que el Ca2+ pueda despolarizar la membrana postsinaptica directamente"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Para generar un microdominio de Ca2+ de alta concentracion (~100 µM) exactamente en el sitio de anclaje vesicular, lo que permite una exocitosis rapida y localizada"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Para impedir que el Ca2+ entre al axon durante el potencial de accion presinaptico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Para sincronizar la liberacion de transmisor con los potenciales de accion postsinápticos"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La concentracion de canales de Ca2+ en las zonas activas junto a las vesiculas ancladas crea un microdominio de Ca2+ muy elevado (~100 µM) en el punto de liberacion. Si los canales estuvieran distribuidos uniformemente, el Ca2+ no alcanzaria la concentracion necesaria junto a las vesiculas para activar el sensor de baja afinidad de la exocitosis."
-                      },
-                      {
-                          "id":  60,
-                          "moduleId":  "m2",
-                          "question":  "Que es la \"movilizacion de vesiculas\" en el contexto de la liberacion cuantica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El transporte de vesiculas desde el soma hasta la terminal sinaptica por transporte axonal rapido"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El proceso por el cual las vesiculas del pool de reserva se desplazan hacia las zonas activas para estar disponibles para la liberacion, lo que constituye un determinante de la probabilidad de liberacion"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La fusion de las membranas vesicular y plasmatica durante la exocitosis"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El proceso de endocitosis por el cual se recupera la membrana vesicular tras la exocitosis"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La probabilidad de liberacion p incluye la probabilidad de que una vesicula alcance el punto de liberacion (movilizacion) y la probabilidad de que sea liberada por el potencial de accion. La movilizacion es regulada por el Ca2+ y determina cuantas vesiculas estan listas en las zonas activas."
-                      },
-                      {
-                          "id":  61,
-                          "moduleId":  "m2",
-                          "question":  "Por que la sinapsis nervio-musculo es un sitio ideal para estudiar la transmision sinaptica quimica?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque es la unica sinapsis en la que se usa acetilcolina como transmisor"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque es relativamente sencilla (un solo axon motor, un solo transmisor, un solo tipo de canal postsináptico) y la celula muscular es suficientemente grande para acomodar dos microelectrodos"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque no tiene hendidura sinaptica, lo que permite visualizar directamente la liberacion del transmisor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque opera con sinapsis electricas en lugar de quimicas, haciendola mas rapida y predecible"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La sinapsis neuromuscular tiene varias ventajas: el musculo es grande y accesible, normalmente recibe solo un axon motor (sin convergencia), libera un solo transmisor (ACh) que activa un solo tipo de receptor (nicotinico ionotropico), haciendo el analisis mucho mas sencillo que en las complejas sinapsis centrales."
-                      },
-                      {
-                          "id":  62,
-                          "moduleId":  "m2",
-                          "question":  "Que es la placa terminal en la sinapsis neuromuscular?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El soma del motoneuron que controla la fibra muscular"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La region especializada de la membrana muscular donde el axon motor (sin mielina) establece el contacto sinaptico, conteniendo los receptores de ACh concentrados en las crestas de los pliegues de union"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El conjunto de vesiculas sinapticas en el terminal presináptico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La vaina de mielina que cubre el ultimo segmento del axon antes de la terminacion sinaptica"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La placa terminal es la region especializada de la membrana de la fibra muscular donde el axon motor establece el contacto sinaptico. Contiene los pliegues de union con alta densidad de receptores de ACh en sus crestas (~10 000 receptores/µm²), separados del terminal presináptico por una hendidura de 100 nm."
-                      },
-                      {
-                          "id":  63,
-                          "moduleId":  "m2",
-                          "question":  "El potencial de placa terminal tiene una amplitud de ~70 mV en condiciones normales. Por que esto asegura la contraccion muscular?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque 70 mV es exactamente el potencial de equilibrio del Na+ en el musculo"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque una despolarizacion de 70 mV desde el potencial de reposo muscular (-90 mV) lleva el potencial hasta ~-20 mV, superando con mucho el umbral para el potencial de accion muscular (-50 mV), asegurando alta fiabilidad de transmision"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque 70 mV es el umbral exacto para el potencial de accion en todas las fibras musculares"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la amplitud de 70 mV abre todos los canales de Na+ sensibles al voltaje simultaneamente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Con un potencial de reposo de -90 mV y un potencial de placa de 70 mV, el potencial muscular alcanza ~-20 mV, muy por encima del umbral de -50 mV. Esta gran amplitud asegura que la transmision tenga un alto factor de seguridad: incluso si el potencial de placa es menor de lo normal, aun asi suele superar el umbral."
-                      },
-                      {
-                          "id":  64,
-                          "moduleId":  "m2",
-                          "question":  "El potencial de inversion de la corriente de la placa terminal es 0 mV. Que indica esto sobre los iones que la producen?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que solo el Na+ contribuye a la corriente sinaptica en la placa terminal"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que los canales de ACh son igualmente permeables al Na+ y al K+, y que el potencial de inversion es la media ponderada de ENa (+55 mV) y EK (-75 mV)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que la corriente de la placa terminal es generada unicamente por el Cl-"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que el Ca2+ es el principal ion que pasa por los canales de la placa terminal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El potencial de inversion de 0 mV indica que los canales activados por ACh son casi igualmente permeables al Na+ (ENa ≈ +55 mV) y al K+ (EK ≈ -75 mV). Con permeabilidades iguales, la media ponderada resulta en ~0 mV. En ese potencial, el flujo de Na+ hacia dentro esta equilibrado por el flujo de K+ hacia fuera."
-                      },
-                      {
-                          "id":  65,
-                          "moduleId":  "m2",
-                          "question":  "Por que los canales de ACh de la placa terminal no son selectivos para un solo ion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque los canales de ACh son demasiado pequeños para discriminar entre iones"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque el poro del canal de ACh es relativamente grande (~0,8 nm), permitiendo el paso de cationes sin discriminar entre Na+ y K+, que son mucho mas pequeños que ese limite"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque la ACh se une a los dos tipos de canales (Na+ y K+) y los abre simultaneamente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque en el musculo los iones Na+ y K+ tienen la misma concentracion intracelular"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El poro del canal nicotinico de ACh es grande (~0,8 nm) comparado con los poros de los canales selectivos de Na+ (~0,3 nm) o K+ (~0,3 nm). Esta amplitud permite que Na+ y K+ pasen casi igual de bien, haciendo el canal poco selectivo entre cationes monovalentes. Los aniones quedan excluidos por las cargas negativas del poro."
-                      },
-                      {
-                          "id":  66,
-                          "moduleId":  "m2",
-                          "question":  "Que es la acetilcolinesterasa y donde se localiza en la sinapsis neuromuscular?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Es un receptor de ACh localizado en los pliegues de union de la placa terminal"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Es una enzima anclada a la membrana basal en la hendidura sinaptica que hidroliza rapidamente la ACh en acetato y colina, terminando la accion del transmisor"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Es una proteina de fusion que media la exocitosis de las vesiculas en la zona activa"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Es un canal ionico que se abre cuando se une la ACh, permitiendo el flujo de Na+ y K+"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La acetilcolinesterasa se ancla a las fibrillas de colageno de la membrana basal dentro de la hendidura sinaptica. Hidroliza la ACh muy rapidamente, limitando la duracion de la accion del transmisor y permitiendo que el canal receptor se cierre y la placa terminal se repolarice para recibir el siguiente impulso."
-                      },
-                      {
-                          "id":  67,
-                          "moduleId":  "m2",
-                          "question":  "El curare bloquea la transmision en la union neuromuscular. Cual es su mecanismo?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Bloquea los canales de Na+ sensibles al voltaje en la fibra muscular, impidiendo el potencial de accion muscular"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Se une al receptor nicotinico de ACh en la placa terminal bloqueando competitivamente la union de la ACh, reduciendo la amplitud del potencial de placa terminal por debajo del umbral"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Inhibe la acetilcolinesterasa, produciendo acumulacion excesiva de ACh que desensibiliza los receptores"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Bloquea la exocitosis de las vesiculas en el terminal presinaptico, reduciendo la liberacion de ACh"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La tubocurarina (curare purificado) se une al sitio de union de la ACh en las subunidades alpha del receptor nicotinico, bloqueando competitivamente la activacion del canal. Reduce la amplitud del potencial de placa terminal; con suficiente curare, el potencial de placa no alcanza el umbral y no se genera potencial de accion muscular, produciendo paralisis flacida."
-                      },
-                      {
-                          "id":  68,
-                          "moduleId":  "m2",
-                          "question":  "El receptor nicotinico de ACh esta formado por cinco subunidades. Cual es su composicion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Cinco subunidades alpha identicas que forman el canal ionico"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Cinco subunidades (α2βγδ) en simetria pentameral, donde las dos subunidades alpha contienen los sitios de union a ACh y el canal ionico esta formado por el segmento M2 de cada subunidad"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Cuatro subunidades identicas alpha como los canales de K+ sensibles al voltaje"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Tres subunidades alpha y dos subunidades beta, donde las beta forman el canal"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El receptor nicotinico tiene la composicion α2βεδ (o α2βγδ en fetal). Las cinco subunidades se organizan simetricamente alrededor de un eje central formando el poro acuoso. Los dos sitios de union a ACh estan en las subunidades alpha. El canal lo forman los segmentos transmembrana M2 de las cinco subunidades."
-                      },
-                      {
-                          "id":  69,
-                          "moduleId":  "m2",
-                          "question":  "Para que el canal receptor de ACh se abra, cuantas moleculas de ACh deben unirse?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una molecula de ACh a cualquiera de las cinco subunidades"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Dos moleculas de ACh, una a cada una de las dos subunidades alpha, en las interfaces con las subunidades adyacentes"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Cinco moleculas de ACh, una a cada subunidad del receptor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una molecula de ACh que se inserta directamente en el poro del canal para abrirlo mecanicamente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El canal se abre cuando dos moleculas de ACh se unen de forma cooperativa: una a cada subunidad alpha. Los sitios de union estan en la interfaz entre cada subunidad alpha y su vecina. La union de solo una molecula tiene baja probabilidad de abrir el canal."
-                      },
-                      {
-                          "id":  70,
-                          "moduleId":  "m2",
-                          "question":  "La corriente sinaptica de la placa terminal aumenta y disminuye mas rapidamente que el potencial de placa terminal resultante. Por que?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque la bomba Na+-K+ contrarresta el cambio de potencial en la escala de milisegundos"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque la capacitancia de la membrana muscular actua como filtro: la corriente sinaptica debe primero cargar la capacitancia antes de que el potencial de membrana cambie, produciendo un retraso y suavizado del potencial"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque los canales de ACh se re-activan al inicio de la repolarizacion, prolongando la corriente"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque el potencial de placa terminal activa canales de K+ adicionales que suavizan su descenso"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La corriente sinaptica rapida (dictada por la rapida apertura y cierre de los canales de ACh) debe cargar la capacitancia de membrana para cambiar el voltaje. Como Vm = Q/Cm, el cambio de potencial es proporcional a la carga acumulada. Esto produce una respuesta de voltaje suavizada y retrasada respecto a la corriente sinaptica."
-                      },
-                      {
-                          "id":  71,
-                          "moduleId":  "m2",
-                          "question":  "Que es la miastenia gravis y cual es su mecanismo patologico?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una enfermedad genetica por mutacion en las subunidades del receptor nicotinico de ACh que impide la union del transmisor"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Una enfermedad autoinmune en la que anticuerpos contra el receptor nicotinico de ACh reducen el numero de receptores funcionales en la placa terminal, comprometiendo la transmision sinaptica"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Una enfermedad por sobreproduccion de acetilcolinesterasa que hidroliza la ACh antes de que llegue a los receptores"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Una infeccion bacteriana que bloquea la exocitosis de vesiculas en el terminal presinaptico"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En la miastenia gravis, el sistema inmune produce anticuerpos contra el receptor nicotinico de ACh. Estos anticuerpos bloquean el receptor, aceleran su degradacion y activan el complemento, reduciendo drasticamente el numero de receptores funcionales. El resultado es un potencial de placa terminal reducido que puede no alcanzar el umbral, causando debilidad muscular fluctuante."
-                      },
-                      {
-                          "id":  72,
-                          "moduleId":  "m2",
-                          "question":  "Como despolariza el potencial de placa terminal al resto de la fibra muscular para generar un potencial de accion?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Por difusion quimica del Ca2+ liberado en la placa terminal hacia los canales de Na+ del resto de la fibra"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El potencial de placa terminal se extiende electronicamente (de forma pasiva y decremental) desde la placa terminal hacia regiones adyacentes, despolarizando los canales de Na+ sensibles al voltaje que generan el potencial de accion muscular propagado"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La ACh liberada difunde a lo largo de toda la superficie muscular activando receptores en toda la fibra"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "El potencial de placa terminal activa directamente los canales de Ca2+ del reticulo sarcoplasmico en toda la fibra"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La corriente sinaptica genera una despolarizacion local que se propaga electronicamente (pasivamente, con atenuacion) desde la placa terminal hacia regiones adyacentes. Los canales de Na+ sensibles al voltaje concentrados en los pliegues de union y en la membrana muscular cercana son activados por esta despolarizacion local, generando un potencial de accion muscular que luego se propaga activamente."
-                      },
-                      {
-                          "id":  73,
-                          "moduleId":  "m2",
-                          "question":  "El registro de zona en la placa terminal mostro que la corriente de un canal de ACh es ~0,3 pA. Que implica esto para el potencial de placa motora en miniatura?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Que un solo canal es suficiente para generar un potencial de placa motora en miniatura de 0,5 mV"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Que el potencial en miniatura requiere la apertura simultanea de aproximadamente 2000 canales de ACh, lo que implica que una vesicula libera ~5000 moleculas de ACh para activar esos canales"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Que el potencial en miniatura es generado por la apertura de un unico canal de ACh"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Que los canales de ACh en el musculo tienen la misma conductancia que los canales de Na+ sensibles al voltaje"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Si la corriente unitaria de un canal es ~0,3 pA y el potencial en miniatura requiere una corriente total de ~600 pA, se necesitan ~2000 canales. Como se necesitan 2 moleculas de ACh para abrir un canal y parte de la ACh no llega a los receptores (hidrolisis, difusion), se requieren ~5000 moleculas de ACh por cuanto, correspondiente al contenido de una vesicula sinaptica."
-                      },
-                      {
-                          "id":  74,
-                          "moduleId":  "m2",
-                          "question":  "Cual es la funcion de los pliegues de union en la placa terminal?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Contener las mitocondrias necesarias para la produccion de ATP que recarga las vesiculas sinapticas"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Las crestas de los pliegues concentran receptores de ACh (~10 000/µm²) frente a las zonas activas; los fondos de los pliegues concentran canales de Na+ sensibles al voltaje que generan el potencial de accion muscular"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Contener la acetilcolinesterasa que sintetiza la ACh para el terminal presinaptico"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Impedir que el Ca2+ entre a la celula muscular durante el potencial de accion"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Los pliegues de union tienen organizacion funcional: crestas con alta densidad de receptores nicotinicos de ACh, optimamente ubicados frente a las zonas activas donde se libera el transmisor. Los fondos de los pliegues concentran canales de Na+ sensibles al voltaje que son activados por la despolarizacion del potencial de placa terminal para generar el potencial de accion muscular."
-                      },
-                      {
-                          "id":  75,
-                          "moduleId":  "m2",
-                          "question":  "Que espera observar si aplica prostigmina (inhibidor de acetilcolinesterasa) a la union neuromuscular?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Una disminucion de la amplitud del potencial de placa terminal por desensibilizacion de los receptores de ACh"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Un aumento de la amplitud y duracion del potencial de placa terminal, porque la ACh permanece mas tiempo en la hendidura antes de ser hidrolizada, activando los receptores por mas tiempo"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Un bloqueo completo de la transmision porque la ACh acumulada bloquea el poro del canal receptor"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Ningun cambio, porque la prostigmina actua solo en el sistema nervioso central"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "Al inhibir la acetilcolinesterasa, la prostigmina permite que la ACh permanezca mas tiempo en la hendidura y active los receptores nicotinicos por un periodo mas prolongado. Esto aumenta tanto la amplitud como la duracion del potencial de placa terminal. Este es el fundamento del uso de inhibidores de colinesterasa en el tratamiento de la miastenia gravis."
-                      },
-                      {
-                          "id":  76,
-                          "moduleId":  "m2",
-                          "question":  "Cual es el factor de seguridad de la transmision en la union neuromuscular normal y por que es importante?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "El factor de seguridad es 1 (el potencial de placa terminal siempre alcanza exactamente el umbral)"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "El potencial de placa terminal (~70 mV) supera con creces el umbral muscular (~40 mV por encima del reposo de -90 mV), proporcionando un gran margen que garantiza la transmision incluso con perdida parcial de receptores o reduccion de liberacion de ACh"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "El factor de seguridad es negativo, lo que significa que el potencial de placa nunca alcanza el umbral sin facilitacion"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "No existe factor de seguridad; cada potencial de accion motor activa exactamente una fibra muscular con precision absoluta"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "El umbral muscular esta a unos -50 mV, y el potencial de reposo a -90 mV, por lo que se necesita despolarizar ~40 mV para generar un potencial de accion. El potencial de placa terminal normal de ~70 mV supera ampliamente este requisito, dando un margen (factor de seguridad) que protege la transmision frente a patologias como la miastenia gravis."
-                      },
-                      {
-                          "id":  77,
-                          "moduleId":  "m2",
-                          "question":  "Por que la corriente sinaptica de la placa terminal (IPPSE) fluye hacia dentro cuando el potencial de membrana es mas negativo que el potencial de inversion (0 mV)?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque a potenciales negativos los canales de ACh se invierten y transportan iones en la direccion opuesta"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque a potenciales mas negativos que 0 mV la fuerza de arrastre electroquimica neta sobre los cationes favorece el flujo hacia dentro: el Na+ es arrastrado por su gradiente quimico y electrico, y aunque el K+ tiende a salir, el mayor flujo de Na+ domina la corriente neta"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque a potenciales negativos la acetilcolinesterasa se inactiva y la ACh permanece mas tiempo abriendo el canal"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque a potenciales negativos todos los canales de Na+ musculares se abren y dominan la corriente"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "A potenciales negativos respecto al potencial de inversion, la fuerza electrica atrae cationes hacia dentro y el gradiente de concentracion empuja al Na+ hacia dentro. Aunque el K+ tiene fuerza hacia fuera por su gradiente, la gran fuerza sobre el Na+ hace que la corriente neta de cationes sea hacia dentro. En el potencial de inversion (0 mV) estos flujos se igualan exactamente."
-                      },
-                      {
-                          "id":  78,
-                          "moduleId":  "m2",
-                          "question":  "Que diferencia estructural fundamental existe entre los canales activados por ligandos y los canales sensibles al voltaje?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Los canales de ligando conducen unicamente aniones y los sensibles al voltaje solo cationes"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Los canales de ligando se abren cuando una molecula especifica (el transmisor) se une a un sitio extracelular del canal, mientras que los sensibles al voltaje se abren en respuesta a cambios del potencial de membrana detectados por su sensor de voltaje intramembrana"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Los canales de ligando tienen cuatro subunidades y los sensibles al voltaje tienen cinco"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Los canales de ligando no tienen poro ionico y los sensibles al voltaje si"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La diferencia clave es el mecanismo de activacion: los canales ionotropicos de ligando tienen un sitio de union para el transmisor en la region extracelular y se abren cuando este se une; los canales sensibles al voltaje tienen un sensor de voltaje (segmento S4 con cargas positivas) que detecta cambios del potencial de membrana y desencadena la apertura del canal."
-                      },
-                      {
-                          "id":  79,
-                          "moduleId":  "m2",
-                          "question":  "En el circuito equivalente de la placa terminal, que determina la amplitud maxima del potencial de placa terminal?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Unicamente el numero de canales de ACh abiertos (la conductancia sinaptica)"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "La media ponderada de las baterias sinaptica (EPPSE ≈ 0 mV) y de reposo (Er ≈ -90 mV), ponderada por sus respectivas conductancias (gPPSE y gr), segun Vm = (gPPSE × EPPSE + gr × Er)/(gPPSE + gr)"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "La velocidad de hidrolisis de la ACh por la acetilcolinesterasa"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "La concentracion de Na+ en el liquido extracelular"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "En el estado estable maximo, la corriente sinaptica iguala la corriente de reposo. El voltaje resultante es la media ponderada de las baterias. Con valores tipicos (gPPSE = 5 × 10^-6 S, gr = 1 × 10^-6 S, EPPSE = 0 mV, Er = -90 mV), se obtiene Vm = -15 mV, y el potencial de placa = -15 - (-90) = 75 mV."
-                      },
-                      {
-                          "id":  80,
-                          "moduleId":  "m2",
-                          "question":  "Por que la sinapsis neuromuscular es un modelo para comprender las enfermedades autoinmunes que afectan los receptores sinapticos?",
-                          "options":  [
-                                          {
-                                              "label":  "A",
-                                              "text":  "Porque es la unica sinapsis del cuerpo afectada por anticuerpos"
-                                          },
-                                          {
-                                              "label":  "B",
-                                              "text":  "Porque su accesibilidad experimental, la identificacion bioquimica del receptor nicotinico y la comprension de la transmision normal permitieron entender como los anticuerpos en la miastenia gravis reducen los receptores funcionales y deterioran la transmision"
-                                          },
-                                          {
-                                              "label":  "C",
-                                              "text":  "Porque la miastenia gravis se trata con trasplante de terminales nerviosas de donantes sanos"
-                                          },
-                                          {
-                                              "label":  "D",
-                                              "text":  "Porque la sinapsis neuromuscular tiene receptores tanto nicotinicos como muscarinicos, lo que permite estudiar ambos tipos de respuesta autoinmune"
-                                          }
-                                      ],
-                          "correct":  "B",
-                          "explanation":  "La sinapsis neuromuscular fue el primer sistema en que se identifico bioquimicamente un receptor sinaptico (el receptor nicotinico). Este conocimiento permitio comprender que en la miastenia gravis los anticuerpos se dirigen contra este receptor. El modelo es valioso porque la transmision normal esta tan bien caracterizada que es posible predecir cuantitativamente el efecto de la perdida de receptores."
-                      },
-                      {
                           "moduleId":  "examen",
                           "question":  "Con respecto al procesamiento sensorial en el asta dorsal de la medula, es correcto afirmar que:",
                           "options":  [
@@ -2169,7 +169,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "Las neuronas de la lamina V son de amplio rango dinamico: reciben convergencia de aferentes tactiles y nociceptivas, por lo que responden a mas de una modalidad sensorial.",
-                          "id":  81
+                          "id":  1
                       },
                       {
                           "moduleId":  "examen",
@@ -2198,7 +198,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "IH (corriente cationica activada por hiperpolarizacion) se abre cuando la membrana se hiperpolariza, generando una corriente de entrada que despolariza de vuelta hacia el reposo.",
-                          "id":  82
+                          "id":  2
                       },
                       {
                           "moduleId":  "examen",
@@ -2227,7 +227,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "El tracto vestibuloespinal, originado en los nucleos vestibulares, controla la musculatura axial y proximal para mantener la postura y el equilibrio.",
-                          "id":  83
+                          "id":  3
                       },
                       {
                           "moduleId":  "examen",
@@ -2252,7 +252,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "A menor diametro, mayor resistencia axial interna (Ri), lo que se traduce en una mayor resistencia de entrada de la fibra.",
-                          "id":  84
+                          "id":  4
                       },
                       {
                           "moduleId":  "examen",
@@ -2281,7 +281,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "La seccion por delante del hipotalamo desconecta la corteza e hipocampo de los nucleos hipotalamicos, liberando respuestas de furia ficticia (sham rage) no dirigidas a un estimulo real.",
-                          "id":  85
+                          "id":  5
                       },
                       {
                           "moduleId":  "examen",
@@ -2310,7 +310,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "El rango audible humano llega hasta aproximadamente 20 KHz; por encima de 25 KHz los sonidos quedan fuera del rango de audicion (ultrasonido).",
-                          "id":  86
+                          "id":  6
                       },
                       {
                           "moduleId":  "examen",
@@ -2335,7 +335,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "En el ganglio autonomo coexisten receptores nicotinicos y muscarinicos, ademas de peptidos, generando potenciales postsinapticos tanto excitadores como inhibidores segun el receptor activado.",
-                          "id":  87
+                          "id":  7
                       },
                       {
                           "moduleId":  "examen",
@@ -2364,7 +364,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "La distancia recorrida de mas equivale a 1 cm en un tiempo adicional de 0,5 ms, lo que da una velocidad de 20 metros por segundo.",
-                          "id":  88
+                          "id":  8
                       },
                       {
                           "moduleId":  "examen",
@@ -2389,7 +389,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "El conducto infraorbitario recorre el piso de la orbita, formado principalmente por el maxilar, y transmite el paquete vasculonervioso infraorbitario.",
-                          "id":  89
+                          "id":  9
                       },
                       {
                           "moduleId":  "examen",
@@ -2418,7 +418,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "Las fibras paralelas (axones de celulas granulares) generan espigas simples en la celula de Purkinje; la espiga compleja, en cambio, es producida por la fibra trepadora.",
-                          "id":  90
+                          "id":  10
                       },
                       {
                           "moduleId":  "examen",
@@ -2447,7 +447,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "El nucleo coclear recibe la aferencia directa del nervio auditivo de un solo oido, por lo que responde solo a estimulos sonoros ipsilaterales; la comparacion binaural ocurre en nucleos posteriores (complejo olivar superior).",
-                          "id":  91
+                          "id":  11
                       },
                       {
                           "moduleId":  "examen",
@@ -2472,7 +472,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "Ligamentos propios de cada huesecillo (martillo, yunque, estribo) los suspenden y fijan a las paredes de la caja del timpano, estabilizando la cadena durante la transmision del sonido.",
-                          "id":  92
+                          "id":  12
                       },
                       {
                           "moduleId":  "examen",
@@ -2501,7 +501,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "Las neuronas del area preoptica hipotalamica promotoras del sueño aumentan marcadamente su descarga durante el sueño NREM y se inhiben durante la vigilia, patron compatible con estos valores.",
-                          "id":  93
+                          "id":  13
                       },
                       {
                           "moduleId":  "examen",
@@ -2530,7 +530,7 @@
                                       ],
                           "correct":  "D",
                           "explanation":  "Por definicion, la potencia optica en dioptrias es igual a 1 dividido la distancia focal expresada en metros.",
-                          "id":  94
+                          "id":  14
                       },
                       {
                           "moduleId":  "examen",
@@ -2559,7 +559,7 @@
                                       ],
                           "correct":  "E",
                           "explanation":  "El campo receptivo circular centro-periferia antagonico es propio de neuronas tempranas de la via visual (retina, geniculado, V1), no de la corteza fusiforme, cuyas neuronas tienen campos grandes y responden a rasgos complejos como rostros.",
-                          "id":  95
+                          "id":  15
                       },
                       {
                           "moduleId":  "examen",
@@ -2588,7 +588,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "La adaptacion en frecuencia depende de una corriente de potasio activada por calcio; los receptores muscarinicos la inhiben, por eso su activacion reduce la adaptacion (efecto de la acetilcolina durante la atencion o vigilia).",
-                          "id":  96
+                          "id":  16
                       },
                       {
                           "moduleId":  "examen",
@@ -2613,7 +613,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "La leptina es sintetizada por el tejido adiposo y señaliza saciedad al hipotalamo; sin ella, se pierde esa señal y el animal desarrolla obesidad marcada.",
-                          "id":  97
+                          "id":  17
                       },
                       {
                           "moduleId":  "examen",
@@ -2642,7 +642,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "La union neuromuscular tiene un gran factor de seguridad: la amplitud del potencial de placa terminal normalmente supera ampliamente el umbral, garantizando la generacion del potencial de accion muscular.",
-                          "id":  98
+                          "id":  18
                       },
                       {
                           "moduleId":  "examen",
@@ -2667,7 +667,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "Los husos neuromusculares estan dispuestos en paralelo con las fibras extrafusales, por lo que durante el estiramiento pasivo del musculo ambas se estiran en magnitud similar.",
-                          "id":  99
+                          "id":  19
                       },
                       {
                           "moduleId":  "examen",
@@ -2692,7 +692,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "Los campos receptivos de las celulas ganglionares tienen organizacion centro-periferia antagonica: la luz en el centro y en la periferia producen efectos opuestos sobre la respuesta de la celula.",
-                          "id":  100
+                          "id":  20
                       },
                       {
                           "moduleId":  "examen",
@@ -2717,7 +717,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "Los receptores adrenergicos (alfa y beta) son todos metabotropicos, acoplados a proteinas G, a diferencia de los receptores nicotinicos que son ionotropicos.",
-                          "id":  101
+                          "id":  21
                       },
                       {
                           "moduleId":  "examen",
@@ -2746,7 +746,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "Las sinapsis electricas (uniones gap) transmiten corriente de forma bidireccional y pasiva, incluyendo cambios hiperpolarizantes, sin requerir neurotransmisor ni calcio.",
-                          "id":  102
+                          "id":  22
                       },
                       {
                           "moduleId":  "examen",
@@ -2771,7 +771,7 @@
                                       ],
                           "correct":  "B",
                           "explanation":  "Las capas concentricas de tejido conectivo que rodean la terminal nerviosa filtran los estimulos sostenidos, haciendo que el corpusculo de Pacini adapte rapidamente y responda solo a la vibracion o cambios rapidos de presion.",
-                          "id":  103
+                          "id":  23
                       },
                       {
                           "moduleId":  "examen",
@@ -2796,7 +796,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "En el pico del potencial de accion la permeabilidad al sodio predomina ampliamente, por lo que el potencial de membrana se aproxima al potencial de equilibrio del sodio (cercano a +55 mV).",
-                          "id":  104
+                          "id":  24
                       },
                       {
                           "moduleId":  "examen",
@@ -2821,7 +821,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "La ligadura activa mecanicamente axones sensoriales del nervio, generando un reflejo que persiste aunque se repita la maniobra distalmente, ya que el estimulo mecanico sigue actuando sobre fibras aferentes intactas proximales al segundo sitio.",
-                          "id":  105
+                          "id":  25
                       },
                       {
                           "moduleId":  "examen",
@@ -2850,7 +850,7 @@
                                       ],
                           "correct":  "E",
                           "explanation":  "El area preoptica contiene neuronas termosensibles que detectan directamente la temperatura local; al calentarla, las neuronas sensibles al calor incrementan su descarga y desencadenan respuestas de perdida de calor (vasodilatacion, inhibicion de termogenesis).",
-                          "id":  106
+                          "id":  26
                       },
                       {
                           "moduleId":  "examen",
@@ -2879,7 +879,7 @@
                                       ],
                           "correct":  "E",
                           "explanation":  "En un adulto joven normal, el sueño REM ocupa cerca del 20 a 25 por ciento del tiempo total de sueño, lo que en una noche de 8 horas equivale a aproximadamente 2 horas.",
-                          "id":  107
+                          "id":  27
                       },
                       {
                           "moduleId":  "examen",
@@ -2904,7 +904,7 @@
                                       ],
                           "correct":  "D",
                           "explanation":  "Los bastones poseen un unico fotopigmento (rodopsina), por lo que no aportan informacion cromatica; la discriminacion de color depende de los tres tipos de conos.",
-                          "id":  108
+                          "id":  28
                       },
                       {
                           "moduleId":  "examen",
@@ -2933,7 +933,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "Cada receptor ionotropico posee un poro con selectividad definida, integrado en la misma proteina que el sitio de union al ligando, a diferencia de los metabotropicos que actuan via segundos mensajeros.",
-                          "id":  109
+                          "id":  29
                       },
                       {
                           "moduleId":  "examen",
@@ -2958,7 +958,7 @@
                                       ],
                           "correct":  "C",
                           "explanation":  "La habituacion es una forma de aprendizaje no asociativo: la respuesta disminuye progresivamente ante la repeticion de un estimulo que no representa amenaza ni relevancia para el animal.",
-                          "id":  110
+                          "id":  30
                       },
                       {
                           "moduleId":  "examen",
@@ -2983,7 +983,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "La region locomotora mesencefalica o mesopontina puede activar generadores centrales de patrones espinales y desencadenar la locomocion incluso sin participacion cortical directa.",
-                          "id":  111
+                          "id":  31
                       },
                       {
                           "moduleId":  "examen",
@@ -3012,7 +1012,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "El receptor de glicina es un canal ionotropico permeable a cloro; su activacion aumenta la conductancia a este ion, generalmente inhibiendo la neurona, y es bloqueado por estricnina, no por atropina.",
-                          "id":  112
+                          "id":  32
                       },
                       {
                           "moduleId":  "examen",
@@ -3041,7 +1041,7 @@
                                       ],
                           "correct":  "E",
                           "explanation":  "Al invertir la polaridad del estimulo (intercambiar anodo y catodo), se invierte la direccion de la corriente inicial bajo los electrodos de registro, invirtiendo especificamente la primera deflexion sin alterar el resto del trazado.",
-                          "id":  113
+                          "id":  33
                       },
                       {
                           "moduleId":  "examen",
@@ -3070,7 +1070,7 @@
                                       ],
                           "correct":  "A",
                           "explanation":  "El area de Wernicke procesa la comprension del lenguaje; su lesion produce afasia de Wernicke, con habla fluente pero comprension gravemente alterada, a diferencia de la afasia de Broca que afecta la produccion.",
-                          "id":  114
+                          "id":  34
                       },
                       {
                           "moduleId":  "examen",
@@ -3099,7 +1099,7 @@
                                       ],
                           "correct":  "D",
                           "explanation":  "Numerosos estudios muestran que la frecuencia de descarga de neuronas de M1 se correlaciona con la fuerza muscular generada durante el movimiento, ademas de con su direccion.",
-                          "id":  115
+                          "id":  35
                       }
                   ]
 }
