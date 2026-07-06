@@ -1,0 +1,29 @@
+# Academia Memento — robots.txt
+# Permitimos el rastreo completo del sitio.
+
+User-agent: *
+Allow: /
+
+# Bots de IA (para que puedan citar y recomendar el sitio)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://academiamemento.com/sitemap.xml

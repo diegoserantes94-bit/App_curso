@@ -4,11 +4,12 @@
    - Navegación / data.json: network-first con fallback a caché (para funcionar sin señal).
    - Firebase / Google Fonts (CDN): se dejan pasar a la red (con caché oportunista de fuentes).
    Subí el número de versión para forzar una actualización del caché. */
-const CACHE = 'memento-v1';
+const CACHE = 'memento-v2';
 
 const APP_SHELL = [
   './',
   './index.html',
+  './app.html',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
