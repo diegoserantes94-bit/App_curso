@@ -183,7 +183,7 @@
   .hero-meta span{display:flex;align-items:center;gap:6px}
   .hero-meta svg{width:15px;height:15px;stroke:#9fc3f5;fill:none;stroke-width:2}
   .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.75rem;backdrop-filter:blur(4px)}
-  .hero-card img{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:16px;padding:12px;margin-bottom:1rem;display:block}
+  .hero-card img{width:210px;max-width:100%;height:auto;object-fit:contain;background:#fff;border-radius:14px;padding:16px 18px;margin:0 auto 1.15rem;display:block}
   .hero-card-title{font-size:15px;font-weight:700;margin-bottom:.4rem}
   .hero-card-text{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.6}
 
@@ -237,6 +237,14 @@
   .btn-white:hover{background:#eaf1fb;transform:translateY(-1px)}
   .btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
   .btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-wa{background:#25D366;color:#fff}
+  .btn-wa:hover{background:#1ebe5a;transform:translateY(-1px)}
+  .btn-wa svg{width:18px;height:18px}
+
+  /* Botón flotante de WhatsApp */
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .15s,box-shadow .15s}
+  .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(37,211,102,.55)}
+  .wa-float svg{width:30px;height:30px}
 
   /* FOOTER */
   footer{background:var(--navy-dark);color:rgba(255,255,255,.6);padding:2.5rem 0 2rem;font-size:13.5px}
@@ -279,9 +287,8 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <span class="hero-badge"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Facultad de Medicina · UdelaR · Ciclo BCC3</span>
       <h1>Curso Paralelo de <span class="accent">Neurociencia</span> para FMED (BCC3)</h1>
-      <p class="hero-capsule">Academia Memento es un <strong>curso paralelo online de Neurociencia</strong> con <strong>clases particulares</strong> para estudiantes de la Facultad de Medicina (<strong>FMED, UdelaR</strong>), ciclo <strong>BCC3</strong>, en Montevideo, Uruguay. Videos, resúmenes y consultas en vivo para llegar preparado a los parciales.</p>
+      <p class="hero-capsule">Academia Memento te ofrece el <strong>curso paralelo online de Neurociencia</strong> para estudiantes de la Facultad de Medicina (<strong>FMED, UdelaR</strong>), ciclo <strong>BCC3</strong>. Videos, resúmenes y consultas en vivo para llegar preparado a los parciales.</p>
       <div class="hero-cta">
         <a href="app.html" class="btn btn-primary btn-lg">Acceso alumnos<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="#curso" class="btn btn-ghost btn-lg" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.25)">Conocé el curso</a>
@@ -293,9 +300,8 @@
       </div>
     </div>
     <div class="hero-card">
-      <img src="logo-memento.jpg" alt="Logo Academia Memento" />
-      <div class="hero-card-title">Recuerda tu potencial</div>
-      <p class="hero-card-text">Una plataforma pensada para que estudiar Neurociencia sea claro, ordenado y a tu ritmo. Accedé al material cuando quieras y resolvé tus dudas en las clases de consulta semanales.</p>
+      <img src="icon-512.png" alt="Academia Memento — Recuerda tu potencial" />
+      <p class="hero-card-text">No se trata de memorizar sin entender, sino de comprender. Estudiá con claridad, a tu ritmo, y llegá a los parciales con la confianza de que sabés.</p>
     </div>
   </div>
 </section>
@@ -306,23 +312,22 @@
     <div class="section-tag">Qué es</div>
     <h2 class="section-title">Un curso paralelo online de Neurociencia, hecho para FMED</h2>
     <p class="section-lead">El <strong>curso paralelo de Neurociencia</strong> de Academia Memento acompaña el cursado oficial de la <strong>Facultad de Medicina (FMED, UdelaR)</strong> en el ciclo <strong>BCC3</strong>. Explicamos los temas difíciles paso a paso y te damos el material ordenado para que rindas mejor.</p>
-    <p class="capsule">Academia Memento ofrece un curso paralelo online de Neurociencia y clases particulares de neuro para estudiantes de FMED (UdelaR), ciclo BCC3, en Uruguay.</p>
 
     <div class="features">
       <div class="feature">
         <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
         <h3>Videos por tema</h3>
-        <p>Clases online grabadas que explican cada tema de Neurociencia con claridad: potencial de membrana, sinapsis, integración sináptica y más. Mirá cuando quieras, las veces que necesites.</p>
+        <p>Clases online grabadas que explican cada tema con claridad. Mirá cuando quieras, donde quieras, las veces que necesites.</p>
       </div>
       <div class="feature">
         <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <h3>Resúmenes y material</h3>
-        <p>Resúmenes descargables de cada tema, redactados para estudiar rápido y repasar antes de los parciales del ciclo BCC3 de FMED.</p>
+        <p>Resúmenes descargables de cada tema, redactados para estudiar rápido y repasar antes de los parciales.</p>
       </div>
       <div class="feature">
         <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h3>Consultas en vivo</h3>
-        <p>Clases de consulta semanales por videollamada. Dejás tu duda en la plataforma, votás las de tus compañeros y las resolvemos en vivo.</p>
+        <p>Clases de consulta semanales por videoconferencia. Dejás tu duda en la plataforma y la tratamos en la clase.</p>
       </div>
     </div>
   </div>
@@ -412,7 +417,8 @@
       <p>Sumate al curso paralelo de Neurociencia para FMED (BCC3 · UdelaR). Accedé a los videos, resúmenes y consultas en vivo desde hoy.</p>
       <div class="hero-cta">
         <a href="app.html" class="btn btn-white btn-lg">Acceso alumnos<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="mailto:diegoserantes94@gmail.com" class="btn btn-outline-w btn-lg">Escribinos</a>
+        <a href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Neurociencia%20de%20Academia%20Memento." target="_blank" rel="noopener" class="btn btn-wa btn-lg"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1A8 8 0 0 0 12 20a8 8 0 0 0 5.6-13.7zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.24-.15-2.5.66.67-2.44-.16-.25A6.5 6.5 0 1 1 12 18.5zm3.6-4.9c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.62.77-.23.15-.43.05a5.3 5.3 0 0 1-1.56-.96 5.9 5.9 0 0 1-1.08-1.35c-.11-.2 0-.3.09-.4l.3-.35c.1-.12.13-.2.2-.34a.37.37 0 0 0 0-.35c0-.1-.44-1.06-.6-1.45s-.32-.33-.44-.34h-.38a.73.73 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66 3.87 3.87 0 0 0 .82 2.06 8.88 8.88 0 0 0 3.4 3 11.4 11.4 0 0 0 1.14.42 2.74 2.74 0 0 0 1.26.08 2.06 2.06 0 0 0 1.35-.95 1.68 1.68 0 0 0 .12-.95c-.05-.09-.18-.14-.38-.24z"/></svg>WhatsApp</a>
+        <a href="mailto:diegoserantes94@gmail.com" class="btn btn-outline-w btn-lg"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
       </div>
     </div>
   </div>
@@ -444,6 +450,11 @@
     <div class="foot-bottom">© 2026 Academia Memento · Neurociencia FMED BCC3 (UdelaR) · Montevideo, Uruguay</div>
   </div>
 </footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/598XXXXXXXX?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Neurociencia%20de%20Academia%20Memento." target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1A8 8 0 0 0 12 20a8 8 0 0 0 5.6-13.7zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.24-.15-2.5.66.67-2.44-.16-.25A6.5 6.5 0 1 1 12 18.5zm3.6-4.9c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.62.77-.23.15-.43.05a5.3 5.3 0 0 1-1.56-.96 5.9 5.9 0 0 1-1.08-1.35c-.11-.2 0-.3.09-.4l.3-.35c.1-.12.13-.2.2-.34a.37.37 0 0 0 0-.35c0-.1-.44-1.06-.6-1.45s-.32-.33-.44-.34h-.38a.73.73 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66 3.87 3.87 0 0 0 .82 2.06 8.88 8.88 0 0 0 3.4 3 11.4 11.4 0 0 0 1.14.42 2.74 2.74 0 0 0 1.26.08 2.06 2.06 0 0 0 1.35-.95 1.68 1.68 0 0 0 .12-.95c-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
 
 </body>
 </html>
