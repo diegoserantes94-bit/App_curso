@@ -1145,6 +1145,7 @@ async function showMain() {
   document.getElementById('consultas-view').style.display = 'none';
   document.querySelector('.content-body').style.display = '';
   buildSidebar(); renderHome();
+  history.replaceState({ module: 'home' }, '', '#home');
   const loginEl = document.getElementById('login-screen');
   const mainEl  = document.getElementById('main-screen');
   loginEl.classList.add('leaving');
@@ -1235,16 +1236,18 @@ function buildSidebar() {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'sb-item' + (m.id === activeModule ? ' active' : '');
+    btn.setAttribute('data-mod', m.id);
     btn.innerHTML = (ICONS[m.icon] || ICONS.grid) + ' ' + m.label + (!noCount ? ' <span class="sb-count">' + count + '</span>' : '');
     btn.addEventListener('click', function() { selectModule(m.id, btn); });
     nav.appendChild(btn);
   });
 }
 
-function selectModule(id, btn) {
+function selectModule(id, btn, fromPop) {
   activeModule = id;
+  if (!btn) btn = document.querySelector('#sb-nav .sb-item[data-mod="' + id + '"]');
   document.querySelectorAll('#sb-nav .sb-item').forEach(function(b){ b.classList.remove('active'); });
-  btn.classList.add('active');
+  if (btn) btn.classList.add('active');
   document.getElementById('ct-label').textContent = getModLabel(id);
   var quizView      = document.getElementById('quiz-view');
   var consultasView = document.getElementById('consultas-view');
@@ -1276,7 +1279,22 @@ function selectModule(id, btn) {
     renderMaterials(id);
   }
   if (window.innerWidth <= 768) closeSidebar();
+  if (!fromPop) history.pushState({ module: id }, '', '#' + id);
 }
+
+// Botón "atrás" del navegador: volver a la vista anterior en vez de salir de la app.
+window.addEventListener('popstate', function(e) {
+  var mainActive = document.getElementById('main-screen').classList.contains('active');
+  if (!mainActive) return; // en el login, dejar el comportamiento normal
+  // Si hay un video abierto, "atrás" lo cierra (en vez de cambiar de módulo).
+  if (document.getElementById('modal-video').style.display === 'flex') {
+    closeModal('modal-video');
+    document.getElementById('mv-player').innerHTML = '';
+    return;
+  }
+  var id = (e.state && e.state.module) ? e.state.module : 'home';
+  selectModule(id, null, true);
+});
 
 /* ══════════ VIDEOS ══════════ */
 function renderVideos(moduleId) {
@@ -1358,6 +1376,7 @@ function playVideo(id) {
   var iframeSrc = 'https://player.vimeo.com/video/' + v.vimeoId + '?autoplay=1&title=0&byline=0&portrait=0';
   document.getElementById('mv-player').innerHTML = '<iframe src="' + iframeSrc + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
   openModal('modal-video');
+  history.pushState({ module: activeModule, video: true }, '', '#video');
 }
 
 /* ══════════ MATERIALS ══════════ */
@@ -2203,8 +2222,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('btn-add-user').addEventListener('click', openAddUser);
 
   // Modal video
-  document.getElementById('mv-close').addEventListener('click', function(){ closeModal('modal-video'); document.getElementById('mv-player').innerHTML = ''; });
-  document.getElementById('modal-video').addEventListener('click', function(e){ if(e.target===this){ closeModal('modal-video'); document.getElementById('mv-player').innerHTML = ''; } });
+  document.getElementById('mv-close').addEventListener('click', function(){ history.back(); });
+  document.getElementById('modal-video').addEventListener('click', function(e){ if(e.target===this){ history.back(); } });
 
   // Modal agregar video
   document.getElementById('av-close').addEventListener('click', closeAddVideo);
@@ -2278,7 +2297,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Escape cierra todo
   document.addEventListener('keydown', function(e) {
     if (e.key !== 'Escape') return;
-    closeModal('modal-video'); document.getElementById('mv-player').innerHTML = '';
+    if (document.getElementById('modal-video').style.display === 'flex') { history.back(); return; }
     closeAddVideo(); closeAddMaterial(); closePublish(); closeRegister(); closeAddUser(); closeAddQuestion();
     closeModal('modal-install-ios');
   });
