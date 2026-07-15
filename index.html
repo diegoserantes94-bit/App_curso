@@ -2,2306 +2,482 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Neurociencia – Facultad de Medicina BCC3</title>
-<!-- PWA -->
-<link rel="manifest" href="manifest.json" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ═══════════ SEO PRINCIPAL ═══════════ -->
+<title>Curso Paralelo de Neurociencia FMED (UC10 · BCC3 · UdelaR) | Academia Memento</title>
+<meta name="description" content="Academia Memento: curso paralelo online de Neurociencia (UC10, ciclo BCC3) para estudiantes de FMED, UdelaR, en Montevideo, Uruguay. Videos, resúmenes y consultas en vivo." />
+<link rel="canonical" href="https://academiamemento.com/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="Academia Memento — Lic. Diego Serantes" />
+<meta name="keywords" content="curso neuro, UC10 FMED, BCC3 FMED, FMED, clases particulares, curso paralelo, clases particulares neuro, profesor particular, clases online, curso paralelo online, neurociencia UdelaR, Montevideo" />
+
+<!-- Geo -->
+<meta name="geo.region" content="UY-MO" />
+<meta name="geo.placename" content="Montevideo, Uruguay" />
+
+<!-- Open Graph / redes -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Academia Memento" />
+<meta property="og:title" content="Curso Paralelo de Neurociencia FMED (UC10 · BCC3 · UdelaR) | Academia Memento" />
+<meta property="og:description" content="Curso paralelo online de Neurociencia (UC10, ciclo BCC3) para estudiantes de FMED, UdelaR. Videos, resúmenes y consultas en vivo." />
+<meta property="og:url" content="https://academiamemento.com/" />
+<meta property="og:image" content="https://academiamemento.com/logo-memento.jpg" />
+<meta property="og:locale" content="es_UY" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Curso Paralelo de Neurociencia FMED (UC10 · BCC3 · UdelaR) | Academia Memento" />
+<meta name="twitter:description" content="Curso paralelo online de Neurociencia (UC10, ciclo BCC3) para estudiantes de FMED, UdelaR." />
+<meta name="twitter:image" content="https://academiamemento.com/logo-memento.jpg" />
+
 <meta name="theme-color" content="#1E3A5F" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Memento" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- ═══════════ DATOS ESTRUCTURADOS (JSON-LD) ═══════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://academiamemento.com/#organizacion",
+      "name": "Academia Memento",
+      "alternateName": "Memento — Recuerda tu potencial",
+      "url": "https://academiamemento.com/",
+      "logo": "https://academiamemento.com/logo-memento.jpg",
+      "description": "Academia Memento ofrece un curso paralelo online de Neurociencia (UC10, ciclo BCC3) para estudiantes de la Facultad de Medicina (FMED, UdelaR), en Montevideo, Uruguay.",
+      "email": "diegoserantes94@gmail.com",
+      "areaServed": { "@type": "Country", "name": "Uruguay" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montevideo",
+        "addressCountry": "UY"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Lic. Diego Serantes",
+        "image": "https://academiamemento.com/diego-serantes.jpg",
+        "jobTitle": "Docente de Fisiología (UdelaR) y doctorando en Neurociencias",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de la República (UdelaR)" },
+        "knowsAbout": ["Neurociencia", "Fisiología", "Neurofisiología"],
+        "sameAs": [
+          "https://exportcvuy.anii.org.uy/cv/?9e7eadec1fd144b03a1aa27287df3b5d",
+          "https://doi.org/10.1111/jsr.14388",
+          "https://doi.org/10.1016/j.physbeh.2022.114011",
+          "https://doi.org/10.7554/eLife.110120.1"
+        ]
+      }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://academiamemento.com/#curso",
+      "name": "Curso Paralelo de Neurociencia — UC10, FMED (UdelaR)",
+      "description": "Curso paralelo online de Neurociencia (UC10, ciclo BCC3) para estudiantes de la Facultad de Medicina (FMED, UdelaR). Incluye videos explicativos, resúmenes descargables, foro de consultas y autoevaluaciones. Con opción de clases particulares y profesor particular.",
+      "inLanguage": "es",
+      "provider": { "@id": "https://academiamemento.com/#organizacion" },
+      "educationalLevel": "Universitario — Neurociencia UC10 (Ciclo BCC3), Facultad de Medicina (UdelaR)",
+      "about": ["Neurociencia", "Potencial de membrana", "Sinapsis", "Neurofisiología"],
+      "courseMode": "online",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT1H",
+        "location": { "@type": "VirtualLocation", "url": "https://academiamemento.com/" }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://academiamemento.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el curso paralelo de Neurociencia de Academia Memento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un curso paralelo online de Neurociencia (UC10) para estudiantes de la Facultad de Medicina, UdelaR. Complementa el cursado oficial con videos explicativos, resúmenes descargables y clases de consulta en vivo, para que llegues preparado a los parciales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se dan las clases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para mayor comodidad del estudiante ofrecemos un curso 100% online: accedés a las clases teóricas y al material bibliográfico cuando quieras, desde cualquier dispositivo. Además hay clases de consulta en vivo semanales por videollamada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen clases particulares de neuro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Ofrecemos preparación de examen, con sesiones particulares individuales con el profesor, enfocadas en repasar tus dudas puntuales de cara al examen. Se coordinan por WhatsApp, según disponibilidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve si curso en el CENUR Litoral Norte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El curso sirve tanto si seguís el dictado de Neurociencia en Montevideo como en el CENUR Litoral Norte de la Universidad de la República (UdelaR): el contenido y las clases de consulta son los mismos para ambas sedes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Quién dicta el curso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El curso está a cargo del Lic. Diego Serantes, docente de Fisiología en la Universidad de la República (UdelaR) desde 2019 y doctorando en Neurociencias, fundador de Academia Memento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo me inscribo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Escribinos por WhatsApp o a diegoserantes94@gmail.com para coordinar la inscripción y el método de pago (a través de transferencia bancaria o hasta 12 cuotas con MercadoPago). Una vez confirmado, te habilitamos el acceso completo y creás tu cuenta desde \"Acceso alumnos\"."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#1E3A5F;--navy-dark:#152D4A;--navy-hover:rgba(255,255,255,0.07);--navy-active:rgba(255,255,255,0.13);
-  --blue:#2E5C9E;--blue-hover:#275191;--blue-light:#EBF1FB;
-  --white:#FFFFFF;--bg:#F4F6F9;--border:#DDE3ED;--border-light:#EEF1F6;
-  --text:#1A2536;--text-mid:#3D4F66;--text-muted:#7A8A9E;
-  --danger:#C0392B;--danger-light:#FDECEA;--success:#1A7A4A;--success-light:#E8F5EE;
-  --warn:#B45309;--warn-light:#FEF3E2;
-  --font:'Inter',system-ui,sans-serif;--radius:10px;--radius-sm:6px;--sidebar-w:252px;
-  --sh-sm:0 1px 3px rgba(30,58,95,.07),0 2px 8px rgba(30,58,95,.04);
-  --sh-md:0 4px 16px rgba(30,58,95,.11),0 1px 4px rgba(30,58,95,.06);
-  --sh-lg:0 10px 32px rgba(30,58,95,.18)
-}
-html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
-
-/* SCREENS */
-.screen{position:fixed;inset:0;opacity:0;pointer-events:none;transition:opacity .36s ease,transform .36s ease}
-.screen.active{opacity:1;pointer-events:all}
-#login-screen{display:flex;background:var(--white);z-index:10}
-#login-screen.leaving{opacity:0;transform:scale(1.01)}
-#main-screen{transform:translateY(16px);background:var(--bg);z-index:5;display:flex;overflow:hidden}
-#main-screen.active{transform:translateY(0)}
-
-/* LOGIN */
-.login-panel{width:42%;flex-shrink:0;background:var(--navy);display:flex;flex-direction:column;justify-content:space-between;padding:3rem 2.75rem;position:relative;overflow:hidden}
-.login-panel::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(46,92,158,.35) 0%,transparent 55%),radial-gradient(circle at 20% 80%,rgba(46,92,158,.25) 0%,transparent 50%);pointer-events:none}
-.login-panel::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
-.lp-top,.lp-bot{position:relative;z-index:1}
-.lp-mid{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;gap:1.75rem}
-.lp-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:5px 14px 5px 8px;font-size:11px;font-weight:600;color:rgba(255,255,255,.80);letter-spacing:.05em;text-transform:uppercase}
-.lp-badge img{height:22px;width:auto}
-.lp-brain-wrap{display:flex;justify-content:center}
-.lp-brain{width:170px;height:170px;object-fit:contain;opacity:.18;mix-blend-mode:screen}
-.lp-logo-memento{width:200px;height:auto;background:white;border-radius:16px;padding:18px 22px}
-.lp-title{font-size:30px;font-weight:700;color:var(--white);letter-spacing:-.02em;line-height:1.15}
-.lp-subtitle{font-size:13px;color:rgba(255,255,255,.50);margin-top:5px}
-.lp-divider{height:1px;background:rgba(255,255,255,.10)}
-.lp-quote{font-size:12px;color:rgba(255,255,255,.38);font-style:italic;line-height:1.6}
-.lp-footer{font-size:11px;color:rgba(255,255,255,.25)}
-.login-form-side{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem;background:var(--white)}
-.login-form-wrap{width:100%;max-width:380px}
-/* Encabezado móvil del login — oculto en desktop */
-.login-mobile-header{display:none;flex-direction:column;align-items:center;justify-content:center;width:100%;background:var(--navy);padding:2rem 1.5rem 1.75rem;text-align:center;position:relative;overflow:hidden}
-.login-mobile-header::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(46,92,158,.4) 0%,transparent 55%),radial-gradient(circle at 20% 80%,rgba(46,92,158,.3) 0%,transparent 50%);pointer-events:none}
-.lmh-brain{width:72px;height:72px;object-fit:contain;opacity:.85;position:relative;z-index:1;margin-bottom:.75rem}
-.lmh-title{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.02em;position:relative;z-index:1}
-.lmh-logo-memento{width:190px;height:auto;background:white;border-radius:14px;padding:16px 20px;position:relative;z-index:1}
-.lmh-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;position:relative;z-index:1}
-.lf-heading{font-size:24px;font-weight:700;color:var(--text);letter-spacing:-.02em;margin-bottom:6px}
-.lf-sub{font-size:14px;color:var(--text-muted);margin-bottom:2rem}
-.field{margin-bottom:1rem}
-.field label{display:block;font-size:12px;font-weight:600;color:var(--text-mid);margin-bottom:5px;letter-spacing:.03em}
-.field input{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s}
-.field input::placeholder{color:var(--text-muted)}
-.field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(46,92,158,.12)}
-.btn-login{width:100%;padding:11px;background:var(--blue);color:var(--white);border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s,box-shadow .15s;margin-top:.5rem}
-.btn-login:hover{background:var(--blue-hover);box-shadow:0 4px 12px rgba(46,92,158,.30)}
-.login-error{font-size:12px;color:var(--danger);margin-top:10px;min-height:18px;display:flex;align-items:center;gap:5px}
-.login-error svg{width:13px;height:13px;stroke:var(--danger);fill:none;stroke-width:2;flex-shrink:0}
-.lf-register{text-align:center;font-size:13px;color:var(--text-muted);margin-top:1rem}
-.lf-register button{background:none;border:none;color:var(--blue);font-weight:600;cursor:pointer;font-family:var(--font);font-size:13px;padding:0}
-.lf-register button:hover{text-decoration:underline}
-
-/* SIDEBAR */
-.sidebar{width:var(--sidebar-w);flex-shrink:0;background:var(--navy);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden}
-.sidebar::-webkit-scrollbar{width:4px}
-.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}
-.sb-header{padding:1.25rem 1.25rem 1rem;border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0}
-.sb-brand{display:flex;align-items:center;justify-content:center}
-.sb-logo{width:32px;height:32px;object-fit:contain;opacity:.85;flex-shrink:0}
-.sb-name{font-size:13px;font-weight:700;color:var(--white);line-height:1.2}
-.sb-faculty{font-size:10px;color:rgba(255,255,255,.40);margin-top:1px}
-.sb-logo-memento{width:148px;height:auto;background:white;border-radius:10px;padding:10px 14px}
-.sb-section{padding:1rem .75rem .5rem;flex-shrink:0}
-.sb-section-label{font-size:10px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.09em;text-transform:uppercase;padding:0 .5rem;margin-bottom:.35rem}
-.sb-nav{display:flex;flex-direction:column;gap:2px}
-.sb-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--radius-sm);cursor:pointer;transition:background .12s;color:rgba(255,255,255,.60);font-size:13px;font-weight:400;border:none;background:none;width:100%;text-align:left;font-family:var(--font)}
-.sb-item svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
-.sb-item:hover{background:var(--navy-hover);color:rgba(255,255,255,.85)}
-.sb-item.active{background:var(--navy-active);color:var(--white);font-weight:500}
-.sb-count{margin-left:auto;font-size:10px;background:rgba(255,255,255,.10);color:rgba(255,255,255,.50);border-radius:999px;padding:1px 7px;font-weight:500}
-.sb-item.active .sb-count{background:rgba(255,255,255,.18);color:rgba(255,255,255,.75)}
-.sb-divider{margin:.75rem 1.25rem;height:1px;background:rgba(255,255,255,.07);flex-shrink:0}
-.sb-footer{margin-top:auto;padding:1rem .75rem;border-top:1px solid rgba(255,255,255,.07);flex-shrink:0}
-.sb-install-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-bottom:.7rem;padding:10px 12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-sm);color:rgba(255,255,255,.9);font-family:var(--font);font-size:12.5px;font-weight:600;cursor:pointer;transition:background .12s,border-color .12s}
-.sb-install-btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.28)}
-.sb-install-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ios-step{display:flex;align-items:flex-start;gap:12px;padding:11px 0;font-size:13.5px;color:var(--text-mid);line-height:1.55}
-.ios-step+.ios-step{border-top:1px solid var(--border-light)}
-.ios-step-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--blue-light);color:var(--blue);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
-.ios-inline-ic{display:inline-block;width:16px;height:16px;vertical-align:-3px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.sb-user{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:var(--radius-sm)}
-.sb-avatar{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sb-user-info{flex:1;min-width:0}
-.sb-user-name{font-size:12px;font-weight:600;color:rgba(255,255,255,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sb-user-role{font-size:10px;color:rgba(255,255,255,.38)}
-.btn-logout-sb{background:none;border:none;cursor:pointer;padding:4px;border-radius:4px;color:rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;transition:color .12s,background .12s}
-.btn-logout-sb:hover{color:rgba(255,255,255,.75);background:var(--navy-hover)}
-.btn-logout-sb svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
-
-/* ADMIN SIDEBAR */
-.sb-admin-actions{padding:.5rem .75rem .75rem;display:flex;flex-direction:column;gap:4px}
-.sb-action-btn{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:var(--radius-sm);cursor:pointer;border:none;width:100%;text-align:left;font-family:var(--font);font-size:13px;font-weight:500;transition:background .12s}
-.sb-action-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
-.sb-action-btn.add-video,.sb-action-btn.add-material{background:rgba(255,255,255,.08);color:rgba(255,255,255,.80)}
-.sb-action-btn.add-video:hover,.sb-action-btn.add-material:hover{background:rgba(255,255,255,.14);color:white}
-.sb-action-btn.publish{background:rgba(46,92,158,.50);color:rgba(255,255,255,.90);margin-top:4px}
-.sb-action-btn.publish:hover{background:rgba(46,92,158,.75);color:white}
-
-/* MAIN CONTENT */
-.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.content-topbar{flex-shrink:0;background:var(--white);border-bottom:1px solid var(--border-light);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(30,58,95,.05)}
-.ct-breadcrumb{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted)}
-.ct-breadcrumb svg{width:14px;height:14px;stroke:var(--text-muted);fill:none;stroke-width:2}
-.ct-breadcrumb strong{color:var(--text);font-weight:600}
-.admin-pill{font-size:11px;font-weight:600;padding:3px 10px;background:var(--blue-light);color:var(--blue);border-radius:999px}
-.content-body{flex:1;overflow-y:auto;padding:1.75rem 2rem}
-.content-body::-webkit-scrollbar{width:6px}
-.content-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:1.25rem}
-.section-title{font-size:17px;font-weight:700;color:var(--text);letter-spacing:-.01em}
-.section-sub{font-size:13px;color:var(--text-muted);margin-top:2px}
-.section-count{font-size:12px;color:var(--text-muted);background:var(--border-light);padding:3px 10px;border-radius:999px;font-weight:500}
-
-/* HOME PANEL */
-.home-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 70%,var(--blue) 150%);border-radius:var(--radius-lg);padding:2rem 2.5rem;color:white;margin-bottom:1.5rem;position:relative;overflow:hidden}
-.home-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
-.home-greeting{font-size:22px;font-weight:700;margin-bottom:4px;position:relative}
-.home-course{font-size:13px;color:rgba(255,255,255,.55);position:relative;margin-bottom:1rem}
-.home-hint{font-size:13px;color:rgba(255,255,255,.4);position:relative;display:flex;align-items:center;gap:6px}
-.home-hint svg{flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2}
-.home-info-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--sh-sm)}
-.home-info-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem;font-size:14px;font-weight:700;color:var(--text)}
-.home-info-header svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;flex-shrink:0}
-.btn-edit-home-inline{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-light);border:none;border-radius:6px;padding:4px 10px;cursor:pointer}
-.btn-edit-home-inline:hover{background:#d0e0f7}
-.btn-edit-home-inline svg{width:12px;height:12px;stroke:var(--blue);fill:none;stroke-width:2}
-.home-info-welcome{font-size:14px;color:var(--text-mid);line-height:1.65;margin:0 0 1rem}
-.home-info-sub{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin:.75rem 0 .4rem}
-.home-info-list{margin:0 0 .5rem;padding-left:1.25rem}
-.home-info-list li{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:3px}
-.home-section-title{font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.07em}
-.home-modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
-.home-mod-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;box-shadow:var(--sh-sm)}
-.home-mod-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--blue)}
-.hmc-icon{width:34px;height:34px;border-radius:8px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;margin-bottom:.85rem}
-.hmc-icon svg{width:15px;height:15px;stroke:var(--blue);fill:none;stroke-width:2}
-.hmc-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
-.hmc-count{font-size:12px;color:var(--text-muted)}
-
-/* VIDEO GRID */
-.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
-.video-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:box-shadow .18s,transform .18s,border-color .18s;box-shadow:var(--sh-sm);display:flex;flex-direction:column;position:relative}
-.video-card:hover{box-shadow:var(--sh-md);transform:translateY(-2px);border-color:var(--blue)}
-.video-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,var(--blue) 130%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.video-thumb.has-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35);transition:background .2s}
-.video-card:hover .video-thumb.has-thumb::after{background:rgba(0,0,0,.2)}
-/* LOCK STATE */
-.video-card.locked{cursor:default;filter:grayscale(.35)}
-.video-card.locked:hover{box-shadow:var(--sh-sm);transform:none;border-color:var(--border-light)}
-.vt-lock{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
-.vt-lock svg{width:28px;height:28px;stroke:rgba(255,255,255,.75);fill:none;stroke-width:1.8}
-.lock-banner{display:flex;align-items:flex-start;gap:10px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:var(--radius);padding:12px 16px;margin-bottom:1.25rem;font-size:13px;color:#1E40AF;line-height:1.55}
-.lock-banner svg{width:16px;height:16px;stroke:#2563EB;fill:none;stroke-width:2;flex-shrink:0;margin-top:1px}
-.vt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
-.play-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.40);display:flex;align-items:center;justify-content:center;transition:background .18s,border-color .18s,transform .18s}
-.play-btn svg{width:16px;height:16px;fill:rgba(255,255,255,.80);margin-left:2px}
-.video-card:hover .play-btn{background:rgba(255,255,255,.28);border-color:rgba(255,255,255,.75);transform:scale(1.08)}
-.vt-num{position:absolute;top:9px;left:10px;font-size:10px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:.08em;z-index:2;text-transform:uppercase}
-.vt-new{position:absolute;top:9px;right:10px;font-size:10px;font-weight:700;padding:2px 8px;background:var(--blue);color:white;border-radius:999px;z-index:2}
-.video-info{padding:13px 14px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
-.vi-module{font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.07em}
-.vi-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.4}
-.vi-duration{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--text-muted);margin-top:auto}
-.vi-duration svg{width:12px;height:12px;stroke:var(--text-muted);fill:none;stroke-width:2}
-.card-del-btn{position:absolute;top:8px;right:8px;z-index:10;width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.85);border:none;cursor:pointer;display:none;align-items:center;justify-content:center}
-.card-del-btn:hover{background:rgba(192,57,43,1)}
-.card-del-btn svg{width:12px;height:12px;stroke:white;fill:none;stroke-width:2.5}
-.admin-mode .video-card:hover .card-del-btn{display:flex}
-.empty-state{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;color:var(--text-muted);gap:.75rem}
-.empty-state svg{width:40px;height:40px;stroke:var(--border);fill:none;stroke-width:1.5}
-
-/* MATERIALS */
-.materials-section{margin-top:2rem}
-.mat-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
-.mat-title{font-size:15px;font-weight:700;color:var(--text)}
-.btn-add-mat-inline{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-light);border:none;border-radius:var(--radius-sm);padding:5px 10px;cursor:pointer;font-family:var(--font)}
-.btn-add-mat-inline:hover{background:#D4E4F7}
-.btn-add-mat-inline svg{width:12px;height:12px;stroke:var(--blue);fill:none;stroke-width:2.5}
-.materials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.material-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:flex-start;gap:12px;box-shadow:var(--sh-sm);position:relative}
-.mat-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mat-icon.pdf{background:#FDECEA}.mat-icon.link{background:var(--blue-light)}.mat-icon.slides{background:#FEF3E2}.mat-icon.book{background:var(--success-light)}
-.mat-icon svg{width:18px;height:18px;fill:none;stroke-width:1.8}
-.mat-icon.pdf svg{stroke:var(--danger)}.mat-icon.link svg{stroke:var(--blue)}.mat-icon.slides svg{stroke:var(--warn)}.mat-icon.book svg{stroke:var(--success)}
-.mat-body{flex:1;min-width:0}
-.mat-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
-.mat-desc{font-size:12px;color:var(--text-muted);margin-bottom:8px;line-height:1.4}
-.btn-open-mat{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--blue);background:var(--blue-light);border:none;border-radius:4px;padding:3px 9px;cursor:pointer;font-family:var(--font);text-decoration:none}
-.btn-open-mat:hover{background:#D4E4F7}
-.btn-open-mat svg{width:11px;height:11px;stroke:var(--blue);fill:none;stroke-width:2}
-.mat-del-btn{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:none;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;color:var(--text-muted)}
-.mat-del-btn:hover{background:var(--danger-light);color:var(--danger)}
-.mat-del-btn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5}
-.admin-mode .mat-del-btn{display:flex}
-.mat-empty{font-size:13px;color:var(--text-muted);font-style:italic;padding:.5rem 0}
-
-/* ADMIN STUDENTS */
-.admin-section{margin-top:2rem}
-.admin-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.25rem 1.5rem;box-shadow:var(--sh-sm)}
-.admin-card-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem;padding-bottom:.85rem;border-bottom:1px solid var(--border-light)}
-.admin-card-header svg{width:15px;height:15px;stroke:var(--blue);fill:none;stroke-width:2}
-.admin-card-title{font-size:13px;font-weight:600;color:var(--text)}
-.admin-card-count{margin-left:auto;font-size:11px;background:var(--blue-light);color:var(--blue);border-radius:999px;padding:2px 9px;font-weight:600}
-.students-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px}
-.student-row{display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
-.s-avatar{width:28px;height:28px;border-radius:50%;background:var(--blue-light);color:var(--blue);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.s-name{font-size:13px;color:var(--text);font-weight:500}
-.user-row{display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
-.user-row-info{flex:1;min-width:0}
-.user-email{font-size:11px;color:var(--text-muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.user-del-btn{background:none;border:none;cursor:pointer;color:var(--text-muted);width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.user-del-btn:hover{background:var(--danger-light);color:var(--danger)}
-.user-del-btn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5}
-.btn-add-user{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:white;background:var(--blue);border:none;border-radius:var(--radius-sm);padding:6px 12px;cursor:pointer;font-family:var(--font);margin-top:.75rem}
-.btn-add-user:hover{background:var(--blue-hover)}
-.btn-add-user svg{width:13px;height:13px;stroke:white;fill:none;stroke-width:2.5}
-.btn-approve{background:none;border:1px solid var(--success);color:var(--success);border-radius:var(--radius-sm);font-size:11px;font-weight:600;padding:3px 10px;cursor:pointer;font-family:var(--font);white-space:nowrap;flex-shrink:0}
-.btn-approve:hover{background:var(--success-light)}
-.reg-success{text-align:center;padding:1rem 0}
-.reg-success-icon{width:52px;height:52px;border-radius:50%;background:var(--success-light);display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
-.reg-success-icon svg{width:26px;height:26px;stroke:var(--success);fill:none;stroke-width:2.5}
-.reg-success-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:.5rem}
-.reg-success-msg{font-size:13px;color:var(--text-muted);line-height:1.6}
-
-/* MODALS */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,26,.72);z-index:200;align-items:center;justify-content:center;padding:1.5rem}
-.modal{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);width:100%;overflow:hidden;box-shadow:var(--sh-lg)}
-.modal-sm{max-width:440px}.modal-md{max-width:520px}.modal-lg{max-width:660px}
-.modal-top{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border-light);background:var(--bg)}
-.modal-title{font-size:15px;font-weight:700;color:var(--text)}
-.modal-subtitle{font-size:12px;color:var(--text-muted);margin-top:2px}
-.modal-close{width:28px;height:28px;border-radius:var(--radius-sm);border:1px solid var(--border);background:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
-.modal-close:hover{background:var(--border-light)}
-.modal-close svg{width:13px;height:13px;stroke:var(--text-muted);fill:none;stroke-width:2.5}
-.modal-body{padding:1.25rem}
-.modal-player{width:100%;aspect-ratio:16/9;background:#000}
-.modal-player iframe{width:100%;height:100%;border:none;display:block}
-.modal-footer{padding:1rem 1.25rem;border-top:1px solid var(--border-light);display:flex;align-items:center;justify-content:flex-end;gap:8px}
-.modal-info-row{display:flex;align-items:center;gap:10px;padding:.9rem 1.25rem;border-top:1px solid var(--border-light)}
-.vmodal-desc{font-size:13px;color:var(--text-muted)}
-.vmodal-module{font-size:11px;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
-.vmodal-dur{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--text-muted);margin-left:auto;white-space:nowrap}
-.vmodal-dur svg{width:13px;height:13px;stroke:var(--text-muted);fill:none;stroke-width:2}
-
-/* FORMS */
-.form-group{margin-bottom:1rem}
-.form-label{display:block;font-size:12px;font-weight:600;color:var(--text-mid);margin-bottom:5px;letter-spacing:.03em}
-.form-label .req{color:var(--danger);margin-left:2px}
-.form-input,.form-select,.form-textarea{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:var(--font);font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s}
-.form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(46,92,158,.10)}
-.form-textarea{resize:vertical;min-height:72px}
-.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A8A9E' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:32px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.form-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
-.form-check{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px;color:var(--text-mid)}
-.form-check input[type=checkbox]{width:15px;height:15px;accent-color:var(--blue);cursor:pointer}
-
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius-sm);font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;border:none;transition:background .15s,box-shadow .15s}
-.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
-.btn-primary{background:var(--blue);color:white}.btn-primary:hover{background:var(--blue-hover);box-shadow:0 3px 10px rgba(46,92,158,.30)}
-.btn-secondary{background:var(--bg);color:var(--text-mid);border:1px solid var(--border)}.btn-secondary:hover{background:var(--border-light)}
-.btn-success{background:var(--success);color:white}.btn-success:hover{background:#156040}
-
-/* ALERT */
-.alert{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-radius:var(--radius-sm);font-size:13px;margin-bottom:1rem}
-.alert svg{width:15px;height:15px;fill:none;stroke-width:2;flex-shrink:0;margin-top:1px}
-.alert-info{background:var(--blue-light);color:var(--blue)}.alert-info svg{stroke:var(--blue)}
-.alert-success{background:var(--success-light);color:var(--success)}.alert-success svg{stroke:var(--success)}
-.alert-danger{background:var(--danger-light);color:var(--danger)}.alert-danger svg{stroke:var(--danger)}
-
-/* TOKEN FIELD */
-.pw-wrap{position:relative}
-.pw-wrap .form-input{padding-right:40px}
-.pw-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:2px;color:var(--text-muted);display:flex}
-.pw-toggle svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
-
-/* FILE UPLOAD */
-.upload-tabs{display:flex;background:var(--bg);border-radius:var(--radius-sm);padding:3px;margin-bottom:1rem}
-.upload-tab{flex:1;padding:6px 8px;border:none;background:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;color:var(--text-muted);transition:background .12s,color .12s}
-.upload-tab.active{background:var(--white);color:var(--text);box-shadow:var(--sh-sm)}
-.upload-zone{border:2px dashed var(--border);border-radius:var(--radius);padding:1.5rem 1rem;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
-.upload-zone:hover,.upload-zone.drag-over{border-color:var(--blue);background:var(--blue-light)}
-.upload-zone svg{width:28px;height:28px;stroke:var(--text-muted);fill:none;stroke-width:1.5;margin-bottom:.4rem}
-.upload-zone-text{font-size:13px;color:var(--text-muted)}
-.upload-zone-link{color:var(--blue);font-weight:600}
-.upload-zone-hint{font-size:11px;color:var(--text-muted);margin-top:3px}
-.upload-preview{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg);border:1px solid var(--border-light);border-radius:var(--radius-sm)}
-.upload-file-icon{width:32px;height:32px;background:var(--danger-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.upload-file-icon svg{width:16px;height:16px;stroke:var(--danger);fill:none;stroke-width:2}
-.upload-file-info{flex:1;min-width:0}
-.upload-file-name{font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.upload-file-size{font-size:11px;color:var(--text-muted)}
-.upload-clear{background:none;border:none;cursor:pointer;color:var(--text-muted);width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.upload-clear:hover{background:var(--border-light);color:var(--text)}
-.upload-clear svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5}
-.upload-progress{margin-top:.75rem}
-.upload-progress-bar{height:4px;background:var(--border-light);border-radius:2px;overflow:hidden;margin-bottom:4px}
-.upload-progress-fill{height:100%;background:var(--blue);border-radius:2px;transition:width .3s ease}
-.upload-progress-text{font-size:11px;color:var(--text-muted)}
-.upload-token{margin-top:.75rem;padding:.75rem;background:var(--warn-light);border-radius:var(--radius-sm)}
-.upload-token-label{font-size:11px;font-weight:600;color:var(--warn);margin-bottom:6px}
-
-/* QUIZ */
-#quiz-view{flex:1;overflow-y:scroll;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;background:var(--bg)}
-.quiz-card{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;padding:1.5rem;gap:.9rem;position:relative;overflow-y:auto}
-.quiz-progress{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em}
-.quiz-module-tag{display:inline-block;font-size:10px;font-weight:600;color:var(--blue);background:var(--blue-light);border-radius:999px;padding:2px 10px;text-transform:uppercase;letter-spacing:.06em}
-.quiz-q-text{font-size:18px;font-weight:700;color:var(--text);line-height:1.4;flex-shrink:0}
-.quiz-opts{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
-.quiz-opt{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--white);border:2px solid var(--border);border-radius:var(--radius);cursor:pointer;font-family:var(--font);font-size:14px;color:var(--text);text-align:left;transition:border-color .15s,background .15s;box-shadow:var(--sh-sm);width:100%}
-.quiz-opt:hover:not(:disabled){border-color:var(--blue);background:var(--blue-light)}
-.quiz-opt-letter{width:28px;height:28px;border-radius:50%;background:var(--bg);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--text-mid);flex-shrink:0;transition:background .15s,border-color .15s,color .15s}
-.quiz-opt.correct{border-color:var(--success);background:var(--success-light)}
-.quiz-opt.correct .quiz-opt-letter{background:var(--success);border-color:var(--success);color:white}
-.quiz-opt.wrong{border-color:var(--danger);background:var(--danger-light)}
-.quiz-opt.wrong .quiz-opt-letter{background:var(--danger);border-color:var(--danger);color:white}
-.quiz-opt:disabled{cursor:default}
-.quiz-feedback{border-radius:var(--radius);padding:14px 16px;display:flex;flex-direction:column;gap:6px;flex-shrink:0}
-.quiz-feedback.correct{background:var(--success-light);border:1px solid #A7D7B6}
-.quiz-feedback.wrong{background:var(--danger-light);border:1px solid #F5B7B1}
-.quiz-feedback-header{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700}
-.quiz-feedback.correct .quiz-feedback-header{color:var(--success)}
-.quiz-feedback.wrong .quiz-feedback-header{color:var(--danger)}
-.quiz-feedback-header svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.5}
-.quiz-feedback-text{font-size:13px;color:var(--text-mid);line-height:1.6}
-.quiz-next-wrap{margin-top:auto;padding-top:.5rem;flex-shrink:0}
-.quiz-next-btn{width:100%;padding:13px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s}
-.quiz-next-btn:hover{background:var(--blue-hover)}
-.quiz-finish-card{height:100%;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;gap:1rem}
-.quiz-finish-icon{width:72px;height:72px;border-radius:50%;background:var(--success-light);display:flex;align-items:center;justify-content:center}
-.quiz-finish-icon svg{width:36px;height:36px;stroke:var(--success);fill:none;stroke-width:2}
-.quiz-finish-title{font-size:22px;font-weight:700;color:var(--text)}
-.quiz-score{font-size:40px;font-weight:700;color:var(--blue)}
-.quiz-score-label{font-size:13px;color:var(--text-muted);margin-top:-6px}
-.quiz-finish-sub{font-size:13px;color:var(--text-muted);line-height:1.6}
-.quiz-restart-btn{padding:12px 28px;background:var(--blue);color:white;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s}
-.quiz-restart-btn:hover{background:var(--blue-hover)}
-.quiz-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--text-muted);text-align:center;padding:2rem}
-.quiz-empty svg{width:48px;height:48px;stroke:var(--border);fill:none;stroke-width:1.5}
-.quiz-card-del{position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.12);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;color:var(--danger)}
-.quiz-card-del svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5}
-.admin-mode .quiz-card-del{display:flex}
-.quiz-header-row{display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-
-/* CONSULTAS (FORO) */
-#consultas-view{flex:1;overflow-y:auto;background:var(--bg)}
-.consultas-wrap{max-width:760px;margin:0 auto;padding:1.75rem 2rem 3rem}
-.consultas-head{margin-bottom:1.25rem}
-.consultas-title{font-size:20px;font-weight:700;color:var(--text);letter-spacing:-.01em}
-.consultas-sub{font-size:13px;color:var(--text-muted);line-height:1.55;margin-top:4px}
-.consulta-form{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1rem;box-shadow:var(--sh-sm);margin-bottom:1.25rem}
-.consulta-textarea{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);padding:11px 13px;font-family:var(--font);font-size:14px;color:var(--text);resize:vertical;box-sizing:border-box;line-height:1.5}
-.consulta-textarea:focus{outline:none;border-color:var(--blue)}
-.consulta-form-row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
-.consulta-select{border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px;font-family:var(--font);font-size:13px;color:var(--text);background:var(--white);cursor:pointer}
-.consulta-select:focus{outline:none;border-color:var(--blue)}
-.consulta-anon{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-mid);cursor:pointer;user-select:none}
-.consulta-anon input{cursor:pointer;width:15px;height:15px;accent-color:var(--blue)}
-.consulta-counter{font-size:12px;color:var(--text-muted);margin-left:auto}
-.consulta-submit{padding:9px 18px;background:var(--blue);color:white;border:none;border-radius:var(--radius-sm);font-family:var(--font);font-size:13px;font-weight:600;cursor:pointer;transition:background .15s}
-.consulta-submit:hover:not(:disabled){background:var(--blue-hover)}
-.consulta-submit:disabled{opacity:.6;cursor:default}
-.consulta-filters{display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
-.consulta-chip{padding:5px 14px;border-radius:999px;border:1px solid var(--border);background:var(--white);font-family:var(--font);font-size:12px;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .15s}
-.consulta-chip:hover{border-color:var(--blue)}
-.consulta-chip.active{background:var(--blue);border-color:var(--blue);color:white}
-.consulta-item{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:14px;margin-bottom:10px;box-shadow:var(--sh-sm)}
-.consulta-vote{display:flex;flex-direction:column;align-items:center;gap:1px;min-width:52px;padding:7px 4px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);cursor:pointer;transition:all .15s;flex-shrink:0}
-.consulta-vote svg{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2.5;transition:stroke .15s}
-.consulta-vote span{font-size:14px;font-weight:700;color:var(--text-mid)}
-.consulta-vote-label{font-size:10px!important;font-weight:600!important;color:var(--text-muted)!important;text-transform:uppercase;letter-spacing:.03em}
-.consulta-vote:hover{border-color:var(--blue)}
-.consulta-vote.voted{background:var(--blue-light);border-color:var(--blue)}
-.consulta-vote.voted svg{stroke:var(--blue)}
-.consulta-vote.voted span{color:var(--blue)}
-.consulta-vote.voted .consulta-vote-label{color:var(--blue)!important}
-.consulta-body{flex:1;min-width:0}
-.consulta-text-line{font-size:14px;color:var(--text);line-height:1.5;word-wrap:break-word}
-.consulta-meta{display:flex;align-items:center;gap:7px;margin-top:7px;font-size:11px;color:var(--text-muted);flex-wrap:wrap}
-.consulta-mod-tag{font-size:10px;font-weight:600;color:var(--blue);background:var(--blue-light);border-radius:999px;padding:2px 9px;text-transform:uppercase;letter-spacing:.05em}
-.consulta-anon-tag{font-size:9px;font-weight:600;color:var(--text-muted);background:var(--border-light);border-radius:999px;padding:1px 7px;text-transform:uppercase;letter-spacing:.05em}
-.consulta-del{width:26px;height:26px;border-radius:50%;background:rgba(192,57,43,.10);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--danger);flex-shrink:0}
-.consulta-del svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.5}
-.consultas-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--text-muted);text-align:center;padding:2.5rem 1rem}
-.consultas-empty svg{width:44px;height:44px;stroke:var(--border);fill:none;stroke-width:1.5}
-.consultas-empty p{font-size:13px;line-height:1.5;max-width:320px}
-
-/* HAMBURGER BUTTON — solo visible en móvil */
-.btn-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:none;cursor:pointer;border-radius:var(--radius-sm);color:var(--text-mid);flex-shrink:0}
-.btn-menu:hover{background:var(--border-light)}
-.btn-menu svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
-/* OVERLAY sidebar móvil */
-.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(10,16,26,.55);z-index:99}
-.sidebar-overlay.visible{display:block}
-
-@media(max-width:768px){
-  /* Login móvil: encabezado navy arriba, formulario abajo */
-  #login-screen{flex-direction:column}
-  .login-panel{display:none}
-  .login-mobile-header{display:flex}
-  .login-form-side{flex:1;padding:1.75rem 1.25rem;justify-content:flex-start;overflow-y:auto}
-  .login-form-wrap{margin-top:1.5rem}
-
-  /* Main: sidebar se convierte en drawer deslizable */
-  .btn-menu{display:flex}
-  .sidebar{
-    position:fixed;left:0;top:0;bottom:0;z-index:100;
-    transform:translateX(-100%);transition:transform .26s ease;
-    width:272px;box-shadow:var(--sh-lg)
+  :root{
+    --navy:#1E3A5F; --navy-dark:#152A46; --blue:#2E5C9E; --blue-hover:#275191; --blue-light:#EBF1FB;
+    --white:#FFFFFF; --bg:#F4F6F9; --text:#1A2536; --text-mid:#3D4F66; --text-muted:#7A8A9E;
+    --border:#DDE3ED; --border-light:#EEF1F6;
+    --font:'Inter',system-ui,-apple-system,sans-serif; --radius:12px; --radius-sm:8px;
+    --sh-sm:0 1px 3px rgba(30,58,95,.07); --sh-md:0 6px 20px rgba(30,58,95,.10); --sh-lg:0 14px 40px rgba(30,58,95,.16);
   }
-  .sidebar.open{transform:translateX(0)}
-  .main-content{width:100%}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+  h1,h2,h3{letter-spacing:-.02em;line-height:1.2}
 
-  /* Topbar */
-  .content-topbar{padding:0 1rem;gap:10px}
-  .ct-breadcrumb{font-size:12px}
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-light)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--navy)}
+  .brand img{height:34px;width:auto;border-radius:6px}
+  .nav-links{display:flex;align-items:center;gap:1.5rem}
+  .nav-links a:not(.btn){font-size:14px;font-weight:500;color:var(--text-mid)}
+  .nav-links a:not(.btn):hover{color:var(--blue)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font);font-weight:600;font-size:14px;padding:10px 20px;border-radius:var(--radius-sm);cursor:pointer;border:none;transition:transform .15s,box-shadow .15s,background .15s}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:var(--sh-sm)}
+  .btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:var(--sh-md)}
+  .btn-ghost{background:var(--white);color:var(--navy);border:1px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+  .btn-lg{padding:14px 28px;font-size:15px}
+  .btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 
-  /* Contenido */
-  .content-body{padding:1rem}
-  .video-grid{grid-template-columns:1fr}
-  .materials-grid{grid-template-columns:1fr}
-  .students-grid{grid-template-columns:1fr}
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(160deg,var(--navy-dark) 0%,var(--navy) 55%,var(--blue) 140%);color:#fff;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 85% 15%,rgba(46,92,158,.5) 0%,transparent 50%),radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:auto,26px 26px;pointer-events:none}
+  .hero-inner{position:relative;padding:4.5rem 0 5rem;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);padding:5px 13px;border-radius:999px;margin-bottom:1.25rem}
+  .hero-badge svg{width:13px;height:13px;stroke:#8fb8f0;fill:none;stroke-width:2}
+  .hero h1{font-size:2.6rem;font-weight:800;margin-bottom:1rem}
+  .hero h1 .accent{color:#9fc3f5}
+  .hero-capsule{font-size:1.05rem;color:rgba(255,255,255,.82);max-width:38rem;margin-bottom:1.75rem}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-meta{margin-top:1.75rem;display:flex;gap:1.75rem;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.6)}
+  .hero-meta span{display:flex;align-items:center;gap:6px}
+  .hero-meta svg{width:15px;height:15px;stroke:#9fc3f5;fill:none;stroke-width:2}
+  .hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.75rem;backdrop-filter:blur(4px)}
+  .hero-card img{width:210px;max-width:100%;height:auto;object-fit:contain;background:#fff;border-radius:14px;padding:16px 18px;margin:0 auto 1.15rem;display:block}
+  .hero-card-title{font-size:15px;font-weight:700;margin-bottom:.4rem}
+  .hero-card-text{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.6}
 
-  /* Consultas */
-  .consultas-wrap{padding:1.25rem 1rem 2.5rem}
-  .consulta-counter{order:3}
-  .consulta-submit{order:4;margin-left:auto}
+  /* SECCIONES */
+  section{padding:4rem 0}
+  .section-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);margin-bottom:.6rem}
+  .section-title{font-size:1.9rem;font-weight:800;color:var(--navy);margin-bottom:.85rem}
+  .section-lead{font-size:1.05rem;color:var(--text-mid);max-width:44rem}
+  .capsule{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:.9rem 1.2rem;font-size:15px;color:var(--navy);font-weight:500;margin:1.25rem 0}
 
-  /* Formularios */
-  .form-row{grid-template-columns:1fr}
+  .alt{background:var(--bg)}
 
-  /* Modales: casi pantalla completa */
-  .modal-overlay{padding:.75rem}
-  .modal-sm,.modal-md,.modal-lg{max-width:100%;max-height:90vh;overflow-y:auto}
-  .modal-body{padding:1rem}
-  .modal-footer{padding:.75rem 1rem;flex-wrap:wrap;gap:8px}
-  .modal-footer .btn{flex:1;justify-content:center}
+  /* FEATURES */
+  .features{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.25rem}
+  @media(max-width:980px){ .features{grid-template-columns:repeat(2,1fr)} }
+  .feature{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.6rem;box-shadow:var(--sh-sm);transition:transform .15s,box-shadow .15s}
+  .feature:hover{transform:translateY(-3px);box-shadow:var(--sh-md)}
+  .feature-ic{width:44px;height:44px;border-radius:11px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+  .feature-ic svg{width:21px;height:21px;stroke:var(--blue);fill:none;stroke-width:2}
+  .feature h3{font-size:16px;font-weight:700;color:var(--text);margin-bottom:.45rem}
+  .feature p{font-size:14px;color:var(--text-muted);line-height:1.65}
 
-  /* Upload tabs */
-  .upload-tabs{flex-direction:row}
-}
+  /* PARA QUIÉN — lista */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+  .check-list{list-style:none;margin-top:.85rem;display:flex;flex-direction:column;gap:.85rem}
+  .check-list-wide{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem 2rem;margin-top:1.5rem}
+  @media(max-width:820px){ .check-list-wide{grid-template-columns:1fr} }
+  .who-banner{display:flex;align-items:center;gap:13px;margin-top:2rem;background:var(--blue-light);border:1px solid #cfe0f7;border-radius:var(--radius);padding:1.1rem 1.4rem;font-size:15px;color:var(--navy);line-height:1.6}
+  .who-banner svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.8;flex-shrink:0}
+  .check-list li{display:flex;gap:11px;font-size:15px;color:var(--text-mid)}
+  .check-list svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2.2;flex-shrink:0;margin-top:2px}
+
+  /* DOCENTE */
+  .teacher{display:flex;gap:1.5rem;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.75rem;box-shadow:var(--sh-sm);margin-top:1.75rem}
+  .teacher-avatar{width:108px;height:108px;border-radius:50%;object-fit:cover;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;flex-shrink:0}
+  .teacher-name{font-size:17px;font-weight:700;color:var(--text)}
+  .teacher-role{font-size:13.5px;color:var(--blue);font-weight:600;margin-bottom:.5rem}
+  .teacher-bio{font-size:14px;color:var(--text-muted);line-height:1.65}
+  .teacher-cv{display:inline-flex;align-items:center;gap:6px;margin-top:.85rem;font-size:13.5px;font-weight:600;color:var(--blue)}
+  .teacher-cv:hover{color:var(--blue-hover)}
+  .teacher-cv svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2}
+  .teacher-pubs{margin-top:.65rem;font-size:12.5px;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+  .teacher-pubs-label{font-weight:600;color:var(--text-mid)}
+  .teacher-pubs a{color:var(--blue);border-bottom:1px dotted var(--blue)}
+  .teacher-pubs a:hover{color:var(--blue-hover)}
+  .teacher-pubs em{font-style:normal;color:var(--text-muted)}
+
+  /* FAQ */
+  .faq{margin-top:2rem;display:flex;flex-direction:column;gap:.75rem}
+  details{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  summary{padding:1.1rem 1.25rem;font-size:15.5px;font-weight:600;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-size:22px;font-weight:400;color:var(--blue);flex-shrink:0;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 1.25rem 1.2rem;font-size:14.5px;color:var(--text-mid);line-height:1.7}
+
+  /* CTA FINAL */
+  .cta-final{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 130%);color:#fff;border-radius:var(--radius);padding:3rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+  .cta-final::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+  .cta-final h2{position:relative;font-size:1.8rem;font-weight:800;margin-bottom:.75rem}
+  .cta-final p{position:relative;font-size:1.05rem;color:rgba(255,255,255,.8);max-width:36rem;margin:0 auto 1.75rem}
+  .cta-final .hero-cta{position:relative;justify-content:center}
+  .btn-white{background:#fff;color:var(--navy)}
+  .btn-white:hover{background:#eaf1fb;transform:translateY(-1px)}
+  .btn-outline-w{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-wa{background:#25D366;color:#fff}
+  .btn-wa:hover{background:#1ebe5a;transform:translateY(-1px)}
+  .btn-wa svg{width:18px;height:18px}
+
+  /* Botón flotante de WhatsApp */
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:80;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);transition:transform .15s,box-shadow .15s}
+  .wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(37,211,102,.55)}
+  .wa-float svg{width:30px;height:30px}
+
+  /* FOOTER */
+  footer{background:var(--navy-dark);color:rgba(255,255,255,.6);padding:2.5rem 0 2rem;font-size:13.5px}
+  .foot-top{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:#fff;font-size:16px;margin-bottom:.5rem}
+  .foot-brand img{height:30px;border-radius:5px}
+  .foot-col h4{color:#fff;font-size:13px;font-weight:600;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.05em}
+  .foot-col a{display:block;color:rgba(255,255,255,.6);margin-bottom:.35rem}
+  .foot-col a:hover{color:#9fc3f5}
+  .foot-bottom{padding-top:1.25rem;font-size:12.5px;color:rgba(255,255,255,.4)}
+
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:2rem;padding:3rem 0 3.5rem}
+    .hero-card{display:none}
+    .hero h1{font-size:2.05rem}
+    .features{grid-template-columns:1fr}
+    .two-col{grid-template-columns:1fr;gap:1.75rem}
+    .nav-links a:not(.btn){display:none}
+    section{padding:3rem 0}
+    .section-title{font-size:1.55rem}
+  }
 </style>
 </head>
 <body>
 
-<!-- LOGIN -->
-<div id="login-screen" class="screen active">
-  <div class="login-panel">
-    <div class="lp-top">
-      <div class="lp-badge"><img src="logo-fmed.png" alt="FMed" />Facultad de Medicina · UdelaR</div>
-    </div>
-    <div class="lp-mid">
-      <div class="lp-brain-wrap"><img src="logo-memento.jpg" alt="Academia Memento" class="lp-logo-memento" /></div>
-      <div class="lp-divider"></div>
-      <div class="lp-quote">"La neurociencia es la ciencia que nos permite entender cómo el cerebro crea la mente y controla la conducta."</div>
-    </div>
-    <div class="lp-bot"><div class="lp-footer">© 2025 Facultad de Medicina · UdelaR · BCC3</div></div>
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <div class="wrap nav">
+    <a href="/" class="brand"><img src="logo-memento.jpg" alt="Academia Memento" />Academia Memento</a>
+    <nav class="nav-links">
+      <a href="#curso">El curso</a>
+      <a href="#modalidad">Modalidad</a>
+      <a href="#docentes">Docentes</a>
+      <a href="#faq">Preguntas</a>
+      <a href="app.html" class="btn btn-primary">Acceso alumnos</a>
+    </nav>
   </div>
-  <div class="login-form-side">
-    <div class="login-mobile-header">
-      <img src="logo-memento.jpg" alt="Academia Memento" class="lmh-logo-memento" />
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <h1>Curso Paralelo de <span class="accent">Neurociencia</span> para FMED (UC10)</h1>
+      <p class="hero-capsule">Academia Memento te ofrece el <strong>curso paralelo online de Neurociencia</strong> para estudiantes de la Facultad de Medicina de la UdelaR. Videos, resúmenes y consultas en vivo para llegar preparado a los parciales.</p>
+      <div class="hero-cta">
+        <a href="app.html" class="btn btn-primary btn-lg">Acceso alumnos<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#curso" class="btn btn-ghost btn-lg" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.25)">Conocé el curso</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Videos explicativos</span>
+        <span><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Resúmenes descargables</span>
+        <span><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Clases de consulta en vivo</span>
+        <span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Acompañamiento por WhatsApp</span>
+      </div>
     </div>
-    <div class="login-form-wrap">
-      <div class="lf-heading">Bienvenido/a</div>
-      <div class="lf-sub">Ingresá tus credenciales para acceder al curso</div>
-      <div class="field"><label>Correo electrónico</label><input type="email" id="inp-user" placeholder="tu@email.com" autocomplete="email" /></div>
-      <div class="field"><label>Contraseña</label><input type="password" id="inp-pass" placeholder="••••••••" /></div>
-      <button class="btn-login" id="btn-login-submit">Iniciar sesión</button>
-      <p class="lf-register">¿No tenés cuenta? <button type="button" id="btn-show-register">Crear cuenta</button></p>
-      <div class="login-error" id="login-error" style="visibility:hidden">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <span id="login-error-msg"></span>
+    <div class="hero-card">
+      <img src="icon-512.png" alt="Academia Memento — Recuerda tu potencial" />
+      <p class="hero-card-text">No se trata de memorizar sin entender, sino de comprender. Estudiá con claridad, a tu ritmo, y llegá a los parciales con la confianza de que sabés.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ QUÉ ES ═══════════ -->
+<section id="curso">
+  <div class="wrap">
+    <div class="section-tag">Qué es</div>
+    <h2 class="section-title">Un curso paralelo online de Neurociencia, hecho para FMED</h2>
+    <p class="section-lead">El <strong>curso paralelo de Neurociencia</strong> de Academia Memento acompaña el cursado oficial de <strong>Neurociencia UC10</strong> de la Facultad de Medicina, UdelaR. Explicamos los temas difíciles paso a paso y te damos el material ordenado para que rindas mejor.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>Videos por tema</h3>
+        <p>Clases online grabadas que explican cada tema con claridad. Mirá cuando quieras, donde quieras, las veces que necesites.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h3>Resúmenes y material</h3>
+        <p>Resúmenes descargables de cada tema, redactados para estudiar rápido y repasar antes de los parciales.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Clases de consulta en vivo</h3>
+        <p>Clases de consulta semanales por videoconferencia. Dejás tu duda en la plataforma y la tratamos en la clase.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>Acompañamiento por WhatsApp</h3>
+        <p>Consultá tus dudas directamente al docente por WhatsApp. Un acompañamiento cercano durante todo el curso, más allá de las clases.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- MAIN -->
-<div id="main-screen" class="screen">
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-  <aside class="sidebar">
-    <div class="sb-header">
-      <div class="sb-brand">
-        <img src="logo-memento.jpg" alt="Academia Memento" class="sb-logo-memento" />
-      </div>
-    </div>
-    <div class="sb-section">
-      <div class="sb-section-label">Módulos</div>
-      <nav class="sb-nav" id="sb-nav"></nav>
-    </div>
-    <div id="sb-admin-wrap" style="display:none">
-      <div class="sb-divider"></div>
-      <div class="sb-section">
-        <div class="sb-section-label">Gestión de contenido</div>
-        <div class="sb-admin-actions">
-          <button type="button" class="sb-action-btn add-video" id="btn-open-add-video">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="9.5" y1="10.5" x2="14.5" y2="10.5"/></svg>
-            Agregar video
-          </button>
-          <button type="button" class="sb-action-btn add-material" id="btn-open-add-material">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
-            Agregar material
-          </button>
-          <button type="button" class="sb-action-btn add-material" id="btn-open-add-question">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            Agregar pregunta
-          </button>
-          <button type="button" class="sb-action-btn publish" id="btn-open-publish">
-            <svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
-            Publicar cambios
-          </button>
-        </div>
-      </div>
-      <div class="sb-divider"></div>
-      <div class="sb-section">
-        <div class="sb-section-label">Administración</div>
-        <nav class="sb-nav">
-          <button type="button" class="sb-item" id="btn-goto-students">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Estudiantes
-          </button>
-        </nav>
-      </div>
-    </div>
-    <div class="sb-footer">
-      <button type="button" class="sb-install-btn" id="btn-install-app" style="display:none">
-        <svg viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="8 11 12 15 16 11"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        Instalar app
-      </button>
-      <div class="sb-user">
-        <div class="sb-avatar" id="sb-avatar">--</div>
-        <div class="sb-user-info">
-          <div class="sb-user-name" id="sb-username">—</div>
-          <div class="sb-user-role" id="sb-role">—</div>
-        </div>
-        <button type="button" class="btn-logout-sb" id="btn-logout" title="Cerrar sesión">
-          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        </button>
-      </div>
-    </div>
-  </aside>
+<!-- ═══════════ PARA QUIÉN + MODALIDAD ═══════════ -->
+<section id="modalidad" class="alt">
+  <div class="wrap">
+    <div class="section-tag">Modalidad</div>
+    <h2 class="section-title">Online, a tu ritmo y con profesor</h2>
+    <p class="section-lead" style="max-width:none">Combinamos la libertad del <strong>curso paralelo online</strong> con el acompañamiento de un <strong>profesor particular</strong>.</p>
+    <ul class="check-list check-list-wide">
+      <li><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span><strong>100% online:</strong> accedés desde el celular o la computadora, cuando quieras, donde quieras.</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><strong>A tu ritmo:</strong> mirás los videos y repasás las veces que necesites, sin horarios fijos.</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="11" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg><span><strong>Seguimiento constante:</strong> no estás solo; tenés un docente a disposición durante todo el curso.</span></li>
+    </ul>
+    <div class="who-banner"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><span>Si estás cursando o vas a rendir <strong>Neurociencia en FMED (UdelaR)</strong>, este curso es para vos — tanto si seguís el dictado de <strong>Montevideo</strong> como el del <strong>CENUR (Litoral Norte)</strong>.</span></div>
+  </div>
+</section>
 
-  <div class="main-content">
-    <div class="content-topbar">
-      <button type="button" class="btn-menu" id="btn-menu" aria-label="Menú">
-        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <div class="ct-breadcrumb">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        <span>Curso</span>
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        <strong id="ct-label">Todos los módulos</strong>
-      </div>
-      <span class="admin-pill" id="admin-pill" style="display:none">Administrador</span>
-    </div>
-    <div class="content-body">
-      <div id="home-panel" style="display:none"></div>
-      <div class="lock-banner" id="lock-banner" style="display:none">
-        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span>El acceso completo al curso inicia el <strong id="lock-banner-date"></strong>. Podés explorar el contenido pero los videos estarán disponibles a partir de esa fecha.</span>
-      </div>
-      <div class="section-header">
-        <div><div class="section-title" id="sec-title">Videos del curso</div><div class="section-sub" id="sec-sub">Seleccioná un módulo o reproducí cualquier video</div></div>
-        <div class="section-count" id="sec-count">0 videos</div>
-      </div>
-      <div class="video-grid" id="video-grid"></div>
-      <div class="materials-section" id="mat-section" style="display:none">
-        <div class="mat-header">
-          <div class="mat-title">Material bibliográfico</div>
-          <button type="button" class="btn-add-mat-inline" id="btn-add-mat-inline" style="display:none">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar
-          </button>
-        </div>
-        <div class="materials-grid" id="mat-grid"></div>
-      </div>
-      <div id="admin-panel" style="display:none">
-        <div class="admin-section">
-          <div class="admin-card" id="pending-card" style="margin-bottom:1rem">
-            <div class="admin-card-header">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <div class="admin-card-title">Solicitudes pendientes</div>
-              <div class="admin-card-count" id="pending-count">0</div>
-            </div>
-            <div class="students-grid" id="pending-list"><p style="font-size:13px;color:var(--text-muted)">Sin solicitudes pendientes.</p></div>
-          </div>
-          <div class="admin-card">
-            <div class="admin-card-header">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <div class="admin-card-title">Estudiantes inscriptos</div>
-              <div class="admin-card-count" id="stu-count">0</div>
-            </div>
-            <div class="students-grid" id="stu-list"></div>
-            <button type="button" class="btn-add-user" id="btn-add-user">
-              <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>Agregar usuario
-            </button>
-          </div>
+<!-- ═══════════ DOCENTE (E-E-A-T) ═══════════ -->
+<section id="docentes">
+  <div class="wrap">
+    <div class="section-tag">Quién lo dicta</div>
+    <h2 class="section-title">Un docente de la UdelaR</h2>
+    <p class="section-lead">La confianza es lo primero: sabés quién te enseña y con qué respaldo.</p>
+    <div class="teacher">
+      <img src="diego-serantes.jpg" alt="Lic. Diego Serantes" class="teacher-avatar" />
+      <div>
+        <div class="teacher-name">Lic. Diego Serantes</div>
+        <div class="teacher-role">Docente de Fisiología (UdelaR) desde 2019 · Doctorando en Neurociencias · Fundador de Academia Memento</div>
+        <p class="teacher-bio">Licenciado en Biología Humana y docente de Fisiología en la Universidad de la República (UdelaR) desde 2019. Actualmente realiza su doctorado en Neurociencias, y dicta el curso de Fisiología en el Centro Universitario Regional (CENUR) Litoral Norte. Con experiencia enseñando a estudiantes de la Facultad de Medicina, creó Academia Memento para explicar los temas de los cursos de forma clara y ayudar a más estudiantes a rendir con confianza.</p>
+        <a href="https://exportcvuy.anii.org.uy/cv/?9e7eadec1fd144b03a1aa27287df3b5d" target="_blank" rel="noopener" class="teacher-cv">Ver CV completo (ANII)<svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        <div class="teacher-pubs">
+          <span class="teacher-pubs-label">Publicaciones científicas:</span>
+          <a href="https://doi.org/10.1111/jsr.14388" target="_blank" rel="noopener">Journal of Sleep Research <em>(primer autor)</em></a>
+          <a href="https://doi.org/10.1016/j.physbeh.2022.114011" target="_blank" rel="noopener">Physiology &amp; Behavior <em>(coautor)</em></a>
+          <a href="https://doi.org/10.7554/eLife.110120.1" target="_blank" rel="noopener">eLife <em>(primer autor, en revisión)</em></a>
         </div>
       </div>
     </div>
-    <div id="quiz-view" style="display:none"></div>
-    <div id="consultas-view" style="display:none"></div>
   </div>
-</div>
+</section>
 
-<!-- MODAL: Registro de estudiante -->
-<div class="modal-overlay" id="modal-register" style="display:none">
-  <div class="modal modal-sm">
-    <div class="modal-top">
-      <div><div class="modal-title">Crear cuenta</div><div class="modal-subtitle">Completá tus datos para registrarte</div></div>
-      <button type="button" class="modal-close" id="reg-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group"><label class="form-label">Nombre completo <span class="req">*</span></label><input type="text" class="form-input" id="reg-name" placeholder="Ej: Ana García" autocomplete="name" /></div>
-      <div class="form-group"><label class="form-label">Correo electrónico <span class="req">*</span></label><input type="email" class="form-input" id="reg-email" placeholder="tu@email.com" autocomplete="email" /></div>
-      <div class="form-group"><label class="form-label">Contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass" placeholder="Mínimo 6 caracteres" /></div>
-      <div class="form-group"><label class="form-label">Confirmar contraseña <span class="req">*</span></label><input type="password" class="form-input" id="reg-pass2" placeholder="Repetí tu contraseña" /></div>
-      <div class="login-error" id="reg-error" style="visibility:hidden"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span id="reg-error-msg"></span></div>
-      <div class="reg-success" id="reg-success" style="display:none">
-        <div class="reg-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div class="reg-success-title">¡Registro exitoso!</div>
-        <div class="reg-success-msg">Tu cuenta está <strong>pendiente de aprobación</strong>.<br>El profesor habilitará tu acceso una vez confirmado el pago.</div>
-      </div>
-    </div>
-    <div class="modal-footer" id="reg-footer">
-      <button type="button" class="btn btn-secondary" id="reg-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="reg-save">Crear cuenta</button>
-    </div>
-  </div>
-</div>
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="section-tag">Preguntas frecuentes</div>
+    <h2 class="section-title">Lo que más nos consultan</h2>
 
-<!-- MODAL: Agregar usuario (admin) -->
-<div class="modal-overlay" id="modal-add-user" style="display:none">
-  <div class="modal modal-sm">
-    <div class="modal-top">
-      <div><div class="modal-title">Agregar usuario</div><div class="modal-subtitle">Se creará una cuenta con acceso al curso</div></div>
-      <button type="button" class="modal-close" id="au-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group"><label class="form-label">Nombre completo <span class="req">*</span></label><input type="text" class="form-input" id="au-name" placeholder="Ej: Carlos López" /></div>
-      <div class="form-group"><label class="form-label">Correo electrónico <span class="req">*</span></label><input type="email" class="form-input" id="au-email" placeholder="estudiante@email.com" /></div>
-      <div class="form-group"><label class="form-label">Contraseña inicial <span class="req">*</span></label><input type="password" class="form-input" id="au-pass" placeholder="Mínimo 6 caracteres" /></div>
-      <div class="form-group"><label class="form-label">Rol</label><select class="form-select" id="au-role"><option value="student">Estudiante</option><option value="admin">Administrador</option></select></div>
-      <div id="au-error" style="display:none;font-size:12px;color:var(--danger);padding:8px 12px;background:var(--danger-light);border-radius:var(--radius-sm);margin-top:8px"></div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="au-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="au-save"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>Crear usuario</button>
+    <div class="faq">
+      <details open>
+        <summary>¿Qué es el curso paralelo de Neurociencia de Academia Memento?</summary>
+        <p>Es un <strong>curso paralelo online de Neurociencia (UC10)</strong> para estudiantes de la Facultad de Medicina, UdelaR. Complementa el cursado oficial con videos explicativos, resúmenes descargables y clases de consulta en vivo, para que llegues preparado a los parciales.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se dan las clases?</summary>
+        <p>Para mayor comodidad del estudiante ofrecemos un curso <strong>100% online</strong>: accedés a las clases teóricas y al material bibliográfico cuando quieras, desde cualquier dispositivo. Además hay <strong>clases de consulta en vivo</strong> semanales por videollamada.</p>
+      </details>
+      <details>
+        <summary>¿Ofrecen clases particulares de neuro?</summary>
+        <p>Sí. Ofrecemos <strong>preparación de examen</strong>, con sesiones particulares individuales con el profesor, enfocadas en repasar tus dudas puntuales de cara al examen. Se coordinan por <strong>WhatsApp</strong>, según disponibilidad.</p>
+      </details>
+      <details>
+        <summary>¿Sirve si curso en el CENUR Litoral Norte?</summary>
+        <p>Sí. El curso sirve tanto si seguís el dictado de Neurociencia en <strong>Montevideo</strong> como en el <strong>CENUR Litoral Norte</strong> de la Universidad de la República (UdelaR): el contenido y las clases de consulta son los mismos para ambas sedes.</p>
+      </details>
+      <details>
+        <summary>¿Cómo me inscribo?</summary>
+        <p>Escribinos por <a href="https://wa.me/59898100760?text=Hola,%20quiero%20inscribirme%20al%20curso%20de%20Neurociencia%20de%20Academia%20Memento." target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">WhatsApp</a> o a <a href="mailto:diegoserantes94@gmail.com" style="color:var(--blue);font-weight:600">diegoserantes94@gmail.com</a> para coordinar la inscripción y el método de pago (a través de <strong>transferencia bancaria</strong> o hasta <strong>12 cuotas con MercadoPago</strong>). Una vez confirmado, te habilitamos el acceso completo y creás tu cuenta desde <strong>"Acceso alumnos"</strong>.</p>
+      </details>
     </div>
   </div>
-</div>
+</section>
 
-<!-- MODAL: Curso bloqueado -->
-<div class="modal-overlay" id="modal-locked" style="display:none">
-  <div class="modal modal-sm" style="text-align:center;padding:2rem">
-    <div style="width:56px;height:56px;border-radius:50%;background:var(--blue-light);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">
-      <svg viewBox="0 0 24 24" width="24" height="24" stroke="var(--blue)" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-    </div>
-    <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:8px">Contenido no disponible aún</div>
-    <div style="font-size:14px;color:var(--text-mid);line-height:1.6;margin-bottom:1.5rem">El acceso completo al curso estará habilitado a partir del <strong id="locked-date"></strong>.<br>Gracias por tu paciencia.</div>
-    <button type="button" class="btn btn-primary" id="locked-ok" style="width:100%">Entendido</button>
-  </div>
-</div>
-
-<!-- MODAL: Editar página principal (admin) -->
-<div class="modal-overlay" id="modal-edit-home" style="display:none">
-  <div class="modal modal-md">
-    <div class="modal-top">
-      <div><div class="modal-title">Editar página principal</div><div class="modal-subtitle">El contenido se guarda al publicar cambios</div></div>
-      <button type="button" class="modal-close" id="eh-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group">
-        <label class="form-label">Fecha de inicio del curso</label>
-        <input type="date" class="form-input" id="eh-start-date" />
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Antes de esta fecha los videos aparecerán bloqueados para los estudiantes. Dejá en blanco para no bloquear.</div>
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section>
+  <div class="wrap">
+    <div class="cta-final">
+      <h2>Empezá a estudiar Neurociencia con claridad</h2>
+      <p>Sumate al curso paralelo de Neurociencia UC10 para FMED (UdelaR). Accedé a los videos, resúmenes y consultas en vivo desde hoy.</p>
+      <div class="hero-cta">
+        <a href="app.html" class="btn btn-white btn-lg">Acceso alumnos<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="https://wa.me/59898100760?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Neurociencia%20de%20Academia%20Memento." target="_blank" rel="noopener" class="btn btn-wa btn-lg"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1A8 8 0 0 0 12 20a8 8 0 0 0 5.6-13.7zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.24-.15-2.5.66.67-2.44-.16-.25A6.5 6.5 0 1 1 12 18.5zm3.6-4.9c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.62.77-.23.15-.43.05a5.3 5.3 0 0 1-1.56-.96 5.9 5.9 0 0 1-1.08-1.35c-.11-.2 0-.3.09-.4l.3-.35c.1-.12.13-.2.2-.34a.37.37 0 0 0 0-.35c0-.1-.44-1.06-.6-1.45s-.32-.33-.44-.34h-.38a.73.73 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66 3.87 3.87 0 0 0 .82 2.06 8.88 8.88 0 0 0 3.4 3 11.4 11.4 0 0 0 1.14.42 2.74 2.74 0 0 0 1.26.08 2.06 2.06 0 0 0 1.35-.95 1.68 1.68 0 0 0 .12-.95c-.05-.09-.18-.14-.38-.24z"/></svg>WhatsApp</a>
+        <a href="mailto:diegoserantes94@gmail.com" class="btn btn-outline-w btn-lg"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
       </div>
-      <div class="form-group">
-        <label class="form-label">Texto de bienvenida</label>
-        <textarea class="form-input" id="eh-welcome" rows="4" placeholder="Escribí el mensaje de bienvenida al curso..."></textarea>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Criterios de evaluación <span style="font-weight:400;color:var(--text-muted)">(uno por línea)</span></label>
-        <textarea class="form-input" id="eh-criteria" rows="5" placeholder="Ej: Parcial 1 — 30% de la nota&#10;Parcial 2 — 30% de la nota&#10;Examen final — 40% de la nota"></textarea>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Recordatorios <span style="font-weight:400;color:var(--text-muted)">(uno por línea)</span></label>
-        <textarea class="form-input" id="eh-reminders" rows="4" placeholder="Ej: Recordá anotarte al examen con anticipación.&#10;Existen puntos por actividades prácticas."></textarea>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="eh-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="eh-save"><svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>Guardar</button>
     </div>
   </div>
-</div>
+</section>
 
-<!-- MODAL: Video -->
-<div class="modal-overlay" id="modal-video" style="display:none">
-  <div class="modal modal-lg">
-    <div class="modal-top">
-      <div><div class="modal-title" id="mv-title"></div><div class="vmodal-module" id="mv-module"></div></div>
-      <button type="button" class="modal-close" id="mv-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div style="max-width:22rem">
+        <div class="foot-brand"><img src="logo-memento.jpg" alt="Academia Memento" />Academia Memento</div>
+        <p>Curso paralelo online de Neurociencia UC10, y clases particulares para estudiantes de FMED, UdelaR.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Curso</h4>
+        <a href="#curso">Qué es</a>
+        <a href="#modalidad">Modalidad</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="app.html">Acceso alumnos</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="mailto:diegoserantes94@gmail.com">diegoserantes94@gmail.com</a>
+        <!-- Agregá tu WhatsApp e Instagram acá cuando quieras:
+        <a href="https://wa.me/59898100760">WhatsApp</a>
+        <a href="https://instagram.com/tu_usuario">Instagram</a> -->
+      </div>
     </div>
-    <div class="modal-player" id="mv-player"></div>
-    <div class="modal-info-row">
-      <div class="vmodal-desc" id="mv-desc"></div>
-      <div class="vmodal-dur"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="mv-dur"></span></div>
-    </div>
+    <div class="foot-bottom">© 2026 Academia Memento · Neurociencia UC10, FMED, UdelaR · Montevideo, Uruguay</div>
   </div>
-</div>
+</footer>
 
-<!-- MODAL: Agregar video -->
-<div class="modal-overlay" id="modal-add-video" style="display:none">
-  <div class="modal modal-md">
-    <div class="modal-top">
-      <div><div class="modal-title">Agregar video</div><div class="modal-subtitle">El video se agregará al curso inmediatamente</div></div>
-      <button type="button" class="modal-close" id="av-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group"><label class="form-label">Título <span class="req">*</span></label><input type="text" class="form-input" id="av-title" placeholder="Ej: Potencial de Acción" /></div>
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">Módulo <span class="req">*</span></label><select class="form-select" id="av-module"></select></div>
-        <div class="form-group"><label class="form-label">Duración</label><input type="text" class="form-input" id="av-duration" placeholder="Ej: 25 min" /></div>
-      </div>
-      <div class="form-group"><label class="form-label">Enlace de Vimeo <span class="req">*</span></label><input type="text" class="form-input" id="av-url" placeholder="https://vimeo.com/123456789 o solo el ID numérico" /><div class="form-hint">Pegá la URL completa de Vimeo o solo el número de ID del video</div></div>
-      <div class="form-group"><label class="form-label">Descripción</label><textarea class="form-textarea" id="av-desc" placeholder="Breve descripción del contenido..."></textarea></div>
-      <label class="form-check"><input type="checkbox" id="av-isnew" checked />Marcar como "Nuevo"</label>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="av-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="av-save"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar video</button>
-    </div>
-  </div>
-</div>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/59898100760?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Neurociencia%20de%20Academia%20Memento." target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.9 12l-1 3.7 3.8-1A8 8 0 0 0 12 20a8 8 0 0 0 5.6-13.7zM12 18.5a6.6 6.6 0 0 1-3.4-.9l-.24-.15-2.5.66.67-2.44-.16-.25A6.5 6.5 0 1 1 12 18.5zm3.6-4.9c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.62.77-.23.15-.43.05a5.3 5.3 0 0 1-1.56-.96 5.9 5.9 0 0 1-1.08-1.35c-.11-.2 0-.3.09-.4l.3-.35c.1-.12.13-.2.2-.34a.37.37 0 0 0 0-.35c0-.1-.44-1.06-.6-1.45s-.32-.33-.44-.34h-.38a.73.73 0 0 0-.53.25 2.23 2.23 0 0 0-.7 1.66 3.87 3.87 0 0 0 .82 2.06 8.88 8.88 0 0 0 3.4 3 11.4 11.4 0 0 0 1.14.42 2.74 2.74 0 0 0 1.26.08 2.06 2.06 0 0 0 1.35-.95 1.68 1.68 0 0 0 .12-.95c-.05-.09-.18-.14-.38-.24z"/></svg>
+</a>
 
-<!-- MODAL: Agregar material -->
-<div class="modal-overlay" id="modal-add-material" style="display:none">
-  <div class="modal modal-md">
-    <div class="modal-top">
-      <div><div class="modal-title">Agregar material bibliográfico</div><div class="modal-subtitle">Se agregará al módulo seleccionado</div></div>
-      <button type="button" class="modal-close" id="am-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group"><label class="form-label">Título <span class="req">*</span></label><input type="text" class="form-input" id="am-title" placeholder="Ej: Principios de Neurociencia – Kandel" /></div>
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">Módulo <span class="req">*</span></label><select class="form-select" id="am-module"></select></div>
-        <div class="form-group"><label class="form-label">Tipo</label>
-          <select class="form-select" id="am-type">
-            <option value="pdf">PDF</option>
-            <option value="link">Enlace web</option>
-            <option value="slides">Presentación</option>
-            <option value="book">Libro / Capítulo</option>
-          </select>
-        </div>
-      </div>
-      <!-- Tabs -->
-      <div class="upload-tabs">
-        <button type="button" class="upload-tab active" id="am-tab-upload">⬆ Subir archivo</button>
-        <button type="button" class="upload-tab" id="am-tab-url">🔗 Enlace externo</button>
-      </div>
-      <!-- Panel subir -->
-      <div id="am-panel-upload">
-        <input type="file" id="am-file-input" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx" style="display:none" />
-        <div class="upload-zone" id="am-upload-zone">
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          <div class="upload-zone-text">Arrastrá el archivo aquí o <span class="upload-zone-link">elegí uno</span></div>
-          <div class="upload-zone-hint">PDF, Word, PowerPoint (máx. 50MB)</div>
-        </div>
-        <div class="upload-preview" id="am-preview" style="display:none">
-          <div class="upload-file-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <div class="upload-file-info"><div class="upload-file-name" id="am-file-name"></div><div class="upload-file-size" id="am-file-size"></div></div>
-          <button type="button" class="upload-clear" id="am-file-clear"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-        </div>
-        <div id="am-token-wrap" style="display:none">
-          <div class="upload-token">
-            <div class="upload-token-label">🔑 Necesitás tu GitHub Token para subir el archivo</div>
-            <input type="password" class="form-input" id="am-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
-            <div class="form-hint" style="margin-top:4px">Se guardará para futuros uploads</div>
-          </div>
-        </div>
-        <div class="upload-progress" id="am-progress" style="display:none">
-          <div class="upload-progress-bar"><div class="upload-progress-fill" id="am-progress-fill" style="width:0%"></div></div>
-          <div class="upload-progress-text" id="am-progress-text">Subiendo...</div>
-        </div>
-      </div>
-      <!-- Panel enlace -->
-      <div id="am-panel-url" style="display:none">
-        <div class="form-group">
-          <label class="form-label">URL <span class="req">*</span></label>
-          <input type="text" class="form-input" id="am-url" placeholder="https://..." />
-          <div class="form-hint">Enlace al recurso (Google Drive, sitio web, etc.)</div>
-        </div>
-      </div>
-      <div class="form-group" style="margin-top:.25rem"><label class="form-label">Descripción</label><textarea class="form-textarea" id="am-desc" placeholder="Ej: Capítulos 1 al 3 – Lectura obligatoria" style="min-height:60px"></textarea></div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="am-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="am-save"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar material</button>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Publicar -->
-<div class="modal-overlay" id="modal-publish" style="display:none">
-  <div class="modal modal-sm">
-    <div class="modal-top">
-      <div><div class="modal-title">Publicar cambios</div><div class="modal-subtitle">Los estudiantes verán los cambios en ~1 minuto</div></div>
-      <button type="button" class="modal-close" id="pub-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="alert alert-info"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span>Necesitás un <strong>Token de GitHub</strong> con permiso <em>repo</em>. Se guarda solo en tu navegador.</span></div>
-      <div class="form-group">
-        <label class="form-label">GitHub Personal Access Token</label>
-        <div class="pw-wrap">
-          <input type="password" class="form-input" id="pub-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" />
-          <button type="button" class="pw-toggle" id="pub-toggle"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
-        </div>
-        <div class="form-hint">Creá uno en <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--blue)">github.com/settings/tokens</a> → seleccioná "repo"</div>
-      </div>
-      <div id="pub-status"></div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="pub-cancel">Cancelar</button>
-      <button type="button" class="btn btn-success" id="pub-save"><svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>Publicar</button>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Agregar pregunta (admin) -->
-<div class="modal-overlay" id="modal-add-question" style="display:none">
-  <div class="modal modal-md">
-    <div class="modal-top">
-      <div><div class="modal-title">Agregar pregunta</div><div class="modal-subtitle">Se agregará al banco de preguntas del Quiz</div></div>
-      <button type="button" class="modal-close" id="aq-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="form-group"><label class="form-label">Pregunta <span class="req">*</span></label><textarea class="form-textarea" id="aq-question" rows="3" placeholder="Ej: ¿Cuál es el potencial de membrana en reposo de una neurona?"></textarea></div>
-      <div class="form-group"><label class="form-label">Módulo</label><select class="form-select" id="aq-module"></select></div>
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">Opción A <span class="req">*</span></label><input type="text" class="form-input" id="aq-a" placeholder="..." /></div>
-        <div class="form-group"><label class="form-label">Opción B <span class="req">*</span></label><input type="text" class="form-input" id="aq-b" placeholder="..." /></div>
-      </div>
-      <div class="form-row">
-        <div class="form-group"><label class="form-label">Opción C <span class="req">*</span></label><input type="text" class="form-input" id="aq-c" placeholder="..." /></div>
-        <div class="form-group"><label class="form-label">Opción D <span style="font-weight:400;color:var(--text-muted)">(opcional)</span></label><input type="text" class="form-input" id="aq-d" placeholder="..." /></div>
-      </div>
-      <div class="form-group"><label class="form-label">Respuesta correcta <span class="req">*</span></label><select class="form-select" id="aq-correct"><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option></select></div>
-      <div class="form-group"><label class="form-label">Explicación <span class="req">*</span></label><textarea class="form-textarea" id="aq-explanation" rows="4" placeholder="Explicá por qué la respuesta es correcta y qué tienen de erróneo las demás opciones..."></textarea></div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" id="aq-cancel">Cancelar</button>
-      <button type="button" class="btn btn-primary" id="aq-save"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar pregunta</button>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Instrucciones para instalar en iPhone/iPad (Safari) -->
-<div class="modal-overlay" id="modal-install-ios" style="display:none">
-  <div class="modal modal-sm">
-    <div class="modal-top">
-      <div><div class="modal-title">Instalar en tu iPhone</div><div class="modal-subtitle">Desde Safari, en 2 pasos</div></div>
-      <button type="button" class="modal-close" id="ios-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-    </div>
-    <div class="modal-body">
-      <div class="ios-step">
-        <div class="ios-step-num">1</div>
-        <div>Tocá el botón <strong>Compartir</strong> <svg class="ios-inline-ic" viewBox="0 0 24 24"><path d="M12 3v13"/><polyline points="8 7 12 3 16 7"/><rect x="5" y="12" width="14" height="9" rx="2"/></svg> en la barra inferior de Safari.</div>
-      </div>
-      <div class="ios-step">
-        <div class="ios-step-num">2</div>
-        <div>Deslizá y elegí <strong>“Agregar a inicio”</strong> <svg class="ios-inline-ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> y confirmá.</div>
-      </div>
-      <p style="margin-top:.9rem;font-size:12.5px;color:var(--text-muted)">Listo: la app queda como un ícono en tu pantalla de inicio y se abre a pantalla completa.</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary" id="ios-ok">Entendido</button>
-    </div>
-  </div>
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script>
-/* ══════════ FIREBASE — reemplazá estos valores con los de tu proyecto ══════════ */
-const firebaseConfig = {
-  apiKey:            "AIzaSyDc6pPB2ilUsBjqyY6-YHR0H87XKUDkQMM",
-  authDomain:        "app-curso-8392a.firebaseapp.com",
-  projectId:         "app-curso-8392a",
-  storageBucket:     "app-curso-8392a.firebasestorage.app",
-  messagingSenderId: "924371574275",
-  appId:             "1:924371574275:web:eb1bf3ec34cbd3ebb4b836"
-};
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db   = firebase.firestore();
-// App secundaria para crear usuarios sin desloguear al admin
-const secondaryApp  = firebase.initializeApp(firebaseConfig, 'secondary');
-const secondaryAuth = secondaryApp.auth();
-
-/* ══════════ CONFIGURACIÓN ══════════ */
-const REPO = { owner:'diegoserantes94-bit', name:'App_curso', branch:'main', file:'data.json' };
-
-const MODULES = [
-  { id:"home", label:"Principal", icon:"home"        },
-  { id:"m0",  label:"Introducción",      icon:"book-open"   },
-  { id:"m1",  label:"Módulo 1",          icon:"layers"      },
-  { id:"m2",  label:"Módulo 2",          icon:"cpu"         },
-  { id:"m3",  label:"Módulo 3",          icon:"trending-up" },
-  { id:"consultas", label:"Consultas",   icon:"message-circle" },
-  { id:"quiz",label:"Quiz",              icon:"help-circle" }
-];
-
-let VIDEOS = [];
-let MATERIALS = { m0:[], m1:[], m2:[], m3:[] };
-let HOME_CONTENT = { welcome:'', criteria:[], reminders:[] };
-let COURSE_START_DATE = '';
-let QUESTIONS = [];
-let CONSULTAS = [];
-let consultasUnsub = null;
-let consultasFilter = 'all';
-
-let currentUser = null, activeModule = "home", isAdmin = false;
-let sessionInterval = null;
-const SESSION_KEY = 'neurociencia_session_token';
-
-const ICONS = {
-  home:        '<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
-  grid:        '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
-  "book-open": '<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
-  layers:      '<svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
-  cpu:         '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>',
-  "trending-up":'<svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
-  "help-circle":'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
-  "message-circle":'<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>'
-};
-const MAT_ICONS = {
-  pdf:   '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
-  link:  '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
-  slides:'<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
-  book:  '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
-};
-
-/* ══════════ MODAL HELPERS ══════════ */
-function openModal(id)  { document.getElementById(id).style.display = 'flex'; }
-function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-
-/* ══════════ DATA ══════════ */
-const LOCAL_KEY = 'neurociencia_data_v2';
-function saveLocal() { localStorage.setItem(LOCAL_KEY, JSON.stringify({ courseStartDate:COURSE_START_DATE, videos:VIDEOS, materials:MATERIALS, homeContent:HOME_CONTENT, questions:QUESTIONS })); }
-async function loadData() {
-  try {
-    const r = await fetch('data.json?t=' + Date.now());
-    if (r.ok) {
-      const d = await r.json();
-      if (d.courseStartDate !== undefined) COURSE_START_DATE = d.courseStartDate;
-      if (d.videos && d.videos.length) VIDEOS = d.videos;
-      if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
-      if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
-      if (d.questions) QUESTIONS = d.questions;
-      return;
-    }
-  } catch(_) {}
-  try {
-    const s = localStorage.getItem(LOCAL_KEY);
-    if (s) {
-      const d = JSON.parse(s);
-      if (d.courseStartDate !== undefined) COURSE_START_DATE = d.courseStartDate;
-      if (d.videos && d.videos.length) VIDEOS = d.videos;
-      if (d.materials) MATERIALS = Object.assign(MATERIALS, d.materials);
-      if (d.homeContent) HOME_CONTENT = Object.assign(HOME_CONTENT, d.homeContent);
-      if (d.questions) QUESTIONS = d.questions;
-    }
-  } catch(_) {}
-}
-
-/* ══════════ COURSE LOCK ══════════ */
-function isCourseUnlocked() {
-  if (isAdmin) return true;
-  if (!COURSE_START_DATE) return true;
-  return new Date() >= new Date(COURSE_START_DATE + 'T00:00:00');
-}
-function formatStartDate() {
-  if (!COURSE_START_DATE) return '';
-  const d = new Date(COURSE_START_DATE + 'T00:00:00');
-  const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-  return d.getDate() + ' de ' + months[d.getMonth()] + ' de ' + d.getFullYear();
-}
-
-/* ══════════ HELPERS ══════════ */
-function extractVimeoId(v) {
-  v = v.trim();
-  const m = v.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-  if (m) return m[1];
-  if (/^\d{6,12}$/.test(v)) return v;
-  return null;
-}
-function nextId(arr) { return arr.length ? Math.max(...arr.map(x => x.id)) + 1 : 1; }
-function getModLabel(id) { return (MODULES.find(m => m.id === id) || {}).label || id; }
-function populateModSelect(selId, currentMod) {
-  const sel = document.getElementById(selId);
-  sel.innerHTML = MODULES.filter(m => m.id !== 'home').map(m =>
-    '<option value="' + m.id + '"' + (m.id === currentMod && currentMod !== 'all' ? ' selected' : '') + '>' + m.label + '</option>'
-  ).join('');
-}
-
-/* ══════════ LOGIN ══════════ */
-async function doLogin() {
-  const email = document.getElementById('inp-user').value.trim();
-  const pass  = document.getElementById('inp-pass').value;
-  const errEl = document.getElementById('login-error');
-  const btn   = document.getElementById('btn-login-submit');
-  if (!email || !pass) {
-    document.getElementById('login-error-msg').textContent = 'Completá todos los campos.';
-    errEl.style.visibility = 'visible'; return;
-  }
-  btn.disabled = true; btn.textContent = 'Ingresando...';
-  errEl.style.visibility = 'hidden';
-  try {
-    const cred    = await auth.signInWithEmailAndPassword(email, pass);
-    const docSnap = await db.collection('users').doc(cred.user.uid).get();
-    if (!docSnap.exists) {
-      await auth.signOut();
-      document.getElementById('login-error-msg').textContent = 'Cuenta no encontrada. Contactá al profesor.';
-      errEl.style.visibility = 'visible';
-      btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
-    }
-    const data = docSnap.data();
-    if (data.role === 'pending') {
-      await auth.signOut();
-      document.getElementById('login-error-msg').textContent = 'Tu cuenta está pendiente de aprobación. El profesor habilitará tu acceso una vez confirmado el pago.';
-      errEl.style.visibility = 'visible';
-      btn.disabled = false; btn.textContent = 'Iniciar sesión'; return;
-    }
-    currentUser = { uid: cred.user.uid, email: cred.user.email, name: data.name || email, role: data.role || 'student' };
-    await setSession(cred.user.uid);
-    startSessionCheck(cred.user.uid);
-    btn.disabled = false; btn.textContent = 'Iniciar sesión';
-    showMain();
-  } catch(e) {
-    var msg = 'Correo o contraseña incorrectos.';
-    if (e.code === 'auth/invalid-email')        msg = 'El correo no es válido.';
-    else if (e.code === 'auth/too-many-requests') msg = 'Demasiados intentos. Intentá más tarde.';
-    document.getElementById('login-error-msg').textContent = msg;
-    errEl.style.visibility = 'visible';
-    document.getElementById('inp-pass').value = '';
-    btn.disabled = false; btn.textContent = 'Iniciar sesión';
-  }
-}
-
-/* ══════════ REGISTRO ══════════ */
-function openRegister() {
-  ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).value = ''; });
-  document.getElementById('reg-error').style.visibility = 'hidden';
-  openModal('modal-register');
-}
-function closeRegister() {
-  closeModal('modal-register');
-  // Resetear estado del modal
-  ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).parentElement.style.display=''; });
-  document.getElementById('reg-success').style.display = 'none';
-  document.getElementById('reg-footer').style.display  = '';
-  document.getElementById('reg-error').style.visibility = 'hidden';
-}
-
-async function doRegister() {
-  const name  = document.getElementById('reg-name').value.trim();
-  const email = document.getElementById('reg-email').value.trim();
-  const pass  = document.getElementById('reg-pass').value;
-  const pass2 = document.getElementById('reg-pass2').value;
-  const errEl = document.getElementById('reg-error');
-  const btn   = document.getElementById('reg-save');
-  function showRegErr(msg) { document.getElementById('reg-error-msg').textContent = msg; errEl.style.visibility = 'visible'; }
-  if (!name || !email || !pass) { showRegErr('Completá todos los campos.'); return; }
-  if (pass.length < 6)          { showRegErr('La contraseña debe tener al menos 6 caracteres.'); return; }
-  if (pass !== pass2)           { showRegErr('Las contraseñas no coinciden.'); return; }
-  btn.disabled = true; btn.textContent = 'Creando cuenta...';
-  errEl.style.visibility = 'hidden';
-  try {
-    const cred = await auth.createUserWithEmailAndPassword(email, pass);
-    await db.collection('users').doc(cred.user.uid).set({ name, email, role:'pending', createdAt: firebase.firestore.FieldValue.serverTimestamp() });
-    await auth.signOut();
-    btn.disabled = false; btn.textContent = 'Crear cuenta';
-    // Mostrar pantalla de éxito en lugar de entrar al curso
-    ['reg-name','reg-email','reg-pass','reg-pass2'].forEach(function(id){ document.getElementById(id).parentElement.style.display='none'; });
-    document.getElementById('reg-error').style.visibility = 'hidden';
-    document.getElementById('reg-success').style.display  = 'block';
-    document.getElementById('reg-footer').style.display   = 'none';
-  } catch(e) {
-    var msg = 'Error (' + (e.code || 'desconocido') + '): ' + e.message;
-    showRegErr(msg); btn.disabled = false; btn.textContent = 'Crear cuenta';
-  }
-}
-
-async function showMain() {
-  isAdmin = currentUser.role === 'admin';
-  const ini = currentUser.name.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
-  document.getElementById('sb-avatar').textContent  = ini;
-  document.getElementById('sb-username').textContent = currentUser.name;
-  document.getElementById('sb-role').textContent    = isAdmin ? 'Administrador' : 'Estudiante';
-  await loadData();
-  if (isAdmin) {
-    document.getElementById('admin-pill').style.display    = 'inline';
-    document.getElementById('sb-admin-wrap').style.display = 'block';
-    document.getElementById('admin-panel').style.display   = 'block';
-    document.getElementById('btn-add-mat-inline').style.display = 'flex';
-    document.getElementById('main-screen').classList.add('admin-mode');
-    loadFirestoreUsers();
-    loadPendingUsers();
-  }
-  activeModule = 'home';
-  document.getElementById('quiz-view').style.display = 'none';
-  document.getElementById('consultas-view').style.display = 'none';
-  document.querySelector('.content-body').style.display = '';
-  buildSidebar(); renderHome();
-  history.replaceState({ module: 'home' }, '', '#home');
-  const loginEl = document.getElementById('login-screen');
-  const mainEl  = document.getElementById('main-screen');
-  loginEl.classList.add('leaving');
-  setTimeout(function() { loginEl.classList.remove('active','leaving'); mainEl.classList.add('active'); }, 340);
-}
-
-/* ══════════ HOME ══════════ */
-function renderHome() {
-  var homeEl = document.getElementById('home-panel');
-  document.getElementById('ct-label').textContent = 'Principal';
-  document.querySelector('.section-header').style.display = 'none';
-  document.getElementById('video-grid').style.display = 'none';
-  document.getElementById('mat-section').style.display = 'none';
-  homeEl.style.display = 'block';
-
-  var name = escapeHtml((currentUser && currentUser.name) ? currentUser.name.split(' ')[0] : 'estudiante');
-
-  var criteriaItems = (HOME_CONTENT.criteria || []).map(function(c){
-    return '<li>' + escapeHtml(c) + '</li>';
-  }).join('');
-  var reminderItems = (HOME_CONTENT.reminders || []).map(function(r){
-    return '<li>' + escapeHtml(r) + '</li>';
-  }).join('');
-
-  var moduleCards = MODULES.filter(function(m){ return m.id !== 'home'; }).map(function(m) {
-    if (m.id === 'quiz') {
-      var qc = QUESTIONS.length;
-      return '<div class="home-mod-card" data-mod="quiz">' +
-        '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
-        '<div class="hmc-name">' + m.label + '</div>' +
-        '<div class="hmc-count">' + qc + ' pregunta' + (qc !== 1 ? 's' : '') + '</div>' +
-      '</div>';
-    }
-    if (m.id === 'consultas') {
-      return '<div class="home-mod-card" data-mod="consultas">' +
-        '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
-        '<div class="hmc-name">' + m.label + '</div>' +
-        '<div class="hmc-count">Dejá y votá dudas</div>' +
-      '</div>';
-    }
-    var count = VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
-    return '<div class="home-mod-card" data-mod="' + m.id + '">' +
-      '<div class="hmc-icon">' + (ICONS[m.icon] || ICONS.grid) + '</div>' +
-      '<div class="hmc-name">' + m.label + '</div>' +
-      '<div class="hmc-count">' + count + ' video' + (count !== 1 ? 's' : '') + '</div>' +
-    '</div>';
-  }).join('');
-
-  homeEl.innerHTML =
-    '<div class="home-hero">' +
-      '<div class="home-greeting">Bienvenido/a, ' + name + '</div>' +
-      '<div class="home-course">Neurociencia · Facultad de Medicina BCC3 · UdelaR</div>' +
-      '<div class="home-hint"><svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Seleccioná un módulo del menú lateral para comenzar</div>' +
-    '</div>' +
-    '<div class="home-info-card">' +
-      '<div class="home-info-header">' +
-        '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' +
-        '<span>Información general</span>' +
-        (isAdmin ? '<button type="button" class="btn-edit-home-inline" id="btn-edit-home-inline"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Editar</button>' : '') +
-      '</div>' +
-      '<p class="home-info-welcome">' + escapeHtml(HOME_CONTENT.welcome || '') + '</p>' +
-      (criteriaItems ? '<div class="home-info-sub">Criterios de evaluación</div><ul class="home-info-list">' + criteriaItems + '</ul>' : '') +
-      (reminderItems ? '<div class="home-info-sub">Recordatorios</div><ul class="home-info-list">' + reminderItems + '</ul>' : '') +
-    '</div>' +
-    '<div class="home-section-title">Módulos del curso</div>' +
-    '<div class="home-modules-grid">' + moduleCards + '</div>';
-
-  homeEl.querySelectorAll('.home-mod-card').forEach(function(card) {
-    card.addEventListener('click', function() {
-      var modId = card.getAttribute('data-mod');
-      var btn = Array.from(document.querySelectorAll('#sb-nav .sb-item')).find(function(b){
-        return b.getAttribute && b.textContent.includes(MODULES.find(function(m){ return m.id === modId; }).label);
-      });
-      if (btn) selectModule(modId, btn);
-    });
-  });
-  var editBtn = document.getElementById('btn-edit-home-inline');
-  if (editBtn) editBtn.addEventListener('click', openEditHome);
-}
-
-/* ══════════ SIDEBAR ══════════ */
-function buildSidebar() {
-  const nav = document.getElementById('sb-nav');
-  nav.innerHTML = '';
-  MODULES.forEach(function(m) {
-    const count = m.id === 'home' ? VIDEOS.length : m.id === 'quiz' ? QUESTIONS.length : VIDEOS.filter(function(v){ return v.moduleId === m.id; }).length;
-    const noCount = (m.id === 'home' || m.id === 'consultas');
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'sb-item' + (m.id === activeModule ? ' active' : '');
-    btn.setAttribute('data-mod', m.id);
-    btn.innerHTML = (ICONS[m.icon] || ICONS.grid) + ' ' + m.label + (!noCount ? ' <span class="sb-count">' + count + '</span>' : '');
-    btn.addEventListener('click', function() { selectModule(m.id, btn); });
-    nav.appendChild(btn);
-  });
-}
-
-function selectModule(id, btn, fromPop) {
-  activeModule = id;
-  if (!btn) btn = document.querySelector('#sb-nav .sb-item[data-mod="' + id + '"]');
-  document.querySelectorAll('#sb-nav .sb-item').forEach(function(b){ b.classList.remove('active'); });
-  if (btn) btn.classList.add('active');
-  document.getElementById('ct-label').textContent = getModLabel(id);
-  var quizView      = document.getElementById('quiz-view');
-  var consultasView = document.getElementById('consultas-view');
-  var contentBody   = document.querySelector('.content-body');
-  if (id !== 'consultas') stopConsultas();
-  if (id === 'home') {
-    quizView.style.display = 'none';
-    consultasView.style.display = 'none';
-    contentBody.style.display = '';
-    renderHome();
-  } else if (id === 'quiz') {
-    contentBody.style.display = 'none';
-    consultasView.style.display = 'none';
-    quizView.style.display = 'block';
-    renderQuiz();
-  } else if (id === 'consultas') {
-    contentBody.style.display = 'none';
-    quizView.style.display = 'none';
-    consultasView.style.display = 'block';
-    startConsultas();
-  } else {
-    quizView.style.display = 'none';
-    consultasView.style.display = 'none';
-    contentBody.style.display = '';
-    document.getElementById('home-panel').style.display = 'none';
-    document.querySelector('.section-header').style.display = '';
-    document.getElementById('video-grid').style.display = '';
-    renderVideos(id);
-    renderMaterials(id);
-  }
-  if (window.innerWidth <= 768) closeSidebar();
-  if (!fromPop) history.pushState({ module: id }, '', '#' + id);
-}
-
-// Botón "atrás" del navegador: volver a la vista anterior en vez de salir de la app.
-window.addEventListener('popstate', function(e) {
-  var mainActive = document.getElementById('main-screen').classList.contains('active');
-  if (!mainActive) return; // en el login, dejar el comportamiento normal
-  // Si hay un video abierto, "atrás" lo cierra (en vez de cambiar de módulo).
-  if (document.getElementById('modal-video').style.display === 'flex') {
-    closeModal('modal-video');
-    document.getElementById('mv-player').innerHTML = '';
-    return;
-  }
-  var id = (e.state && e.state.module) ? e.state.module : 'home';
-  selectModule(id, null, true);
-});
-
-/* ══════════ VIDEOS ══════════ */
-function renderVideos(moduleId) {
-  const filtered = VIDEOS.filter(function(v){ return v.moduleId === moduleId; });
-  document.getElementById('sec-title').textContent = getModLabel(moduleId);
-  document.getElementById('sec-sub').textContent   = 'Videos de este módulo';
-  document.getElementById('sec-count').textContent = filtered.length + ' video' + (filtered.length !== 1 ? 's' : '');
-  const grid = document.getElementById('video-grid');
-  grid.innerHTML = '';
-
-  const unlocked = isCourseUnlocked();
-  const lockBanner = document.getElementById('lock-banner');
-  if (lockBanner) {
-    lockBanner.style.display = unlocked ? 'none' : 'flex';
-    if (!unlocked) document.getElementById('lock-banner-date').textContent = formatStartDate();
-  }
-
-  if (!filtered.length) {
-    grid.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>No hay videos en este módulo.</p></div>';
-    return;
-  }
-  filtered.forEach(function(v) {
-    const card = document.createElement('div');
-    card.className = 'video-card' + (unlocked ? '' : ' locked');
-    card.setAttribute('role','button'); card.setAttribute('tabindex','0');
-    card.innerHTML =
-      '<div class="video-thumb">' +
-        (unlocked
-          ? '<div class="vt-play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>'
-          : '<div class="vt-lock"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>') +
-        '<span class="vt-num">' + escapeHtml(v.moduleLabel) + '</span>' +
-        (v.isNew ? '<span class="vt-new">Nuevo</span>' : '') +
-      '</div>' +
-      '<div class="video-info">' +
-        '<div class="vi-module">' + escapeHtml(v.moduleLabel) + '</div>' +
-        '<div class="vi-title">' + escapeHtml(v.title) + '</div>' +
-        '<div class="vi-duration"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + escapeHtml(v.duration) + '</div>' +
-      '</div>' +
-      '<button type="button" class="card-del-btn" title="Eliminar video"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>';
-    card.addEventListener('click', function() { playVideo(v.id); });
-    card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') playVideo(v.id); });
-    card.querySelector('.card-del-btn').addEventListener('click', function(e) {
-      e.stopPropagation();
-      if (confirm('¿Eliminar "' + v.title + '" del curso?')) { VIDEOS = VIDEOS.filter(function(x){ return x.id !== v.id; }); saveLocal(); buildSidebar(); if (activeModule === 'home') renderHome(); else renderVideos(activeModule); }
-    });
-    grid.appendChild(card);
-    if (v.vimeoId) setVimeoThumb(card, v.vimeoId);
-  });
-}
-
-function setVimeoThumb(card, vimeoId) {
-  fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + vimeoId)
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      if (!d.thumbnail_url) return;
-      var url = d.thumbnail_url.replace(/_\d+x\d+/, '_640');
-      var thumb = card.querySelector('.video-thumb');
-      thumb.style.backgroundImage = 'url(' + url + ')';
-      thumb.style.backgroundSize = 'cover';
-      thumb.style.backgroundPosition = 'center';
-      thumb.classList.add('has-thumb');
-    })
-    .catch(function(){});
-}
-
-/* ══════════ PLAY VIDEO ══════════ */
-function playVideo(id) {
-  const v = VIDEOS.find(function(x){ return x.id === id; });
-  if (!v) return;
-  if (!isCourseUnlocked()) {
-    document.getElementById('locked-date').textContent = formatStartDate();
-    openModal('modal-locked');
-    return;
-  }
-  document.getElementById('mv-title').textContent  = v.title;
-  document.getElementById('mv-module').textContent = v.moduleLabel;
-  document.getElementById('mv-desc').textContent   = v.desc;
-  document.getElementById('mv-dur').textContent    = v.duration;
-  var iframeSrc = 'https://player.vimeo.com/video/' + v.vimeoId + '?autoplay=1&title=0&byline=0&portrait=0';
-  document.getElementById('mv-player').innerHTML = '<iframe src="' + iframeSrc + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
-  openModal('modal-video');
-  history.pushState({ module: activeModule, video: true }, '', '#video');
-}
-
-/* ══════════ MATERIALS ══════════ */
-function renderMaterials(moduleId) {
-  const sec = document.getElementById('mat-section');
-  if (moduleId === 'all') { sec.style.display = 'none'; return; }
-  sec.style.display = 'block';
-  const items = MATERIALS[moduleId] || [];
-  const grid  = document.getElementById('mat-grid');
-  grid.innerHTML = '';
-  if (!items.length) {
-    grid.innerHTML = '<p class="mat-empty">No hay material bibliográfico para este módulo todavía.</p>';
-    return;
-  }
-  items.forEach(function(m) {
-    const card = document.createElement('div');
-    card.className = 'material-card';
-    card.innerHTML =
-      '<div class="mat-icon ' + escapeHtml(m.type) + '">' + (MAT_ICONS[m.type] || MAT_ICONS.link) + '</div>' +
-      '<div class="mat-body">' +
-        '<div class="mat-name">' + escapeHtml(m.title) + '</div>' +
-        (m.desc ? '<div class="mat-desc">' + escapeHtml(m.desc) + '</div>' : '') +
-        '<a class="btn-open-mat" href="' + escapeHtml(m.url) + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Abrir</a>' +
-      '</div>' +
-      '<button type="button" class="mat-del-btn" title="Eliminar"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>';
-    card.querySelector('.mat-del-btn').addEventListener('click', function() {
-      if (confirm('¿Eliminar este material?')) {
-        MATERIALS[moduleId] = MATERIALS[moduleId].filter(function(x){ return x.id !== m.id; });
-        saveLocal(); renderMaterials(activeModule);
-      }
-    });
-    grid.appendChild(card);
-  });
-}
-
-/* ══════════ USUARIOS (ADMIN) ══════════ */
-async function loadPendingUsers() {
-  const list  = document.getElementById('pending-list');
-  const count = document.getElementById('pending-count');
-  try {
-    const snap = await db.collection('users').where('role','==','pending').get();
-    count.textContent = snap.size;
-    if (snap.empty) {
-      list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">Sin solicitudes pendientes.</p>';
-      return;
-    }
-    list.innerHTML = '';
-    snap.forEach(function(doc) {
-      const u = doc.data();
-      const ini = escapeHtml((u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase());
-      const row = document.createElement('div');
-      row.className = 'user-row';
-      row.innerHTML =
-        '<div class="s-avatar" style="background:var(--warn-light);color:var(--warn)">' + ini + '</div>' +
-        '<div class="user-row-info">' +
-          '<div class="s-name">' + escapeHtml(u.name || '—') + '</div>' +
-          '<div class="user-email">' + escapeHtml(u.email || '') + '</div>' +
-        '</div>' +
-        '<button type="button" class="btn-approve">Aprobar</button>';
-      row.querySelector('.btn-approve').addEventListener('click', function() {
-        db.collection('users').doc(doc.id).update({ role:'student' }).then(function(){
-          loadPendingUsers(); loadFirestoreUsers();
-        });
-      });
-      list.appendChild(row);
-    });
-  } catch(e) {
-    list.innerHTML = '<p style="font-size:13px;color:var(--danger)">Error: ' + e.message + '</p>';
-  }
-}
-
-async function loadFirestoreUsers() {
-  const list  = document.getElementById('stu-list');
-  const count = document.getElementById('stu-count');
-  list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">Cargando...</p>';
-  try {
-    const snap = await db.collection('users').where('role','==','student').get();
-    count.textContent = snap.size;
-    if (snap.empty) {
-      list.innerHTML = '<p style="font-size:13px;color:var(--text-muted)">No hay estudiantes registrados todavía.</p>';
-      return;
-    }
-    list.innerHTML = '';
-    snap.forEach(function(doc) {
-      const u = doc.data();
-      const ini = escapeHtml((u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase());
-      const row = document.createElement('div');
-      row.className = 'user-row';
-      row.innerHTML =
-        '<div class="s-avatar">' + ini + '</div>' +
-        '<div class="user-row-info">' +
-          '<div class="s-name">' + escapeHtml(u.name || '—') + '</div>' +
-          '<div class="user-email">' + escapeHtml(u.email || '') + '</div>' +
-        '</div>' +
-        '<button type="button" class="user-del-btn" title="Eliminar estudiante"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>';
-      row.querySelector('.user-del-btn').addEventListener('click', function() {
-        if (confirm('¿Eliminar a "' + (u.name || u.email) + '"?\nYa no podrá acceder al curso.')) {
-          db.collection('users').doc(doc.id).delete().then(function(){ loadFirestoreUsers(); });
-        }
-      });
-      list.appendChild(row);
-    });
-  } catch(e) {
-    list.innerHTML = '<p style="font-size:13px;color:var(--danger)">Error al cargar usuarios: ' + e.message + '</p>';
-  }
-}
-
-function openAddUser() {
-  ['au-name','au-email','au-pass'].forEach(function(id){ document.getElementById(id).value = ''; });
-  document.getElementById('au-role').value = 'student';
-  document.getElementById('au-error').style.display = 'none';
-  openModal('modal-add-user');
-}
-function closeAddUser() { closeModal('modal-add-user'); }
-
-/* ══════════ EDITAR PÁGINA PRINCIPAL ══════════ */
-function openEditHome() {
-  document.getElementById('eh-start-date').value = COURSE_START_DATE || '';
-  document.getElementById('eh-welcome').value = HOME_CONTENT.welcome || '';
-  document.getElementById('eh-criteria').value = (HOME_CONTENT.criteria || []).join('\n');
-  document.getElementById('eh-reminders').value = (HOME_CONTENT.reminders || []).join('\n');
-  openModal('modal-edit-home');
-}
-function closeEditHome() { closeModal('modal-edit-home'); }
-function saveHomeContent() {
-  COURSE_START_DATE      = document.getElementById('eh-start-date').value;
-  HOME_CONTENT.welcome   = document.getElementById('eh-welcome').value.trim();
-  HOME_CONTENT.criteria  = document.getElementById('eh-criteria').value.split('\n').map(function(l){ return l.trim(); }).filter(Boolean);
-  HOME_CONTENT.reminders = document.getElementById('eh-reminders').value.split('\n').map(function(l){ return l.trim(); }).filter(Boolean);
-  saveLocal();
-  closeEditHome();
-  renderHome();
-}
-
-async function saveNewUser() {
-  const name  = document.getElementById('au-name').value.trim();
-  const email = document.getElementById('au-email').value.trim();
-  const pass  = document.getElementById('au-pass').value;
-  const role  = document.getElementById('au-role').value;
-  const errEl = document.getElementById('au-error');
-  const btn   = document.getElementById('au-save');
-  function showErr(msg) { errEl.textContent = msg; errEl.style.display = 'block'; }
-  if (!name || !email || !pass) { showErr('Completá todos los campos.'); return; }
-  if (pass.length < 6) { showErr('La contraseña debe tener al menos 6 caracteres.'); return; }
-  btn.disabled = true; btn.textContent = 'Creando...';
-  errEl.style.display = 'none';
-  try {
-    const cred = await secondaryAuth.createUserWithEmailAndPassword(email, pass);
-    await db.collection('users').doc(cred.user.uid).set({ name, email, role, createdAt: firebase.firestore.FieldValue.serverTimestamp() });
-    await secondaryAuth.signOut();
-    btn.disabled = false; btn.textContent = 'Crear usuario';
-    closeAddUser();
-    loadFirestoreUsers();
-  } catch(e) {
-    var msg = 'Error al crear el usuario.';
-    if (e.code === 'auth/email-already-in-use') msg = 'Ese correo ya está registrado.';
-    else if (e.code === 'auth/invalid-email')   msg = 'El correo no es válido.';
-    else if (e.code === 'auth/weak-password')   msg = 'Contraseña débil (mínimo 6 caracteres).';
-    showErr(msg); btn.disabled = false; btn.textContent = 'Crear usuario';
-  }
-}
-
-/* ══════════ AGREGAR VIDEO ══════════ */
-function openAddVideo() { populateModSelect('av-module', activeModule); openModal('modal-add-video'); }
-function closeAddVideo() {
-  closeModal('modal-add-video');
-  ['av-title','av-url','av-desc','av-duration'].forEach(function(id){ document.getElementById(id).value = ''; });
-  document.getElementById('av-isnew').checked = true;
-}
-function saveVideo() {
-  const title    = document.getElementById('av-title').value.trim();
-  const url      = document.getElementById('av-url').value.trim();
-  const moduleId = document.getElementById('av-module').value;
-  const duration = document.getElementById('av-duration').value.trim() || '—';
-  const desc     = document.getElementById('av-desc').value.trim();
-  const isNew    = document.getElementById('av-isnew').checked;
-  if (!title) { alert('El título es obligatorio.'); return; }
-  const vimeoId = extractVimeoId(url);
-  if (!vimeoId) { alert('ID o URL de Vimeo inválido. Pegá la URL completa o solo el número de ID.'); return; }
-  VIDEOS.push({ id:nextId(VIDEOS), moduleId, moduleLabel:getModLabel(moduleId), title, desc, duration, platform:'vimeo', vimeoId, isNew });
-  saveLocal(); buildSidebar(); if (activeModule === 'home') renderHome(); else renderVideos(activeModule); closeAddVideo();
-}
-
-/* ══════════ AGREGAR MATERIAL ══════════ */
-let amMode = 'upload';
-let amFile = null;
-
-function openAddMaterial() {
-  populateModSelect('am-module', activeModule);
-  switchAmTab('upload');
-  const token = localStorage.getItem('gh_token');
-  document.getElementById('am-token-wrap').style.display = token ? 'none' : 'block';
-  openModal('modal-add-material');
-}
-
-function switchAmTab(mode) {
-  amMode = mode;
-  document.getElementById('am-tab-upload').classList.toggle('active', mode === 'upload');
-  document.getElementById('am-tab-url').classList.toggle('active', mode === 'url');
-  document.getElementById('am-panel-upload').style.display = mode === 'upload' ? 'block' : 'none';
-  document.getElementById('am-panel-url').style.display   = mode === 'url'    ? 'block' : 'none';
-  if (mode === 'url')    document.getElementById('am-type').value = 'link';
-  if (mode === 'upload') document.getElementById('am-type').value = 'pdf';
-}
-
-function formatFileSize(bytes) {
-  if (bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
-  return (bytes/(1024*1024)).toFixed(1) + ' MB';
-}
-
-function handleFileSelect(file) {
-  if (!file) return;
-  if (file.size > 50 * 1024 * 1024) { alert('El archivo supera el límite de 50MB.'); return; }
-  amFile = file;
-  const ext = file.name.split('.').pop().toLowerCase();
-  var typeMap = { pdf:'pdf', ppt:'slides', pptx:'slides', doc:'book', docx:'book', xls:'link', xlsx:'link' };
-  if (typeMap[ext]) document.getElementById('am-type').value = typeMap[ext];
-  document.getElementById('am-upload-zone').style.display = 'none';
-  document.getElementById('am-preview').style.display     = 'flex';
-  document.getElementById('am-file-name').textContent = file.name;
-  document.getElementById('am-file-size').textContent = formatFileSize(file.size);
-  if (!document.getElementById('am-title').value) {
-    document.getElementById('am-title').value = file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
-  }
-}
-
-function readFileAsBase64(file) {
-  return new Promise(function(resolve, reject) {
-    var reader = new FileReader();
-    reader.onload  = function() { resolve(reader.result.split(',')[1]); };
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
-async function uploadFileToGitHub(file, token) {
-  var safeName = file.name.replace(/[^a-zA-Z0-9.\-_]/g, '_');
-  var path = 'materiales/' + safeName;
-  var api  = 'https://api.github.com/repos/' + REPO.owner + '/' + REPO.name + '/contents/' + path;
-  var hdrs = { 'Authorization':'token ' + token, 'Content-Type':'application/json' };
-  var sha = null;
-  var gr = await fetch(api, { headers:hdrs });
-  if (gr.ok) { sha = (await gr.json()).sha; }
-  var content = await readFileAsBase64(file);
-  var body = { message:'Subir material: ' + safeName, content:content, branch:REPO.branch };
-  if (sha) body.sha = sha;
-  var pr = await fetch(api, { method:'PUT', headers:hdrs, body:JSON.stringify(body) });
-  if (!pr.ok) { var e = await pr.json(); throw new Error(e.message || 'Error al subir el archivo'); }
-  return 'materiales/' + safeName;
-}
-
-function closeAddMaterial() {
-  closeModal('modal-add-material');
-  ['am-title','am-url','am-desc'].forEach(function(id){ document.getElementById(id).value = ''; });
-  amFile = null;
-  document.getElementById('am-file-input').value = '';
-  document.getElementById('am-upload-zone').style.display = 'block';
-  document.getElementById('am-preview').style.display     = 'none';
-  document.getElementById('am-progress').style.display    = 'none';
-  document.getElementById('am-progress-fill').style.width = '0%';
-}
-
-async function saveMaterial() {
-  var title    = document.getElementById('am-title').value.trim();
-  var moduleId = document.getElementById('am-module').value;
-  var type     = document.getElementById('am-type').value;
-  var desc     = document.getElementById('am-desc').value.trim();
-  if (!title) { alert('El título es obligatorio.'); return; }
-
-  var url = '';
-
-  if (amMode === 'upload') {
-    if (!amFile) { alert('Seleccioná un archivo para subir.'); return; }
-    var token = localStorage.getItem('gh_token') || document.getElementById('am-token').value.trim();
-    if (!token) { alert('Ingresá tu GitHub Token para subir el archivo.'); return; }
-    localStorage.setItem('gh_token', token);
-    var saveBtn = document.getElementById('am-save');
-    saveBtn.disabled = true; saveBtn.textContent = 'Subiendo...';
-    document.getElementById('am-progress').style.display = 'block';
-    document.getElementById('am-progress-fill').style.width = '40%';
-    document.getElementById('am-progress-text').textContent = 'Subiendo a GitHub...';
-    try {
-      url = await uploadFileToGitHub(amFile, token);
-      document.getElementById('am-progress-fill').style.width = '100%';
-      document.getElementById('am-progress-text').textContent = '¡Archivo subido!';
-    } catch(e) {
-      document.getElementById('am-progress').style.display = 'none';
-      saveBtn.disabled = false;
-      saveBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:white;fill:none;stroke-width:2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar material';
-      alert('Error al subir: ' + e.message); return;
-    }
-    saveBtn.disabled = false;
-    saveBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:white;fill:none;stroke-width:2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Agregar material';
-  } else {
-    url = document.getElementById('am-url').value.trim();
-    if (!url) { alert('La URL es obligatoria.'); return; }
-  }
-
-  if (!MATERIALS[moduleId]) MATERIALS[moduleId] = [];
-  var allMats = [].concat.apply([], Object.values(MATERIALS));
-  MATERIALS[moduleId].push({ id:nextId(allMats), moduleId, title, url, type, desc });
-  saveLocal(); renderMaterials(activeModule); closeAddMaterial();
-}
-
-/* ══════════ PUBLICAR ══════════ */
-function openPublish() {
-  const t = localStorage.getItem('gh_token'); if (t) document.getElementById('pub-token').value = t;
-  document.getElementById('pub-status').innerHTML = '';
-  openModal('modal-publish');
-}
-function closePublish() { closeModal('modal-publish'); }
-
-async function doPublish() {
-  const token = document.getElementById('pub-token').value.trim();
-  if (!token) { alert('Ingresá tu GitHub Token.'); return; }
-  localStorage.setItem('gh_token', token);
-  const btn = document.getElementById('pub-save');
-  btn.disabled = true; btn.textContent = 'Publicando...';
-  const setStatus = function(type, msg) {
-    document.getElementById('pub-status').innerHTML = '<div class="alert alert-' + type + '"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span>' + msg + '</span></div>';
-  };
-  try {
-    setStatus('info', 'Conectando con GitHub...');
-    const api = 'https://api.github.com/repos/' + REPO.owner + '/' + REPO.name + '/contents/' + REPO.file;
-    const hdrs = { 'Authorization':'token ' + token, 'Content-Type':'application/json' };
-    let sha = null;
-    const gr = await fetch(api, { headers:hdrs });
-    if (gr.ok) { sha = (await gr.json()).sha; }
-    setStatus('info', 'Subiendo contenido...');
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify({ courseStartDate:COURSE_START_DATE, homeContent:HOME_CONTENT, videos:VIDEOS, materials:MATERIALS, questions:QUESTIONS }, null, 2))));
-    const body = { message:'Actualizar contenido del curso', content, branch:REPO.branch };
-    if (sha) body.sha = sha;
-    const pr = await fetch(api, { method:'PUT', headers:hdrs, body:JSON.stringify(body) });
-    if (pr.ok) {
-      setStatus('success', '¡Publicado! Los estudiantes verán los cambios en ~1 minuto.');
-      btn.textContent = '✓ Publicado';
-      setTimeout(function(){ btn.disabled = false; btn.textContent = 'Publicar'; }, 3000);
-    } else {
-      const e = await pr.json();
-      setStatus('danger', 'Error: ' + (e.message || pr.statusText));
-      btn.disabled = false; btn.textContent = 'Publicar';
-    }
-  } catch(e) {
-    setStatus('danger', 'Error de conexión: ' + e.message);
-    btn.disabled = false; btn.textContent = 'Publicar';
-  }
-}
-
-/* ══════════ SESIÓN ÚNICA ══════════ */
-function generateSessionToken() {
-  return Date.now().toString(36) + Math.random().toString(36).substring(2);
-}
-
-async function setSession(uid) {
-  const token = generateSessionToken();
-  localStorage.setItem(SESSION_KEY, token);
-  await db.collection('users').doc(uid).update({ sessionToken: token });
-}
-
-function startSessionCheck(uid) {
-  sessionInterval = setInterval(async function() {
-    try {
-      const doc  = await db.collection('users').doc(uid).get();
-      const remote = doc.exists ? doc.data().sessionToken : null;
-      const local  = localStorage.getItem(SESSION_KEY);
-      if (remote && local && remote !== local) {
-        clearInterval(sessionInterval);
-        alert('Tu sesión fue iniciada en otro dispositivo. Serás desconectado.');
-        doLogout();
-      }
-    } catch(_) { /* error de red — no desconectar */ }
-  }, 45000);
-}
-
-function stopSessionCheck() {
-  if (sessionInterval) { clearInterval(sessionInterval); sessionInterval = null; }
-}
-
-/* ══════════ SIDEBAR MÓVIL ══════════ */
-function toggleSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.getElementById('sidebar-overlay');
-  const open = sidebar.classList.toggle('open');
-  overlay.classList.toggle('visible', open);
-}
-function closeSidebar() {
-  document.querySelector('.sidebar').classList.remove('open');
-  document.getElementById('sidebar-overlay').classList.remove('visible');
-}
-
-/* ══════════ LOGOUT ══════════ */
-async function doLogout() {
-  stopSessionCheck();
-  stopConsultas();
-  localStorage.removeItem(SESSION_KEY);
-  closeModal('modal-video');
-  document.getElementById('mv-player').innerHTML = '';
-  await auth.signOut();
-  currentUser = null; activeModule = 'home'; isAdmin = false;
-  const mainEl  = document.getElementById('main-screen');
-  const loginEl = document.getElementById('login-screen');
-  mainEl.classList.remove('active','admin-mode');
-  setTimeout(function() {
-    loginEl.classList.add('active');
-    ['admin-panel','admin-pill','sb-admin-wrap'].forEach(function(id){ document.getElementById(id).style.display = 'none'; });
-    document.getElementById('btn-add-mat-inline').style.display = 'none';
-    document.getElementById('inp-user').value = '';
-    document.getElementById('inp-pass').value = '';
-    document.getElementById('login-error').style.visibility = 'hidden';
-  }, 340);
-}
-
-/* ══════════ QUIZ ══════════ */
-function renderQuiz() {
-  var qv = document.getElementById('quiz-view');
-  var qs = QUESTIONS.slice().sort(function(){ return Math.random() - 0.5; });
-  var score = 0;
-  qv.innerHTML = '';
-
-  if (!qs.length) {
-    qv.innerHTML = '<div class="quiz-empty">' +
-      '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' +
-      '<p style="font-size:14px;font-weight:600;color:var(--text)">' + (isAdmin ? 'No hay preguntas cargadas aún.' : 'No hay preguntas disponibles aún.') + '</p>' +
-      (isAdmin ? '<p style="font-size:13px">Usá el botón <strong>Agregar pregunta</strong> del menú lateral para cargar la primera.</p>' : '') +
-      '</div>';
-    return;
-  }
-
-  qs.forEach(function(q, idx) {
-    var card = document.createElement('div');
-    card.className = 'quiz-card';
-
-    // Barajar las opciones y re-etiquetar A/B/C/D según la nueva posición,
-    // de modo que la respuesta correcta caiga en una letra distinta cada vez.
-    var LETTERS = ['A','B','C','D','E','F'];
-    var shuffled = q.options.slice().sort(function(){ return Math.random() - 0.5; });
-    var correctLetter = 'A';
-    var displayOpts = shuffled.map(function(opt, i) {
-      var letter = LETTERS[i];
-      if (opt.label === q.correct) correctLetter = letter;
-      return { label: letter, text: opt.text };
-    });
-
-    var optsHtml = displayOpts.map(function(opt) {
-      return '<button type="button" class="quiz-opt" data-letter="' + opt.label + '">' +
-        '<span class="quiz-opt-letter">' + opt.label + '</span>' +
-        '<span>' + escapeHtml(opt.text) + '</span>' +
-      '</button>';
-    }).join('');
-
-    var isLast = idx === qs.length - 1;
-    card.innerHTML =
-      '<div class="quiz-header-row">' +
-        '<div class="quiz-progress">Pregunta ' + (idx + 1) + ' de ' + qs.length + '</div>' +
-        '<span class="quiz-module-tag">' + escapeHtml(getModLabel(q.moduleId)) + '</span>' +
-      '</div>' +
-      '<div class="quiz-q-text">' + escapeHtml(q.question) + '</div>' +
-      '<div class="quiz-opts">' + optsHtml + '</div>' +
-      '<div class="quiz-feedback" style="display:none"></div>' +
-      '<div class="quiz-next-wrap" style="display:none">' +
-        '<button type="button" class="quiz-next-btn">' + (isLast ? 'Ver resultados →' : 'Siguiente pregunta →') + '</button>' +
-      '</div>' +
-      '<button type="button" class="quiz-card-del" data-qid="' + q.id + '" title="Eliminar pregunta">' +
-        '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
-      '</button>';
-
-    card.querySelectorAll('.quiz-opt').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var chosen = btn.getAttribute('data-letter');
-        var isCorrect = chosen === correctLetter;
-        if (isCorrect) score++;
-
-        card.querySelectorAll('.quiz-opt').forEach(function(b) {
-          b.disabled = true;
-          if (b.getAttribute('data-letter') === correctLetter) b.classList.add('correct');
-          else if (b === btn) b.classList.add('wrong');
-        });
-
-        var fbEl = card.querySelector('.quiz-feedback');
-        fbEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'wrong');
-        fbEl.innerHTML =
-          '<div class="quiz-feedback-header">' +
-            (isCorrect
-              ? '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>¡Correcto!'
-              : '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Incorrecto') +
-          '</div>' +
-          '<div class="quiz-feedback-text">' + escapeHtml(q.explanation || '') + '</div>';
-        fbEl.style.display = 'flex';
-        card.querySelector('.quiz-next-wrap').style.display = 'block';
-
-        var fc = document.getElementById('quiz-finish');
-        if (fc) fc.querySelector('.quiz-score').textContent = score + '/' + qs.length;
-      });
-    });
-
-    card.querySelector('.quiz-next-wrap button').addEventListener('click', function() {
-      var allCards = qv.querySelectorAll('.quiz-card, .quiz-finish-card');
-      var next = allCards[idx + 1];
-      if (next) next.scrollIntoView({ behavior:'smooth', block:'start' });
-    });
-
-    card.querySelector('.quiz-card-del').addEventListener('click', function() {
-      var qid = parseInt(this.getAttribute('data-qid'));
-      if (confirm('¿Eliminar esta pregunta?')) {
-        QUESTIONS = QUESTIONS.filter(function(x){ return x.id !== qid; });
-        saveLocal(); buildSidebar(); renderQuiz();
-      }
-    });
-
-    qv.appendChild(card);
-  });
-
-  var finishCard = document.createElement('div');
-  finishCard.className = 'quiz-finish-card';
-  finishCard.id = 'quiz-finish';
-  finishCard.innerHTML =
-    '<div class="quiz-finish-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>' +
-    '<div class="quiz-finish-title">¡Terminaste el quiz!</div>' +
-    '<div class="quiz-score">0/' + qs.length + '</div>' +
-    '<div class="quiz-score-label">respuestas correctas</div>' +
-    '<div class="quiz-finish-sub">Podés volver a repasar las preguntas<br>deslizando hacia arriba, o reiniciar.</div>' +
-    '<button type="button" class="quiz-restart-btn">Reiniciar quiz</button>';
-  finishCard.querySelector('.quiz-restart-btn').addEventListener('click', function() {
-    renderQuiz();
-  });
-  qv.appendChild(finishCard);
-}
-
-function openAddQuestion() {
-  populateModSelect('aq-module', activeModule !== 'quiz' ? activeModule : 'm1');
-  ['aq-question','aq-a','aq-b','aq-c','aq-d','aq-explanation'].forEach(function(id){ document.getElementById(id).value = ''; });
-  document.getElementById('aq-correct').value = 'A';
-  openModal('modal-add-question');
-}
-function closeAddQuestion() { closeModal('modal-add-question'); }
-function saveQuestion() {
-  var question    = document.getElementById('aq-question').value.trim();
-  var moduleId    = document.getElementById('aq-module').value;
-  var a           = document.getElementById('aq-a').value.trim();
-  var b           = document.getElementById('aq-b').value.trim();
-  var c           = document.getElementById('aq-c').value.trim();
-  var d           = document.getElementById('aq-d').value.trim();
-  var correct     = document.getElementById('aq-correct').value;
-  var explanation = document.getElementById('aq-explanation').value.trim();
-  if (!question || !a || !b || !c) { alert('La pregunta y las opciones A, B y C son obligatorias.'); return; }
-  if (!explanation) { alert('La explicación es obligatoria.'); return; }
-  var options = [{ label:'A', text:a }, { label:'B', text:b }, { label:'C', text:c }];
-  if (d) options.push({ label:'D', text:d });
-  QUESTIONS.push({ id:nextId(QUESTIONS), moduleId:moduleId, question:question, options:options, correct:correct, explanation:explanation });
-  saveLocal(); buildSidebar(); closeAddQuestion();
-  if (activeModule === 'quiz') renderQuiz();
-}
-
-/* ══════════ CONSULTAS (FORO) ══════════ */
-function escapeHtml(s) {
-  return String(s || '').replace(/[&<>"']/g, function(c) {
-    return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
-  });
-}
-function timeAgo(date) {
-  if (!date) return 'ahora';
-  var s = Math.floor((Date.now() - date.getTime()) / 1000);
-  if (s < 60)    return 'hace instantes';
-  var m = Math.floor(s / 60);
-  if (m < 60)    return 'hace ' + m + ' min';
-  var h = Math.floor(m / 60);
-  if (h < 24)    return 'hace ' + h + ' h';
-  var d = Math.floor(h / 24);
-  if (d < 7)     return 'hace ' + d + (d === 1 ? ' día' : ' días');
-  return date.toLocaleDateString('es-UY', { day:'numeric', month:'short' });
-}
-function contentModules() {
-  return MODULES.filter(function(m){ return /^m\d/.test(m.id); });
-}
-
-function startConsultas() {
-  renderConsultasShell();
-  stopConsultas();
-  consultasUnsub = db.collection('consultas').onSnapshot(function(snap) {
-    CONSULTAS = snap.docs.map(function(doc) {
-      var d = doc.data();
-      return {
-        id: doc.id,
-        text: d.text || '',
-        moduleId: d.moduleId || '',
-        authorUid: d.authorUid || '',
-        authorName: d.authorName || 'Estudiante',
-        anonymous: !!d.anonymous,
-        voters: d.voters || [],
-        createdAt: d.createdAt && d.createdAt.toDate ? d.createdAt.toDate() : null
-      };
-    });
-    renderConsultasList();
-  }, function(err) {
-    var listEl = document.getElementById('consultas-list');
-    if (listEl) listEl.innerHTML = '<div class="consultas-empty"><p>No se pudieron cargar las consultas. Revisá tu conexión.</p></div>';
-  });
-}
-function stopConsultas() {
-  if (consultasUnsub) { consultasUnsub(); consultasUnsub = null; }
-}
-
-function renderConsultasShell() {
-  var view = document.getElementById('consultas-view');
-  var modOptions = contentModules().map(function(m) {
-    return '<option value="' + m.id + '">' + m.label + '</option>';
-  }).join('');
-  var filterChips = '<button type="button" class="consulta-chip' + (consultasFilter === 'all' ? ' active' : '') + '" data-filter="all">Todas</button>' +
-    contentModules().map(function(m) {
-      return '<button type="button" class="consulta-chip' + (consultasFilter === m.id ? ' active' : '') + '" data-filter="' + m.id + '">' + m.label + '</button>';
-    }).join('');
-
-  view.innerHTML =
-    '<div class="consultas-wrap">' +
-      '<div class="consultas-head">' +
-        '<div class="consultas-title">Consultas para las clases</div>' +
-        '<div class="consultas-sub">Dejá tus dudas para la clase de consulta semanal. Si ya está la que ibas a hacer, votala para que la tratemos.</div>' +
-      '</div>' +
-      '<div class="consulta-form">' +
-        '<textarea id="consulta-text" class="consulta-textarea" maxlength="1000" rows="3" placeholder="Escribí tu duda de forma clara y concreta..."></textarea>' +
-        '<div class="consulta-form-row">' +
-          '<select id="consulta-module" class="consulta-select">' + modOptions + '</select>' +
-          '<label class="consulta-anon"><input type="checkbox" id="consulta-anon" /> Preguntar en anónimo</label>' +
-          '<span class="consulta-counter" id="consulta-counter">1000</span>' +
-          '<button type="button" class="consulta-submit" id="consulta-submit">Publicar consulta</button>' +
-        '</div>' +
-      '</div>' +
-      '<div class="consulta-filters" id="consulta-filters">' + filterChips + '</div>' +
-      '<div id="consultas-list"></div>' +
-    '</div>';
-
-  var textEl = document.getElementById('consulta-text');
-  var counterEl = document.getElementById('consulta-counter');
-  textEl.addEventListener('input', function() { counterEl.textContent = 1000 - textEl.value.length; });
-  document.getElementById('consulta-submit').addEventListener('click', submitConsulta);
-  document.getElementById('consulta-filters').querySelectorAll('.consulta-chip').forEach(function(chip) {
-    chip.addEventListener('click', function() {
-      consultasFilter = chip.getAttribute('data-filter');
-      document.querySelectorAll('#consulta-filters .consulta-chip').forEach(function(c){ c.classList.remove('active'); });
-      chip.classList.add('active');
-      renderConsultasList();
-    });
-  });
-}
-
-function renderConsultasList() {
-  var listEl = document.getElementById('consultas-list');
-  if (!listEl) return;
-  var items = CONSULTAS.filter(function(c) {
-    return consultasFilter === 'all' || c.moduleId === consultasFilter;
-  });
-  items.sort(function(a, b) {
-    if (b.voters.length !== a.voters.length) return b.voters.length - a.voters.length;
-    return (b.createdAt ? b.createdAt.getTime() : 0) - (a.createdAt ? a.createdAt.getTime() : 0);
-  });
-
-  if (!items.length) {
-    listEl.innerHTML = '<div class="consultas-empty">' +
-      '<svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>' +
-      '<p>Todavía no hay consultas' + (consultasFilter !== 'all' ? ' en este módulo' : '') + '. ¡Sé el primero en dejar tu duda!</p>' +
-    '</div>';
-    return;
-  }
-
-  var uid = currentUser ? currentUser.uid : '';
-  listEl.innerHTML = items.map(function(c) {
-    var voted = c.voters.indexOf(uid) !== -1;
-    var canDelete = isAdmin || c.authorUid === uid;
-    var authorLabel;
-    if (c.anonymous) {
-      authorLabel = isAdmin
-        ? escapeHtml(c.authorName.split(' ')[0]) + ' <span class="consulta-anon-tag">anónimo</span>'
-        : 'Anónimo';
-    } else {
-      authorLabel = escapeHtml(c.authorName.split(' ')[0]);
-    }
-    return '<div class="consulta-item">' +
-      '<button type="button" class="consulta-vote' + (voted ? ' voted' : '') + '" data-id="' + c.id + '" data-voted="' + voted + '">' +
-        '<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
-        '<span>' + c.voters.length + '</span>' +
-        '<span class="consulta-vote-label">' + (voted ? 'Votado' : 'Votar') + '</span>' +
-      '</button>' +
-      '<div class="consulta-body">' +
-        '<div class="consulta-text-line">' + escapeHtml(c.text) + '</div>' +
-        '<div class="consulta-meta">' +
-          '<span class="consulta-mod-tag">' + getModLabel(c.moduleId) + '</span>' +
-          '<span>' + authorLabel + '</span>' +
-          '<span>·</span>' +
-          '<span>' + timeAgo(c.createdAt) + '</span>' +
-        '</div>' +
-      '</div>' +
-      (canDelete ? '<button type="button" class="consulta-del" data-id="' + c.id + '" title="Eliminar"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>' : '') +
-    '</div>';
-  }).join('');
-
-  listEl.querySelectorAll('.consulta-vote').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      toggleVoteConsulta(btn.getAttribute('data-id'), btn.getAttribute('data-voted') === 'true');
-    });
-  });
-  listEl.querySelectorAll('.consulta-del').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      deleteConsulta(btn.getAttribute('data-id'));
-    });
-  });
-}
-
-function submitConsulta() {
-  var textEl = document.getElementById('consulta-text');
-  var text = textEl.value.trim();
-  if (!text) { textEl.focus(); return; }
-  var moduleId = document.getElementById('consulta-module').value;
-  var anon = document.getElementById('consulta-anon').checked;
-  var btn = document.getElementById('consulta-submit');
-  btn.disabled = true; btn.textContent = 'Publicando...';
-  db.collection('consultas').add({
-    text: text,
-    moduleId: moduleId,
-    authorUid: currentUser.uid,
-    authorName: currentUser.name,
-    anonymous: anon,
-    voters: [currentUser.uid],
-    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-  }).then(function() {
-    textEl.value = '';
-    document.getElementById('consulta-anon').checked = false;
-    document.getElementById('consulta-counter').textContent = '1000';
-  }).catch(function(e) {
-    alert('No se pudo publicar la consulta: ' + (e.message || e.code));
-  }).then(function() {
-    btn.disabled = false; btn.textContent = 'Publicar consulta';
-  });
-}
-
-function toggleVoteConsulta(id, hasVoted) {
-  var uid = currentUser.uid;
-  var ref = db.collection('consultas').doc(id);
-  var change = hasVoted
-    ? firebase.firestore.FieldValue.arrayRemove(uid)
-    : firebase.firestore.FieldValue.arrayUnion(uid);
-  ref.update({ voters: change }).catch(function(e) {
-    alert('No se pudo registrar tu voto: ' + (e.message || e.code));
-  });
-}
-
-function deleteConsulta(id) {
-  if (!confirm('¿Eliminar esta consulta?')) return;
-  db.collection('consultas').doc(id).delete().catch(function(e) {
-    alert('No se pudo eliminar: ' + (e.message || e.code));
-  });
-}
-
-/* ══════════ PWA — INSTALACIÓN Y OFFLINE ══════════ */
-var deferredInstallPrompt = null;
-
-function isStandalone() {
-  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-}
-function isIOS() {
-  return /iphone|ipad|ipod/i.test(window.navigator.userAgent) && !window.MSStream;
-}
-
-function initInstall() {
-  var btn = document.getElementById('btn-install-app');
-  if (!btn) return;
-
-  // Ya está instalada como app → no mostrar el botón.
-  if (isStandalone()) { btn.style.display = 'none'; return; }
-
-  // iOS/Safari no dispara beforeinstallprompt → mostramos el botón con instrucciones.
-  if (isIOS()) btn.style.display = 'flex';
-
-  // Android / Chrome / Edge → capturamos el evento nativo de instalación.
-  window.addEventListener('beforeinstallprompt', function(e) {
-    e.preventDefault();
-    deferredInstallPrompt = e;
-    btn.style.display = 'flex';
-  });
-
-  window.addEventListener('appinstalled', function() {
-    btn.style.display = 'none';
-    deferredInstallPrompt = null;
-  });
-
-  btn.addEventListener('click', function() {
-    if (deferredInstallPrompt) {
-      deferredInstallPrompt.prompt();
-      deferredInstallPrompt.userChoice.then(function() {
-        deferredInstallPrompt = null;
-        btn.style.display = 'none';
-      });
-    } else if (isIOS()) {
-      openModal('modal-install-ios');
-    }
-  });
-
-  // Cierre del modal de instrucciones iOS.
-  var iosClose = document.getElementById('ios-close');
-  var iosOk    = document.getElementById('ios-ok');
-  if (iosClose) iosClose.addEventListener('click', function(){ closeModal('modal-install-ios'); });
-  if (iosOk)    iosOk.addEventListener('click', function(){ closeModal('modal-install-ios'); });
-  document.getElementById('modal-install-ios').addEventListener('click', function(e){ if(e.target===this) closeModal('modal-install-ios'); });
-}
-
-// Registrar el service worker (habilita instalación + funcionamiento sin conexión).
-// Se omite en localhost para no interferir con el entorno de desarrollo/preview.
-(function() {
-  var host = window.location.hostname;
-  var isLocal = host === 'localhost' || host === '127.0.0.1' || host === '';
-  if ('serviceWorker' in navigator && !isLocal) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('sw.js').catch(function(err) {
-        console.warn('No se pudo registrar el service worker:', err);
-      });
-    });
-  }
-})();
-
-/* ══════════ WIRE UP — todos los listeners aquí, sin onclick en HTML ══════════ */
-document.addEventListener('DOMContentLoaded', function() {
-  // Login
-  document.getElementById('btn-login-submit').addEventListener('click', doLogin);
-  document.getElementById('inp-pass').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
-  document.getElementById('inp-user').addEventListener('keydown', function(e){ if(e.key==='Enter') document.getElementById('inp-pass').focus(); });
-  document.getElementById('btn-show-register').addEventListener('click', openRegister);
-
-  // Menú móvil
-  document.getElementById('btn-menu').addEventListener('click', toggleSidebar);
-  document.getElementById('sidebar-overlay').addEventListener('click', closeSidebar);
-
-  // Logout
-  document.getElementById('btn-logout').addEventListener('click', doLogout);
-
-  // Instalar app (PWA)
-  initInstall();
-
-  // Admin sidebar
-  document.getElementById('btn-open-add-video').addEventListener('click', openAddVideo);
-  document.getElementById('btn-open-add-material').addEventListener('click', openAddMaterial);
-  document.getElementById('btn-open-publish').addEventListener('click', openPublish);
-  document.getElementById('btn-add-mat-inline').addEventListener('click', openAddMaterial);
-  document.getElementById('btn-goto-students').addEventListener('click', function(){ document.getElementById('admin-panel').scrollIntoView({behavior:'smooth'}); });
-  document.getElementById('btn-add-user').addEventListener('click', openAddUser);
-
-  // Modal video
-  document.getElementById('mv-close').addEventListener('click', function(){ history.back(); });
-  document.getElementById('modal-video').addEventListener('click', function(e){ if(e.target===this){ history.back(); } });
-
-  // Modal agregar video
-  document.getElementById('av-close').addEventListener('click', closeAddVideo);
-  document.getElementById('av-cancel').addEventListener('click', closeAddVideo);
-  document.getElementById('av-save').addEventListener('click', saveVideo);
-  document.getElementById('modal-add-video').addEventListener('click', function(e){ if(e.target===this) closeAddVideo(); });
-
-  // Modal agregar material
-  document.getElementById('am-close').addEventListener('click', closeAddMaterial);
-  document.getElementById('am-cancel').addEventListener('click', closeAddMaterial);
-  document.getElementById('am-save').addEventListener('click', saveMaterial);
-  document.getElementById('modal-add-material').addEventListener('click', function(e){ if(e.target===this) closeAddMaterial(); });
-  // Tabs
-  document.getElementById('am-tab-upload').addEventListener('click', function(){ switchAmTab('upload'); });
-  document.getElementById('am-tab-url').addEventListener('click', function(){ switchAmTab('url'); });
-  // Zona de upload
-  var amZone = document.getElementById('am-upload-zone');
-  var amInput = document.getElementById('am-file-input');
-  amZone.addEventListener('click', function(){ amInput.click(); });
-  amInput.addEventListener('change', function(){ if (this.files[0]) handleFileSelect(this.files[0]); this.value = ''; });
-  document.getElementById('am-file-clear').addEventListener('click', function() {
-    amFile = null; amInput.value = '';
-    document.getElementById('am-upload-zone').style.display = 'block';
-    document.getElementById('am-preview').style.display     = 'none';
-  });
-  // Drag & drop
-  amZone.addEventListener('dragover',  function(e){ e.preventDefault(); amZone.classList.add('drag-over'); });
-  amZone.addEventListener('dragleave', function(){ amZone.classList.remove('drag-over'); });
-  amZone.addEventListener('drop', function(e){
-    e.preventDefault(); amZone.classList.remove('drag-over');
-    if (e.dataTransfer.files[0]) handleFileSelect(e.dataTransfer.files[0]);
-  });
-
-  // Modal publicar
-  document.getElementById('pub-close').addEventListener('click', closePublish);
-  document.getElementById('pub-cancel').addEventListener('click', closePublish);
-  document.getElementById('pub-save').addEventListener('click', doPublish);
-  document.getElementById('pub-toggle').addEventListener('click', function(){ const i = document.getElementById('pub-token'); i.type = i.type === 'password' ? 'text' : 'password'; });
-  document.getElementById('modal-publish').addEventListener('click', function(e){ if(e.target===this) closePublish(); });
-
-  // Modal registro
-  document.getElementById('reg-close').addEventListener('click', closeRegister);
-  document.getElementById('reg-cancel').addEventListener('click', closeRegister);
-  document.getElementById('reg-save').addEventListener('click', doRegister);
-  document.getElementById('modal-register').addEventListener('click', function(e){ if(e.target===this) closeRegister(); });
-  document.getElementById('reg-pass2').addEventListener('keydown', function(e){ if(e.key==='Enter') doRegister(); });
-
-  // Modal agregar usuario (admin)
-  document.getElementById('au-close').addEventListener('click', closeAddUser);
-  document.getElementById('au-cancel').addEventListener('click', closeAddUser);
-  document.getElementById('au-save').addEventListener('click', saveNewUser);
-  document.getElementById('modal-add-user').addEventListener('click', function(e){ if(e.target===this) closeAddUser(); });
-
-  // Modal curso bloqueado
-  document.getElementById('locked-ok').addEventListener('click', function(){ closeModal('modal-locked'); });
-  document.getElementById('modal-locked').addEventListener('click', function(e){ if(e.target===this) closeModal('modal-locked'); });
-
-  // Modal agregar pregunta (admin)
-  document.getElementById('btn-open-add-question').addEventListener('click', openAddQuestion);
-  document.getElementById('aq-close').addEventListener('click', closeAddQuestion);
-  document.getElementById('aq-cancel').addEventListener('click', closeAddQuestion);
-  document.getElementById('aq-save').addEventListener('click', saveQuestion);
-  document.getElementById('modal-add-question').addEventListener('click', function(e){ if(e.target===this) closeAddQuestion(); });
-
-  // Modal editar página principal
-  document.getElementById('eh-close').addEventListener('click', closeEditHome);
-  document.getElementById('eh-cancel').addEventListener('click', closeEditHome);
-  document.getElementById('eh-save').addEventListener('click', saveHomeContent);
-  document.getElementById('modal-edit-home').addEventListener('click', function(e){ if(e.target===this) closeEditHome(); });
-
-  // Escape cierra todo
-  document.addEventListener('keydown', function(e) {
-    if (e.key !== 'Escape') return;
-    if (document.getElementById('modal-video').style.display === 'flex') { history.back(); return; }
-    closeAddVideo(); closeAddMaterial(); closePublish(); closeRegister(); closeAddUser(); closeAddQuestion();
-    closeModal('modal-install-ios');
-  });
-});
-</script>
 </body>
 </html>
