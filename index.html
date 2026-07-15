@@ -1161,13 +1161,13 @@ function renderHome() {
   document.getElementById('mat-section').style.display = 'none';
   homeEl.style.display = 'block';
 
-  var name = (currentUser && currentUser.name) ? currentUser.name.split(' ')[0] : 'estudiante';
+  var name = escapeHtml((currentUser && currentUser.name) ? currentUser.name.split(' ')[0] : 'estudiante');
 
   var criteriaItems = (HOME_CONTENT.criteria || []).map(function(c){
-    return '<li>' + c + '</li>';
+    return '<li>' + escapeHtml(c) + '</li>';
   }).join('');
   var reminderItems = (HOME_CONTENT.reminders || []).map(function(r){
-    return '<li>' + r + '</li>';
+    return '<li>' + escapeHtml(r) + '</li>';
   }).join('');
 
   var moduleCards = MODULES.filter(function(m){ return m.id !== 'home'; }).map(function(m) {
@@ -1206,7 +1206,7 @@ function renderHome() {
         '<span>Información general</span>' +
         (isAdmin ? '<button type="button" class="btn-edit-home-inline" id="btn-edit-home-inline"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Editar</button>' : '') +
       '</div>' +
-      '<p class="home-info-welcome">' + (HOME_CONTENT.welcome || '') + '</p>' +
+      '<p class="home-info-welcome">' + escapeHtml(HOME_CONTENT.welcome || '') + '</p>' +
       (criteriaItems ? '<div class="home-info-sub">Criterios de evaluación</div><ul class="home-info-list">' + criteriaItems + '</ul>' : '') +
       (reminderItems ? '<div class="home-info-sub">Recordatorios</div><ul class="home-info-list">' + reminderItems + '</ul>' : '') +
     '</div>' +
@@ -1325,13 +1325,13 @@ function renderVideos(moduleId) {
         (unlocked
           ? '<div class="vt-play"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>'
           : '<div class="vt-lock"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>') +
-        '<span class="vt-num">' + v.moduleLabel + '</span>' +
+        '<span class="vt-num">' + escapeHtml(v.moduleLabel) + '</span>' +
         (v.isNew ? '<span class="vt-new">Nuevo</span>' : '') +
       '</div>' +
       '<div class="video-info">' +
-        '<div class="vi-module">' + v.moduleLabel + '</div>' +
-        '<div class="vi-title">' + v.title + '</div>' +
-        '<div class="vi-duration"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + v.duration + '</div>' +
+        '<div class="vi-module">' + escapeHtml(v.moduleLabel) + '</div>' +
+        '<div class="vi-title">' + escapeHtml(v.title) + '</div>' +
+        '<div class="vi-duration"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + escapeHtml(v.duration) + '</div>' +
       '</div>' +
       '<button type="button" class="card-del-btn" title="Eliminar video"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>';
     card.addEventListener('click', function() { playVideo(v.id); });
@@ -1395,11 +1395,11 @@ function renderMaterials(moduleId) {
     const card = document.createElement('div');
     card.className = 'material-card';
     card.innerHTML =
-      '<div class="mat-icon ' + m.type + '">' + (MAT_ICONS[m.type] || MAT_ICONS.link) + '</div>' +
+      '<div class="mat-icon ' + escapeHtml(m.type) + '">' + (MAT_ICONS[m.type] || MAT_ICONS.link) + '</div>' +
       '<div class="mat-body">' +
-        '<div class="mat-name">' + m.title + '</div>' +
-        (m.desc ? '<div class="mat-desc">' + m.desc + '</div>' : '') +
-        '<a class="btn-open-mat" href="' + m.url + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Abrir</a>' +
+        '<div class="mat-name">' + escapeHtml(m.title) + '</div>' +
+        (m.desc ? '<div class="mat-desc">' + escapeHtml(m.desc) + '</div>' : '') +
+        '<a class="btn-open-mat" href="' + escapeHtml(m.url) + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Abrir</a>' +
       '</div>' +
       '<button type="button" class="mat-del-btn" title="Eliminar"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>';
     card.querySelector('.mat-del-btn').addEventListener('click', function() {
@@ -1426,14 +1426,14 @@ async function loadPendingUsers() {
     list.innerHTML = '';
     snap.forEach(function(doc) {
       const u = doc.data();
-      const ini = (u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase();
+      const ini = escapeHtml((u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase());
       const row = document.createElement('div');
       row.className = 'user-row';
       row.innerHTML =
         '<div class="s-avatar" style="background:var(--warn-light);color:var(--warn)">' + ini + '</div>' +
         '<div class="user-row-info">' +
-          '<div class="s-name">' + (u.name || '—') + '</div>' +
-          '<div class="user-email">' + (u.email || '') + '</div>' +
+          '<div class="s-name">' + escapeHtml(u.name || '—') + '</div>' +
+          '<div class="user-email">' + escapeHtml(u.email || '') + '</div>' +
         '</div>' +
         '<button type="button" class="btn-approve">Aprobar</button>';
       row.querySelector('.btn-approve').addEventListener('click', function() {
@@ -1462,14 +1462,14 @@ async function loadFirestoreUsers() {
     list.innerHTML = '';
     snap.forEach(function(doc) {
       const u = doc.data();
-      const ini = (u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase();
+      const ini = escapeHtml((u.name || u.email).split(' ').map(function(w){ return w[0]; }).join('').slice(0,2).toUpperCase());
       const row = document.createElement('div');
       row.className = 'user-row';
       row.innerHTML =
         '<div class="s-avatar">' + ini + '</div>' +
         '<div class="user-row-info">' +
-          '<div class="s-name">' + (u.name || '—') + '</div>' +
-          '<div class="user-email">' + (u.email || '') + '</div>' +
+          '<div class="s-name">' + escapeHtml(u.name || '—') + '</div>' +
+          '<div class="user-email">' + escapeHtml(u.email || '') + '</div>' +
         '</div>' +
         '<button type="button" class="user-del-btn" title="Eliminar estudiante"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>';
       row.querySelector('.user-del-btn').addEventListener('click', function() {
@@ -1823,7 +1823,7 @@ function renderQuiz() {
     var optsHtml = displayOpts.map(function(opt) {
       return '<button type="button" class="quiz-opt" data-letter="' + opt.label + '">' +
         '<span class="quiz-opt-letter">' + opt.label + '</span>' +
-        '<span>' + opt.text + '</span>' +
+        '<span>' + escapeHtml(opt.text) + '</span>' +
       '</button>';
     }).join('');
 
@@ -1831,9 +1831,9 @@ function renderQuiz() {
     card.innerHTML =
       '<div class="quiz-header-row">' +
         '<div class="quiz-progress">Pregunta ' + (idx + 1) + ' de ' + qs.length + '</div>' +
-        '<span class="quiz-module-tag">' + getModLabel(q.moduleId) + '</span>' +
+        '<span class="quiz-module-tag">' + escapeHtml(getModLabel(q.moduleId)) + '</span>' +
       '</div>' +
-      '<div class="quiz-q-text">' + q.question + '</div>' +
+      '<div class="quiz-q-text">' + escapeHtml(q.question) + '</div>' +
       '<div class="quiz-opts">' + optsHtml + '</div>' +
       '<div class="quiz-feedback" style="display:none"></div>' +
       '<div class="quiz-next-wrap" style="display:none">' +
@@ -1863,7 +1863,7 @@ function renderQuiz() {
               ? '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>¡Correcto!'
               : '<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Incorrecto') +
           '</div>' +
-          '<div class="quiz-feedback-text">' + (q.explanation || '') + '</div>';
+          '<div class="quiz-feedback-text">' + escapeHtml(q.explanation || '') + '</div>';
         fbEl.style.display = 'flex';
         card.querySelector('.quiz-next-wrap').style.display = 'block';
 
