@@ -8,7 +8,7 @@ Sitio estático (HTML/CSS/JS puro), sin backend. Alojado en **GitHub Pages**.
 - **URL pública:** https://diegoserantes94-bit.github.io/App_curso/
 - **Repo:** https://github.com/diegoserantes94-bit/App_curso
 - **Archivo principal:** `index.html` (todo el sitio está en este único archivo)
-- **Propietario:** Diego Serantes — diegoserantes94@gmail.com
+- **Propietario:** Diego Serantes — diegoserantes94@gmail.com (cuenta personal / login admin en Firebase). El contacto público que figura en la web es academiamemento@gmail.com.
 
 ---
 
